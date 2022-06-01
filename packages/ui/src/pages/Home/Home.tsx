@@ -1,12 +1,16 @@
 import React, { FC } from "react";
-import { HomeProps } from "./Home.types";
-import { Button } from "../../components";
+import { Module, ModuleProps } from "../../modules";
 
-const Home: FC<HomeProps> = ({ hero_title, ...props }) => {
+export interface HomeProps {
+  modules: [ModuleProps];
+}
+
+const Home: FC<HomeProps> = ({ modules }) => {
   return (
     <div>
-      <h1 className="text-3xl">{hero_title}</h1>
-      <Button text="Click Me" />
+      {modules.map((el) => {
+        return <Module module={el.module} />;
+      })}
     </div>
   );
 };

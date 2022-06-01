@@ -1,11 +1,25 @@
-import type { NextPage } from "next";
-import { Button } from "ui";
-const HomePage: NextPage = (props) => {
-  return (
-    <div>
-      <Button text="hello world!"></Button>
-    </div>
-  );
+import type { NextPage, GetStaticProps } from "next";
+import { Home, type HomeProps } from "ui";
+
+interface Props {
+    pageData : HomeProps
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+ 
+  const data: Props = {
+    pageData : {
+      modules: []
+    }
+  };
+
+  return {
+    props: data,
+  };
+};
+
+const HomePage: NextPage<Props> = (props) => {
+  return <Home {...props.pageData} />;
 };
 
 export default HomePage;
