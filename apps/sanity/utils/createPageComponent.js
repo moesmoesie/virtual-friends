@@ -20,7 +20,6 @@ export default ({
         name: "slug",
         title: "Slug",
         validation: isHomePage ? null : (Rule) => slugValidator(Rule),
-        readOnly: true,
         options: {
           isUnique: isUniqueAcrossAllDocuments,
         },
