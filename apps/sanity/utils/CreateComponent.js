@@ -1,3 +1,5 @@
+import { BiAtom } from "react-icons/bi";
+
 export default ({ name, title, fields, props = null }) => {
   return {
     name,
@@ -16,14 +18,13 @@ export default ({ name, title, fields, props = null }) => {
     preview: {
       select: {
         id: "id",
-        flag: "language.flag",
       },
       prepare(selection) {
-        const { id, flag } = selection;
-        const subtitle = id;
+        const { id } = selection;
         return {
-          title: subtitle,
-          media: flag,
+          title: id,
+          subtitle: title,
+          media: BiAtom,
         };
       },
     },

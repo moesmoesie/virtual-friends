@@ -6,12 +6,14 @@ export default ({
   slug,
   fields,
   isHomePage = false,
+  icon = null,
   props = null,
 }) => {
   return {
     name,
     title,
     type: "document",
+    icon,
     i18n: true,
     ...props,
     fields: [
@@ -34,10 +36,9 @@ export default ({
     preview: {
       select: {
         slug: "slug.current",
-        title: "_type",
       },
       prepare(selection) {
-        const { slug, title } = selection;
+        const { slug } = selection;
         return {
           subtitle: slug ? `/${slug}` : "/",
           title,

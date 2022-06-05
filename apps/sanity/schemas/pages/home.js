@@ -1,34 +1,24 @@
 import { AiOutlineHome } from "react-icons/ai";
-import createPageComponent from "../../utils/createPageComponent";
-import { homeModules, generalModules } from "../modules";
+import { createPage } from "../../utils";
+import * as modules from "../modules";
 
-export default createPageComponent({
+export default createPage({
   name: "homePage",
   title: "Home",
   slug: "",
   isHomePage: true,
-  props: {
-    icon: AiOutlineHome,
-  },
+  icon: AiOutlineHome,
   fields: [
     {
       name: "modules",
       title: "Modules",
       type: "array",
-      of: [
-        {
-          type: "reference",
-          to: [
-            ...homeModules.map((el) => {
-              return { type: el.name };
-            }),
-
-            ...generalModules.map((el) => {
-              return { type: el.name };
-            }),
-          ],
-        },
-      ],
+      of: Object.values(modules).map((el) => {
+        return {
+          title: el.title,
+          type: el.name,
+        };
+      }),
     },
   ],
 });

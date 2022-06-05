@@ -1,30 +1,26 @@
-export default ({ name, title, fields, icon = undefined, props = null }) => {
+export default ({
+  name,
+  title,
+  subtitle = "",
+  previewTitle,
+  fields,
+  icon = null,
+  props = null,
+}) => {
   return {
     name,
     title,
-    type: "document",
-    i18n: true,
-    ...props,
-    fields: [
-      {
-        title: "Module Title",
-        name: "module_title",
-        type: "string",
-        validation: (Rule) => Rule.required(),
-      },
-      ...fields,
-    ],
+    type: "object",
     preview: {
-      select: {
-        title: "module_title",
-        lang: "_lang",
-      },
-      prepare({ title, lang }) {
+      prepare() {
         return {
-          title,
-          subtitle: lang,
+          title: previewTitle ?? title,
+          subtitle,
+          media: icon,
         };
       },
     },
+    ...props,
+    fields,
   };
 };

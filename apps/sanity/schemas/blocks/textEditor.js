@@ -1,5 +1,5 @@
 export default {
-  name: "text_editor",
+  name: "textEditor",
   type: "array",
   of: [
     {

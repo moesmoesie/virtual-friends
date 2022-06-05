@@ -1,13 +1,18 @@
 import { createComponent } from "../../utils";
 
 export default createComponent({
-  name: "button",
-  title: "Button",
+  name: "uniqueSellingPoint",
+  title: "Unique Selling Point",
   fields: [
     {
+      name: "title",
+      title: "Title",
       type: "string",
+    },
+    {
       name: "content",
       title: "Content",
+      type: "textEditor",
     },
   ],
 });

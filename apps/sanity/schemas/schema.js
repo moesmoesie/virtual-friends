@@ -14,7 +14,7 @@ import * as components from "./components";
 import * as blocks from "./blocks";
 
 // Import Collections
-import { generalModules, homeModules } from "./modules";
+import * as modules from "./modules";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -23,7 +23,6 @@ export default createSchema({
     ...Object.values(pages),
     ...Object.values(components),
     ...Object.values(blocks),
-    ...generalModules,
-    ...homeModules,
+    ...Object.values(modules),
   ]),
 });
