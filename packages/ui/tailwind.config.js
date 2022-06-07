@@ -1,3 +1,2 @@
-const tailwindConfig = require("config/tailwind.config");
-tailwindConfig.content = ["./src/**/*.{html,js,ts,tsx}"];
+const tailwindConfig = require("config/tailwind/tailwind.config");
 module.exports = tailwindConfig;

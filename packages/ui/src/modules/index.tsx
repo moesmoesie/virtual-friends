@@ -1,65 +1,29 @@
-import HomeAboutModule, {
-  Props as HomeAboutModuleProps,
-} from "./HomeAboutModule";
-import HomeHowWeWorkModule, {
-  Props as HomeHowWeWorkModuleProps,
-} from "./HomeHowWeWorkModule";
-import HomeLandingModule, {
-  Props as HomeLandingModuleProps,
-} from "./HomeLandingModule";
-import HomeOfferModule, {
-  Props as HomeOfferModuleProps,
-} from "./HomeOfferModule";
-import HomeUniqueSellingPointsModule, {
-  Props as HomeUniqueSellingPointsModuleProps,
-} from "./HomeUniqueSellingPointsModule";
-import GeneralContactModule, {
-  Props as GeneralContactModuleProps,
-} from "./GeneralContactModule";
-
 import React from "react";
 
+import HomeAboutModule from "./HomeAboutModule";
+import HomeHowWeWorkModule from "./HomeHowWeWorkModule";
+import HomeLandingModule from "./HomeLandingModule";
+import HomeOfferModule from "./HomeOfferModule";
+import HomeUniqueSellingPointsModule from "./HomeUniqueSellingPointsModule";
+
 export interface ModuleProps {
-  module:
-    | {
-        name: "HomeUniqueSellingPointsModule";
-        data: HomeUniqueSellingPointsModuleProps;
-      }
-    | {
-        name: "HomeAboutModule";
-        data: HomeAboutModuleProps;
-      }
-    | {
-        name: "HomeHowWeWorkModuleModule";
-        data: HomeHowWeWorkModuleProps;
-      }
-    | {
-        name: "HomeLandingModule";
-        data: HomeLandingModuleProps;
-      }
-    | {
-        name: "HomeOfferModule";
-        data: HomeOfferModuleProps;
-      }
-    | {
-        name: "GeneralContactModule";
-        data: HomeOfferModuleProps;
-      };
+  module: any;
 }
 
 export const Module: React.FC<ModuleProps> = ({ module }) => {
-  switch (module.name) {
-    case "HomeAboutModule":
+  console.log(module);
+  switch (module?.type ?? "") {
+    case "homeAboutModule":
       return <HomeAboutModule {...module.data} />;
-    case "HomeHowWeWorkModuleModule":
+    case "homeHowWeWorkModule":
       return <HomeHowWeWorkModule {...module.data} />;
-    case "HomeLandingModule":
+    case "homeLandingModule":
       return <HomeLandingModule {...module.data} />;
-    case "HomeOfferModule":
+    case "homeOffersModule":
       return <HomeOfferModule {...module.data} />;
-    case "HomeUniqueSellingPointsModule":
+    case "homeUniqueSellingPointsModule":
       return <HomeUniqueSellingPointsModule {...module.data} />;
-    case "GeneralContactModule":
-      return <GeneralContactModule {...module.data} />;
+    default:
+      return <div>Module Not Found!</div>;
   }
 };

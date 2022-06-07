@@ -1,24 +1,35 @@
 import type { NextPage, GetStaticProps } from "next";
-import { Home, type HomeProps } from "ui";
+import { Home } from "ui";
+import { getClient } from "../lib/cms/sanity.server";
 
-interface Props {
-    pageData : HomeProps
-}
+const query = `
+  *[_type == 'homePage' && _lang == $lang][0]{
+    'id' : _id,
+    'lang' : _lang,
+    modules[]{
+      'type' : _type,
+      'key' : _key,
+      _type == 'homeLandingModule' => {
+        title,
+        subtitle
+      }
+    }
+  }
+`;
 
 export const getStaticProps: GetStaticProps = async () => {
- 
-  const data: Props = {
-    pageData : {
-      modules: []
-    }
-  };
+  const pageData = await getClient(false).fetch(query, {
+    lang: "en-us",
+  });
 
   return {
-    props: data,
+    props: {
+      pageData,
+    },
   };
 };
 
-const HomePage: NextPage<Props> = (props) => {
+const HomePage: NextPage<PageType> = (props) => {
   return <Home {...props.pageData} />;
 };
 

@@ -2,14 +2,14 @@ import React, { FC } from "react";
 import { Module, ModuleProps } from "../../modules";
 
 export interface HomeProps {
-  modules: [ModuleProps];
+  modules?: ModuleProps[];
 }
 
-const Home: FC<HomeProps> = ({ modules }) => {
+const Home: FC<HomeProps> = ({ modules = [] }) => {
   return (
     <div>
-      {modules.map((el) => {
-        return <Module module={el.module} />;
+      {modules.map((module) => {
+        return <Module module={module} />;
       })}
     </div>
   );
