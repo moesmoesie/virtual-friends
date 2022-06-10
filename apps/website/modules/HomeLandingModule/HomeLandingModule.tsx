@@ -1,18 +1,19 @@
 import { Button } from "ui";
+import { Container } from "ui";
 
 const HomeLandingModule = () => {
   return (
     <>
-      <div>
-        <div className="md:px-16 max-w-6xl bg-DarkPurple/400 px-4 py-4">
+      <div className="w-full bg-DarkPurple/400">
+        <Container className="py-4">
           <a className="body-3 font-bold uppercase text-Teal/500" href="#">
             Virtual Friends
           </a>
-        </div>
+        </Container>
       </div>
 
-      <div className="md:px-16 mt-16 max-w-6xl px-4">
-        <p className="display-1 mb-6 drop-shadow-md">
+      <Container>
+        <p className="display-1 mb-6 mt-16 drop-shadow-md">
           Your friendly guides through the
           <span className="bg-green-purple-gradient flex-nowrap bg-clip-text text-[transparent]">
             &nbsp;virtual world
@@ -23,7 +24,7 @@ const HomeLandingModule = () => {
           production
         </p>
         <Button>Lets Talk!</Button>
-      </div>
+      </Container>
     </>
   );
 };
