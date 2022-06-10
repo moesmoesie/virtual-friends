@@ -14,7 +14,7 @@ const HomeLandingModule = () => {
 
       <Container className="relative overflow-hidden pb-32">
         {/* Background Art */}
-        <div className="absolute -left-1/4 -top-1/4 -z-10 h-full w-[200%]">
+        <div className="absolute -left-1/4 -top-1/4 -z-10 h-full w-[600px]">
           <img src="/assets/bg-art.png" />
         </div>
 
@@ -23,14 +23,14 @@ const HomeLandingModule = () => {
 
         <div className="absolute left-full h-[400px] w-[600px] -translate-y-1/2 -translate-x-1/2 rounded-full bg-PurpleNavy/500 blur-[100px]" />
 
-        <p className="display-1 mb-6 mt-16 drop-shadow-md">
+        <p className="display-1 mb-6 mt-16 max-w-sm drop-shadow-md">
           Your friendly guides through the
           <span className="bg-green-purple-gradient flex-nowrap bg-clip-text text-[transparent]">
             &nbsp;virtual world
           </span>
         </p>
 
-        <p className="body-3 mb-10">
+        <p className="body-3 mb-10 max-w-sm">
           We are a web development agency that can bring your web designs into
           production
         </p>
