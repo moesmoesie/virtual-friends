@@ -1,2 +1,1 @@
-const tailwindConfig = require("config/tailwind/tailwind.config");
-module.exports = tailwindConfig;
+module.exports = require("tw-config/tailwind.config");

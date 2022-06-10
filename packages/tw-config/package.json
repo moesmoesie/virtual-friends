@@ -1,0 +1,7 @@
+{
+  "name": "tw-config",
+  "version": "0.0.0",
+  "peerDependencies": {
+    "tailwindcss": "^3.1.0"
+  }
+}

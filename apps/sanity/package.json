@@ -5,7 +5,7 @@
   "main": "package.json",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "sanity start",
+    "sanity-dev": "sanity start",
     "sanity-deploy": "sanity deploy"
   },
   "dependencies": {

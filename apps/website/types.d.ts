@@ -1,3 +1,0 @@
-interface PageType {
-  pageData: any;
-}
