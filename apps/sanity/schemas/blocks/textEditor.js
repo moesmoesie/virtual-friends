@@ -1,3 +1,5 @@
+import React from "react";
+
 export default {
   name: "textEditor",
   type: "array",
@@ -6,11 +8,12 @@ export default {
       type: "block",
       styles: [
         { title: "Normal", value: "normal" },
+        { title: "Body 2", value: "body-2" },
+        { title: "Body 3", value: "body-3" },
         { title: "H1", value: "h1" },
         { title: "H2", value: "h2" },
         { title: "H3", value: "h3" },
         { title: "H4", value: "h4" },
-        { title: "Quote", value: "blockquote" },
       ],
       lists: [
         { title: "Bullet", value: "bullet" },
@@ -22,6 +25,19 @@ export default {
           { title: "Emphasis", value: "em" },
           { title: "Underline", value: "underline" },
           { title: "Code", value: "code" },
+          {
+            title: "Gradient",
+            value: "gradient",
+            blockEditor: {
+              render: (props) => {
+                return (
+                  <span style={{ backgroundColor: "green" }}>
+                    {props.children}
+                  </span>
+                );
+              },
+            },
+          },
         ],
         annotations: [
           {

@@ -29,10 +29,14 @@
   }
 
   .display-4 {
-    @apply font-display text-[23px] leading-[1.4] medium:text-[35px];
+    @apply font-display text-[23px] font-bold leading-[1.4] medium:text-[35px];
   }
 
   /* Gradients */
+
+  .gradient-text {
+    @apply bg-green-purple-gradient bg-clip-text text-[transparent];
+  }
 
   .bg-green-gradient {
     background: linear-gradient(180deg, #43edbd 0%, #1bb17b 100%);

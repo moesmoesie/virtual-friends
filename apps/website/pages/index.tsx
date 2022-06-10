@@ -1,26 +1,52 @@
 import type { NextPage, GetStaticProps } from "next";
-import HomeLandingModule from "../modules/HomeLandingModule";
-import { Container } from "ui";
+import { Header } from "ui";
+import { Module } from "../modules";
+import { groq } from "next-sanity";
+import { getClient } from "../lib/cms/sanity.server";
+
+const query = groq`
+  *[_type == 'homePage' && _lang == $lang][0]{
+    'modules' : modules[]{
+      'type': _type,
+      'key': _key,
+      _type == 'homeLandingModule' => {
+        title,
+        subtitle,
+        button->{
+          content
+        }
+      },
+      _type == 'homeAboutModule' => {
+        design_content,
+        design_title,
+        develop_title,
+        develop_content
+      }
+    }
+  }
+`;
 
 export const getStaticProps: GetStaticProps = async () => {
+  const parameters = {
+    lang: "en-us",
+  };
+
+  const data = await getClient(false).fetch(query, parameters);
+
   return {
     props: {
-      pageData: {},
+      pageData: data,
     },
   };
 };
 
-const HomePage: NextPage = () => {
+const HomePage: NextPage<{ pageData: any }> = ({ pageData }) => {
   return (
-    <div className="max-w-[100vw] overflow-hidden">
-      <div className=" w-full bg-DarkPurple/400">
-        <Container className="z-50 py-4">
-          <a className="body-3 font-bold uppercase text-Teal/500" href="#">
-            Virtual Friends
-          </a>
-        </Container>
-      </div>
-      <HomeLandingModule />
+    <div>
+      <Header />
+      {pageData.modules.map((module: any) => {
+        return <Module key={module.key} type={module.type} data={module} />;
+      })}
       <div className="h-96 w-full bg-DarkPurple/600 "></div>
     </div>
   );

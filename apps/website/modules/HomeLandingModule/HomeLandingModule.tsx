@@ -1,30 +1,35 @@
 import { Button } from "ui";
 import { Container } from "ui";
+import { RichText } from "../../components";
 
-const HomeLandingModule = () => {
+interface HomeLandingModuleProps {
+  title?: string | any[];
+  subtitle?: string | any[];
+  button?: any;
+}
+
+const HomeLandingModule: React.FC<HomeLandingModuleProps> = ({
+  title = "Placeholder Title",
+  subtitle = "Placeholder Subtitle",
+  button,
+}) => {
   return (
     <>
-      <div className="relative">
-        <Container className="pb-32 medium:pb-48">
-          {/* Start Absolute */}
+      <div className="relative overflow-hidden">
+        <Container className="pb-32 medium:pb-48 large:min-h-[37rem]">
           <TopGradient />
           <BottomGradient />
           <BackgroundArt />
 
-          {/* End Absolute */}
+          <div className="mb-6 mt-16 max-w-[350px] small:max-w-[500px] medium:mb-11 medium:mt-24 medium:max-w-xl">
+            <RichText content={title} />
+          </div>
 
-          <p className="display-1 mb-6 mt-16 max-w-sm drop-shadow-md medium:mb-11 medium:mt-24 medium:max-w-2xl">
-            Your friendly guides through the
-            <span className="bg-green-purple-gradient flex-nowrap bg-clip-text text-[transparent]">
-              &nbsp;virtual world
-            </span>
-          </p>
+          <div className="mb-10 max-w-sm medium:mb-12 medium:max-w-2xl">
+            <RichText content={subtitle} />
+          </div>
 
-          <p className="body-3 mb-10 max-w-sm medium:mb-12 medium:max-w-2xl">
-            We are a web development agency that can bring your web designs into
-            production
-          </p>
-          <Button>Lets Talk!</Button>
+          {button !== undefined ? <Button>{button?.content}</Button> : <></>}
         </Container>
       </div>
     </>
@@ -41,7 +46,7 @@ const BackgroundArt = () => {
 
 const TopGradient = () => {
   return (
-    <div className="bg-purple-gradient absolute left-1/2 top-full -z-30 h-96 w-[200%] -translate-y-1/4 -translate-x-1/2 overflow-hidden rounded-full opacity-70 blur-[60px] " />
+    <div className="bg-purple-gradient absolute left-1/2 top-full -z-30 h-96 w-[200%] -translate-y-1/4 -translate-x-1/2 overflow-hidden rounded-full opacity-70 blur-[180px] " />
   );
 };
 
