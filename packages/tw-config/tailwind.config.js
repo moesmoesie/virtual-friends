@@ -10,8 +10,9 @@ module.exports = {
       body: ["Roboto"],
     },
     screens: {
+      small: "450px",
       medium: "768px",
-      large: "1440px",
+      large: "1280px",
     },
     colors: {
       white: "#ffffff",
