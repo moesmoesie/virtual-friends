@@ -1,10 +1,18 @@
 import React, { FC } from "react";
 import { ButtonProps } from "./Button.types";
 
-const Button: FC<ButtonProps> = ({ text, ...props }) => {
+const Button: FC<ButtonProps> = ({ children, type = "default" }) => {
+  if (type == "accent") {
+    return (
+      <button className="body-3 bg-green-gradient rounded-md p-3 px-8 shadow-CardShadowMedium">
+        {children}
+      </button>
+    );
+  }
+
   return (
-    <button className="rounded-md bg-blue-300 p-4 text-3xl" {...props}>
-      {text} hello
+    <button className="body-3 bg-green-gradient rounded-md p-3 px-8 shadow-CardShadowMedium">
+      {children}
     </button>
   );
 };

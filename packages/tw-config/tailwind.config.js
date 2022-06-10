@@ -2,6 +2,7 @@ module.exports = {
   content: [
     "../../packages/ui/**/*.{html,js,ts,tsx}",
     "./modules/**/*.{html,js,ts,tsx}",
+    "./pages/**/*.{html,js,ts,tsx}",
   ],
   theme: {
     fontFamily: {

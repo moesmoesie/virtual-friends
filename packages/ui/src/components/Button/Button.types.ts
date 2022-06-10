@@ -1,3 +1,4 @@
 export interface ButtonProps {
-  text: string;
+  children: JSX.Element | string;
+  type?: "default" | "accent";
 }

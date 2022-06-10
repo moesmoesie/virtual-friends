@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* inter-regular - latin */
 @font-face {
   font-family: "Inter";
