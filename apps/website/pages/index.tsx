@@ -37,6 +37,13 @@ const query = groq`
           'body' : content,
           keywords
         }
+      },
+      _type == 'homeUniqueSellingPointsModule' => {
+        title,
+        uniqueSellingPoints[] -> {
+          title,
+          'body' : content,
+        }
       }
     }
   }
