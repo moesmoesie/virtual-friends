@@ -1,8 +1,9 @@
 import HomeLandingModule from "../HomeLandingModule";
 import HomeAboutModule from "../HomeAboutModule";
+import HomeHowWeWorkModule from "../HomeHowWeWorkModule";
 
 interface ModuleProps {
-  type: "homeLandingModule" | "homeAboutModule";
+  type: "homeLandingModule" | "homeAboutModule" | "homeHowWeWorkModule";
   data: any;
 }
 
@@ -12,6 +13,8 @@ const Module: React.FC<ModuleProps> = ({ type, data }) => {
       return <HomeLandingModule {...data} />;
     case "homeAboutModule":
       return <HomeAboutModule {...data} />;
+    case "homeHowWeWorkModule":
+      return <HomeHowWeWorkModule {...data} />;
     default:
       return <div>Module not Found!</div>;
   }

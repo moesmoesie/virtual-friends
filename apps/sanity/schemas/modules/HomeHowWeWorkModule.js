@@ -17,7 +17,7 @@ export default createModule({
     {
       name: "content",
       title: "Content",
-      type: "textEditor",
+      type: "text",
     },
     {
       name: "steps",

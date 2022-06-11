@@ -12,7 +12,7 @@ export default createComponent({
     {
       name: "content",
       title: "Content",
-      type: "textEditor",
+      type: "text",
     },
   ],
 });

@@ -21,6 +21,14 @@ const query = groq`
         design_title,
         develop_title,
         develop_content
+      },
+      _type == 'homeHowWeWorkModule' => {
+        title,
+        'body': content,
+        steps[]->{
+          'body': content,
+          title
+        }
       }
     }
   }
@@ -32,7 +40,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 
   const data = await getClient(false).fetch(query, parameters);
-
+  console.log(data);
   return {
     props: {
       pageData: data,
