@@ -29,6 +29,14 @@ const query = groq`
           'body': content,
           title
         }
+      },
+      _type == 'homeOffersModule' => {
+        title,
+        offers[] {
+          title,
+          'body' : content,
+          keywords
+        }
       }
     }
   }
