@@ -15,6 +15,7 @@ const components: PortableTextComponents = {
     gradient: ({ children }) => (
       <span className="gradient-text">{children}</span>
     ),
+    bold: ({ children }) => <span className="font-bold">{children}</span>,
   },
 };
 
