@@ -18,7 +18,7 @@ const HomeOffersModule: React.FC<HomeOffersModuleProps> = ({
   offers = [],
 }) => {
   return (
-    <Container className="mb-96">
+    <Container className="mb-36">
       <h2 className="display-1 gradient-text mb-6 inline-block medium:mb-11">
         {title}
       </h2>
@@ -72,7 +72,7 @@ const Offer: React.FC<OfferProps> = ({
           })}
         </div>
       </div>
-      <div className="h-96 flex-1" />
+      <div className="hidden h-96 flex-1 large:block" />
     </div>
   );
 };
