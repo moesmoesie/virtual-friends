@@ -1,5 +1,5 @@
 import type { NextPage, GetStaticProps } from "next";
-import { Header } from "ui";
+import { Header, Footer } from "ui";
 import { Module } from "../modules";
 import { groq } from "next-sanity";
 import { getClient } from "../lib/cms/sanity.server";
@@ -70,7 +70,8 @@ const HomePage: NextPage<{ pageData: any }> = ({ pageData }) => {
       {pageData.modules.map((module: any) => {
         return <Module key={module.key} type={module.type} data={module} />;
       })}
-      <div className="h-96 w-full bg-DarkPurple/600 "></div>
+      <div className="mt-12 h-[50rem] w-full bg-DarkPurple/600" />
+      <Footer />
     </div>
   );
 };
