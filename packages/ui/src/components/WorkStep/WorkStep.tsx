@@ -1,5 +1,5 @@
 import React from "react";
-
+import Card from "../Card";
 interface WorkStepProps {
   title: string;
   body: string;
@@ -16,10 +16,12 @@ const WorkStep: React.FC<WorkStepProps> = ({ title, body, varient }) => {
     );
   } else {
     return (
-      <div className="flex h-[250px] flex-col items-center justify-center rounded-[10px] bg-DarkPurple/100 px-5">
-        <h3 className="body-3 mb-3 text-center font-bold">{title}</h3>
-        <p className="body-1 text-center">{body}</p>
-      </div>
+      <Card>
+        <div className="flex h-[250px] flex-col items-center justify-center px-5">
+          <h3 className="body-3 mb-3 text-center font-bold">{title}</h3>
+          <p className="body-1 text-center">{body}</p>
+        </div>
+      </Card>
     );
   }
 };
