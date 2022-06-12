@@ -19,8 +19,19 @@ export default createModule({
       type: "array",
       of: [
         {
-          type: "reference",
-          to: [{ type: "uniqueSellingPoint" }],
+          type: "object",
+          fields: [
+            {
+              name: "title",
+              title: "Title",
+              type: "string",
+            },
+            {
+              name: "body",
+              title: "Body",
+              type: "text",
+            },
+          ],
         },
       ],
     },
