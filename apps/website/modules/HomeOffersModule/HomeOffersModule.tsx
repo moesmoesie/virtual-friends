@@ -2,8 +2,6 @@ import React from "react";
 import { Container } from "ui";
 import { RichText } from "../../components";
 
-interface OfferProp {}
-
 interface HomeOffersModuleProps {
   title: string;
   offers: {
@@ -26,6 +24,7 @@ const HomeOffersModule: React.FC<HomeOffersModuleProps> = ({
         {offers.map((el, index) => {
           return (
             <Offer
+              key={index}
               reverse={index % 2 == 0}
               keywords={el.keywords}
               title={el.title}
