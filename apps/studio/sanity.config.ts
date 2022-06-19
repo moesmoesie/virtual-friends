@@ -1,6 +1,7 @@
 import { createConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 import { schemaTypes } from "./schemas";
+import "tw-config/shared-styles.css";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";

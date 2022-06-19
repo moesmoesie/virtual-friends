@@ -1,5 +1,5 @@
-import React from "react";
 import { defineType } from "sanity";
+import { GradientText, GradientEditorIcon } from "../../components";
 
 export default defineType({
   title: "Text Editor",
@@ -31,13 +31,8 @@ export default defineType({
             title: "Gradient",
             value: "gradient",
             blockEditor: {
-              render: (props: any) => {
-                return (
-                  <span style={{ backgroundColor: "green" }}>
-                    {props.children}
-                  </span>
-                );
-              },
+              icon: GradientEditorIcon,
+              render: GradientText,
             },
           },
         ],
