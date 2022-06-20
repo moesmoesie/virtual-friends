@@ -1,4 +1,4 @@
-import { Container, InfoCard } from "ui";
+import { Container, InfoCard, BlurredRadialGradient } from "ui";
 import { RichText } from "../../components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core";
@@ -62,7 +62,9 @@ const BottomGradient = () => {
 
 const CenterGradient = () => {
   return (
-    <div className="bg-green-gradient absolute left-1/2 top-1/2 -z-40 h-[30rem] w-[30rem] -translate-y-1/2 -translate-x-1/2  rounded-full opacity-20 blur-[50px] " />
+    <div className="absolute left-1/2 top-1/2 -z-40 h-[30rem] w-[30rem] -translate-y-1/2 -translate-x-1/2 text-Teal/500 ">
+      <BlurredRadialGradient />
+    </div>
   );
 };
 

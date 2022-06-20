@@ -5,3 +5,4 @@ export { default as InfoCard } from "./InfoCard";
 export { default as Footer } from "./Footer";
 export { default as Card } from "./Card";
 export { default as CompanyCard } from "./CompanyCard";
+export { default as BlurredRadialGradient } from "./BlurredRadialGradient";
