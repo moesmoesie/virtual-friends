@@ -6,3 +6,4 @@ export { default as Footer } from "./Footer";
 export { default as Card } from "./Card";
 export { default as CompanyCard } from "./CompanyCard";
 export { default as BlurredRadialGradient } from "./BlurredRadialGradient";
+export { default as Product } from "./Product";

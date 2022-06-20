@@ -1,6 +1,8 @@
 import React from "react";
-import { Container } from "ui";
+import { Container, Product, Button } from "ui";
 import { RichText } from "../../components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Ecommerce from "./Ecommerce";
 
 interface HomeOffersModuleProps {
   title: string;
@@ -71,7 +73,7 @@ const Offer: React.FC<OfferProps> = ({
           })}
         </div>
       </div>
-      <div className="hidden h-96 flex-1 large:block" />
+      <Ecommerce />
     </div>
   );
 };
