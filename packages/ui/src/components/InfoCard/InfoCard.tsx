@@ -3,14 +3,15 @@ import Card from "../Card";
 interface InfoCardProps {
   title: string;
   body: string;
+  icon: JSX.Element;
 }
 
-const InfoCard: React.FC<InfoCardProps> = ({ title, body }) => {
+const InfoCard: React.FC<InfoCardProps> = ({ title, body, icon }) => {
   return (
     <Card>
       <div className="p-5">
         <div className="mb-3 flex items-center gap-5 large:flex-col large:items-center">
-          <Icon />
+          {icon}
           <span className="body-3 text-2xl font-bold medium:text-3xl">
             {title}
           </span>
@@ -18,12 +19,6 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, body }) => {
         <p className="body-2 min-h-[4rem] large:text-center">{body}</p>
       </div>
     </Card>
-  );
-};
-
-const Icon = () => {
-  return (
-    <div className="h-6 w-6 rounded-full bg-Teal/500 large:h-12 large:w-12" />
   );
 };
 

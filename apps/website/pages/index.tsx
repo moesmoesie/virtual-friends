@@ -43,6 +43,10 @@ const query = groq`
         uniqueSellingPoints[] {
           title,
           body,
+          icon {
+            iconName,
+            prefix
+          }
         }
       }
     }
