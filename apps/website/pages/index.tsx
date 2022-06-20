@@ -48,6 +48,9 @@ const query = groq`
             prefix
           }
         }
+      },
+      _type == 'contactModule' => {
+        title
       }
     }
   }
@@ -74,7 +77,6 @@ const HomePage: NextPage<{ pageData: any }> = ({ pageData }) => {
       {pageData.modules.map((module: any) => {
         return <Module key={module.key} type={module.type} data={module} />;
       })}
-      <div className="mt-12 h-[50rem] w-full bg-DarkPurple/600" />
       <Footer />
     </div>
   );

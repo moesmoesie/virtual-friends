@@ -3,13 +3,17 @@ import HomeAboutModule from "../HomeAboutModule";
 import HomeHowWeWorkModule from "../HomeHowWeWorkModule";
 import HomeOffersModule from "../HomeOffersModule";
 import HomeUniqueSellingPointsModule from "../HomeUniqueSellingPointsModule";
+import GeneralContactModule from "../GeneralContactModule";
+
 interface ModuleProps {
   type:
     | "homeLandingModule"
     | "homeAboutModule"
     | "homeHowWeWorkModule"
     | "homeOffersModule"
-    | "homeUniqueSellingPointsModule";
+    | "homeUniqueSellingPointsModule"
+    | "contactModule";
+
   data: any;
 }
 
@@ -25,6 +29,8 @@ const Module: React.FC<ModuleProps> = ({ type, data }) => {
       return <HomeOffersModule {...data} />;
     case "homeUniqueSellingPointsModule":
       return <HomeUniqueSellingPointsModule {...data} />;
+    case "contactModule":
+      return <GeneralContactModule {...data} />;
     default:
       return <div>Module not Found!</div>;
   }

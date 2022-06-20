@@ -4,3 +4,4 @@ export { default as WorkStep } from "./WorkStep";
 export { default as InfoCard } from "./InfoCard";
 export { default as Footer } from "./Footer";
 export { default as Card } from "./Card";
+export { default as CompanyCard } from "./CompanyCard";

@@ -18,33 +18,39 @@ const HomeUniqueSellingPointsModule: React.FC<
   HomeUniqueSellingPointsModule
 > = ({ title, uniqueSellingPoints = [] }) => {
   return (
-    <Container className="relative">
-      {title !== undefined ? (
-        <h2 className="display-1 gradient-text">{title}</h2>
-      ) : (
-        <></>
-      )}
-
-      <div className="grid grid-cols-1 gap-3 medium:grid-cols-2 large:grid-cols-3 large:gap-5">
-        {uniqueSellingPoints.map((el, index) => {
-          return (
-            <InfoCard
-              key={index}
-              body={el.body}
-              title={el.title}
-              icon={
-                <FontAwesomeIcon
-                  className="text-[24px] text-Teal/500 large:text-[58px]"
-                  icon={el.icon.iconName}
-                />
-              }
-            />
-          );
-        })}
-      </div>
+    <div className="relative">
       <CenterGradient />
-      <BottomGradient />
-    </Container>
+
+      <div className="relative overflow-hidden">
+        <BottomGradient />
+
+        <Container className="relative pb-12">
+          {title !== undefined ? (
+            <h2 className="display-1 gradient-text">{title}</h2>
+          ) : (
+            <></>
+          )}
+
+          <div className="grid grid-cols-1 gap-3 medium:grid-cols-2 large:grid-cols-3 large:gap-5">
+            {uniqueSellingPoints.map((el, index) => {
+              return (
+                <InfoCard
+                  key={index}
+                  body={el.body}
+                  title={el.title}
+                  icon={
+                    <FontAwesomeIcon
+                      className="text-[24px] text-Teal/500 large:text-[58px]"
+                      icon={el.icon.iconName}
+                    />
+                  }
+                />
+              );
+            })}
+          </div>
+        </Container>
+      </div>
+    </div>
   );
 };
 
