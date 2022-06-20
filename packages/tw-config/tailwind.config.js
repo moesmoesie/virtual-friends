@@ -6,6 +6,14 @@ module.exports = {
     "./components/**/*.{html,js,ts,tsx}",
   ],
   theme: {
+    extends: {
+      boxShadow: {
+        ShadowGreen: "0 14px 32px rgba(64, 201, 162, 0.20000000298023224)",
+        ShadowPurple: "0 14px 32px rgba(121, 71, 247, 0.10000000149011612)",
+        CardShadowSmall: "0 14px 32px rgba(0, 0, 0, 0.10000000149011612)",
+        CardShadowMedium: "0 32px 44px rgba(0, 0, 0, 0.25)",
+      },
+    },
     fontFamily: {
       display: ["Inter"],
       body: ["Roboto"],
@@ -59,12 +67,6 @@ module.exports = {
       "DarkPurple/300": "#453f5a",
       "DarkPurple/200": "#504a69",
       "DarkPurple/100": "#564f71",
-    },
-    boxShadow: {
-      ShadowGreen: "0 14px 32px rgba(64, 201, 162, 0.20000000298023224)",
-      ShadowPurple: "0 14px 32px rgba(121, 71, 247, 0.10000000149011612)",
-      CardShadowSmall: "0 14px 32px rgba(0, 0, 0, 0.10000000149011612)",
-      CardShadowMedium: "0 32px 44px rgba(0, 0, 0, 0.25)",
     },
   },
   plugins: [],

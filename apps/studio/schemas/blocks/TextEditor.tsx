@@ -1,5 +1,10 @@
 import { defineType } from "sanity";
-import { GradientText, GradientEditorIcon } from "../../components";
+import {
+  GradientText,
+  GradientEditorIcon,
+  FontAwesomeEditorText,
+  FontAwesomeEditorIcon,
+} from "../../components";
 
 export default defineType({
   title: "Text Editor",
@@ -27,6 +32,15 @@ export default defineType({
           { title: "Emphasis", value: "em" },
           { title: "Underline", value: "underline" },
           { title: "Code", value: "code" },
+          {
+            title: "Font Awesome",
+            value: "font-awesome",
+            // @ts-ignore
+            blockEditor: {
+              icon: FontAwesomeEditorIcon,
+              render: FontAwesomeEditorText,
+            },
+          },
           {
             title: "Gradient",
             value: "gradient",
