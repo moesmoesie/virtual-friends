@@ -16,7 +16,7 @@ const HomeLandingModule: React.FC<HomeLandingModuleProps> = ({
   return (
     <>
       <div className="relative overflow-hidden">
-        <Container className="pb-32 medium:pb-48 large:min-h-[37rem]">
+        <Container className="pb-32 medium:pb-48 large:min-h-[50rem]">
           <BackgroundArt />
 
           <div className="mb-6 mt-16 max-w-[350px] small:max-w-[500px] medium:mb-11 medium:mt-24 medium:max-w-xl">
