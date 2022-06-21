@@ -49,8 +49,6 @@ const HomeAboutModule: React.FC<HomeAboutModuleProps> = ({
             </Card>
           </div>
         </div>
-
-        <Gradient />
       </div>
 
       {/* Small Medium */}
@@ -73,12 +71,6 @@ const HomeAboutModule: React.FC<HomeAboutModuleProps> = ({
         </div>
       </div>
     </Container>
-  );
-};
-
-const Gradient = () => {
-  return (
-    <div className="absolute left-1/2 top-3/4 -z-30 h-[35rem] w-[35rem] -translate-y-1/3 -translate-x-1/2 overflow-hidden rounded-full bg-PurpleNavy/500 opacity-70 blur-[80px] " />
   );
 };
 
