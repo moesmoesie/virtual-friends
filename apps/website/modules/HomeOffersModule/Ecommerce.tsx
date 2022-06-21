@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Product, Button } from "ui";
+import { Product, Button, Receipt } from "ui";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const products = [
@@ -39,8 +39,13 @@ const products = [
 
 const Ecommerce: React.FC = () => {
   return (
-    <div className="hidden h-96 flex-1 large:block">
-      <ProductCard />
+    <div className="hidden flex-1 grid-cols-[min-content,min-content] gap-7 large:grid">
+      <div className="pt-3">
+        <ProductCard />
+      </div>
+      <div>
+        <Receipt products={products.slice(0, 3)} />
+      </div>
     </div>
   );
 };

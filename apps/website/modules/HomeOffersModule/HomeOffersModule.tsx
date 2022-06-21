@@ -59,7 +59,7 @@ const Offer: React.FC<OfferProps> = ({
         reverse ? "large:flex-row-reverse" : ""
       } large: items-center large:gap-12`}
     >
-      <div className="flex-[1.2]">
+      <div className="flex-[1]">
         {/* Title */}
         <h3 className="display-3 mb-4"> {title}</h3>
 
