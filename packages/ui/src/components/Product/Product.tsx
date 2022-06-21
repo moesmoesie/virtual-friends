@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Button from "../Button";
-
+import { motion } from "framer-motion";
 interface ProductPorps {
   products?: {
     id: string;
@@ -39,16 +39,40 @@ const Product: React.FC<ProductPorps> = ({
 
       {/* Body */}
 
-      <div className="flex flex-col items-center">
-        <div className="grid h-44 w-full place-items-center rounded-lg bg-DarkPurple/500">
-          <img src={currentProduct?.image} />
+      <div className="flex flex-col items-center overflow-hidden">
+        <div className="relative flex w-full">
+          <div className="relative flex w-full flex-col items-center">
+            <motion.div
+              transition={{
+                ease: "easeIn",
+                duration: 0.3,
+              }}
+              animate={{
+                x: `-${
+                  100 * products!.findIndex((el) => el.id === currentProductId)
+                }%`,
+              }}
+              className="flex translate-x-[-100%]"
+            >
+              {products?.map((e, index) => {
+                return (
+                  <div className="flex w-full shrink-0 flex-col items-center">
+                    <div className="grid h-44 w-full place-items-center rounded-lg bg-DarkPurple/500">
+                      <img src={e?.image} />
+                    </div>
+
+                    <span className="body-3 pt-4 text-[18px] font-bold ">
+                      {e?.title}
+                    </span>
+                    <span className="body-3 mb-4 text-[28px] font-bold">
+                      {e?.price}
+                    </span>
+                  </div>
+                );
+              })}
+            </motion.div>
+          </div>
         </div>
-        <span className="body-3 pt-4 text-[18px] font-bold ">
-          {currentProduct?.title}
-        </span>
-        <span className="body-3 mb-4 text-[28px] font-bold">
-          {currentProduct?.price}
-        </span>
 
         <div className="mb-2 flex items-center gap-2">
           <span className="body-1 text-Grey/200">Colors</span>
