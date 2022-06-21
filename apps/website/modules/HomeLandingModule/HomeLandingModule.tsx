@@ -29,7 +29,15 @@ const HomeLandingModule: React.FC<HomeLandingModuleProps> = ({
             <RichText content={subtitle} />
           </div>
 
-          {button !== undefined ? <Button>{button?.content}</Button> : <></>}
+          {button !== undefined ? (
+            <Button>
+              <span className="body-3 inline-block px-8 py-3">
+                {button?.content}
+              </span>
+            </Button>
+          ) : (
+            <></>
+          )}
         </Container>
       </div>
     </>
