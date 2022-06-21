@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, WorkStep } from "ui";
+import { motion } from "framer-motion";
 
 type step = {
   title: string;
@@ -42,7 +43,10 @@ const HomeHowWeWorkModule: React.FC<HomeHowWeWorkModuleProps> = ({
       {/* Larger Screen */}
       <div className="mt-14 hidden gap-4 large:flex">
         <div className="relative flex gap-5">
-          <div className=" bg-green-purple-gradient absolute top-[16%] h-1 w-full rounded-xl" />
+          <div className="absolute top-6 h-1 w-full">
+            <TrackBar itemCount={5} />
+          </div>
+
           {steps.map((el, index) => {
             return (
               <WorkStep
@@ -56,6 +60,38 @@ const HomeHowWeWorkModule: React.FC<HomeHowWeWorkModuleProps> = ({
         </div>
       </div>
     </Container>
+  );
+};
+
+const TrackBar: React.FC<{ itemCount: number }> = ({ itemCount }) => {
+  const currentPercentage = 50;
+  return (
+    <svg width="100%" height={"40px"}>
+      <defs>
+        <linearGradient id="0" x1="0" y1="0.5" x2="1" y2="0.5">
+          <stop offset="0%" stop-color="#927cff" />
+          <stop offset={`${currentPercentage - 30}%`} stop-color="#927cff" />
+          <stop offset={`${currentPercentage - 12} %`} stop-color="#40c9a2" />
+          <stop offset={`${currentPercentage}%`} stop-color="#40c9a2" />
+          <stop offset={`${currentPercentage + 12}%`} stop-color="#40c9a2" />
+          <stop offset={`${currentPercentage + 30}%`} stop-color="#927cff" />
+          <stop offset="100%" stop-color="#927cff" />
+        </linearGradient>
+      </defs>
+
+      <clipPath id="myClip">
+        <rect width="100%" y="10" className="h-2" />
+        <circle cx="10%" cy="12.5" r="12.5" />
+        <circle cx="30%" cy="12.5" r="12.5" />
+        <circle cx="50%" cy="12.5" r="12.5" />
+        <circle cx="70%" cy="12.5" r="12.5" />
+        <circle cx="90%" cy="12.5" r="12.5" />
+      </clipPath>
+
+      <g clipPath="url(#myClip)">
+        <rect width="100%" y="0" fill="url(#0)" className="h-10" />
+      </g>
+    </svg>
   );
 };
 
