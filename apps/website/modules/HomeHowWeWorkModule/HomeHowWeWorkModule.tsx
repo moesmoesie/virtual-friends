@@ -43,7 +43,7 @@ const HomeHowWeWorkModule: React.FC<HomeHowWeWorkModuleProps> = ({
       {/* Larger Screen */}
       <div className="mt-14 hidden gap-4 large:flex">
         <div className="relative flex gap-5">
-          <div className="absolute top-6 h-1 w-full">
+          <div className="absolute top-6 z-50 h-1 w-full">
             <TrackBar itemCount={5} />
           </div>
 
