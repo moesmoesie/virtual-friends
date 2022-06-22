@@ -3,6 +3,7 @@ import { Container, Product, Button } from "ui";
 import { RichText } from "../../components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Ecommerce from "./Ecommerce";
+import Company from "./Company";
 
 interface HomeOffersModuleProps {
   title: string;
@@ -73,7 +74,7 @@ const Offer: React.FC<OfferProps> = ({
           })}
         </div>
       </div>
-      <Ecommerce />
+      <Company />
     </div>
   );
 };
