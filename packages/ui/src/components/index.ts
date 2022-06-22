@@ -10,3 +10,4 @@ export { default as Product } from "./Product";
 export { default as Receipt } from "./Receipt";
 export { default as IconButton } from "./IconButton";
 export { default as ReviewCard } from "./ReviewCard";
+export { default as EmployeeCard } from "./EmployeeCard";
