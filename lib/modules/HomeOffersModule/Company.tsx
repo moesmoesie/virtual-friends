@@ -38,6 +38,9 @@ const Company: React.FC = () => {
           phone: "+31634XXX366",
           position: "A Virtual Foe",
           image: "/assets/employee2.png",
+          github: "hello",
+          linkedin: "asda",
+          mail: "asda",
         }}
       />
     </div>

@@ -73,7 +73,7 @@ const Offer: React.FC<OfferProps> = ({
           })}
         </div>
       </div>
-      <Ecommerce />
+      <Company />
     </div>
   );
 };

@@ -4,5 +4,8 @@ export interface EmployeeCardProps {
     position: string;
     phone: string;
     image: string;
+    github?: string;
+    mail?: string;
+    linkedin?: string;
   };
 }
