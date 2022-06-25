@@ -17,3 +17,6 @@ export { default as ContactForm } from "./ContactForm";
 export { default as AssetCard } from "./AssetCard";
 export { default as AssetBarChartCard } from "./AssetBarChartCard";
 export { default as AssetLineChartCard } from "./AssetLineChartCard";
+export { default as UploadImageCard } from "./UploadImageCard";
+export { default as Picker } from "./Picker";
+export { default as TextEditor } from "./TextEditor";

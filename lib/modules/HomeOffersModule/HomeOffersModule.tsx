@@ -3,6 +3,7 @@ import { Container } from "../../components";
 import { RichText } from "../../components";
 import Company from "./Company";
 import Ecommerce from "./Ecommerce";
+import ContentMangementSystem from "./ContentMangementSystem";
 import ProgressiveWebApp from "./ProgressiveWebApp";
 
 interface HomeOffersModuleProps {
@@ -75,7 +76,7 @@ const Offer: React.FC<OfferProps> = ({
         </div>
       </div>
       <div className="hidden large:block">
-        <ProgressiveWebApp />
+        <ContentMangementSystem />
       </div>
     </div>
   );
