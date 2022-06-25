@@ -12,6 +12,7 @@ interface HomeOffersModuleProps {
     title: string;
     body: string | object[];
     keywords: string[];
+    type: string;
   }[];
 }
 
@@ -28,6 +29,7 @@ const HomeOffersModule: React.FC<HomeOffersModuleProps> = ({
         {offers.map((el, index) => {
           return (
             <Offer
+              type={el.type}
               key={index}
               reverse={index % 2 == 0}
               keywords={el.keywords}
@@ -47,6 +49,7 @@ interface OfferProps {
   children: string | JSX.Element;
   keywords: string[];
   reverse: boolean;
+  type: string;
 }
 
 const Offer: React.FC<OfferProps> = ({
@@ -54,7 +57,9 @@ const Offer: React.FC<OfferProps> = ({
   children,
   keywords,
   reverse = false,
+  type,
 }) => {
+  console.log(type);
   return (
     <div
       className={`large:flex ${
@@ -76,7 +81,10 @@ const Offer: React.FC<OfferProps> = ({
         </div>
       </div>
       <div className="hidden large:block">
-        <ContentMangementSystem />
+        {type === "cms" ? <ContentMangementSystem /> : null}
+        {type === "pwa" ? <ProgressiveWebApp /> : null}
+        {type === "ecommerce" ? <Ecommerce /> : null}
+        {type === "company" ? <Company /> : null}
       </div>
     </div>
   );

@@ -33,6 +33,7 @@ const query = groq`
       _type == 'homeOffersModule' => {
         title,
         offers[] {
+          type,
           title,
           'body' : content,
           keywords

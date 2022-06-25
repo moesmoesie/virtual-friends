@@ -26,6 +26,14 @@ export default defineType({
               type: "string",
             },
             {
+              name: "type",
+              type: "string",
+              title: "Type",
+              options: {
+                list: ["cms", "company", "ecommerce", "pwa"],
+              },
+            },
+            {
               name: "content",
               title: "Content",
               type: "textEditor",

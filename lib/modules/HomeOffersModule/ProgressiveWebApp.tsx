@@ -3,11 +3,15 @@ import {
   AssetCard,
   AssetBarChartCard,
   AssetLineChartCard,
+  BlurredRadialGradient,
 } from "../../components";
 
 const ProgressiveWebApp: React.FC = () => {
   return (
-    <div className="grid gap-5 grid-rows-[min-content,min-content] grid-cols-[min-content,min-content,min-content]">
+    <div className="grid relative gap-5 grid-rows-[min-content,min-content] grid-cols-[min-content,min-content,min-content]">
+      <div className="absolute left-1/2 top-1/2 -z-50 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 text-PurpleNavy/500">
+        <BlurredRadialGradient />
+      </div>
       <div className="-translate-y-0">
         <AssetCard />
       </div>
