@@ -8,7 +8,7 @@ const Button: FC<ButtonProps> = ({ children, type = "default" }) => {
         className="bg-purple-gradient shadow-CardShadowMedium rounded-md"
         style={{
           boxShadow:
-            "0px 4px 5px rgba(121, 71, 247, 0.3), 0px 9px 10px rgba(121, 71, 247, 0.2), 0px 14px 32px rgba(121, 71, 247, 0.1);",
+            "0px 4px 5px rgba(121, 71, 247, 0.3), 0px 9px 10px rgba(121, 71, 247, 0.2), 0px 14px 32px rgba(121, 71, 247, 0.1)",
         }}
       >
         {children}

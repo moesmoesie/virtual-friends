@@ -1,18 +1,12 @@
 import React from "react";
 import Card from "../Card";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 interface CompanyCardProps {
   className?: string;
   type: "horizontal" | "verticle";
-  phoneIcon: JSX.Element;
-  mailIcon: JSX.Element;
 }
 
-const CompanyCard: React.FC<CompanyCardProps> = ({
-  type = "horizontal",
-  phoneIcon,
-  mailIcon,
-}) => {
+const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
   return (
     <div className="flex">
       <Card>
@@ -39,12 +33,16 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
               </div>
               <div className="flex justify-between">
                 <p className="body-2 flex-1">
-                  <span className="mr-2">{phoneIcon}</span>
+                  <span className="mr-2 text-Teal/500">
+                    {<FontAwesomeIcon icon={"phone"} />}
+                  </span>
                   <span>+31612818127</span> <br />
                 </p>
 
                 <p className="body-2 flex-1 ">
-                  <span className="mr-2">{mailIcon}</span>
+                  <span className="mr-2 text-Teal/500">
+                    <FontAwesomeIcon icon={"envelope"} />
+                  </span>
                   <span className="ml-1">mndarwesh@virtualfriends.dev</span>
                 </p>
               </div>
@@ -59,9 +57,13 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
                 </p>
 
                 <p className="body-2 mb-4">
-                  <span className="mr-2">{phoneIcon}</span>
+                  <span className="mr-2 text-Teal/500">
+                    <FontAwesomeIcon icon={"phone"} />
+                  </span>
                   <span>+31612818127</span> <br />
-                  <span className="mr-2">{mailIcon}</span>
+                  <span className="mr-2 text-Teal/500">
+                    <FontAwesomeIcon icon={"envelope"} />
+                  </span>
                   <span className="ml-1">mndarwesh@virtualfriends.dev</span>
                 </p>
 

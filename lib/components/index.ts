@@ -13,3 +13,4 @@ export { default as ReviewCard } from "./ReviewCard";
 export { default as EmployeeCard } from "./EmployeeCard";
 export { default as Container } from "./Container";
 export { default as RichText } from "./RichText";
+export { default as ContactForm } from "./ContactForm";
