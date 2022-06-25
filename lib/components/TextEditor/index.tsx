@@ -26,15 +26,12 @@ const TextEditor: React.FC = () => {
             <span className="body-1 text-Grey/200">#003232</span>
           </div>
         </div>
-        <div className="p-2 h-full overflow-y-scroll">
+        <div className="pl-2 pt-2 pb-2 h-full">
           <textarea
+            defaultValue={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit blandit diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit`}
             spellCheck={false}
             className="w-full focus:outline-none resize-none h-full bg-[transparent]"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor
-            blandit diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit
-            blandit diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit
-          </textarea>
+          />
         </div>
       </div>
     </div>
