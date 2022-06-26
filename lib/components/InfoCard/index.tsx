@@ -1,10 +1,6 @@
 import React from "react";
 import Card from "../Card";
-interface InfoCardProps {
-  title: string;
-  body: string;
-  icon: JSX.Element;
-}
+import { InfoCardProps } from "./types";
 
 const InfoCard: React.FC<InfoCardProps> = ({ title, body, icon }) => {
   return (

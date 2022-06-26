@@ -5,16 +5,7 @@ import Company from "./Company";
 import Ecommerce from "./Ecommerce";
 import ContentMangementSystem from "./ContentMangementSystem";
 import ProgressiveWebApp from "./ProgressiveWebApp";
-
-interface HomeOffersModuleProps {
-  title: string;
-  offers: {
-    title: string;
-    body: string | object[];
-    keywords: string[];
-    type: string;
-  }[];
-}
+import { HomeOffersModuleProps } from "./types";
 
 const HomeOffersModule: React.FC<HomeOffersModuleProps> = ({
   title = "Default Title",
@@ -59,7 +50,6 @@ const Offer: React.FC<OfferProps> = ({
   reverse = false,
   type,
 }) => {
-  console.log(type);
   return (
     <div
       className={`large:flex ${
@@ -81,10 +71,10 @@ const Offer: React.FC<OfferProps> = ({
         </div>
       </div>
       <div className="hidden large:block">
-        {type === "cms" ? <ContentMangementSystem /> : null}
-        {type === "pwa" ? <ProgressiveWebApp /> : null}
-        {type === "ecommerce" ? <Ecommerce /> : null}
-        {type === "company" ? <Company /> : null}
+        {type === "cms" && <ContentMangementSystem />}
+        {type === "pwa" && <ProgressiveWebApp />}
+        {type === "ecommerce" && <Ecommerce />}
+        {type === "company" && <Company />}
       </div>
     </div>
   );

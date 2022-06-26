@@ -1,21 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { useState } from "react";
-
-interface ProductPorps {
-  products?: {
-    id: string;
-    discountPercentage: number;
-    image?: string;
-    title: string;
-    price: string;
-    color: string;
-  }[];
-  currentProductId: string;
-  setCurrentProductId: (value: string) => void;
-  favoriteButton?: JSX.Element;
-  addButton: JSX.Element;
-}
+import { ProductPorps } from "./types";
 
 const Product: React.FC<ProductPorps> = ({
   products,

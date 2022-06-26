@@ -4,18 +4,7 @@ import HomeHowWeWorkModule from "../HomeHowWeWorkModule";
 import HomeOffersModule from "../HomeOffersModule";
 import HomeUniqueSellingPointsModule from "../HomeUniqueSellingPointsModule";
 import GeneralContactModule from "../GeneralContactModule";
-
-interface ModuleProps {
-  type:
-    | "homeLandingModule"
-    | "homeAboutModule"
-    | "homeHowWeWorkModule"
-    | "homeOffersModule"
-    | "homeUniqueSellingPointsModule"
-    | "contactModule";
-
-  data: any;
-}
+import { ModuleProps } from "./types";
 
 const Module: React.FC<ModuleProps> = ({ type, data }) => {
   switch (type) {

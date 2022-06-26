@@ -1,9 +1,5 @@
 import React from "react";
-
-interface ContainerProps {
-  children: JSX.Element | JSX.Element[];
-  className?: string;
-}
+import { ContainerProps } from "./types";
 
 const Container: React.FC<ContainerProps> = ({ children, className = "" }) => {
   return (

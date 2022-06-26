@@ -1,16 +1,6 @@
 import React from "react";
 import { Container, WorkStep } from "../../components";
-
-type step = {
-  title: string;
-  body: string;
-};
-
-interface HomeHowWeWorkModuleProps {
-  title: string;
-  body: string;
-  steps: step[];
-}
+import { HomeHowWeWorkModuleProps } from "./types";
 
 const HomeHowWeWorkModule: React.FC<HomeHowWeWorkModuleProps> = ({
   body = "Default Body",

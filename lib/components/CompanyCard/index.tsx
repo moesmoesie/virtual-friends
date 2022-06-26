@@ -1,10 +1,7 @@
 import React from "react";
 import Card from "../Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-interface CompanyCardProps {
-  className?: string;
-  type: "horizontal" | "verticle";
-}
+import { CompanyCardProps } from "./types";
 
 const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
   return (

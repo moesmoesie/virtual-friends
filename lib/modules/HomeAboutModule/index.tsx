@@ -1,12 +1,6 @@
+import { HomeAboutModuleProps } from "./types";
 import { RichText, Container, Card } from "../../components";
 import { useState } from "react";
-
-interface HomeAboutModuleProps {
-  design_content: object[] | string;
-  design_title: string;
-  develop_content: object[] | string;
-  develop_title: string;
-}
 
 const HomeAboutModule: React.FC<HomeAboutModuleProps> = ({
   design_content,

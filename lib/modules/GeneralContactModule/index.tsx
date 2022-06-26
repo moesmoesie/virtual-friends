@@ -1,9 +1,5 @@
 import { Container, CompanyCard, ContactForm } from "../../components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-interface GeneralContactModuleProps {
-  title: string;
-}
+import { GeneralContactModuleProps } from "./types";
 
 const GeneralContactModule: React.FC<GeneralContactModuleProps> = ({
   title,

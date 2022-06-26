@@ -1,8 +1,5 @@
 import React from "react";
-
-interface CardProps {
-  children: JSX.Element;
-}
+import { CardProps } from "./types";
 
 const Card: React.FC<CardProps> = ({ children }) => {
   return (

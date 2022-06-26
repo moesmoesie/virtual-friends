@@ -1,20 +1,9 @@
 import { Container, InfoCard } from "../../components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-interface HomeUniqueSellingPointsModule {
-  title?: string;
-  uniqueSellingPoints: {
-    title: string;
-    body: string;
-    icon: {
-      iconName: any;
-      prefix: string;
-    };
-  }[];
-}
+import { HomeUniqueSellingPointsModuleProps } from "./types";
 
 const HomeUniqueSellingPointsModule: React.FC<
-  HomeUniqueSellingPointsModule
+  HomeUniqueSellingPointsModuleProps
 > = ({ title, uniqueSellingPoints = [] }) => {
   return (
     <div className="relative">
