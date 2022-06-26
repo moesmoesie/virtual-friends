@@ -9,6 +9,9 @@ const HomeLandingModule: React.FC<HomeLandingModuleProps> = ({
   return (
     <>
       <div className="relative pt-12 overflow-hidden">
+        <div className="w-[2000px] blur-2xl opacity-20 -z-10  h-[200px]  bottom-0 bg-purple-gradient absolute" />
+        <div className="w-[600px] blur-2xl -z-10 right-0 -translate-y-1/2 opacity-20 rounded-full  h-[500px] bg-PurpleNavy/500  top-0 bg-purple-gradient absolute" />
+
         <Container className="pb-32 medium:pb-48 large:min-h-[35rem]">
           <BackgroundArt />
 

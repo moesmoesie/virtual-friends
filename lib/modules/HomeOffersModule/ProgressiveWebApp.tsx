@@ -8,6 +8,8 @@ import {
 const ProgressiveWebApp: React.FC = () => {
   return (
     <div className="grid relative gap-5 grid-rows-[min-content,min-content] grid-cols-[min-content,min-content,min-content]">
+      <div className="w-[500px] blur-2xl opacity-60 -z-10 rounded-full h-[500px] bg-PurpleNavy/500 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute" />
+
       <div className="-translate-y-0">
         <AssetCard />
       </div>

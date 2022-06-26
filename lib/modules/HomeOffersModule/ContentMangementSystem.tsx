@@ -7,6 +7,8 @@ import { TextEditor } from "../../components";
 const ContentMangementSystem: React.FC = () => {
   return (
     <div className="relative grid gap-6 grid-cols-[min-content,min-content]">
+      <div className="w-[500px] -z-10 blur-2xl opacity-60 rounded-full h-[500px] bg-PurpleNavy/500 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute" />
+
       <div className="translate-x-6">
         <div className="w-[350px] h-[200px]">
           <TextEditor />
