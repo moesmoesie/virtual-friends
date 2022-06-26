@@ -7,7 +7,7 @@ module.exports = {
     "./pages/**/*.{html,js,ts,tsx}",
   ],
   theme: {
-    extends: {
+    extend: {
       boxShadow: {
         ShadowGreen: "0 14px 32px rgba(64, 201, 162, 0.20000000298023224)",
         ShadowPurple: "0 14px 32px rgba(121, 71, 247, 0.10000000149011612)",
