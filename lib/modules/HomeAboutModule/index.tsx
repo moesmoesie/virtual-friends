@@ -3,7 +3,6 @@ import { RichText, Card } from "../../components";
 import { useState } from "react";
 import { ModuleContainer } from "../../components";
 import { useScreen } from "../../hooks";
-
 const HomeAboutModule: React.FC<HomeAboutModuleProps> = ({
   design_content,
   design_title,
@@ -15,7 +14,7 @@ const HomeAboutModule: React.FC<HomeAboutModuleProps> = ({
 
   return (
     <ModuleContainer>
-      <div>
+      <div className="relative">
         {screen === "large" && (
           <div className="relative hidden large:block">
             <div className="mb-9 flex justify-center gap-24">

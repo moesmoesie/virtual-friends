@@ -1,16 +1,9 @@
 import React from "react";
-import {
-  ReviewCard,
-  EmployeeCard,
-  BlurredRadialGradient,
-} from "../../components";
+import { ReviewCard, EmployeeCard } from "../../components";
 
 const Company: React.FC = () => {
   return (
     <div className="grid-row-[min-content,min-content] relative hidden flex-1 grid-cols-[min-content,min-content] gap-x-5 large:grid">
-      <div className="absolute left-1/2 top-1/2 -z-50 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 text-PurpleNavy/400">
-        <BlurredRadialGradient />
-      </div>
       <div className="absolute bottom-0 left-1/2 z-50 translate-y-1/3 -translate-x-1/2">
         <ReviewCard
           review={{

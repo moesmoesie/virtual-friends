@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Product, Button, Receipt, IconButton } from "../../components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { BlurredRadialGradient } from "../../components";
 const products = [
   {
     color: "/assets/productColor2.jpg",
@@ -40,9 +39,6 @@ const products = [
 const Ecommerce: React.FC = () => {
   return (
     <div className="relative  grid-cols-[min-content,min-content] gap-7 grid">
-      <div className="absolute left-1/2 top-1/2 -z-50 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 text-PurpleNavy/500">
-        <BlurredRadialGradient />
-      </div>
       <div className="pt-3">
         <ProductCard />
       </div>

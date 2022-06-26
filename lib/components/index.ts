@@ -5,7 +5,6 @@ export { default as InfoCard } from "./InfoCard";
 export { default as Footer } from "./Footer";
 export { default as Card } from "./Card";
 export { default as CompanyCard } from "./CompanyCard";
-export { default as BlurredRadialGradient } from "./BlurredRadialGradient";
 export { default as Product } from "./Product";
 export { default as Receipt } from "./Receipt";
 export { default as IconButton } from "./IconButton";

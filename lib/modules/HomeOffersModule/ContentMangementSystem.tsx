@@ -1,15 +1,12 @@
 import { UploadImageCard } from "../../components";
 import { Picker } from "../../components";
-import { Button, BlurredRadialGradient } from "../../components";
+import { Button } from "../../components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TextEditor } from "../../components";
 
 const ContentMangementSystem: React.FC = () => {
   return (
     <div className="relative grid gap-6 grid-cols-[min-content,min-content]">
-      <div className="absolute left-1/2 top-1/2 -z-50 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 text-PurpleNavy/500">
-        <BlurredRadialGradient />
-      </div>
       <div className="translate-x-6">
         <div className="w-[350px] h-[200px]">
           <TextEditor />
