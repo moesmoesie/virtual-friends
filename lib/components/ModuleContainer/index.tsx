@@ -6,7 +6,7 @@ const ModuleContainer: React.FC<ModuleContainerProps> = ({
   title,
 }) => {
   return (
-    <Container className="py-12">
+    <Container className="my-8 medium:my-16 large:my-24">
       <div>
         {title && (
           <h2 className="gradient-text display-1 mb-4 medium:mb-8 large:mb-12 inline-block">

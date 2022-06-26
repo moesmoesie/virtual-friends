@@ -2,51 +2,58 @@ import React from "react";
 import { WorkStep } from "../../components";
 import { HomeHowWeWorkModuleProps } from "./types";
 import ModuleContainer from "../../components/ModuleContainer";
+import { useScreen } from "../../hooks";
 
 const HomeHowWeWorkModule: React.FC<HomeHowWeWorkModuleProps> = ({
   body = "Default Body",
   steps = [],
   title = "default",
 }) => {
+  const screen = useScreen();
+
   return (
     <ModuleContainer title={title}>
-      <p className="body-3 medium:display-4 mb-6 max-w-3xl">{body}</p>
+      <div>
+        <p className="body-3 medium:display-4 mb-6 max-w-3xl">{body}</p>
 
-      {/* Small Medium Screen */}
-      <div className="mt-10 flex gap-4 large:hidden">
-        <div className="bg-green-purple-gradient w-1 rounded-xl" />
-        <div className="flex flex-col gap-6">
-          {steps.map((el, index) => {
-            return (
-              <WorkStep
-                title={el.title}
-                body={el.body}
-                key={index}
-                varient="no-card"
-              />
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Larger Screen */}
-      <div className="mt-14 hidden gap-4 large:flex">
-        <div className="relative flex gap-5">
-          <div className="absolute top-6 z-50 h-1 w-full">
-            <TrackBar itemCount={5} />
+        {["small", "medium"].includes(screen) && (
+          <div className="mt-10 flex gap-4 ">
+            <div className="bg-green-purple-gradient w-1 rounded-xl" />
+            <div className="flex flex-col gap-6">
+              {steps.map((el, index) => {
+                return (
+                  <WorkStep
+                    title={el.title}
+                    body={el.body}
+                    key={index}
+                    varient="no-card"
+                  />
+                );
+              })}
+            </div>
           </div>
+        )}
 
-          {steps.map((el, index) => {
-            return (
-              <WorkStep
-                title={el.title}
-                body={el.body}
-                key={index}
-                varient="card"
-              />
-            );
-          })}
-        </div>
+        {screen === "large" && (
+          <div className="mt-14 gap-4 flex">
+            <div className="relative flex gap-5">
+              <div className="absolute top-6 z-40 h-1 w-full">
+                <TrackBar itemCount={5} />
+              </div>
+
+              {steps.map((el, index) => {
+                return (
+                  <WorkStep
+                    title={el.title}
+                    body={el.body}
+                    key={index}
+                    varient="card"
+                  />
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
     </ModuleContainer>
   );

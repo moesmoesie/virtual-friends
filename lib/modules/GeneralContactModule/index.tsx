@@ -6,7 +6,7 @@ const GeneralContactModule: React.FC<GeneralContactModuleProps> = ({
   title,
 }) => {
   return (
-    <div className="bg-DarkPurple/600 py-20">
+    <div className="bg-DarkPurple/600 py-8 ">
       <ModuleContainer title={title}>
         <div className="flex flex-col large:flex-row gap-12">
           <div className="w-full">
