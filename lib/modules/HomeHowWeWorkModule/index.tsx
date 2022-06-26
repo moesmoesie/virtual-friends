@@ -1,6 +1,7 @@
 import React from "react";
-import { Container, WorkStep } from "../../components";
+import { WorkStep } from "../../components";
 import { HomeHowWeWorkModuleProps } from "./types";
+import ModuleContainer from "../../components/ModuleContainer";
 
 const HomeHowWeWorkModule: React.FC<HomeHowWeWorkModuleProps> = ({
   body = "Default Body",
@@ -8,8 +9,7 @@ const HomeHowWeWorkModule: React.FC<HomeHowWeWorkModuleProps> = ({
   title = "default",
 }) => {
   return (
-    <Container className="pb-20">
-      <h2 className="gradient-text display-1 mb-5 inline-block">{title}</h2>
+    <ModuleContainer title={title}>
       <p className="body-3 medium:display-4 mb-6 max-w-3xl">{body}</p>
 
       {/* Small Medium Screen */}
@@ -48,7 +48,7 @@ const HomeHowWeWorkModule: React.FC<HomeHowWeWorkModuleProps> = ({
           })}
         </div>
       </div>
-    </Container>
+    </ModuleContainer>
   );
 };
 

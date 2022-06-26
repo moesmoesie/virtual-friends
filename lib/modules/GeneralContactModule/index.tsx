@@ -1,14 +1,13 @@
 import { Container, CompanyCard, ContactForm } from "../../components";
 import { GeneralContactModuleProps } from "./types";
+import ModuleContainer from "../../components/ModuleContainer";
 
 const GeneralContactModule: React.FC<GeneralContactModuleProps> = ({
   title,
 }) => {
   return (
     <div className="bg-DarkPurple/600 py-20">
-      <Container>
-        <h2 className="gradient-text display-1  mb-9 inline-block">{title}</h2>
-
+      <ModuleContainer title={title}>
         <div className="flex flex-col large:flex-row gap-12">
           <div className="w-full">
             <div className="medium:hidden">
@@ -65,7 +64,7 @@ const GeneralContactModule: React.FC<GeneralContactModuleProps> = ({
             </div>
           </div>
         </div>
-      </Container>
+      </ModuleContainer>
     </div>
   );
 };

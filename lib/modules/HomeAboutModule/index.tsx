@@ -1,6 +1,7 @@
 import { HomeAboutModuleProps } from "./types";
 import { RichText, Container, Card } from "../../components";
 import { useState } from "react";
+import { ModuleContainer } from "../../components";
 
 const HomeAboutModule: React.FC<HomeAboutModuleProps> = ({
   design_content,
@@ -11,8 +12,8 @@ const HomeAboutModule: React.FC<HomeAboutModuleProps> = ({
   const [view, setView] = useState<"develop" | "design">("design");
 
   return (
-    <Container>
-      <div className="relative mt-16 mb-20 hidden large:block">
+    <ModuleContainer>
+      <div className="relative hidden large:block">
         <div className="mb-9 flex justify-center gap-24">
           <div className="mb-4 flex flex-col items-end gap-9 text-right">
             <button className="display-3 text-right">{design_title}</button>
@@ -45,7 +46,7 @@ const HomeAboutModule: React.FC<HomeAboutModuleProps> = ({
       </div>
 
       {/* Small Medium */}
-      <div className="mt-16 mb-20 large:hidden">
+      <div className="large:hidden">
         <div className="mb-4 flex items-baseline justify-start gap-9">
           <button className="display-3">
             {view == "design" ? design_title : develop_title}
@@ -63,7 +64,7 @@ const HomeAboutModule: React.FC<HomeAboutModuleProps> = ({
           />
         </div>
       </div>
-    </Container>
+    </ModuleContainer>
   );
 };
 

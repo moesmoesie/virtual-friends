@@ -20,3 +20,4 @@ export { default as AssetLineChartCard } from "./AssetLineChartCard";
 export { default as UploadImageCard } from "./UploadImageCard";
 export { default as Picker } from "./Picker";
 export { default as TextEditor } from "./TextEditor";
+export { default as ModuleContainer } from "./ModuleContainer";
