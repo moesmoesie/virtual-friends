@@ -65,10 +65,24 @@ const HomeAboutModule: React.FC<HomeAboutModuleProps> = ({
                 {view == "develop" ? design_title : develop_title}
               </button>
             </div>
-            <div className="max-w-2xl">
+            <div className="max-w-2xl mb-8 medium:mb-12">
               <RichText
                 content={view == "develop" ? develop_content : design_content}
               />
+            </div>
+
+            <div className="flex gap-6 pb-8">
+              <div className="flex-1">
+                <Card>
+                  <div className="h-[500px] medium:min-w-[500px] medium:h-96 " />
+                </Card>
+              </div>
+
+              <div className="flex-1 hidden medium:block">
+                <Card>
+                  <div className="h-[500px] medium:min-w-[500px] medium:h-96 " />
+                </Card>
+              </div>
             </div>
           </div>
         )}
