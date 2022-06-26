@@ -5,8 +5,9 @@ const Card: React.FC<CardProps> = ({ children }) => {
   return (
     <div className="relative group">
       <div className="w-full absolute h-full blur-xl touch:hidden transition-colors duration-300 group-hover:bg-PurpleNavy/050/10" />
+      <div className="absolute w-full noBackgroundFilter:bg-PurpleNavy/600/95 -z-30 h-full rounded-2xl backdrop-blur-lg bg-glass-gradient" />
 
-      <div className="bg-card relative overflow-hidden rounded-2xl">
+      <div className="relative overflow-hidden shadow-CardShadowMedium rounded-2xl">
         <svg className="absolute left-0 z-20 top-0 w-full h-full">
           <defs>
             <linearGradient gradientTransform="rotate(60)" id="linear">
@@ -24,7 +25,8 @@ const Card: React.FC<CardProps> = ({ children }) => {
             fill="transparent"
           />
         </svg>
-        {children}
+
+        <div className="relative">{children}</div>
       </div>
     </div>
   );

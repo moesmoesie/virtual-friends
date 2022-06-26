@@ -20,6 +20,7 @@ module.exports = {
       body: ["Roboto"],
     },
     screens: {
+      noBackgroundFilter: { raw: "@supports not (display: backdrop-filter)" },
       touch: { raw: "(hover:none)" },
       small: "450px",
       medium: "768px",
