@@ -52,7 +52,6 @@
 }
 
 @layer components {
-  /* Typography */
   .body-1 {
     @apply font-body text-[13px] leading-[1.6] medium:text-[14px];
   }
@@ -79,42 +78,5 @@
 
   .display-4 {
     @apply font-display text-[23px] font-bold leading-[1.4] medium:text-[35px];
-  }
-
-  /* Gradients */
-  .gradient-text {
-    @apply bg-green-purple-gradient bg-clip-text text-[transparent];
-  }
-
-  .bg-green-gradient {
-    background: linear-gradient(180deg, #43edbd 0%, #1bb17b 100%);
-  }
-
-  .bg-glass-gradient {
-    background: linear-gradient(
-      141.24deg,
-      rgba(146, 124, 255, 0.71) 1.69%,
-      rgba(64, 201, 162, 0.24) 100%
-    );
-  }
-
-  .bg-glass-gradient {
-    background: linear-gradient(
-      141.24deg,
-      rgba(146, 124, 255, 0.142) 1.69%,
-      rgba(64, 201, 162, 0.048) 100%
-    );
-  }
-
-  .bg-white-gradient {
-    background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
-  }
-
-  .bg-purple-gradient {
-    background: linear-gradient(180deg, #a93bff 0%, #7b2acc 100%);
-  }
-
-  .bg-green-purple-gradient {
-    background: linear-gradient(293.54deg, #9d4bf4 13.32%, #1bb17b 83.07%);
   }
 }

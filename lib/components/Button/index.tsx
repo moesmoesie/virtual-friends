@@ -1,20 +1,28 @@
 import React, { FC } from "react";
-import { ButtonProps } from "./Button.types";
+import { ButtonProps } from "./types";
 
-const Button: FC<ButtonProps> = ({ children, type = "default" }) => {
+const Button: FC<ButtonProps> = ({
+  children,
+  type = "default",
+  ...buttonArgs
+}) => {
   if (type == "accent") {
     return (
-      <button className="bg-purple-gradient group relative rounded-md">
-        <div className="bg-purple-gradient rounded-md z-0 transition-opacity duration-700 group-hover:duration-300 absolute w-full h-full blur-md opacity-60 group-hover:opacity-90 top-1 " />
-        <div className="relative">{children}</div>
+      <button
+        {...buttonArgs}
+        className="bg-gradient-1 px-6 py-2 body-3 rounded-md relative"
+      >
+        {children}
       </button>
     );
   }
 
   return (
-    <button className="bg-green-gradient group rounded-md relative">
-      <div className="bg-green-gradient rounded-md z-0 transition-opacity duration-700 group-hover:duration-300 absolute w-full h-full blur-md opacity-60 group-hover:opacity-90 top-1 " />
-      <div className="relative">{children}</div>
+    <button
+      {...buttonArgs}
+      className="bg-gradient-2 px-6 py-2 body-3 rounded-md relative"
+    >
+      {children}
     </button>
   );
 };

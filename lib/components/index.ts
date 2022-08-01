@@ -1,8 +1,6 @@
 export { default as Button } from "./Button";
-export { default as Header } from "./Header";
 export { default as WorkStep } from "./WorkStep";
 export { default as InfoCard } from "./InfoCard";
-export { default as Footer } from "./Footer";
 export { default as Card } from "./Card";
 export { default as CompanyCard } from "./CompanyCard";
 export { default as Product } from "./Product";
@@ -20,3 +18,4 @@ export { default as UploadImageCard } from "./UploadImageCard";
 export { default as Picker } from "./Picker";
 export { default as TextEditor } from "./TextEditor";
 export { default as ModuleContainer } from "./ModuleContainer";
+export { default as GradientText } from "./GradientText";
