@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const EmployeeCard: React.FC<EmployeeCardProps> = ({ employee }) => {
   return (
-    <div className="relative flex h-[422px] w-[301px] overflow-hidden rounded-lg ">
+    <div className="relative flex w-full h-full overflow-hidden rounded-lg ">
       <div className="z-10 flex items-end justify-between w-full mt-auto p-6 text-white">
         <div>
           <p className="body-2 font-bold">{employee.name}</p>
-          <p className="body-1 -translate-y-1 text-Teal/500">
+          <p className="body-1 -translate-y-1 text-teal-500">
             {employee.position}
           </p>
           <p className="body-1">{employee.phone}</p>
