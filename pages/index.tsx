@@ -37,27 +37,52 @@ const HomePage: NextPage = () => {
             {
               body: "Vestibulum tristique placerat suscipit. Pellentesque interdum arcu ac elit imperdiet volutpat",
               title: "Strategy",
-              icon: <FontAwesomeIcon size="2x" icon={"plus"} />,
+              icon: (
+                <FontAwesomeIcon
+                  className="text-[22px] medium:text-[40px] text-teal-500"
+                  icon={"plus"}
+                />
+              ),
             },
             {
               body: "Phasellus et scelerisque odio, sed venenatis ligula. Duis bibendum, dui ac dapibus fringilla, libero mi malesuada",
               title: "Backend",
-              icon: <FontAwesomeIcon size="2x" icon={"code"} />,
+              icon: (
+                <FontAwesomeIcon
+                  className="text-[22px] medium:text-[40px] text-teal-500"
+                  icon={"code"}
+                />
+              ),
             },
             {
               body: "Sed eleifend ligula id risus euismod molestie. In ultrices dui a leo euismod volutpat. Aenean molestie",
               title: "Frontend",
-              icon: <FontAwesomeIcon size="2x" icon={"paint-brush"} />,
+              icon: (
+                <FontAwesomeIcon
+                  className="text-[22px] medium:text-[40px] text-teal-500"
+                  icon={"paint-brush"}
+                />
+              ),
             },
             {
               body: "Pellentesque mi lectus, gravida sagittis pharetra eget, eleifend ut leo. Maecenas ac sapien quam.",
               title: "Quality Check",
-              icon: <FontAwesomeIcon size="2x" icon={"check"} />,
+              icon: (
+                <FontAwesomeIcon
+                  className="text-[22px] medium:text-[40px] text-teal-500"
+                  icon={"check"}
+                />
+              ),
             },
             {
               body: "Etiam vehicula pretium diam. Ut accumsan ipsum quam, non pulvinar justo pulvinar quis. Nulla facilisis non",
               title: "Launch",
-              icon: <FontAwesomeIcon size="2x" icon={"rocket"} />,
+              icon: (
+                <FontAwesomeIcon
+                  className="text-[22px] medium:text-[40px] text-teal-500"
+                  icon={"rocket"}
+                />
+              ),
             },
           ]}
         />
