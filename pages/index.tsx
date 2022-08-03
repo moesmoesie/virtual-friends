@@ -9,11 +9,9 @@ import {
 import HowWeWorkBlock from "../lib/blocks/HowWeWorkBlock";
 import UniqueSellingPointsBlock from "../lib/blocks/UniqueSellingPointsBlock";
 
-import { GradientText } from "../lib/components";
-
 const HomePage: NextPage = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <PageBlock
         backgroundColor="#000000"
         header={<HeaderBlock />}
@@ -22,12 +20,53 @@ const HomePage: NextPage = () => {
         <HomeLandingBlock
           title={
             <span>
-              Your friendly guides through the&nbsp;
-              <GradientText>virtual World</GradientText>
+              <span>
+                Hello, we are a<br />
+                Web Development Agency
+              </span>
             </span>
           }
-          subtitle="We are a web development agency that can bring your web designs into production"
+          subtitle={
+            <span>
+              Lets brings those crazy web ideas you have into production.
+            </span>
+          }
           button="Lets Talk!"
+        />
+
+        <UniqueSellingPointsBlock
+          uniqueSellingPoints={[
+            {
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
+              title: "Performance",
+              icon: { iconName: "plus", prefix: "fas" },
+            },
+            {
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
+              title: "Performance",
+              icon: { iconName: "plus", prefix: "fas" },
+            },
+            {
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
+              title: "Performance",
+              icon: { iconName: "plus", prefix: "fas" },
+            },
+            {
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
+              title: "Performance",
+              icon: { iconName: "plus", prefix: "fas" },
+            },
+            {
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
+              title: "Performance",
+              icon: { iconName: "plus", prefix: "fas" },
+            },
+            {
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
+              title: "Performance",
+              icon: { iconName: "plus", prefix: "fas" },
+            },
+          ]}
         />
 
         <HowWeWorkBlock
@@ -87,40 +126,6 @@ const HomePage: NextPage = () => {
           ]}
         />
 
-        <UniqueSellingPointsBlock
-          uniqueSellingPoints={[
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-          ]}
-        />
         <div className="py-[1000px]" />
       </PageBlock>
     </div>
