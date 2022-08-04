@@ -5,6 +5,7 @@ import {
   HeaderBlock,
   FooterBlock,
   HomeLandingBlock,
+  AboutBlock,
 } from "../lib/blocks";
 import HowWeWorkBlock from "../lib/blocks/HowWeWorkBlock";
 import UniqueSellingPointsBlock from "../lib/blocks/UniqueSellingPointsBlock";
@@ -34,7 +35,14 @@ const HomePage: NextPage = () => {
           button="Lets Talk!"
         />
 
-        <UniqueSellingPointsBlock
+        <AboutBlock
+          design_content="You designed or are in the procces of designing a piece of art (website) for yourself, company, or a client."
+          design_title="You Design"
+          develop_content="We build out your wonderfull designs and add backend functionality needed to go into production."
+          develop_title="We Develop"
+        />
+
+        {/* <UniqueSellingPointsBlock
           uniqueSellingPoints={[
             {
               body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
@@ -124,7 +132,7 @@ const HomePage: NextPage = () => {
               ),
             },
           ]}
-        />
+        /> */}
 
         <div className="py-[1000px]" />
       </PageBlock>
