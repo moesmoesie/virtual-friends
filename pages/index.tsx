@@ -6,9 +6,9 @@ import {
   FooterBlock,
   HomeLandingBlock,
   AboutBlock,
+  OffersBlock,
 } from "../lib/blocks";
 import HowWeWorkBlock from "../lib/blocks/HowWeWorkBlock";
-import UniqueSellingPointsBlock from "../lib/blocks/UniqueSellingPointsBlock";
 
 const HomePage: NextPage = () => {
   return (
@@ -42,40 +42,7 @@ const HomePage: NextPage = () => {
           develop_title="We Develop"
         />
 
-        {/* <UniqueSellingPointsBlock
-          uniqueSellingPoints={[
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-          ]}
-        />
+        <div className="h-[50px] medium:h-[100px]  w-12" />
 
         <HowWeWorkBlock
           body="Praesent dignissim diam convallis augue convallis cursus. Vivamus vitae libero at mi ornare dictum sed quis diam. Duis sed odio"
@@ -130,6 +97,75 @@ const HomePage: NextPage = () => {
                   icon={"rocket"}
                 />
               ),
+            },
+          ]}
+        />
+
+        <div className="h-[50px] medium:h-[100px]  w-12" />
+
+        <OffersBlock
+          title="What we offer"
+          offers={[
+            {
+              type: "eccommerce",
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+              title: "E-commerce ",
+              keywords: ["SENDCLOUD", "MOLLIE", "SENDGRID", "SHOPIFY API"],
+            },
+            {
+              type: "company",
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+              title: "Company Website ",
+              keywords: ["NEXTJS", "TAILWIND", "VERCEL"],
+            },
+
+            {
+              type: "cms",
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+              title: "Content Mangement System",
+              keywords: ["Sanity", "Strapi"],
+            },
+
+            {
+              type: "pwa",
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+              title: "Progressive Web App",
+              keywords: ["react", "GOOGLE CLOUD PLATFORM", "Firebase"],
+            },
+          ]}
+        />
+
+        {/* <UniqueSellingPointsBlock
+          uniqueSellingPoints={[
+            {
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
+              title: "Performance",
+              icon: { iconName: "plus", prefix: "fas" },
+            },
+            {
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
+              title: "Performance",
+              icon: { iconName: "plus", prefix: "fas" },
+            },
+            {
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
+              title: "Performance",
+              icon: { iconName: "plus", prefix: "fas" },
+            },
+            {
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
+              title: "Performance",
+              icon: { iconName: "plus", prefix: "fas" },
+            },
+            {
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
+              title: "Performance",
+              icon: { iconName: "plus", prefix: "fas" },
+            },
+            {
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
+              title: "Performance",
+              icon: { iconName: "plus", prefix: "fas" },
             },
           ]}
         /> */}

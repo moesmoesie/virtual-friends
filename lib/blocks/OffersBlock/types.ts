@@ -2,7 +2,7 @@ export interface OffersBlockProps {
   title: string;
   offers: {
     title: string;
-    body: string | object[];
+    body: string;
     keywords: string[];
     type: string;
   }[];
