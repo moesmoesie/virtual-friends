@@ -18,23 +18,10 @@ const HomePage: NextPage = () => {
         header={<HeaderBlock />}
         footer={<FooterBlock />}
       >
-        <HomeLandingBlock
-          title={
-            <span>
-              <span>
-                Hello, we are a<br />
-                Web Development Agency
-              </span>
-            </span>
-          }
-          subtitle={
-            <span>
-              Lets brings those crazy web ideas you have into production.
-            </span>
-          }
-          button="Lets Talk!"
-        />
 
+<div className="h-[300px] medium:h-[300px]  w-12" />
+
+   
         <AboutBlock
           design_content="You designed or are in the procces of designing a piece of art (website) for yourself, company, or a client."
           design_title="You Design"
