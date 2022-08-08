@@ -9,6 +9,7 @@ import {
   OffersBlock,
 } from "../lib/blocks";
 import HowWeWorkBlock from "../lib/blocks/HowWeWorkBlock";
+import UniqueSellingPointsBlock from "../lib/blocks/UniqueSellingPointsBlock";
 
 const HomePage: NextPage = () => {
   return (
@@ -122,7 +123,8 @@ const HomePage: NextPage = () => {
           ]}
         />
 
-        {/* <UniqueSellingPointsBlock
+        <div className="h-[50px] w-12" />
+        <UniqueSellingPointsBlock
           uniqueSellingPoints={[
             {
               body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
@@ -155,7 +157,7 @@ const HomePage: NextPage = () => {
               icon: { iconName: "plus", prefix: "fas" },
             },
           ]}
-        /> */}
+        />
 
         <div className="py-[1000px]" />
       </PageBlock>
