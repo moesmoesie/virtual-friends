@@ -10,7 +10,7 @@ const Button: FC<ButtonProps> = ({
     return (
       <button
         {...buttonArgs}
-        className="bg-gradient-1 px-6 py-2 body-3 rounded-md relative"
+        className="bg-gradient-purple px-6 py-2 body-3 rounded-md relative"
       >
         {children}
       </button>

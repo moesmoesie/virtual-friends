@@ -5,7 +5,7 @@ const Card: React.FC<CardProps> = ({ children, className = "" }) => {
     <div
       className={
         className +
-        " relative border-purple-navy-100 border rounded-lg bg-gradient-glass supports-backdrop-filter:backdrop-blur-lg"
+        " relative border-purple-navy-100 border rounded-2xl bg-gradient-glass supports-backdrop-filter:backdrop-blur-lg"
       }
     >
       {children}

@@ -4,9 +4,9 @@ import {
   PageBlock,
   HeaderBlock,
   FooterBlock,
-  HomeLandingBlock,
   AboutBlock,
   OffersBlock,
+  ContactBlock
 } from "../lib/blocks";
 import HowWeWorkBlock from "../lib/blocks/HowWeWorkBlock";
 import UniqueSellingPointsBlock from "../lib/blocks/UniqueSellingPointsBlock";
@@ -159,7 +159,9 @@ const HomePage: NextPage = () => {
           ]}
         />
 
-        <div className="py-[1000px]" />
+
+        <ContactBlock title="Lets Talk"/>
+
       </PageBlock>
     </div>
   );

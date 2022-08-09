@@ -2,10 +2,10 @@ import { InputProps } from "./types";
 
 const Input: React.FC<InputProps> = (props) => {
   const baseStyle =
-    "w-full pt-3 pb-4 border-b border-b-DarkPurple/200 bg-[transparent] placeholder:text-Grey/300 focus:border-b-Teal/500 focus:outline-none";
+    "w-full pt-3 pb-4 border-b border-dark-purple-200 bg-[transparent] placeholder:text-grey-300 border-b-teal-500 focus:outline-none";
   switch (props.type) {
     case "dropdown":
-      return <div className="w-full h-12 bg-PurpleNavy/600" />;
+      return <div className="w-full h-12 bg-purple-navy-600 placeholder:text-grey-300" />;
     case "multiline":
       return (
         <textarea

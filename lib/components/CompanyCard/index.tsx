@@ -7,8 +7,8 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
   return (
     <div className="flex">
       <Card>
-        <div className="py-6 pl-6 pr-12">
-          <p className="body-3 pb-4 font-bold text-Teal/500 ">
+        <div className="py-12 pl-6 pr-12">
+          <p className="body-3 pb-4 font-bold text-teal-500 ">
             Virtual Friends
           </p>
 
@@ -30,14 +30,14 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
               </div>
               <div className="flex justify-between">
                 <p className="body-2 flex-1">
-                  <span className="mr-2 text-Teal/500">
+                  <span className="mr-2 text-teal-500">
                     {<FontAwesomeIcon icon={"phone"} />}
                   </span>
                   <span>+31612818127</span> <br />
                 </p>
 
                 <p className="body-2 flex-1 ">
-                  <span className="mr-2 text-Teal/500">
+                  <span className="mr-2 text-teal-500">
                     <FontAwesomeIcon icon={"envelope"} />
                   </span>
                   <span className="ml-1">mndarwesh@virtualfriends.dev</span>
@@ -54,11 +54,11 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
                 </p>
 
                 <p className="body-2 mb-4">
-                  <span className="mr-2 text-Teal/500">
+                  <span className="mr-2 text-teal-500">
                     <FontAwesomeIcon icon={"phone"} />
                   </span>
                   <span>+31612818127</span> <br />
-                  <span className="mr-2 text-Teal/500">
+                  <span className="mr-2 text-teal-500">
                     <FontAwesomeIcon icon={"envelope"} />
                   </span>
                   <span className="ml-1">mndarwesh@virtualfriends.dev</span>
