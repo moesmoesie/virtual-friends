@@ -3,10 +3,8 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html>
-      <Head />
-
-
-        <link
+      <Head>
+      <link
           rel="preload"
           href={`/fonts/inter-v11-latin/inter-v11-latin-700.woff2`}
           as="font"
@@ -34,8 +32,7 @@ export default function Document() {
           as="font"
           crossOrigin=""
         />
-
-
+      </Head>
       <body className="min-h-screen">
         <Main />
         <NextScript />
