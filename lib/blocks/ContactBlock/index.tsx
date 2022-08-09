@@ -7,7 +7,7 @@ const GeneralContactModule: React.FC<ContactBlockProps> = (props) => {
   return (
 
       <Container module={props.module}>
-       <h2 className="display-1 mb-10"><GradientText>Get in touch</GradientText></h2>
+       <h2 className="display-1 mb-10"><GradientText>{props.title}</GradientText></h2>
         <CompanyCard type={screen === 'medium' ? "horizontal" : 'verticle'}/>
       </Container>
   );

@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { Container, GradientText, Card, InfoCard } from "../../components";
 import { HowWeWorkBlockProps } from "./types";
 import { useScreen } from "../../hooks";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { step } from "./types";
 
 const HowWeWorkBlock: React.FC<HowWeWorkBlockProps> = (props) => {

@@ -5,9 +5,6 @@ export interface HomeUniqueSellingPointsModuleProps extends ContentBlock {
   uniqueSellingPoints: {
     title: string;
     body: string;
-    icon: {
-      iconName: any;
-      prefix: string;
-    };
+    icon: JSX.Element
   }[];
 }

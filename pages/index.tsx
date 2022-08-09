@@ -1,180 +1,60 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { getStoryblokApi, useStoryblokState } from "@storyblok/react";
 import type { NextPage } from "next";
 import {
   PageBlock,
   HeaderBlock,
   FooterBlock,
-  AboutBlock,
-  OffersBlock,
-  ContactBlock,
-  SpacerBlock
 } from "../lib/blocks";
-import HowWeWorkBlock from "../lib/blocks/HowWeWorkBlock";
-import UniqueSellingPointsBlock from "../lib/blocks/UniqueSellingPointsBlock";
+import {StoryblokComponent} from "@storyblok/react";
+import { useScreen } from "../lib/hooks";
 
-const HomePage: NextPage = () => {
+const HomePage: NextPage<{story: any}> = ({story}) => {
+  const screen = useScreen()
+  story = useStoryblokState(story);
+
   return (
     <div className="overflow-hidden">
       <PageBlock
         backgroundColor="#000000"
-        header={<HeaderBlock />}
-        footer={<FooterBlock />}
+        header={<StoryblokComponent blok={story?.content?.header[0]} key={story?.content?.header[0]._uid}/>}
+        footer={<StoryblokComponent blok={story?.content?.footer[0]} key={story?.content?.footer[0]._uid}/>}
       >
 
-        <SpacerBlock height={150}/>
-
-        <AboutBlock
-          module={{
-            paddingBottom: 0,
-            paddingTop: 0
-          }}
-          design_content="You designed or are in the procces of designing a piece of art (website) for yourself, company, or a client."
-          design_title="You Design"
-          develop_content="We build out your wonderfull designs and add backend functionality needed to go into production."
-          develop_title="We Develop"
-        />
-
-        <SpacerBlock height={150}/>
-
-        <HowWeWorkBlock
-          body="Praesent dignissim diam convallis augue convallis cursus. Vivamus vitae libero at mi ornare dictum sed quis diam. Duis sed odio"
-          title="How We Work"
-          steps={[
-            {
-              body: "Vestibulum tristique placerat suscipit. Pellentesque interdum arcu ac elit imperdiet volutpat",
-              title: "Strategy",
-              icon: (
-                <FontAwesomeIcon
-                  className="text-[22px] medium:text-[40px] text-teal-500"
-                  icon={"plus"}
-                />
-              ),
-            },
-            {
-              body: "Phasellus et scelerisque odio, sed venenatis ligula. Duis bibendum, dui ac dapibus fringilla, libero mi malesuada",
-              title: "Backend",
-              icon: (
-                <FontAwesomeIcon
-                  className="text-[22px] medium:text-[40px] text-teal-500"
-                  icon={"code"}
-                />
-              ),
-            },
-            {
-              body: "Sed eleifend ligula id risus euismod molestie. In ultrices dui a leo euismod volutpat. Aenean molestie",
-              title: "Frontend",
-              icon: (
-                <FontAwesomeIcon
-                  className="text-[22px] medium:text-[40px] text-teal-500"
-                  icon={"paint-brush"}
-                />
-              ),
-            },
-            {
-              body: "Pellentesque mi lectus, gravida sagittis pharetra eget, eleifend ut leo. Maecenas ac sapien quam.",
-              title: "Quality Check",
-              icon: (
-                <FontAwesomeIcon
-                  className="text-[22px] medium:text-[40px] text-teal-500"
-                  icon={"check"}
-                />
-              ),
-            },
-            {
-              body: "Etiam vehicula pretium diam. Ut accumsan ipsum quam, non pulvinar justo pulvinar quis. Nulla facilisis non",
-              title: "Launch",
-              icon: (
-                <FontAwesomeIcon
-                  className="text-[22px] medium:text-[40px] text-teal-500"
-                  icon={"rocket"}
-                />
-              ),
-            },
-          ]}
-        />
-
-        <SpacerBlock height={100}/>
-
-        <OffersBlock
-          title="What we offer"
-          offers={[
-            {
-              type: "eccommerce",
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-              title: "E-commerce ",
-              keywords: ["SENDCLOUD", "MOLLIE", "SENDGRID", "SHOPIFY API"],
-            },
-            {
-              type: "company",
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-              title: "Company Website ",
-              keywords: ["NEXTJS", "TAILWIND", "VERCEL"],
-            },
-
-            {
-              type: "cms",
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-              title: "Content Mangement System",
-              keywords: ["Sanity", "Strapi"],
-            },
-
-            {
-              type: "pwa",
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-              title: "Progressive Web App",
-              keywords: ["react", "GOOGLE CLOUD PLATFORM", "Firebase"],
-            },
-          ]}
-        />
-
-        <SpacerBlock height={50}/>
-
-        <UniqueSellingPointsBlock
-          uniqueSellingPoints={[
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-            {
-              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.",
-              title: "Performance",
-              icon: { iconName: "plus", prefix: "fas" },
-            },
-          ]}
-        />
-
-        <ContactBlock
-          module={{
-            paddingTop: 75,
-            paddingBottom: 75,
-            backgroundColor: "#201D2A"
-          }}
-          title="Lets Talk"/>
+        {story.content.body.map((nestedBlok : any) => {
+            if(nestedBlok.responsive && nestedBlok.responsive.includes(screen)){
+              return <></>
+            }
+            return  <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+          }
+        )}
 
       </PageBlock>
     </div>
   );
 };
+
+export async function getStaticProps() {
+  // home is the default slug for the homepage in Storyblok
+  let slug = "home";
+ 
+  // load the draft version
+  let sbParams = {
+    version: "draft", // or 'published'
+  };
+ 
+  const storyblokApi = getStoryblokApi();
+  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+
+  console.log(data)
+ 
+  return {
+    props: {
+      story: data ? data.story : false,
+      key: data ? data.story.id : false,
+    },
+    revalidate: 3600, // revalidate every hour
+  };
+}
 
 export default HomePage;

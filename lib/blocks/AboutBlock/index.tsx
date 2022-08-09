@@ -27,12 +27,12 @@ const HomeAboutModuleLarge: React.FC<AboutBlockProps> = (props) => {
     <Container module={props.module}>
       <div className="flex gap-52 mb-9 items-center justify-center">
         <div className="max-w-sm">
-          <p className="display-3 text-end">{props.design_title}</p>
-          <p className="body-3 text-end">{props.design_content}</p>
+          <p className="display-3 text-end">{props.designTitle}</p>
+          <p className="body-3 text-end">{props.designContent}</p>
         </div>
         <div className="max-w-sm">
-          <p className="display-3">{props.develop_title}</p>
-          <p className="body-3">{props.develop_content}</p>
+          <p className="display-3">{props.developTitle}</p>
+          <p className="body-3">{props.developContent}</p>
         </div>
       </div>
 
@@ -61,7 +61,7 @@ const HomeAboutModuleSmall: React.FC<AboutBlockProps> = (props) => {
               currentView === "design" ? "!text-white !scale-110" : ""
             }`}
           >
-            {props.design_title}
+            {props.designTitle}
           </button>
 
           <button
@@ -70,13 +70,13 @@ const HomeAboutModuleSmall: React.FC<AboutBlockProps> = (props) => {
               currentView === "develop" ? "!text-white !scale-105" : ""
             }`}
           >
-            {props.develop_title}
+            {props.developTitle}
           </button>
         </div>
         <p className="body-3 mb-12 medium:max-w-[75%]">
           {currentView === "design"
-            ? props.design_content
-            : props.develop_content}
+            ? props.designContent
+            : props.developContent}
         </p>
 
         <motion.div
