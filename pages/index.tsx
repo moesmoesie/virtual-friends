@@ -20,7 +20,7 @@ const HomePage: NextPage = () => {
         footer={<FooterBlock />}
       >
 
-<div className="h-[300px] medium:h-[300px]  w-12" />
+<div className="h-[150px] medium:h-[150px]  w-12" />
 
    
         <AboutBlock
