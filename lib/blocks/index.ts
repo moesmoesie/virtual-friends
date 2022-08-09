@@ -6,3 +6,4 @@ export { default as UnqiueSellingPointsBlock } from "./UniqueSellingPointsBlock"
 export { default as HeaderBlock } from "./HeaderBlock";
 export { default as FooterBlock } from "./FooterBlock";
 export { default as PageBlock } from "./PageBlock";
+export { default as SpacerBlock} from './SpacerBlock'

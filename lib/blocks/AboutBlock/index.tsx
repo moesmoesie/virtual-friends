@@ -1,7 +1,7 @@
 import { AboutBlockProps } from "./types";
 import { Card, Container } from "../../components";
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { useScreen } from "../../hooks";
 
 const variants = {
@@ -19,13 +19,12 @@ const HomeAboutModule: React.FC<AboutBlockProps> = (props) => {
   if (screen !== "large") {
     return <HomeAboutModuleSmall {...props} />;
   }
-
   return <HomeAboutModuleLarge {...props} />;
 };
 
 const HomeAboutModuleLarge: React.FC<AboutBlockProps> = (props) => {
   return (
-    <Container>
+    <Container module={props.module}>
       <div className="flex gap-52 mb-9 items-center justify-center">
         <div className="max-w-sm">
           <p className="display-3 text-end">{props.design_title}</p>
@@ -53,7 +52,7 @@ const HomeAboutModuleLarge: React.FC<AboutBlockProps> = (props) => {
 const HomeAboutModuleSmall: React.FC<AboutBlockProps> = (props) => {
   const [currentView, setCurrentView] = useState("design");
   return (
-    <Container>
+    <Container module={props.module}>
       <div className="">
         <div className="flex mb-4 gap-8 medium:gap-16 items-baseline">
           <button

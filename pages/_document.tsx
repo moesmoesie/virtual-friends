@@ -25,7 +25,6 @@ export default function Document() {
           crossOrigin=""
         />
 
-
         <link
           rel="preload"
           href={`/fonts/roboto-v30-latin/roboto-v30-latin-regular.woff2`}

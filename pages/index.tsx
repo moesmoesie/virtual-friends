@@ -6,7 +6,8 @@ import {
   FooterBlock,
   AboutBlock,
   OffersBlock,
-  ContactBlock
+  ContactBlock,
+  SpacerBlock
 } from "../lib/blocks";
 import HowWeWorkBlock from "../lib/blocks/HowWeWorkBlock";
 import UniqueSellingPointsBlock from "../lib/blocks/UniqueSellingPointsBlock";
@@ -20,17 +21,20 @@ const HomePage: NextPage = () => {
         footer={<FooterBlock />}
       >
 
-<div className="h-[150px] medium:h-[150px]  w-12" />
+        <SpacerBlock height={150}/>
 
-   
         <AboutBlock
+          module={{
+            paddingBottom: 0,
+            paddingTop: 0
+          }}
           design_content="You designed or are in the procces of designing a piece of art (website) for yourself, company, or a client."
           design_title="You Design"
           develop_content="We build out your wonderfull designs and add backend functionality needed to go into production."
           develop_title="We Develop"
         />
 
-        <div className="h-[50px] medium:h-[100px]  w-12" />
+        <SpacerBlock height={150}/>
 
         <HowWeWorkBlock
           body="Praesent dignissim diam convallis augue convallis cursus. Vivamus vitae libero at mi ornare dictum sed quis diam. Duis sed odio"
@@ -89,7 +93,7 @@ const HomePage: NextPage = () => {
           ]}
         />
 
-        <div className="h-[50px] medium:h-[100px]  w-12" />
+        <SpacerBlock height={100}/>
 
         <OffersBlock
           title="What we offer"
@@ -123,7 +127,8 @@ const HomePage: NextPage = () => {
           ]}
         />
 
-        <div className="h-[50px] w-12" />
+        <SpacerBlock height={50}/>
+
         <UniqueSellingPointsBlock
           uniqueSellingPoints={[
             {
@@ -159,8 +164,13 @@ const HomePage: NextPage = () => {
           ]}
         />
 
-
-        <ContactBlock title="Lets Talk"/>
+        <ContactBlock
+          module={{
+            paddingTop: 75,
+            paddingBottom: 75,
+            backgroundColor: "#201D2A"
+          }}
+          title="Lets Talk"/>
 
       </PageBlock>
     </div>

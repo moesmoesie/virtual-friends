@@ -7,7 +7,7 @@ const UniqueSellingPointsBlock: React.FC<HomeUniqueSellingPointsModuleProps> = (
   props
 ) => {
   return (
-    <Container>
+    <Container module={props.module}>
       <div className="relative py-12">
         <div className="grid grid-cols-1 gap-3 medium:gap-5 medium:grid-cols-2 large:grid-cols-3 large:gap-5">
           {props.uniqueSellingPoints.map((el, index) => {

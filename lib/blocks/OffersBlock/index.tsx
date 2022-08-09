@@ -1,9 +1,5 @@
 import React from "react";
 import { GradientText, RichText } from "../../components";
-import Company from "./Company";
-import Ecommerce from "./Ecommerce";
-import ContentMangementSystem from "./ContentMangementSystem";
-import ProgressiveWebApp from "./ProgressiveWebApp";
 import { OffersBlockProps } from "./types";
 import { Container } from "../../components";
 

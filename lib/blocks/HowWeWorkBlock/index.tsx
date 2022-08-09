@@ -8,12 +8,9 @@ import { step } from "./types";
 
 const HowWeWorkBlock: React.FC<HowWeWorkBlockProps> = (props) => {
   const screen = useScreen();
-  const containerRef = useRef<HTMLDivElement>(null)
-  const cardRef = useRef<HTMLDivElement>(null)
-
 
   return (
-    <Container>
+    <Container module={props.module}>
       <div>
         <h2 className="display-1 mb-6">
           <GradientText>{props.title}</GradientText>

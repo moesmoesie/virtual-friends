@@ -6,12 +6,10 @@ const GeneralContactModule: React.FC<ContactBlockProps> = (props) => {
   const screen = useScreen()
   return (
 
-    <div className="bg-dark-purple-600 py-16 large:py-32">
-      <Container>
+      <Container module={props.module}>
        <h2 className="display-1 mb-10"><GradientText>Get in touch</GradientText></h2>
         <CompanyCard type={screen === 'medium' ? "horizontal" : 'verticle'}/>
       </Container>
-    </div>
   );
 };
 
