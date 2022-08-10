@@ -1,0 +1,1 @@
+export {default as getFontawesomeIcon} from './getFontawesomeIcon'
