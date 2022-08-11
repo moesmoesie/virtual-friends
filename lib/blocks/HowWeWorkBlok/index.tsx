@@ -26,8 +26,12 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
             <div className="flex gap-5">
               {blok?.steps.map((el: any, index: number) => {
                 return (
-                  <div className="flex-1 h-full" {...storyblokEditable(el)}>
-                    <Card key={index}>
+                  <div
+                    key={index}
+                    className="flex-1 h-full"
+                    {...storyblokEditable(el)}
+                  >
+                    <Card>
                       <div className="px-4 py-6 text-center gap-6 flex flex-col items-center">
                         <FontAwesomeIcon
                           className="text-teal-500"
@@ -78,9 +82,8 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
             <div className="flex gap-5 flex-col">
               {blok?.steps.map((el: any, index: number) => {
                 return (
-                  <div {...storyblokEditable(el)}>
+                  <div key={index} {...storyblokEditable(el)}>
                     <InfoCard
-                      key={index}
                       title={el.title}
                       body={el.body}
                       icon={
