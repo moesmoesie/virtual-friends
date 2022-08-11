@@ -1,6 +1,6 @@
 const prefixes : any = {
     "solid" : "fas",
-    "brand" : "fab"
+    "brands" : "fab"
 }
 
 const getFontAwesomeIcon = (value: string) : any => {
