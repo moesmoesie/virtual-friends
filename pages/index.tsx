@@ -11,7 +11,6 @@ const HomePage: NextPage<{ story: any }> = ({ story }) => {
   return (
     <div className="overflow-hidden">
       <PageBlock
-        backgroundColor="#000000"
         header={
           <StoryblokComponent
             blok={story?.content?.header[0]}
