@@ -1,5 +1,5 @@
 export { default as AboutBlock } from "./AboutBlock";
-export { default as OffersBlock } from "./OffersBlock";
+export { default as OffersBlock } from "./OffersBlok";
 export { default as ContactBlock } from "./ContactBlock";
 export { default as HomeLandingBlock } from "./HomeLandingBlock";
 export { default as UnqiueSellingPointsBlock } from "./UniqueSellingPointsBlock";
@@ -10,20 +10,19 @@ export { default as SpacerBlock} from './SpacerBlock'
 
 import SpacerStoryblok from "./SpacerBlock/storyblok";
 import HomeAboutModuleStoryblok from "./AboutBlock/storyblok";
-import OffersStoryblok from "./OffersBlock/storyblok";
 import UniqueSellingPointsStoryblok from "./UniqueSellingPointsBlock/storyblok";
 import ContactStoryblok from "./ContactBlock/storyblok";
 import HeaderStoryblok from "./HeaderBlock/storyblok";
 import FooterStoryblok from "./FooterBlock/storyblok";
 
 import HowWeWorkBlok from "./HowWeWorkBlok";
-
+import OffersBlok from "./OffersBlok";
 
 export const storyblokComponents = {
     spacer : SpacerStoryblok,
     aboutMe: HomeAboutModuleStoryblok,
     howWeWork: HowWeWorkBlok,
-    productOffering: OffersStoryblok,
+    productOffering: OffersBlok,
     uniqueSellingPoints: UniqueSellingPointsStoryblok,
     contact: ContactStoryblok,
     header: HeaderStoryblok,
