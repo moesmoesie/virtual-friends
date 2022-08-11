@@ -1,5 +1,4 @@
 import React from "react";
-import { motion, AnimatePresence, Variants } from "framer-motion";
 import { useState } from "react";
 import { ProductPorps } from "./types";
 
@@ -14,18 +13,12 @@ const Product: React.FC<ProductPorps> = ({
     return products?.find((el) => el.id == currentProductId);
   };
 
-  const variants: Variants = {
-    visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
-    hidden: { opacity: 0, x: 100 },
-    exit: { opacity: 0, x: -100, transition: { duration: 0.2 } },
-  };
-
   return (
-    <div className="flex w-[241px] flex-col gap-4 rounded-lg bg-DarkPurple/600 p-5">
+    <div className="flex w-[241px] flex-col gap-4 rounded-lg bg-dark-purple-600 p-5">
       {/* HEADER */}
       <div className="flex items-center justify-between">
-        <div className="inline-block rounded-md bg-DarkPurple/500 py-1 px-3">
-          <span className="body-1 font-bold text-Teal/500">
+        <div className="inline-block rounded-md bg-dark-purple-500 py-1 px-3">
+          <span className="body-1 font-bold text-teal-500">
             {getProduct()?.discountPercentage}%
           </span>
         </div>
@@ -38,48 +31,30 @@ const Product: React.FC<ProductPorps> = ({
         <div className="relative flex w-full">
           <div className="relative flex w-full flex-col items-center">
             <div className="flex w-full flex-col items-center">
-              <div className="relative grid h-44 w-full place-items-center rounded-lg bg-DarkPurple/500">
-                <AnimatePresence>
-                  <motion.img
-                    key={currentProductId}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    variants={variants}
-                    className="absolute"
-                    src={getProduct()?.image}
-                  />
-                </AnimatePresence>
+              <div className="relative grid h-44 w-full place-items-center rounded-lg bg-dark-purple-500">
+                <img
+                  key={currentProductId}
+                  className="absolute"
+                  src={getProduct()?.image}
+                />
               </div>
 
               <div className="relative mt-5 h-[35px] w-full items-center">
-                <AnimatePresence>
-                  <motion.span
-                    key={currentProductId}
-                    exit="exit"
-                    initial="hidden"
-                    animate="visible"
-                    variants={variants}
-                    className="body-3 absolute w-full text-center text-[18px] font-bold "
-                  >
-                    {getProduct()?.title}
-                  </motion.span>
-                </AnimatePresence>
+                <span
+                  key={currentProductId}
+                  className="body-3 absolute w-full text-center text-[18px] font-bold "
+                >
+                  {getProduct()?.title}
+                </span>
               </div>
 
               <div className="relative mb-5 h-[35px] w-full items-center">
-                <AnimatePresence>
-                  <motion.span
-                    key={currentProductId}
-                    variants={variants}
-                    exit="exit"
-                    initial="hidden"
-                    animate="visible"
-                    className="body-3 absolute w-full text-center text-[28px] font-bold "
-                  >
-                    {getProduct()?.price}
-                  </motion.span>
-                </AnimatePresence>
+                <span
+                  key={currentProductId}
+                  className="body-3 absolute w-full text-center text-[28px] font-bold "
+                >
+                  {getProduct()?.price}
+                </span>
               </div>
             </div>
           </div>
@@ -88,9 +63,9 @@ const Product: React.FC<ProductPorps> = ({
 
         {/* COLOR PICKER */}
         <div className="mb-2 flex items-center gap-2">
-          <span className="body-1 text-Grey/200">Colors</span>
+          <span className="body-1 text-grey-200">Colors</span>
 
-          {products?.map((el, index) => {
+          {products?.map((el) => {
             return (
               <button key={el.id} onClick={() => setCurrentProductId(el.id)}>
                 <img

@@ -12,9 +12,9 @@ interface ReceiptProps {
 
 const Receipt: React.FC<ReceiptProps> = ({ products }) => {
   return (
-    <div className="w-[320px] rounded-lg bg-DarkPurple/600 p-5">
-      <div className="border-b-2 border-DarkPurple/400 pb-5">
-        <p className="body-2  text-Teal/500">Your Order</p>
+    <div className="w-[320px] rounded-lg bg-dark-purple-600 p-5">
+      <div className="border-b-2 border-dark-purple-400 pb-5">
+        <p className="body-2  text-teal-500">Your Order</p>
       </div>
 
       <div className="h-[240px] overflow-scroll">
@@ -22,10 +22,10 @@ const Receipt: React.FC<ReceiptProps> = ({ products }) => {
           return (
             <div
               key={el.id}
-              className="border-b-3 my-5 flex gap-4 border-DarkPurple/400  last:border-b-0"
+              className="border-b-3 my-5 flex gap-4 border-dark-purple-400  last:border-b-0"
             >
               <div>
-                <div className="grid h-full w-14 items-center rounded-lg bg-DarkPurple/400">
+                <div className="grid h-full w-14 items-center rounded-lg bg-dark-purple-500">
                   <img src={el.image} alt="" />
                 </div>
               </div>
@@ -37,7 +37,7 @@ const Receipt: React.FC<ReceiptProps> = ({ products }) => {
                 </div>
                 <div className="flex items-baseline gap-2">
                   <p className="body-2">{el.price}</p>
-                  <div className="rounded-lg bg-DarkPurple/500 px-3 text-Grey/200">
+                  <div className="rounded-lg bg-dark-purple-500 px-3 text-grey-200">
                     <span className="body-1">1 </span>
                   </div>
                 </div>
@@ -47,7 +47,7 @@ const Receipt: React.FC<ReceiptProps> = ({ products }) => {
         })}
       </div>
 
-      <div className="body-1 border-b-2 border-t-2 border-DarkPurple/400 py-5 pb-5">
+      <div className="body-1 border-b-2 border-t-2 border-dark-purple-400 py-5 pb-5">
         <div className="mb-1 flex justify-between">
           <p>Delivery</p>
           <p>€ 4,95</p>
