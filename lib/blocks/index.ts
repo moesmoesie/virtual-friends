@@ -10,17 +10,19 @@ export { default as SpacerBlock} from './SpacerBlock'
 
 import SpacerStoryblok from "./SpacerBlock/storyblok";
 import HomeAboutModuleStoryblok from "./AboutBlock/storyblok";
-import HowWeWorkStoryblok from "./HowWeWorkBlock/storyblok";
 import OffersStoryblok from "./OffersBlock/storyblok";
 import UniqueSellingPointsStoryblok from "./UniqueSellingPointsBlock/storyblok";
 import ContactStoryblok from "./ContactBlock/storyblok";
 import HeaderStoryblok from "./HeaderBlock/storyblok";
 import FooterStoryblok from "./FooterBlock/storyblok";
 
+import HowWeWorkBlok from "./HowWeWorkBlok";
+
+
 export const storyblokComponents = {
     spacer : SpacerStoryblok,
     aboutMe: HomeAboutModuleStoryblok,
-    howWeWork: HowWeWorkStoryblok,
+    howWeWork: HowWeWorkBlok,
     productOffering: OffersStoryblok,
     uniqueSellingPoints: UniqueSellingPointsStoryblok,
     contact: ContactStoryblok,
