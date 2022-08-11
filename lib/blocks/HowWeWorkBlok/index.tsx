@@ -5,8 +5,9 @@ import { motion } from "framer-motion";
 import { storyblokEditable } from "@storyblok/react";
 import getFontAwesomeIcon from "../../utils/getFontawesomeIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Blok } from "../types";
 
-const HowWeWorkBlock: React.FC<{ blok: any }> = ({ blok }) => {
+const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
   const screen = useScreen();
 
   return (
