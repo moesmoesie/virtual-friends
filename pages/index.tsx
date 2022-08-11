@@ -11,18 +11,8 @@ const HomePage: NextPage<{ story: any }> = ({ story }) => {
   return (
     <div className="overflow-hidden">
       <PageBlock
-        header={
-          <StoryblokComponent
-            blok={story?.content?.header[0]}
-            key={story?.content?.header[0]._uid}
-          />
-        }
-        footer={
-          <StoryblokComponent
-            blok={story?.content?.footer[0]}
-            key={story?.content?.footer[0]._uid}
-          />
-        }
+        header={<StoryblokComponent blok={story?.content?.header[0]} />}
+        footer={<StoryblokComponent blok={story?.content?.footer[0]} />}
       >
         {story.content.body.map((nestedBlok: any) => {
           if (nestedBlok.responsive && nestedBlok.responsive.includes(screen)) {
