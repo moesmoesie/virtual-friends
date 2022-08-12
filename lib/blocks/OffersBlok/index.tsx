@@ -5,6 +5,7 @@ import { Blok } from "../types";
 import { storyblokEditable } from "@storyblok/react";
 import Ecommerce from "./Ecommerce";
 import Company from "./Company";
+import ContentMangementSystem from "./ContentMangementSystem";
 
 const OffersBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
   return (
@@ -50,7 +51,11 @@ const OffersBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                       </div>
                     )}
 
-                    {el?.type === "cms" && <div>cms</div>}
+                    {el?.type === "cms" && (
+                      <div className="translate-x-16">
+                        <ContentMangementSystem />
+                      </div>
+                    )}
 
                     {el?.type === "pwa" && <div>pwa</div>}
                   </div>
