@@ -8,7 +8,7 @@ import HeaderBlok from "./HeaderBlok";
 import AboutBlok from "./AboutBlok";
 import SpacerBlok from "./SpacerBlok";
 import UniqueSellingPointsBlok from "./UniqueSellingPointsBlok";
-
+import HomeLandingBlok from "./HomeLandingBlok";
 
 export const storyblokComponents = {
     spacer : SpacerBlok,
@@ -18,5 +18,6 @@ export const storyblokComponents = {
     uniqueSellingPoints: UniqueSellingPointsBlok,
     contact: ContactStoryblok,
     header: HeaderBlok,
-    footer: FooterBlok
+    footer: FooterBlok,
+    homeLanding: HomeLandingBlok
 }

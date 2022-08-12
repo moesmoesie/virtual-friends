@@ -15,10 +15,13 @@ const HomePage: NextPage<{ story: any }> = ({ story }) => {
         footer={<StoryblokComponent blok={story?.content?.footer[0]} />}
       >
         {story.content.body.map((nestedBlok: any) => {
-          if (nestedBlok.responsive && nestedBlok.responsive.includes(screen)) {
-            return <></>;
+          if (nestedBlok.show && nestedBlok.show.includes(screen)) {
+            return (
+              <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+            );
           }
-          return <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />;
+
+          return <></>;
         })}
       </PageBlock>
     </div>
