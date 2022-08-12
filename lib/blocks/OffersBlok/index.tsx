@@ -6,6 +6,7 @@ import { storyblokEditable } from "@storyblok/react";
 import Ecommerce from "./Ecommerce";
 import Company from "./Company";
 import ContentMangementSystem from "./ContentMangementSystem";
+import ProgressiveWebApp from "./ProgressiveWebApp";
 
 const OffersBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
   return (
@@ -57,7 +58,11 @@ const OffersBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                       </div>
                     )}
 
-                    {el?.type === "pwa" && <div>pwa</div>}
+                    {el?.type === "pwa" && (
+                      <div className="translate-x-16">
+                        <ProgressiveWebApp />
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

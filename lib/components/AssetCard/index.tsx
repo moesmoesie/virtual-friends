@@ -11,7 +11,7 @@ const AssetCard: React.FC = () => {
       </div>
       <p className="body-1 mt-3 font-bold text-purple-navy-050">Portfolio</p>
       <p className="body-1 -mt-2 text-[28px] font-bold">52,7K</p>
-      <p className="body-1 text-Teal/500">+23%</p>
+      <p className="body-1 text-teal-500">+23%</p>
     </div>
   );
 };

@@ -13,7 +13,7 @@ const AssetLineChartCard: React.FC = () => {
   ];
 
   return (
-    <div className="bg-DarkPurple/600 rounded-lg pt-6 pb-4 shadow-2xl">
+    <div className="bg-dark-purple-600 rounded-lg pt-6 pb-4 shadow-2xl">
       <img src="assets/graph.png" alt="chart" />
       <div className="flex justify-between pl-5 pr-7">
         {months.map((el, index) => {
