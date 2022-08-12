@@ -33,7 +33,10 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({ employee }) => {
           )}
         </div>
       </div>
-      <img src={employee.image} className="absolute top-0 h-full w-full" />
+      <img
+        src={employee.image}
+        className="absolute object-cover top-0 h-full w-full"
+      />
     </div>
   );
 };

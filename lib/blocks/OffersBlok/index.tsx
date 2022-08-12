@@ -4,6 +4,7 @@ import { Container } from "../../components";
 import { Blok } from "../types";
 import { storyblokEditable } from "@storyblok/react";
 import Ecommerce from "./Ecommerce";
+import Company from "./Company";
 
 const OffersBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
   return (
@@ -42,6 +43,16 @@ const OffersBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                         <Ecommerce />
                       </div>
                     )}
+
+                    {el?.type === "company" && (
+                      <div className="translate-x-16">
+                        <Company />
+                      </div>
+                    )}
+
+                    {el?.type === "cms" && <div>cms</div>}
+
+                    {el?.type === "pwa" && <div>pwa</div>}
                   </div>
                 </div>
               </div>

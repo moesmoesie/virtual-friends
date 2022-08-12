@@ -3,20 +3,8 @@ import { ReviewCard, EmployeeCard } from "../../components";
 
 const Company: React.FC = () => {
   return (
-    <div className="grid-row-[min-content,min-content] relative hidden flex-1 grid-cols-[min-content,min-content] gap-x-5 large:grid">
-      <div className="w-[500px] blur-2xl opacity-60 rounded-full h-[500px] bg-PurpleNavy/500 left-1/2 top-3/4 -translate-x-1/2 -translate-y-1/2 absolute" />
-
-      <div className="absolute bottom-0 left-1/2 z-50 translate-y-1/3 -translate-x-1/2">
-        <ReviewCard
-          review={{
-            name: "Jane Caboosy",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            company: "Caboosy inc",
-            image: "/assets/woman.png",
-          }}
-        />
-      </div>
-      <div className="relative">
+    <div className="absolute grid gap-x-4 grid-rows-[min-content,min-content] grid-cols-[min-content,min-content] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className="w-[260px] h-[360px] translate-y-24 shadow-2xl">
         <EmployeeCard
           employee={{
             name: "John Doe",
@@ -27,17 +15,34 @@ const Company: React.FC = () => {
         />
       </div>
 
-      <EmployeeCard
-        employee={{
-          name: "Jane Doe",
-          phone: "+31634XXX366",
-          position: "A Virtual Foe",
-          image: "/assets/employee2.png",
-          github: "hello",
-          linkedin: "asda",
-          mail: "asda",
-        }}
-      />
+      <div>
+        <div className="w-[260px] h-[360px] shadow-2xl translate-y-16">
+          <EmployeeCard
+            employee={{
+              name: "Jane Doe",
+              phone: "+31634XXX366",
+              position: "A Virtual Foe",
+              image: "/assets/employee2.png",
+              github: "hello",
+              linkedin: "asda",
+              mail: "asda",
+            }}
+          />
+        </div>
+      </div>
+
+      <div className="col-span-2 justify-self-center">
+        <div className="shadow-2xl">
+          <ReviewCard
+            review={{
+              name: "Jane Caboosy",
+              body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              company: "Caboosy inc",
+              image: "/assets/woman.png",
+            }}
+          />
+        </div>
+      </div>
     </div>
   );
 };
