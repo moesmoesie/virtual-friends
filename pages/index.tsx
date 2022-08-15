@@ -15,13 +15,29 @@ const HomePage: NextPage<{ story: any }> = ({ story }) => {
         footer={<StoryblokComponent blok={story?.content?.footer[0]} />}
       >
         {story.content.body.map((nestedBlok: any) => {
-          if (nestedBlok.show && nestedBlok.show.includes(screen)) {
-            return (
+          return (
+            <div
+              className={`hidden 
+                ${
+                  nestedBlok.show.includes("small")
+                    ? "small:block"
+                    : "small:hidden"
+                }
+                ${
+                  nestedBlok.show.includes("medium")
+                    ? "medium:block"
+                    : "medium:hidden"
+                }
+                ${
+                  nestedBlok.show.includes("large")
+                    ? "large:block"
+                    : "large:hidden"
+                }
+              `}
+            >
               <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
-            );
-          }
-
-          return <></>;
+            </div>
+          );
         })}
       </PageBlock>
     </div>
