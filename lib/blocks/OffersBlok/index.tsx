@@ -7,6 +7,7 @@ import Ecommerce from "./Ecommerce";
 import Company from "./Company";
 import ContentMangementSystem from "./ContentMangementSystem";
 import ProgressiveWebApp from "./ProgressiveWebApp";
+import { Chip } from "../../components";
 
 const OffersBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
   return (
@@ -71,20 +72,6 @@ const OffersBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
         </div>
       </Container>
     </section>
-  );
-};
-
-interface ChipProps {
-  value: string;
-}
-
-const Chip: React.FC<ChipProps> = ({ value }) => {
-  return (
-    <div className="rounded-lg bg-dark-purple-300 px-2 py-1">
-      <span className="body-1 whitespace-nowrap font-bold uppercase">
-        {value}
-      </span>
-    </div>
   );
 };
 
