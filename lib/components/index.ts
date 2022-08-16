@@ -19,3 +19,4 @@ export { default as Picker } from "./Picker";
 export { default as TextEditor } from "./TextEditor";
 export { default as ModuleContainer } from "./ModuleContainer";
 export { default as GradientText } from "./GradientText";
+export { default as StoryblokImage} from './StoryblokImage'
