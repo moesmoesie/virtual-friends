@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { GradientText, RichText, StoryblokImage } from "../../components";
 import { Container } from "../../components";
 import { Blok } from "../types";
@@ -52,13 +52,36 @@ const ProductComponent: React.FC<{ name: string }> = ({ name }) => {
 
 const ProductSection: React.FC<ProductSectionProps> = (props) => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(scrollRef);
+  const isInView = useInView(scrollRef, { once: true });
+  const [show, setShow] = useState(false);
+
+  const icon = {
+    show: { filter: "blur(0px)" },
+    hidden: { filter: "blur(24px)" },
+  };
+
+  const components = {
+    hidden: {
+      opacity: 0,
+      x: props.reverse ? -100 : 100,
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+
+  useEffect(() => {
+    if (isInView) {
+      console.log(isInView);
+      setShow(true);
+    }
+  }, [isInView]);
 
   return (
     <div
-      ref={scrollRef}
       className={`w-full flex ${
-        props.reverse ? "flex-row-reverse" : "flex-row"
+        props.reverse ? "large:flex-row-reverse" : "flex-row"
       }`}
     >
       <div className="max-w-xl grid gap-4 medium:gap-6 w-full">
@@ -76,17 +99,20 @@ const ProductSection: React.FC<ProductSectionProps> = (props) => {
       </div>
 
       <div
-        className={`flex-1 relative ${
+        className={`flex-1 relative hidden large:block ${
           props.reverse ? "-translate-x-16" : "translate-x-16"
         }`}
       >
+        <div
+          ref={scrollRef}
+          className="absolute w-[12px] h-[12px] left-1/2 top-full -translate-x-1/2 -translate-y-1/2"
+        ></div>
         <div className="absolute w-[600px] h-[600px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <motion.div
-            whileInView={{
-              filter: "blur(40px)",
-            }}
+            variants={icon}
+            initial={"hidden"}
+            animate={show ? "hidden" : "show"}
             transition={{ duration: 0.7 }}
-            viewport={{ once: true, margin: "-600px" }}
           >
             <StoryblokImage
               className="w-full object-cover h-full  "
@@ -97,16 +123,10 @@ const ProductSection: React.FC<ProductSectionProps> = (props) => {
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <motion.div
-            initial={{
-              opacity: 0,
-              x: props.reverse ? -100 : 100,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            transition={{ delay: 0.5 }}
-            viewport={{ once: true, margin: "-500px" }}
+            variants={components}
+            initial={"hidden"}
+            animate={show ? "show" : "hidden"}
+            transition={{ delay: 0.2, duration: 0.4 }}
           >
             {props.components}
           </motion.div>
