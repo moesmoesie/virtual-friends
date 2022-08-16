@@ -17,12 +17,9 @@ const HomePage: NextPage<{ story: any }> = ({ story }) => {
         {story.content.body.map((nestedBlok: any) => {
           return (
             <div
-              className={`hidden 
-                ${
-                  nestedBlok.show.includes("small")
-                    ? "small:block"
-                    : "small:hidden"
-                }
+              key={nestedBlok._uid}
+              className={` 
+                ${nestedBlok.show.includes("small") ? "block" : "hidden"}
                 ${
                   nestedBlok.show.includes("medium")
                     ? "medium:block"
@@ -35,7 +32,7 @@ const HomePage: NextPage<{ story: any }> = ({ story }) => {
                 }
               `}
             >
-              <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+              <StoryblokComponent blok={nestedBlok} />
             </div>
           );
         })}
@@ -55,7 +52,7 @@ export async function getStaticProps() {
 
   const storyblokApi = getStoryblokApi();
   let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
-
+  console.log(data);
   return {
     props: {
       story: data ? data.story : false,
