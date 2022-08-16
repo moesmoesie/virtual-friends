@@ -4,5 +4,5 @@ export interface ProductSectionProps {
     keywords : string[]
     components : JSX.Element,
     reverse : boolean,
-    image : JSX.Element
+    image? : any
 }
