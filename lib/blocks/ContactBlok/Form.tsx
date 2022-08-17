@@ -24,6 +24,9 @@ const Form: React.FC = () => {
 
   const onSubmit = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
+    alert(
+      `${formBody.name} \n${formBody.email} \n${formBody.catagory} \n${formBody.message}s`
+    );
   };
 
   return (
