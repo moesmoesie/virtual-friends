@@ -8,18 +8,12 @@ const HomeLandingBlok: React.FC<{ blok: Blok }> = ({ blok }) => {
       <Container module={blok}>
         <Background />
         <div className="flex items-center relative justify-between">
-          <div className="max-w-2xl flex flex-col gap-10">
+          <div className="max-w-3xl flex flex-col gap-10">
             <h1 className="display-1 ">{blok?.title}</h1>
             <p className="body-3 medium:max-w-[80%]">{blok.body}</p>
             <div>
               <Button>{blok.callToAction}</Button>
             </div>
-          </div>
-
-          <div className="w-full hidden large:flex justify-end">
-            <Card className="w-[450px] h-[450px] rounded-full">
-              <div />
-            </Card>
           </div>
         </div>
       </Container>
