@@ -21,3 +21,4 @@ export { default as ModuleContainer } from "./ModuleContainer";
 export { default as GradientText } from "./GradientText";
 export { default as StoryblokImage} from './StoryblokImage'
 export {default as Chip} from './Chip'
+export {Input, MultlineInput, SelectInput} from './Input'
