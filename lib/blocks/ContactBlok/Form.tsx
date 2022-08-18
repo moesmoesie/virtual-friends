@@ -1,52 +1,34 @@
-import { useState, useEffect } from "react";
+import { useRef } from "react";
 import { Button, Input, SelectInput, MultlineInput } from "../../components";
 
-interface FormDataType {
-  name: string;
-  email: string;
-  catagory: string;
-  message: string;
+interface FormValue {
+  value: string;
+  status?: "success" | "error";
+  message?: string;
 }
 
 const Form: React.FC = () => {
-  const formData: FormDataType = {
-    name: "",
-    email: "",
-    catagory: "",
-    message: "",
-  };
-
-  const [formBody, setformBody] = useState<FormDataType>(formData);
-
-  const inputChangeHandler = (name: string, value: string) => {
-    setformBody({ ...formBody, [name]: value });
-  };
+  const name = useRef<FormValue>({ value: "" });
+  const email = useRef<FormValue>({ value: "" });
+  const catagory = useRef<FormValue>({ value: "" });
+  const message = useRef<FormValue>({ value: "" });
 
   const onSubmit = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
-    alert(
-      `${formBody.name} \n${formBody.email} \n${formBody.catagory} \n${formBody.message}`
-    );
+    console.log(name.current.value);
+    console.log(email.current.value);
+    console.log(catagory.current.value);
+    console.log(message.current.value);
   };
 
   return (
     <form className="flex-1 gap-3 gap-x-6 grid-cols-1 grid">
-      <Input
-        setValue={(name, value) => inputChangeHandler(name, value)}
-        required
-        placeholder="Name"
-        name="name"
-      />
+      <Input inputRef={name} required placeholder="Name" name="name" />
 
-      <Input
-        setValue={(name, value) => inputChangeHandler(name, value)}
-        required
-        placeholder="E-mail"
-        name="email"
-      />
+      <Input inputRef={email} required placeholder="E-mail" name="email" />
 
       <SelectInput
-        setValue={(name, value) => inputChangeHandler(name, value)}
+        inputRef={catagory}
         type="select"
         required
         placeholder="Catagory"
@@ -55,7 +37,7 @@ const Form: React.FC = () => {
       />
 
       <MultlineInput
-        setValue={(name, value) => inputChangeHandler(name, value)}
+        inputRef={message}
         type="multiline"
         placeholder="Message"
         name="message"

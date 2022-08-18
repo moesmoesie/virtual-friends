@@ -1,8 +1,17 @@
+import React, { MutableRefObject } from "react";
+
+
+interface FormValue {
+  value: string;
+  status?: "success" | "error";
+  message?: string;
+}
+
 export interface InputProps {
   name: string;
   placeholder: string;
   required?: boolean;
-  setValue: (name: string, value: string) => void;
+  inputRef: MutableRefObject<FormValue>
 }
 
 export interface InputSelectProps extends InputProps {

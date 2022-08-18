@@ -2,10 +2,16 @@ import { useState, useEffect } from "react";
 import { InputMultilineProps, InputProps, InputSelectProps } from "./types";
 
 export const Input: React.FC<InputProps> = (props) => {
+  const [current, setCurrent] = useState<string>("");
+
+  useEffect(() => {
+    props.inputRef.current.value = current;
+  }, [current]);
+
   return (
     <div>
       <input
-        onChange={(e) => props.setValue(props.name, e.target.value)}
+        onChange={(event) => setCurrent(event.target.value)}
         required={props.required}
         name={props.name}
         placeholder={props.placeholder + (props.required ? " *" : "")}
@@ -16,10 +22,16 @@ export const Input: React.FC<InputProps> = (props) => {
 };
 
 export const MultlineInput: React.FC<InputMultilineProps> = (props) => {
+  const [current, setCurrent] = useState<string>("");
+
+  useEffect(() => {
+    props.inputRef.current.value = current;
+  }, [current]);
+
   return (
     <div>
       <textarea
-        onChange={(e) => props.setValue(props.name, e.target.value)}
+        onChange={(event) => setCurrent(event.target.value)}
         name={props.name}
         placeholder={props.placeholder}
         className="border-b medium:min-h-[107px] placeholder:text-white medium:py-4 outline-none placeholder:body-2 py-3 border-dark-purple-200 w-full bg-transparent"
@@ -32,7 +44,7 @@ export const SelectInput: React.FC<InputSelectProps> = (props) => {
   const [current, setCurrent] = useState<string>(props.options[0]);
 
   useEffect(() => {
-    props.setValue(props.name, current);
+    props.inputRef.current.value = current;
   }, [current]);
 
   return (
