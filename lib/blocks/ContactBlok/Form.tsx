@@ -24,6 +24,8 @@ const Form: React.FC = () => {
     message: [Required],
   });
 
+  const hChaptchaError = form.getFirstErrorMessage("hChaptcha");
+
   return (
     <form className="flex-1 gap-3 gap-x-6 grid-cols-1 grid">
       <Input
@@ -75,6 +77,9 @@ const Form: React.FC = () => {
           onVerify={(token, ekey) => form.setToken({ token, ekey })}
           sitekey="10000000-ffff-ffff-ffff-000000000001"
         />
+        {hChaptchaError && (
+          <p className="mt-3 text-[#FF0000]">{hChaptchaError}</p>
+        )}
       </div>
 
       <div className="mt-4">
