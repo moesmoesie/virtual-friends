@@ -84,7 +84,12 @@ const Form: React.FC = () => {
 
       <div className="mt-4">
         <Button onClick={form.submit} type="accent">
-          <span className="body-2 whitespace-nowrap">Send Message</span>
+          <span className="body-2 whitespace-nowrap">
+            {form.status === "error" && "Failed, Try Again!"}
+            {form.status === "success" && "Completed!"}
+            {form.status === "loading" && "Loading"}
+            {form.status === "idle" && "Send Message"}
+          </span>
         </Button>
       </div>
     </form>

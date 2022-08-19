@@ -19,6 +19,9 @@ export const useForm = <T,>(initialState: T, validators: ValidatorType<T>) => {
   const [values, setValues] = useState<T>(initialState);
   const [errors, setErrors] = useState<ErrorType<T>>({});
   const [token, setToken] = useState<TokenType | null>(null);
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
   type Fields = keyof T;
 
@@ -84,6 +87,7 @@ export const useForm = <T,>(initialState: T, validators: ValidatorType<T>) => {
 
   const submit = async (event: React.SyntheticEvent) => {
     event.preventDefault();
+    setStatus("loading");
 
     const newErrors: ErrorType<T> = {};
     let isValid = true;
@@ -103,6 +107,7 @@ export const useForm = <T,>(initialState: T, validators: ValidatorType<T>) => {
 
     if (!isValid) {
       newErrors.form = ["Form is invalid!"];
+      setStatus("error");
       return;
     }
 
@@ -119,12 +124,20 @@ export const useForm = <T,>(initialState: T, validators: ValidatorType<T>) => {
     });
 
     const responseData = await response.json();
-    console.log(responseData.errors);
+
+    setErrors(responseData.errors);
+
+    if (response.status === 200) {
+      setStatus("success");
+    } else {
+      setStatus("error");
+    }
   };
 
   return {
     getFirstErrorMessage,
     getStatus,
+    status,
     setToken,
     changeHandler,
     submit,

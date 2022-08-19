@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-
-
+import sendgrid from "@sendgrid/mail";
 // HELPERS
 
 // TYPES
@@ -19,6 +18,7 @@ if(process.env.HCAPTCHA_SECRET_KEY === undefined){
 
 const VERIFY_URL = "https://hcaptcha.com/siteverify"
 const SECRET_KEY = process.env.HCAPTCHA_SECRET_KEY
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY!);
 
 export default async function handler(
   req: NextApiRequest,
@@ -40,8 +40,7 @@ export default async function handler(
 
     if(token === undefined){
         addToErrors('hChaptcha','No hChaptcha token provided!')
-        res.status(402).json({errors})
-        return
+        return res.status(402).json({errors})
     }
 
     const parameters = new URLSearchParams({
@@ -59,8 +58,7 @@ export default async function handler(
 
     if(responseData?.success === false){
         addToErrors('hChaptcha','The hChaptcha validation was no success!')
-        res.status(402).json({ errors})
-        return
+        return res.status(402).json({ errors})
     }
 
     // START FIELD VALIDATION
@@ -79,11 +77,26 @@ export default async function handler(
     }
 
     if(Object.keys(errors).length > 0){
-        res.status(402).json({errors})
-        return
+        return res.status(402).json({errors})
     }
 
-    // START EMAIL SENDING
+    try {
+        await sendgrid.send({
+        to: "mdarwesh@virtualfriends.dev",
+        from: "mdarwesh@virtualfriends.dev",
+        subject: `WEBSITE FORM | ${name} - ${email} - ${catagory}` ,
+        html: `
+        <div>
+            name : ${name}
+            email: ${email}
+            catagory: ${catagory}
+            message: ${message}
+        </div>`,
+        });
+    } catch (error) { 
+        addToErrors("form", "Unable to proccess email.")
+        return res.status(500).json({errors});
+    }
 
     res.status(200).json({ errors })
 }
