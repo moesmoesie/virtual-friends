@@ -7,7 +7,8 @@ const SpacerBlok: React.FC<{ blok: Blok }> = ({ blok }) => {
       {...storyblokEditable(blok)}
       style={{
         height: `${blok?.height}px`,
-        backgroundColor: blok?.backgroundColor,
+        backgroundColor:
+          blok?.backgroundColor === "" ? undefined : blok?.backgroundColor,
       }}
     />
   );
