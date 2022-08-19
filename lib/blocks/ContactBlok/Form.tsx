@@ -75,7 +75,7 @@ const Form: React.FC = () => {
           ref={ref}
           theme="light"
           onVerify={(token, ekey) => form.setToken({ token, ekey })}
-          sitekey="10000000-ffff-ffff-ffff-000000000001"
+          sitekey={process.env["NEXT_PUBLIC_HCAPTCHA_SITE_KEY"]!}
         />
         {hChaptchaError && (
           <p className="mt-3 text-[#FF0000]">{hChaptchaError}</p>
