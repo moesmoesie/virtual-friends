@@ -1,5 +1,7 @@
 import { Button, Input, SelectInput, MultlineInput } from "../../components";
 import { useForm } from "./useForm";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { useRef } from "react";
 
 const initialValues = {
   name: "",
@@ -15,6 +17,7 @@ const Required = (value: string) => {
 };
 
 const Form: React.FC = () => {
+  const ref = useRef<HCaptcha>(null);
   const form = useForm(initialValues, {
     name: [Required],
     email: [Required],
@@ -61,7 +64,20 @@ const Form: React.FC = () => {
         name="message"
       />
 
-      <div className="mt-8">
+      <div className="mt-3">
+        <HCaptcha
+          onExpire={() => {
+            ref.current?.resetCaptcha();
+            form.setToken(null);
+          }}
+          ref={ref}
+          theme="light"
+          onVerify={(token, ekey) => form.setToken({ token, ekey })}
+          sitekey="10000000-ffff-ffff-ffff-000000000001"
+        />
+      </div>
+
+      <div className="mt-4">
         <Button onClick={form.submit} type="accent">
           <span className="body-2 whitespace-nowrap">Send Message</span>
         </Button>

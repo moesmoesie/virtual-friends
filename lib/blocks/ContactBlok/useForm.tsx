@@ -8,9 +8,15 @@ type ErrorType<T> = {
   [Property in keyof T]?: string[];
 };
 
+type TokenType = {
+  token: string;
+  ekey: string;
+};
+
 export const useForm = <T,>(initialState: T, validators: ValidatorType<T>) => {
   const [values, setValues] = useState<T>(initialState);
   const [errors, setErrors] = useState<ErrorType<T>>({});
+  const [token, setToken] = useState<TokenType | null>(null);
 
   const getErrors = (name: keyof T) => {
     return errors[name];
@@ -83,6 +89,11 @@ export const useForm = <T,>(initialState: T, validators: ValidatorType<T>) => {
       return;
     }
 
+    if (token === null) {
+      console.log("Please prove you are a human");
+      return;
+    }
+
     // TODO: Implement post request
     // TODO: Implement server side response validation
 
@@ -95,6 +106,7 @@ export const useForm = <T,>(initialState: T, validators: ValidatorType<T>) => {
     getFirstErrorMessage,
     getErrors,
     getStatus,
+    setToken,
     changeHandler,
     submit,
   };
