@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Product, Button, Receipt, IconButton } from "../../components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FloatingContainer from "../../components/FloatingContainer";
 const products = [
   {
     color: "/assets/productColor2.jpg",
@@ -39,25 +40,29 @@ const products = [
 const Ecommerce: React.FC = () => {
   return (
     <div className="relative grid-cols-[min-content,min-content] gap-7 grid">
-      <div className="pt-3">
+      <FloatingContainer delay={0.4} className="pt-3">
         <ProductCard />
-      </div>
+      </FloatingContainer>
       <div className="relative">
-        <div className="absolute right-10 top-0 -translate-y-1/2">
-          <IconButton
-            icon={
-              <div className="relative">
-                <FontAwesomeIcon
-                  className="text-[20px] text-Teal/500"
-                  icon={"shopping-cart"}
-                />
-              </div>
-            }
-          />
+        <div className="absolute z-50 right-10 top-0 -translate-y-1/2">
+          <FloatingContainer delay={0.2} className="pt-3">
+            <IconButton
+              icon={
+                <div className="relative">
+                  <FontAwesomeIcon
+                    className="text-[20px] text-Teal/500"
+                    icon={"shopping-cart"}
+                  />
+                </div>
+              }
+            />
+          </FloatingContainer>
         </div>
-        <div className="shadow-2xl">
-          <Receipt products={products.slice(0, 3)} />
-        </div>
+        <FloatingContainer className="relative">
+          <div className="shadow-2xl">
+            <Receipt products={products.slice(0, 3)} />
+          </div>
+        </FloatingContainer>
       </div>
     </div>
   );

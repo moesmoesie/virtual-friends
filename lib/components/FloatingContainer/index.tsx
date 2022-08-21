@@ -4,7 +4,7 @@ const FloatingContainer: React.FC<FloatingContainerProps> = (props) => {
   return (
     <motion.div
       animate={{
-        y: [20, -20, 20],
+        y: [10, -10, 10],
       }}
       transition={{
         repeat: Infinity,
