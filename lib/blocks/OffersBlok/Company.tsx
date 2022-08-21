@@ -11,6 +11,9 @@ const Company: React.FC = () => {
             phone: "+31634XXX366",
             position: "A Virtual Friend",
             image: "/assets/employee1.png",
+            github: "https://github.com/moesmoesie",
+            linkedin: "https://www.linkedin.com/in/mustafadarwesh/",
+            mail: "mailto:mdarwesh@virtualfriends.dev",
           }}
         />
       </div>
@@ -23,9 +26,9 @@ const Company: React.FC = () => {
               phone: "+31634XXX366",
               position: "A Virtual Foe",
               image: "/assets/employee2.png",
-              github: "hello",
-              linkedin: "asda",
-              mail: "asda",
+              github: "https://github.com/moesmoesie",
+              linkedin: "https://www.linkedin.com/in/mustafadarwesh/",
+              mail: "mailto:mdarwesh@virtualfriends.dev",
             }}
           />
         </div>

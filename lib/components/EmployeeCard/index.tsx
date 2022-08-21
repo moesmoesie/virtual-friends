@@ -15,19 +15,19 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({ employee }) => {
         </div>
         <div className="flex gap-2 flex-col">
           {employee?.linkedin && (
-            <a href="#">
+            <a href={employee?.linkedin} target="_blank">
               <FontAwesomeIcon className="text-xl" icon={["fab", "linkedin"]} />
             </a>
           )}
 
           {employee?.github && (
-            <a href="#">
+            <a href={employee?.github} target="_blank">
               <FontAwesomeIcon className="text-xl" icon={["fab", "github"]} />
             </a>
           )}
 
           {employee?.mail && (
-            <a href="#">
+            <a href={employee?.mail}>
               <FontAwesomeIcon className="text-xl" icon={"envelope"} />
             </a>
           )}
