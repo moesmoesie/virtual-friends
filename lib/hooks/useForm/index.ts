@@ -1,19 +1,5 @@
 import { useEffect, useState } from "react";
-
-type ValidatorType<T> = {
-  [Property in keyof T]?: ((value: string) => string | undefined)[];
-};
-
-type ErrorFields<T> = keyof T | "hChaptcha" | "form";
-
-type ErrorType<T> = {
-  [Property in ErrorFields<T>]?: string[];
-};
-
-type TokenType = {
-  token: string;
-  ekey: string;
-};
+import { ValidatorType, ErrorType, TokenType, ErrorFields } from "./types";
 
 export const useForm = <T,>(initialState: T, validators: ValidatorType<T>) => {
   const [values, setValues] = useState<T>(initialState);

@@ -1,5 +1,5 @@
 import { storyblokEditable } from "@storyblok/react";
-import { Container, CompanyCard, GradientText, Button } from "../../components";
+import { Container, CompanyCard, GradientText } from "../../components";
 import { useScreen } from "../../hooks";
 import { Blok } from "../types";
 import Form from "./Form";

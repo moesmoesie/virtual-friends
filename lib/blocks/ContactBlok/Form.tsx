@@ -1,7 +1,7 @@
 import { Button, Input, SelectInput, MultlineInput } from "../../components";
-import { useForm } from "./useForm";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { useRef } from "react";
+import { useForm } from "../../hooks/useForm";
 
 const initialValues = {
   name: "",
