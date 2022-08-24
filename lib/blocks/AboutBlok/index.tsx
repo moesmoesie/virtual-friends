@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useScreen } from "../../hooks";
 import { Blok } from "../types";
 import { storyblokEditable } from "@storyblok/react";
+import ModelCard from "./ModelCard";
+import CodeCard from "./CodeCard";
 
 const variants = {
   active: { x: 0, scale: 1 },
@@ -39,13 +41,13 @@ const HomeAboutModuleLarge: React.FC<{ blok: Blok }> = ({ blok }) => {
         </div>
 
         <div className="flex justify-center gap-6">
-          <Card className="flex-1 h-[371px]">
-            <div />
-          </Card>
+          <div className="flex-1 h-[371px]">
+            <ModelCard />
+          </div>
 
-          <Card className="flex-1 h-[371px]">
-            <div />
-          </Card>
+          <div className="flex-1 h-[371px]">
+            <CodeCard />
+          </div>
         </div>
       </Container>
     </section>
