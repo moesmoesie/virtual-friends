@@ -9,8 +9,8 @@ import ContentMangementSystem from "./ContentMangementSystem";
 import ProgressiveWebApp from "./ProgressiveWebApp";
 import { Chip } from "../../components";
 import { ProductSectionProps } from "./types";
-import { motion, useInView, useViewportScroll } from "framer-motion";
-import { reverse } from "dns";
+import { animated, useSpring } from "react-spring";
+import { Waypoint } from "react-waypoint";
 
 const OffersBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
   return (
@@ -51,32 +51,17 @@ const ProductComponent: React.FC<{ name: string }> = ({ name }) => {
 };
 
 const ProductSection: React.FC<ProductSectionProps> = (props) => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(scrollRef, { once: true });
   const [show, setShow] = useState(false);
 
-  const icon = {
-    show: { filter: "blur(0px)" },
-    hidden: { filter: "blur(24px)" },
-  };
+  const iconStyles = useSpring({
+    filter: show ? "blur(24px)" : "blur(0px)",
+  });
 
-  const components = {
-    hidden: {
-      opacity: 0,
-      x: props.reverse ? -100 : 100,
-    },
-    show: {
-      opacity: 1,
-      x: 0,
-    },
-  };
-
-  useEffect(() => {
-    if (isInView) {
-      console.log(isInView);
-      setShow(true);
-    }
-  }, [isInView]);
+  const componentStyles = useSpring({
+    delay: 200,
+    opacity: show ? 1 : 0,
+    x: show ? 1 : props.reverse ? -100 : 100,
+  });
 
   return (
     <div
@@ -103,33 +88,23 @@ const ProductSection: React.FC<ProductSectionProps> = (props) => {
           props.reverse ? "-translate-x-16" : "translate-x-16"
         }`}
       >
-        <div
-          ref={scrollRef}
-          className="absolute w-[12px] h-[12px] left-1/2 top-full -translate-x-1/2 -translate-y-1/2"
-        ></div>
+        <Waypoint onEnter={() => setShow(true)}>
+          <div className="absolute w-[12px] h-[12px] left-1/2 top-full -translate-x-1/2 -translate-y-1/2" />
+        </Waypoint>
+
         <div className="absolute w-[600px] h-[600px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <motion.div
-            variants={icon}
-            initial={"hidden"}
-            animate={show ? "hidden" : "show"}
-            transition={{ duration: 0.7 }}
-          >
+          <animated.div style={iconStyles}>
             <StoryblokImage
               className="w-full object-cover h-full  "
               {...props?.image}
             />
-          </motion.div>
+          </animated.div>
         </div>
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <motion.div
-            variants={components}
-            initial={"hidden"}
-            animate={show ? "show" : "hidden"}
-            transition={{ delay: 0.2, duration: 0.4 }}
-          >
+          <animated.div style={componentStyles}>
             {props.components}
-          </motion.div>
+          </animated.div>
         </div>
       </div>
     </div>
