@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { storyblokEditable } from "@storyblok/react";
 import { Button, Card, Container } from "../../components";
 import { Blok } from "../types";
@@ -11,8 +12,32 @@ const HomeLandingBlok: React.FC<{ blok: Blok }> = ({ blok }) => {
           <div className="max-w-3xl flex flex-col gap-10">
             <h1 className="display-1 ">{blok?.title}</h1>
             <p className="body-3 medium:max-w-[80%]">{blok.body}</p>
-            <div>
+            <div className="flex items-center">
               <Button>{blok.callToAction}</Button>
+              <div className="flex items-start gap-4">
+                <div className="flex gap-4 ml-8">
+                  <a className="w-7 h-7 bg-black place-items-center rounded-full grid">
+                    <FontAwesomeIcon
+                      className="text-white text-[19px] rounded-full"
+                      icon={["fab", "instagram"]}
+                    />
+                  </a>
+
+                  <a className="w-7 h-7 bg-black place-items-center rounded-full grid">
+                    <FontAwesomeIcon
+                      className="text-white text-[19px] rounded-full"
+                      icon={["fab", "linkedin-in"]}
+                    />
+                  </a>
+
+                  <a className="w-7 h-7 bg-black place-items-center rounded-full grid">
+                    <FontAwesomeIcon
+                      className="text-white text-[19px] rounded-full"
+                      icon={["fab", "instagram"]}
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
