@@ -56,7 +56,7 @@ const Background: React.FC<{ images: any }> = (props) => {
         {props.images.map((image: any, index: number) => {
           const { left, top, bottom, right, translate } = image;
           return (
-            <FloatingContainer key={index} delay={0.4}>
+            <FloatingContainer delay={index * 200} key={index}>
               <StoryblokImage
                 style={{
                   left,

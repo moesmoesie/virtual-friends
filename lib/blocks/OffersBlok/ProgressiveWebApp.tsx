@@ -13,19 +13,19 @@ const ProgressiveWebApp: React.FC = () => {
           <AssetCard />
         </div>
       </FloatingContainer>
-      <FloatingContainer delay={0.3}>
+      <FloatingContainer delay={300}>
         <div className="translate-y-8">
           <AssetBarChartCard />
         </div>
       </FloatingContainer>
 
-      <FloatingContainer delay={0.5}>
+      <FloatingContainer delay={500}>
         <div className="translate-y-20">
           <AssetCard />
         </div>
       </FloatingContainer>
 
-      <FloatingContainer delay={0.7} className="col-span-3 -z-10">
+      <FloatingContainer delay={700} className="col-span-3 -z-10">
         <div className="-translate-y-4 pr-5">
           <AssetLineChartCard />
         </div>
