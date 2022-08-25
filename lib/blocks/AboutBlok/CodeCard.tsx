@@ -137,7 +137,7 @@ useGLTF.preload("/player.glb");
 
 const CodeCard: React.FC = () => {
   return (
-    <Card className="h-full w-[600px] overflow-hidden  max-w-full">
+    <Card className="h-full w-full overflow-hidden  max-w-full">
       <div className="flex relative overflow-hidden h-full flex-col">
         <div className="flex bg-dark-purple-200 w-full  absolute top-0 px-5 pb-2 gap-2 pt-4">
           <div className="w-3 h-3 bg-[#DE3663] rounded-full" />

@@ -1,126 +1,78 @@
-import { Card, Container } from "../../components";
-import { motion } from "framer-motion";
+import { Container } from "../../components";
 import { useState } from "react";
-import { useScreen } from "../../hooks";
 import { Blok } from "../types";
 import { storyblokEditable } from "@storyblok/react";
 import ModelCard from "./ModelCard";
 import CodeCard from "./CodeCard";
-
-const variants = {
-  active: { x: 0, scale: 1 },
-  nonActive: { x: "105%", scale: 0.96 },
-};
-
-const desvariants = {
-  active: { x: 0, scale: 1 },
-  nonActive: { x: "-105%", scale: 0.96 },
-};
+import { useSpring, animated } from "react-spring";
+import tailwindConfig from "../../../tailwind.config.js";
 
 const AboutBlok: React.FC<{ blok: Blok }> = (props) => {
-  const screen = useScreen();
-  if (screen !== "large") {
-    return <HomeAboutModuleSmall {...props} />;
-  }
   return <HomeAboutModuleLarge {...props} />;
 };
 
 const HomeAboutModuleLarge: React.FC<{ blok: Blok }> = ({ blok }) => {
+  const [current, setCurrent] = useState<"model" | "code">("model");
+
+  // START ANIMATIONS
+  const modelStyles = useSpring({ opacity: current == "model" ? 1 : 0 });
+  const codeStyles = useSpring({ opacity: current == "code" ? 1 : 0 });
+  const devButtonStyle = useSpring({
+    color:
+      current == "code"
+        ? "#ffffff"
+        : tailwindConfig.theme.colors["dark-purple-100"],
+    scale: current == "code" ? 1 : 0.85,
+  });
+  const desButtonStyle = useSpring({
+    color:
+      current == "model"
+        ? "#ffffff"
+        : tailwindConfig.theme.colors["dark-purple-100"],
+    scale: current == "model" ? 1 : 0.85,
+  });
+
+  // END ANIMATIONS
+
   return (
     <section {...storyblokEditable(blok)}>
       <Container module={blok}>
-        <div className="flex gap-52 mb-9 items-center justify-center">
-          <div className="max-w-sm">
-            <p className="display-3 text-end">{blok?.designTitle}</p>
-            <p className="body-3 text-end">{blok?.designContent}</p>
-          </div>
-          <div className="max-w-sm">
-            <p className="display-3">{blok?.developTitle}</p>
-            <p className="body-3">{blok?.developContent}</p>
-          </div>
-        </div>
-
-        <div className="flex justify-center gap-6">
-          <div className="flex-1 h-[371px]">
-            <ModelCard />
-          </div>
-
-          <div className="flex-1 h-[371px]">
-            <CodeCard />
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-};
-
-const HomeAboutModuleSmall: React.FC<{ blok: Blok }> = ({ blok }) => {
-  const [currentView, setCurrentView] = useState("design");
-  return (
-    <section {...storyblokEditable(blok)}>
-      <Container module={blok?.module}>
-        <div className="">
-          <div className="flex mb-4 gap-8 medium:gap-16 items-baseline">
-            <button
-              onClick={() => setCurrentView("design")}
-              className={`display-4 text-dark-purple-100 transition-all origin-bottom ${
-                currentView === "design" ? "!text-white !scale-110" : ""
-              }`}
-            >
-              {blok?.designTitle}
-            </button>
-
-            <button
-              onClick={() => setCurrentView("develop")}
-              className={`display-4 text-dark-purple-100 transition-all origin-bottom ${
-                currentView === "develop" ? "!text-white !scale-105" : ""
-              }`}
-            >
-              {blok?.developTitle}
-            </button>
-          </div>
-          <p className="body-3 mb-12 medium:max-w-[75%]">
-            {currentView === "design"
-              ? blok?.designContent
-              : blok?.developContent}
-          </p>
-
-          <motion.div
-            onDrag={(event) => console.log(event)}
-            className="medium:h-[371px] relative h-[580px]"
+        <div className="flex gap-3 mb-3 small:gap-10 items-baseline">
+          <animated.button
+            style={desButtonStyle}
+            disabled={current === "model"}
+            onClick={() => setCurrent("model")}
+            className="display-3 origin-bottom-left whitespace-nowrap"
           >
-            {/* DESIGN CARD */}
-            <motion.div
-              onClick={() => setCurrentView("design")}
-              variants={desvariants}
-              transition={{
-                ease: "easeInOut",
-              }}
-              initial="active"
-              animate={currentView === "design" ? "active" : "nonActive"}
-              className="absolute top-0 left-0 h-full"
-            >
-              <Card className="w-[343px] medium:w-[548px] h-full">
-                <div />
-              </Card>
-            </motion.div>
+            {blok?.designTitle}
+          </animated.button>
+          <animated.button
+            style={devButtonStyle}
+            disabled={current === "code"}
+            onClick={() => setCurrent("code")}
+            className="display-3 origin-bottom-right whitespace-nowrap"
+          >
+            {blok?.developTitle}
+          </animated.button>
+        </div>
 
-            {/* DEVELOP CARD */}
-            <motion.div
-              onClick={() => setCurrentView("develop")}
-              variants={variants}
-              transition={{
-                ease: "easeInOut",
-              }}
-              initial="nonActive"
-              animate={currentView === "develop" ? "active" : "nonActive"}
-              className="absolute top-0 left-0 h-full"
-            >
-              <Card className="w-[343px] medium:w-[548px] h-full">
-                <div />
-              </Card>
-            </motion.div>
-          </motion.div>
+        <div className="mb-8">
+          <p className="body-3">{blok?.developContent}</p>
+        </div>
+
+        <div className="relative h-[400px] w-full">
+          <animated.div
+            style={modelStyles}
+            className="absolute top-0 w-full h-full"
+          >
+            <ModelCard />
+          </animated.div>
+          <animated.div
+            style={codeStyles}
+            className="absolute top-0 w-full h-full"
+          >
+            <CodeCard />
+          </animated.div>
         </div>
       </Container>
     </section>
