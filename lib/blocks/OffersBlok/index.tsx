@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { GradientText, RichText, StoryblokImage } from "../../components";
+import { GradientText, StoryblokImage } from "../../components";
 import { Container } from "../../components";
 import { Blok } from "../types";
 import { storyblokEditable } from "@storyblok/react";
