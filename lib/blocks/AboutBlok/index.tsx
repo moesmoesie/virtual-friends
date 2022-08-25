@@ -4,7 +4,7 @@ import { Blok } from "../types";
 import { storyblokEditable } from "@storyblok/react";
 import ModelCard from "./ModelCard";
 import CodeCard from "./CodeCard";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated } from "@react-spring/web";
 import tailwindConfig from "../../../tailwind.config.js";
 import { useScreen, useWindow } from "../../hooks";
 

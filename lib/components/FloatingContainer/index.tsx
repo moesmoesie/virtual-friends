@@ -1,5 +1,5 @@
 import { FloatingContainerProps } from "./types";
-import { useSpring, animated, easings } from "react-spring";
+import { useSpring, animated } from "@react-spring/web";
 
 const FloatingContainer: React.FC<FloatingContainerProps> = (props) => {
   const p = useSpring({

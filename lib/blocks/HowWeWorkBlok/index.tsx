@@ -7,10 +7,7 @@ import {
   StoryblokImage,
 } from "../../components";
 import { useScreen } from "../../hooks";
-import { motion } from "framer-motion";
 import { storyblokEditable } from "@storyblok/react";
-import getFontAwesomeIcon from "../../utils/getFontawesomeIcon";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Blok } from "../types";
 
 const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
@@ -51,11 +48,7 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
           )}
 
           {screen === "medium" && (
-            <motion.div
-              dragConstraints={{ right: 0, left: -400 }}
-              drag="x"
-              className="flex gap-5"
-            >
+            <div className="flex gap-5">
               {blok?.steps.map((el: any) => {
                 return (
                   <div
@@ -73,7 +66,7 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                   </div>
                 );
               })}
-            </motion.div>
+            </div>
           )}
 
           {screen === "small" && (
@@ -84,7 +77,7 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                     <InfoCard
                       title={el.title}
                       body={el.body}
-                      icon={<StoryblokImage className="w-12" {...el?.icon} />}
+                      icon={<StoryblokImage className="w-" {...el?.icon} />}
                     />
                   </div>
                 );

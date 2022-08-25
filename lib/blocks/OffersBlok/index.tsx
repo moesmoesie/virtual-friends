@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { GradientText, StoryblokImage } from "../../components";
 import { Container } from "../../components";
 import { Blok } from "../types";
@@ -9,7 +9,7 @@ import ContentMangementSystem from "./ContentMangementSystem";
 import ProgressiveWebApp from "./ProgressiveWebApp";
 import { Chip } from "../../components";
 import { ProductSectionProps } from "./types";
-import { animated, useSpring } from "react-spring";
+import { animated, useChain, useSpring, useSpringRef } from "@react-spring/web";
 import { Waypoint } from "react-waypoint";
 
 const OffersBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
@@ -53,15 +53,20 @@ const ProductComponent: React.FC<{ name: string }> = ({ name }) => {
 const ProductSection: React.FC<ProductSectionProps> = (props) => {
   const [show, setShow] = useState(false);
 
+  const iconStylesRef = useSpringRef();
   const iconStyles = useSpring({
     filter: show ? "blur(24px)" : "blur(0px)",
+    ref: iconStylesRef,
   });
 
+  const componentStylesRef = useSpringRef();
   const componentStyles = useSpring({
-    delay: 200,
     opacity: show ? 1 : 0,
     x: show ? 1 : props.reverse ? -100 : 100,
+    ref: componentStylesRef,
   });
+
+  useChain([iconStylesRef, componentStylesRef], [0, 0.2]);
 
   return (
     <div
