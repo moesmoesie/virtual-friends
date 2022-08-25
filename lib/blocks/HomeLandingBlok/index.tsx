@@ -53,10 +53,10 @@ const Background: React.FC<{ images: any }> = (props) => {
       <div className="absolute hidden medium:block rounded-3xl -left-16 bottom-0 origin-left opacity-50 -rotate-[30deg] large:-rotate-[20deg] w-[130%] large:w-[110%] blur-3xl h-[250px] large:h-[300px] bg-gradient-1" />
       <div className="absolute medium:hidden -left-16 bottom-0 origin-left opacity-50 -rotate-[45deg] large:-rotate-[20deg] w-[200%] large:w-[110%] blur-3xl h-[250px] large:h-[300px] bg-gradient-1" />
       <div className="w-[500px]  h-[500px] -translate-y-12 right-0 absolute">
-        {props.images.map((image: any) => {
+        {props.images.map((image: any, index: number) => {
           const { left, top, bottom, right, translate } = image;
           return (
-            <FloatingContainer delay={0.4}>
+            <FloatingContainer key={index} delay={0.4}>
               <StoryblokImage
                 style={{
                   left,

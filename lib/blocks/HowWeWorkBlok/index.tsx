@@ -1,5 +1,11 @@
 import React from "react";
-import { Container, GradientText, Card, InfoCard } from "../../components";
+import {
+  Container,
+  GradientText,
+  Card,
+  InfoCard,
+  StoryblokImage,
+} from "../../components";
 import { useScreen } from "../../hooks";
 import { motion } from "framer-motion";
 import { storyblokEditable } from "@storyblok/react";
@@ -33,11 +39,7 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                   >
                     <Card>
                       <div className="px-4 py-6 text-center gap-6 flex flex-col items-center">
-                        <FontAwesomeIcon
-                          className="text-teal-500"
-                          size="3x"
-                          icon={getFontAwesomeIcon(el?.icon)}
-                        />
+                        <StoryblokImage className="w-24" {...el?.icon} />
                         <p className="body-3 font-bold">{el.title}</p>
                         <p className="body-1">{el.body}</p>
                       </div>
@@ -63,11 +65,7 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                   >
                     <Card className="h-full">
                       <div className="px-4 py-6 text-center gap-6 flex flex-col items-center">
-                        <FontAwesomeIcon
-                          className="text-teal-500"
-                          size="3x"
-                          icon={getFontAwesomeIcon(el?.icon)}
-                        />
+                        <StoryblokImage className="w-24" {...el?.icon} />
                         <p className="body-3 font-bold">{el.title}</p>
                         <p className="body-1">{el.body}</p>
                       </div>
@@ -86,13 +84,7 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                     <InfoCard
                       title={el.title}
                       body={el.body}
-                      icon={
-                        <FontAwesomeIcon
-                          className="text-teal-500"
-                          size="2x"
-                          icon={getFontAwesomeIcon(el?.icon)}
-                        />
-                      }
+                      icon={<StoryblokImage className="w-12" {...el?.icon} />}
                     />
                   </div>
                 );
