@@ -9,7 +9,6 @@ export { default as IconButton } from "./IconButton";
 export { default as ReviewCard } from "./ReviewCard";
 export { default as EmployeeCard } from "./EmployeeCard";
 export { default as Container } from "./Container";
-export { default as RichText } from "./RichText";
 export { default as AssetCard } from "./AssetCard";
 export { default as AssetBarChartCard } from "./AssetBarChartCard";
 export { default as AssetLineChartCard } from "./AssetLineChartCard";
