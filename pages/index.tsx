@@ -2,11 +2,12 @@ import { getStoryblokApi, useStoryblokState } from "@storyblok/react";
 import type { NextPage } from "next";
 import { PageBlock } from "../lib/blocks";
 import { StoryblokComponent } from "@storyblok/react";
-import { useScreen } from "../lib/hooks";
 
-const HomePage: NextPage<{ story: any }> = ({ story }) => {
-  const screen = useScreen();
-  story = useStoryblokState(story);
+const HomePage: NextPage<{ story: any; preview: boolean }> = ({
+  story,
+  preview,
+}) => {
+  story = useStoryblokState(story, {}, preview);
 
   return (
     <div className="overflow-hidden">
@@ -41,24 +42,23 @@ const HomePage: NextPage<{ story: any }> = ({ story }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getStaticProps(context: any) {
   // home is the default slug for the homepage in Storyblok
   let slug = "home";
-
-  // load the draft version
-  let sbParams = {
-    version: "draft", // or 'published'
-  };
+  const preview = context?.preview ? true : false;
 
   const storyblokApi = getStoryblokApi();
-  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+
+  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, {
+    version: preview ? "draft" : "published",
+  });
 
   return {
     props: {
       story: data ? data.story : false,
       key: data ? data.story.id : false,
+      preview: preview,
     },
-    revalidate: 3600, // revalidate every hour
   };
 }
 
