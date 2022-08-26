@@ -12,6 +12,8 @@ const HomePage: NextPage<{ story: any; preview: boolean }> = ({
   return (
     <div className="overflow-hidden">
       <PageBlock
+        title={story?.content?.title}
+        description={story?.content?.description}
         header={<StoryblokComponent blok={story?.content?.header[0]} />}
         footer={<StoryblokComponent blok={story?.content?.footer[0]} />}
       >
