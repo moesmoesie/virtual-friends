@@ -92,7 +92,7 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                       body={el.body}
                       icon={
                         <StoryblokImage
-                          size={500}
+                          size={300}
                           className="w-12"
                           {...el?.icon}
                         />
