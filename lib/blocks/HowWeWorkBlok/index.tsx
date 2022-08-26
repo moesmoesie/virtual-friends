@@ -80,7 +80,7 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                     <InfoCard
                       title={el.title}
                       body={el.body}
-                      icon={<StoryblokImage className="w-" {...el?.icon} />}
+                      icon={<StoryblokImage className="w-12" {...el?.icon} />}
                     />
                   </div>
                 );
