@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import StoryblokImage from "../StoryblokImage";
 import { ProductPorps } from "./types";
 
 const Product: React.FC<ProductPorps> = ({
@@ -32,10 +33,12 @@ const Product: React.FC<ProductPorps> = ({
           <div className="relative flex w-full flex-col items-center">
             <div className="flex w-full flex-col items-center">
               <div className="relative grid h-44 w-full place-items-center rounded-lg bg-dark-purple-500">
-                <img
+                <StoryblokImage
                   key={currentProductId}
                   className="absolute"
-                  src={getProduct()?.image}
+                  filename={getProduct()?.image ?? ""}
+                  is_external_url={false}
+                  size={300}
                 />
               </div>
 

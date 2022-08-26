@@ -1,4 +1,5 @@
 import React from "react";
+import StoryblokImage from "../StoryblokImage";
 
 interface ReceiptProps {
   products: {
@@ -26,7 +27,12 @@ const Receipt: React.FC<ReceiptProps> = ({ products }) => {
             >
               <div>
                 <div className="grid h-full w-14 items-center rounded-lg bg-dark-purple-500">
-                  <img src={el.image} alt="" />
+                  <StoryblokImage
+                    filename={el.image}
+                    alt=""
+                    is_external_url={false}
+                    size={300}
+                  />
                 </div>
               </div>
               <div className="flex flex-col">
@@ -64,10 +70,6 @@ const Receipt: React.FC<ReceiptProps> = ({ products }) => {
       </div>
     </div>
   );
-};
-
-const Order = () => {
-  return;
 };
 
 export default Receipt;

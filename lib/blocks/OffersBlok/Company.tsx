@@ -12,7 +12,8 @@ const Company: React.FC = () => {
               name: "John Doe",
               phone: "+31634XXX366",
               position: "A Virtual Friend",
-              image: "/assets/employee1.png",
+              image:
+                "https://a.storyblok.com/f/170199/663x849/12627c8cf4/employee2.png",
               github: "https://github.com/moesmoesie",
               linkedin: "https://www.linkedin.com/in/mustafadarwesh/",
               mail: "mailto:mdarwesh@virtualfriends.dev",
@@ -28,7 +29,8 @@ const Company: React.FC = () => {
               name: "Jane Doe",
               phone: "+31634XXX366",
               position: "A Virtual Foe",
-              image: "/assets/employee2.png",
+              image:
+                "https://a.storyblok.com/f/170199/663x849/9e323dcf80/employee1.png",
               github: "https://github.com/moesmoesie",
               linkedin: "https://www.linkedin.com/in/mustafadarwesh/",
               mail: "mailto:mdarwesh@virtualfriends.dev",
@@ -45,7 +47,8 @@ const Company: React.FC = () => {
                 name: "Jane Caboosy",
                 body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                 company: "Caboosy inc",
-                image: "/assets/woman.png",
+                image:
+                  "https://a.storyblok.com/f/170199/512x512/6b21f39954/woman.png",
               }}
             />
           </div>

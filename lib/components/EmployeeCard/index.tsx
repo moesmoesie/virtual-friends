@@ -1,6 +1,7 @@
 import React from "react";
 import { EmployeeCardProps } from "./types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import StoryblokImage from "../StoryblokImage";
 
 const EmployeeCard: React.FC<EmployeeCardProps> = ({ employee }) => {
   return (
@@ -33,8 +34,12 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({ employee }) => {
           )}
         </div>
       </div>
-      <img
-        src={employee.image}
+
+      <StoryblokImage
+        filename={employee.image}
+        size={500}
+        is_external_url={false}
+        alt={"Company employee"}
         className="absolute object-cover top-0 h-full w-full"
       />
     </div>

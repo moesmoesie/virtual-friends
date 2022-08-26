@@ -9,7 +9,7 @@ const products = [
     id: "1",
     price: "€ 89,95",
     title: "Virtual Boy",
-    image: "/assets/gameboy.png",
+    image: "https://a.storyblok.com/f/170199/165x160/86df839329/gameboy.png",
   },
   {
     color: "/assets/productColor3.jpg",
@@ -17,7 +17,7 @@ const products = [
     id: "2",
     price: "€ 89,95",
     title: "Virtual Boy 3",
-    image: "/assets/gameboy.png",
+    image: "https://a.storyblok.com/f/170199/165x160/86df839329/gameboy.png",
   },
   {
     color: "/assets/productColor4.jpg",
@@ -25,7 +25,7 @@ const products = [
     id: "3",
     price: "€ 89,95",
     title: "Virtual Boy",
-    image: "/assets/gameboy.png",
+    image: "https://a.storyblok.com/f/170199/165x160/86df839329/gameboy.png",
   },
   {
     color: "/assets/productColor1.jpg",
@@ -33,7 +33,7 @@ const products = [
     id: "4",
     price: "€ 90,34",
     title: "Virtual Boy",
-    image: "/assets/gameboy.png",
+    image: "https://a.storyblok.com/f/170199/165x160/86df839329/gameboy.png",
   },
 ];
 
