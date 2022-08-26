@@ -20,3 +20,4 @@ export { default as GradientText } from "./GradientText";
 export { default as StoryblokImage} from './StoryblokImage'
 export {default as Chip} from './Chip'
 export {Input, MultlineInput, SelectInput} from './Input'
+export {default as ScrollContainer} from './ScrollContainer'

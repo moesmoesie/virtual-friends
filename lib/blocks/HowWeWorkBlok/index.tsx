@@ -5,6 +5,7 @@ import {
   Card,
   InfoCard,
   StoryblokImage,
+  ScrollContainer,
 } from "../../components";
 import { useScreen } from "../../hooks";
 import { storyblokEditable } from "@storyblok/react";
@@ -48,25 +49,27 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
           )}
 
           {screen === "medium" && (
-            <div className="flex gap-5">
-              {blok?.steps.map((el: any) => {
-                return (
-                  <div
-                    {...storyblokEditable(el)}
-                    className="min-w-[200px]"
-                    key={el._uid}
-                  >
-                    <Card className="h-full">
-                      <div className="px-4 py-6 text-center gap-6 flex flex-col items-center">
-                        <StoryblokImage className="w-24" {...el?.icon} />
-                        <p className="body-3 font-bold">{el.title}</p>
-                        <p className="body-1">{el.body}</p>
-                      </div>
-                    </Card>
-                  </div>
-                );
-              })}
-            </div>
+            <ScrollContainer min={-450} max={0}>
+              <div className="flex gap-5">
+                {blok?.steps.map((el: any) => {
+                  return (
+                    <div
+                      {...storyblokEditable(el)}
+                      className="min-w-[200px]"
+                      key={el._uid}
+                    >
+                      <Card className="h-full">
+                        <div className="px-4 py-6 text-center gap-6 flex flex-col items-center">
+                          <StoryblokImage className="w-24" {...el?.icon} />
+                          <p className="body-3 font-bold">{el.title}</p>
+                          <p className="body-1">{el.body}</p>
+                        </div>
+                      </Card>
+                    </div>
+                  );
+                })}
+              </div>
+            </ScrollContainer>
           )}
 
           {screen === "small" && (
