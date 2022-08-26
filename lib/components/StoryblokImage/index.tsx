@@ -4,7 +4,7 @@ const StoryblokImage: React.FC<StoryblokImageProps> = ({
   filename,
   is_external_url,
   size,
-  lazy,
+  lazy = true,
   ...props
 }) => {
   let src = filename;
@@ -19,7 +19,7 @@ const StoryblokImage: React.FC<StoryblokImageProps> = ({
 
   src += options;
 
-  return <img {...props} loading={lazy ? "lazy" : undefined} src={src} />;
+  return <img {...props} loading={lazy ? "lazy" : "eager"} src={src} />;
 };
 
 export default StoryblokImage;

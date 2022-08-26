@@ -39,6 +39,7 @@ const Product: React.FC<ProductPorps> = ({
                   filename={getProduct()?.image ?? ""}
                   is_external_url={false}
                   size={300}
+                  loading="lazy"
                 />
               </div>
 
@@ -72,6 +73,7 @@ const Product: React.FC<ProductPorps> = ({
             return (
               <button key={el.id} onClick={() => setCurrentProductId(el.id)}>
                 <img
+                  loading="lazy"
                   key={el.id}
                   src={el.color}
                   className={`${

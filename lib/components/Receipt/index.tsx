@@ -32,6 +32,7 @@ const Receipt: React.FC<ReceiptProps> = ({ products }) => {
                     alt=""
                     is_external_url={false}
                     size={300}
+                    lazy={true}
                   />
                 </div>
               </div>

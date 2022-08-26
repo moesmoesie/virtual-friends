@@ -40,6 +40,7 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({ employee }) => {
         size={500}
         is_external_url={false}
         alt={"Company employee"}
+        lazy={true}
         className="absolute object-cover top-0 h-full w-full"
       />
     </div>
