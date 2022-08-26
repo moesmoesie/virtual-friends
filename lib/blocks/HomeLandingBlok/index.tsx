@@ -30,18 +30,22 @@ const Background: React.FC<{ images: any }> = (props) => {
       <div className="absolute medium:hidden -left-16 bottom-0 origin-left opacity-50 -rotate-[45deg] large:-rotate-[20deg] w-[200%] large:w-[110%] blur-3xl h-[250px] large:h-[300px] bg-gradient-1" />
       <div className="w-[500px]  h-[500px] -translate-y-12 right-0 absolute">
         {props.images.map((image: any, index: number) => {
-          const { left, top, bottom, right, translate } = image;
+          const p = Object.assign({}, image);
+          Object.keys(p).forEach((key) => {
+            if (
+              p[key] === undefined ||
+              !["top", "bottom", "right", "left", "translate"].includes(key)
+            ) {
+              delete p[key];
+            }
+          });
           return (
             <FloatingContainer delay={index * 200} key={index}>
               <StoryblokImage
                 lazy={false}
                 size={800}
                 style={{
-                  left,
-                  top,
-                  bottom,
-                  right,
-                  translate,
+                  ...p,
                 }}
                 className="absolute w-[200px] blur-xl  large:blur-0 medium:w-[300px]"
                 {...image.Image}
