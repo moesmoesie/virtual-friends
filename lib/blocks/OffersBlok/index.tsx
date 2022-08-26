@@ -100,6 +100,8 @@ const ProductSection: React.FC<ProductSectionProps> = (props) => {
         <div className="absolute w-[600px] h-[600px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <animated.div style={iconStyles}>
             <StoryblokImage
+              lazy={true}
+              size={800}
               className="w-full object-cover h-full  "
               {...props?.image}
             />

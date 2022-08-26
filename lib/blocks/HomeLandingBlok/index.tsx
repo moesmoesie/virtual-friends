@@ -58,6 +58,7 @@ const Background: React.FC<{ images: any }> = (props) => {
           return (
             <FloatingContainer delay={index * 200} key={index}>
               <StoryblokImage
+                size={800}
                 style={{
                   left,
                   top,

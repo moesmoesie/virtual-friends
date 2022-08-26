@@ -37,7 +37,12 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                   >
                     <Card>
                       <div className="px-4 py-6 text-center gap-6 flex flex-col items-center">
-                        <StoryblokImage className="w-24" {...el?.icon} />
+                        <StoryblokImage
+                          lazy={true}
+                          size={500}
+                          className="w-24"
+                          {...el?.icon}
+                        />
                         <p className="body-3 font-bold">{el.title}</p>
                         <p className="body-1">{el.body}</p>
                       </div>
@@ -60,7 +65,12 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                     >
                       <Card className="h-full">
                         <div className="px-4 py-6 text-center gap-6 flex flex-col items-center">
-                          <StoryblokImage className="w-24" {...el?.icon} />
+                          <StoryblokImage
+                            lazy={true}
+                            size={500}
+                            className="w-24"
+                            {...el?.icon}
+                          />
                           <p className="body-3 font-bold">{el.title}</p>
                           <p className="body-1">{el.body}</p>
                         </div>
@@ -80,7 +90,13 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                     <InfoCard
                       title={el.title}
                       body={el.body}
-                      icon={<StoryblokImage className="w-12" {...el?.icon} />}
+                      icon={
+                        <StoryblokImage
+                          size={500}
+                          className="w-12"
+                          {...el?.icon}
+                        />
+                      }
                     />
                   </div>
                 );
