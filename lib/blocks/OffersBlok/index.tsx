@@ -20,7 +20,7 @@ const OffersBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
           <GradientText>{blok?.title}</GradientText>
         </h2>
 
-        <div className="flex relative flex-col gap-14 medium:gap-28 large:gap-96">
+        <div className="flex relative flex-col gap-14 medium:gap-20 large:gap-80">
           {blok?.products?.map((el: Blok, index: number) => {
             const keywords = el.keywords.split(",");
             return (
