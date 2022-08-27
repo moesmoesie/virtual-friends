@@ -53,10 +53,7 @@ const HomeAboutModuleLarge: React.FC<{ blok: Blok }> = ({ blok }) => {
   });
 
   const devButtonStyle = useSpring({
-    color:
-      current == "code"
-        ? "#ffffff"
-        : tailwindConfig.theme.colors["dark-purple-100"],
+    color: current == "code" ? "#ffffff" : "#564f71",
     scale: current == "code" ? 1 : 0.85,
   });
 
@@ -68,10 +65,7 @@ const HomeAboutModuleLarge: React.FC<{ blok: Blok }> = ({ blok }) => {
   });
 
   const desButtonStyle = useSpring({
-    color:
-      current == "model"
-        ? "#ffffff"
-        : tailwindConfig.theme.colors["dark-purple-100"],
+    color: current == "model" ? "#ffffff" : "#564f71",
     scale: current == "model" ? 1 : 0.85,
   });
 

@@ -40,12 +40,12 @@ const products = [
 const Ecommerce: React.FC = () => {
   return (
     <div className="relative grid-cols-[min-content,min-content] gap-7 grid">
-      <FloatingContainer delay={400} className="pt-3">
+      <FloatingContainer delay={0.4} className="pt-3">
         <ProductCard />
       </FloatingContainer>
       <div className="relative">
         <div className="absolute z-50 right-10 top-0 -translate-y-1/2">
-          <FloatingContainer delay={200} className="pt-3">
+          <FloatingContainer delay={0.2} className="pt-3">
             <IconButton
               icon={
                 <div className="relative">

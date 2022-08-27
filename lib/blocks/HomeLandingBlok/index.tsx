@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { storyblokEditable } from "@storyblok/react";
 import { Button, Container, StoryblokImage } from "../../components";
 import FloatingContainer from "../../components/FloatingContainer";
@@ -40,7 +39,7 @@ const Background: React.FC<{ images: any }> = (props) => {
             }
           });
           return (
-            <FloatingContainer delay={index * 200} key={index}>
+            <FloatingContainer delay={index * 0.2} key={index}>
               <StoryblokImage
                 lazy={false}
                 size={800}

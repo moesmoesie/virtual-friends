@@ -14,7 +14,7 @@ const ContentMangementSystem: React.FC = () => {
         </div>
       </FloatingContainer>
 
-      <FloatingContainer delay={400}>
+      <FloatingContainer delay={0.4}>
         <div className="z-10 mt-24 translate-x-6">
           <Button type="accent">
             <span className="px-6 py-2 flex items-center font-bold gap-2 body-1">
@@ -25,13 +25,13 @@ const ContentMangementSystem: React.FC = () => {
         </div>
       </FloatingContainer>
 
-      <FloatingContainer delay={500}>
+      <FloatingContainer delay={0.5}>
         <div className="translate-x-10">
           <UploadImageCard />
         </div>
       </FloatingContainer>
 
-      <FloatingContainer delay={300}>
+      <FloatingContainer delay={0.3}>
         <div className="-translate-x-16">
           <Picker />
         </div>

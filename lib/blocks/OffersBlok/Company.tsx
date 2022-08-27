@@ -22,7 +22,7 @@ const Company: React.FC = () => {
         </div>
       </FloatingContainer>
 
-      <FloatingContainer delay={500}>
+      <FloatingContainer delay={0.5}>
         <div className="w-[260px] h-[360px] shadow-2xl translate-y-16">
           <EmployeeCard
             employee={{
@@ -40,7 +40,7 @@ const Company: React.FC = () => {
       </FloatingContainer>
 
       <div className="col-span-2 justify-self-center">
-        <FloatingContainer delay={200}>
+        <FloatingContainer delay={0.2}>
           <div className="shadow-2xl">
             <ReviewCard
               review={{

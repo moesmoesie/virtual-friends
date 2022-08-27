@@ -9,6 +9,15 @@ module.exports = {
     "./pages/**/*.{html,js,ts,tsx}",
   ],
   theme: {
+    keyframes: {
+      floating: {
+        '0%,100%': { transform: 'translateY(0px)' },
+        '50%': { transform: 'translateY(15px)' },
+      }
+    },
+    animation: {
+      floating: 'floating 4s ease-in-out infinite',
+    },
     fontFamily: {
       display: ["Inter"],
       body: ["Roboto"],
