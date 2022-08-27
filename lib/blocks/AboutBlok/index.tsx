@@ -5,7 +5,6 @@ import { storyblokEditable } from "@storyblok/react";
 import ModelCard from "./ModelCard";
 import CodeCard from "./CodeCard";
 import { useSpring, animated } from "@react-spring/web";
-import tailwindConfig from "../../../tailwind.config.js";
 import { useScreen, useWindow } from "../../hooks";
 
 const AboutBlok: React.FC<{ blok: Blok }> = (props) => {
@@ -34,14 +33,16 @@ const HomeAboutModuleLarge: React.FC<{ blok: Blok }> = ({ blok }) => {
     config: {
       duration: 0,
     },
-    opacity: current == "model" || ["medium", "large"].includes(screen) ? 1 : 0,
+    opacity:
+      current == "model" || ["medium", "large"].includes(screen ?? "") ? 1 : 0,
   });
 
   const codeStyles = useSpring({
     config: {
       duration: 0,
     },
-    opacity: current == "code" || ["medium", "large"].includes(screen) ? 1 : 0,
+    opacity:
+      current == "code" || ["medium", "large"].includes(screen ?? "") ? 1 : 0,
   });
 
   const modelTextStyles = useSpring({

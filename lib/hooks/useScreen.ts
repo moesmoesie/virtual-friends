@@ -3,9 +3,9 @@ import { useState } from "react";
 import { useEventListener } from ".";
 import { useIsomorphicLayoutEffect } from ".";
 
-type Screen = "small" | "medium" | "large";
+type Screen = "small" | "medium" | "large" | undefined ;
 function useScreen(): Screen {
-  const [screen, setScreen] = useState<Screen>("small");
+  const [screen, setScreen] = useState<Screen | undefined>(undefined);
 
   const handleSize = () => {
     var x: Screen = "small";

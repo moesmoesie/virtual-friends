@@ -2,12 +2,14 @@ import { getStoryblokApi, useStoryblokState } from "@storyblok/react";
 import type { NextPage } from "next";
 import { PageBlock } from "../lib/blocks";
 import { StoryblokComponent } from "@storyblok/react";
+import { useScreen } from "../lib/hooks";
 
 const HomePage: NextPage<{ story: any; preview: boolean }> = ({
   story,
   preview,
 }) => {
   story = useStoryblokState(story, {}, preview);
+  const screen = useScreen();
 
   return (
     <div className="overflow-hidden">
@@ -18,26 +20,12 @@ const HomePage: NextPage<{ story: any; preview: boolean }> = ({
         footer={<StoryblokComponent blok={story?.content?.footer[0]} />}
       >
         {story.content.body.map((nestedBlok: any) => {
-          return (
-            <div
-              key={nestedBlok._uid}
-              className={` 
-                ${nestedBlok.show.includes("small") ? "block" : "hidden"}
-                ${
-                  nestedBlok.show.includes("medium")
-                    ? "medium:block"
-                    : "medium:hidden"
-                }
-                ${
-                  nestedBlok.show.includes("large")
-                    ? "large:block"
-                    : "large:hidden"
-                }
-              `}
-            >
-              <StoryblokComponent blok={nestedBlok} />
-            </div>
-          );
+          if (nestedBlok.show.includes(screen)) {
+            return (
+              <StoryblokComponent key={nestedBlok._uid} blok={nestedBlok} />
+            );
+          }
+          return <></>;
         })}
       </PageBlock>
     </div>
