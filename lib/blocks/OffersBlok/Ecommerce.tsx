@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Product, Button, Receipt, IconButton } from "../../components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FloatingContainer from "../../components/FloatingContainer";
 const products = [
   {
@@ -49,10 +48,10 @@ const Ecommerce: React.FC = () => {
             <IconButton
               icon={
                 <div className="relative">
-                  <FontAwesomeIcon
+                  {/* <FontAwesomeIcon
                     className="text-[20px] text-Teal/500"
                     icon={"shopping-cart"}
-                  />
+                  /> */}
                 </div>
               }
             />
@@ -76,16 +75,14 @@ const ProductCard: React.FC = () => {
         products={products}
         currentProductId={currentId}
         setCurrentProductId={(value) => setId(value)}
-        favoriteButton={
-          <FontAwesomeIcon icon="heart" className=" body-3 text-teal-500" />
-        }
+        favoriteButton={<div />}
         addButton={
           <Button type="accent">
             <span className="body-1 whitespace-nowrap flex items-center gap-2  px-6 py-2 font-bold">
-              <FontAwesomeIcon
+              {/* <FontAwesomeIcon
                 className="text-[20px] text-teal-500"
                 icon="plus"
-              />
+              /> */}
               Add to Chart
             </span>
           </Button>

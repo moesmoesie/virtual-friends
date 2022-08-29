@@ -1,13 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { storyblokEditable } from "@storyblok/react";
-import { GradientText, InfoCard } from "../../components";
+import { GradientText, Icon, InfoCard } from "../../components";
 import { Container } from "../../components";
-import { useScreen } from "../../hooks";
-import getFontAwesomeIcon from "../../utils/getFontawesomeIcon";
 import { Blok } from "../types";
 
 const UniqueSellingPointsBlok: React.FC<{ blok: Blok }> = ({ blok }) => {
-  const screen = useScreen();
   return (
     <section {...storyblokEditable(blok)}>
       <Container module={blok}>
@@ -27,10 +23,10 @@ const UniqueSellingPointsBlok: React.FC<{ blok: Blok }> = ({ blok }) => {
                   body={el?.body}
                   title={el?.title}
                   icon={
-                    <FontAwesomeIcon
-                      className="text-teal-500"
-                      size={screen === "large" ? "3x" : "2x"}
-                      icon={getFontAwesomeIcon(el?.icon)}
+                    <Icon
+                      type="string"
+                      className="w-20 h-20 text-teal-500"
+                      icon={el?.icon}
                     />
                   }
                 />

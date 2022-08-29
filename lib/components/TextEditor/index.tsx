@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 const TextEditor: React.FC = () => {
   return (
     <div className="bg-dark-purple-600 w-full h-full overflow-hidden rounded-lg p-4 shadow-2xl">
@@ -11,11 +9,11 @@ const TextEditor: React.FC = () => {
 
           <div className="flex  gap-1">
             <button className="w-8 h-8 hover:bg-dark-purple-200 rounded-lg">
-              <FontAwesomeIcon icon="bold" />
+              {/* <FontAwesomeIcon icon="bold" /> */}
             </button>
 
             <button className="w-8 h-8 hover:bg-dark-purple-200 rounded-lg">
-              <FontAwesomeIcon icon="italic" />
+              {/* <FontAwesomeIcon icon="italic" /> */}
             </button>
           </div>
 

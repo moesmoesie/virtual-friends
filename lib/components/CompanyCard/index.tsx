@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "../Card";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CompanyCardProps } from "./types";
 
 const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
@@ -28,14 +27,14 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
               <div className="flex justify-between">
                 <p className="body-2 flex-1">
                   <span className="mr-2 text-teal-500">
-                    {<FontAwesomeIcon icon={"phone"} />}
+                    {/* {<FontAwesomeIcon icon={"phone"} />} */}
                   </span>
                   <span>+31612818127</span> <br />
                 </p>
 
                 <p className="body-2 flex-1 ">
                   <span className="mr-2 text-teal-500">
-                    <FontAwesomeIcon icon={"envelope"} />
+                    {/* <FontAwesomeIcon icon={"envelope"} /> */}
                   </span>
                   <span className="ml-1">mndarwesh@virtualfriends.dev</span>
                 </p>
@@ -54,11 +53,11 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
 
                   <p className="body-2 mb-7 whitespace-nowrap">
                     <span className="mr-2 text-teal-500">
-                      <FontAwesomeIcon icon={"phone"} />
+                      {/* <FontAwesomeIcon icon={"phone"} /> */}
                     </span>
                     <span>+31612818127</span> <br />
                     <span className="mr-2 text-teal-500">
-                      <FontAwesomeIcon icon={"envelope"} />
+                      {/* <FontAwesomeIcon icon={"envelope"} /> */}
                     </span>
                     <span className="ml-1">mndarwesh@virtualfriends.dev</span>
                   </p>

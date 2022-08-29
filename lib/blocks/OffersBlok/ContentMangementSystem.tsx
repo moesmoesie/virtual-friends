@@ -1,7 +1,6 @@
 import { UploadImageCard } from "../../components";
 import { Picker } from "../../components";
 import { Button } from "../../components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TextEditor } from "../../components";
 import FloatingContainer from "../../components/FloatingContainer";
 
@@ -18,7 +17,7 @@ const ContentMangementSystem: React.FC = () => {
         <div className="z-10 mt-24 translate-x-6">
           <Button type="accent">
             <span className="px-6 py-2 flex items-center font-bold gap-2 body-1">
-              <FontAwesomeIcon className="text-teal-500 body-2" icon="plus" />
+              {/* <FontAwesomeIcon className="text-teal-500 body-2" icon="plus" /> */}
               Deploy
             </span>
           </Button>

@@ -1,6 +1,5 @@
 import React from "react";
 import { EmployeeCardProps } from "./types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import StoryblokImage from "../StoryblokImage";
 
 const EmployeeCard: React.FC<EmployeeCardProps> = ({ employee }) => {
@@ -17,19 +16,19 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({ employee }) => {
         <div className="flex gap-2 flex-col">
           {employee?.linkedin && (
             <a href={employee?.linkedin} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon className="text-xl" icon={["fab", "linkedin"]} />
+              {/* <FontAwesomeIcon className="text-xl" icon={["fab", "linkedin"]} /> */}
             </a>
           )}
 
           {employee?.github && (
             <a href={employee?.github} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon className="text-xl" icon={["fab", "github"]} />
+              {/* <FontAwesomeIcon className="text-xl" icon={["fab", "github"]} /> */}
             </a>
           )}
 
           {employee?.mail && (
             <a href={employee?.mail}>
-              <FontAwesomeIcon className="text-xl" icon={"envelope"} />
+              {/* <FontAwesomeIcon className="text-xl" icon={"envelope"} /> */}
             </a>
           )}
         </div>
