@@ -4,8 +4,11 @@ import { PageBlock } from "../lib/blocks";
 import { StoryblokComponent } from "@storyblok/react";
 import { useScreen } from "../lib/hooks";
 
-const HomePage: NextPage<{ story: any }> = ({ story }) => {
-  story = useStoryblokState(story);
+const HomePage: NextPage<{ story: any; preview: any }> = ({
+  story,
+  preview,
+}) => {
+  story = useStoryblokState(story, {}, preview);
   const screen = useScreen();
 
   return (
@@ -30,20 +33,26 @@ const HomePage: NextPage<{ story: any }> = ({ story }) => {
 };
 
 export async function getStaticProps(context: any) {
-  // home is the default slug for the homepage in Storyblok
   let slug = "home";
-  const storyblokApi = getStoryblokApi();
 
-  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, {
-    version: "draft",
-  });
+  let sbParams = {
+    version: "published",
+  };
+
+  if (context.preview) {
+    sbParams.version = "draft";
+  }
+
+  const storyblokApi = getStoryblokApi();
+  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
 
   return {
     props: {
       story: data ? data.story : false,
-      preview: context?.preview ?? false,
+      key: data ? data.story.id : false,
+      preview: context.preview || false,
     },
-    revalidate: 10,
+    revalidate: 3600,
   };
 }
 
