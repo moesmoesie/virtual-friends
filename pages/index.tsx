@@ -43,6 +43,7 @@ export async function getStaticProps(context: any) {
       story: data ? data.story : false,
       preview: context?.preview ?? false,
     },
+    revalidate: 10,
   };
 }
 
