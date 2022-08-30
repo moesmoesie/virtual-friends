@@ -5,7 +5,7 @@ import { Blok } from "../types";
 
 const FooterBlok: React.FC<{ blok: Blok }> = ({ blok }) => {
   return (
-    <footer {...storyblokEditable(blok)} className="bg-dark-purple-600">
+    <footer {...storyblokEditable(blok)} className="bg-white">
       <Container className="">
         <div className="flex justify-between py-6">
           <span className="body-2">Virtual Friends © 2022 </span>

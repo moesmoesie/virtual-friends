@@ -4,7 +4,7 @@ import Card from "../../components/Card";
 const ModelCard: React.FC = () => {
   return (
     <Card className="overflow-hidden h-full w-full">
-      <div></div>
+      <img src="/art.png" className="w-full h-full object-cover" />
     </Card>
   );
 };

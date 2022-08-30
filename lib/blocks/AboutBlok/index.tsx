@@ -118,8 +118,8 @@ const HomeAboutModuleLarge: React.FC<{ blok: Blok }> = ({ blok }) => {
 
           {screen === "large" && (
             <>
-              <div className="flex mb-10 gap-48">
-                <div className="text-end flex-1">
+              <div className="flex text-center mb-10 gap-40">
+                <div className="flex-1 flex items-center flex-col">
                   <p className="display-3">{blok?.developTitle}</p>
                   <p className="body-3">{blok?.developContent}</p>
                 </div>

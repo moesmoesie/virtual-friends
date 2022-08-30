@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useScreen } from "../../hooks";
 import PageBlockProps from "./types";
 
 const PageBlock: React.FC<PageBlockProps> = (props) => {
@@ -11,7 +10,7 @@ const PageBlock: React.FC<PageBlockProps> = (props) => {
           <meta name="description" content={props.description} />
         )}
       </Head>
-      <div className="w-full min-h-[100vh] bg-dark-purple-500 text-white">
+      <div className="w-full min-h-[100vh] bg-white text-black">
         <div>
           {props.header}
           {props.children}

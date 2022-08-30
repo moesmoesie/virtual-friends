@@ -1,7 +1,7 @@
 import { Card } from "../../components";
 import Highlight, { defaultProps } from "prism-react-renderer";
-import okaidia from "prism-react-renderer/themes/okaidia";
-okaidia.plain.backgroundColor = "transparent";
+import theme from "prism-react-renderer/themes/vsLight";
+theme.plain.backgroundColor = "transparent";
 
 const text = `import React, { Suspense, useRef, useState } from "react";
 import { useGLTF, useAnimations, OrbitControls } from "@react-three/drei";
@@ -146,12 +146,7 @@ const CodeCard: React.FC = () => {
         </div>
 
         <div className="flex-1 px-5  mt-2 pt-8 pb-5 overflow-scroll">
-          <Highlight
-            {...defaultProps}
-            theme={okaidia}
-            code={text}
-            language="jsx"
-          >
+          <Highlight {...defaultProps} theme={theme} code={text} language="jsx">
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
               <pre className={className} style={style}>
                 {tokens.map((line, i) => (

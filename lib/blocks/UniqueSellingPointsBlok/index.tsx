@@ -25,7 +25,7 @@ const UniqueSellingPointsBlok: React.FC<{ blok: Blok }> = ({ blok }) => {
                   icon={
                     <Icon
                       type="string"
-                      className="w-20 h-20 text-teal-500"
+                      className="w-20 h-20 text-voilet-400"
                       icon={el?.icon}
                     />
                   }

@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html>
       <Head>
-      <link
+        <link
           rel="preload"
           href={`/fonts/inter-v11-latin/inter-v11-latin-700.woff2`}
           as="font"
@@ -14,6 +14,13 @@ export default function Document() {
         <link
           rel="preload"
           href={`/fonts/inter-v11-latin/inter-v11-latin-regular.woff2`}
+          as="font"
+          crossOrigin=""
+        />
+
+        <link
+          rel="preload"
+          href={`/fonts/inter-v11-latin/inter-v12-latin-900.woff2`}
           as="font"
           crossOrigin=""
         />

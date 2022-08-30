@@ -26,14 +26,14 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
               </div>
               <div className="flex justify-between">
                 <p className="body-2 flex-1">
-                  <span className="mr-2 text-teal-500">
+                  <span className="mr-2 text-voilet-400">
                     {/* {<FontAwesomeIcon icon={"phone"} />} */}
                   </span>
                   <span>+31612818127</span> <br />
                 </p>
 
                 <p className="body-2 flex-1 ">
-                  <span className="mr-2 text-teal-500">
+                  <span className="mr-2 text-voilet-400">
                     {/* <FontAwesomeIcon icon={"envelope"} /> */}
                   </span>
                   <span className="ml-1">mndarwesh@virtualfriends.dev</span>
@@ -53,14 +53,14 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
 
                   <p className="body-2 items-center gap-2  flex whitespace-nowrap">
                     <svg
-                      className="w-5 h-5"
+                      className="w-5 h-5 text-voilet-400"
                       viewBox="0 0 59 59"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M57.8867 44.188L55.168 55.6294C54.8281 57.3286 53.4688 58.4614 51.7695 58.4614C23.2227 58.3481 0 35.1255 0 6.57861C0 4.87939 1.01953 3.52002 2.71875 3.18018L14.1602 0.461426C15.7461 0.121582 17.4453 1.02783 18.125 2.50049L23.4492 14.8481C24.0156 16.3208 23.6758 18.02 22.4297 18.9263L16.3125 23.9106C20.1641 31.7271 26.5078 38.0708 34.4375 41.9224L39.4219 35.8052C40.3281 34.6724 42.0273 34.2192 43.5 34.7856L55.8477 40.1099C57.3203 40.9028 58.2266 42.6021 57.8867 44.188Z"
-                        fill="#40C9A2"
+                        fill="currentColor"
                       />
                     </svg>
 
@@ -69,14 +69,14 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
 
                   <p className="flex gap-2 items-center mb-7 body-2">
                     <svg
-                      className="w-5 h-5"
+                      className="w-5 h-5 text-voilet-400"
                       viewBox="0 0 58 45"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         d="M52.5625 0.598145C55.5078 0.598145 58 3.09033 58 6.03564C58 7.84814 57.0938 9.43408 55.7344 10.4536L31.1523 28.9185C29.793 29.938 28.0938 29.938 26.7344 28.9185L2.15234 10.4536C0.792969 9.43408 0 7.84814 0 6.03564C0 3.09033 2.37891 0.598145 5.4375 0.598145H52.5625ZM24.582 31.8638C27.1875 33.7896 30.6992 33.7896 33.3047 31.8638L58 13.2856V36.8481C58 40.9263 54.7148 44.0981 50.75 44.0981H7.25C3.17188 44.0981 0 40.9263 0 36.8481V13.2856L24.582 31.8638Z"
-                        fill="#40C9A2"
+                        fill="currentColor"
                       />
                     </svg>
 

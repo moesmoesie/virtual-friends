@@ -30,7 +30,7 @@ module.exports = {
     },
     colors: {
       white: "#ffffff",
-      black: "#000000",
+      black: "#333333",
       transparent: "transparent",
       "grey-900": "#101010",
       "grey-800": "#2c2c2c",
@@ -75,9 +75,9 @@ module.exports = {
       "dark-purple-100": "#564f71",
     },
     backgroundImage: {
-      "gradient-1":
-        "linear-gradient(293.54deg, #9D4BF4 13.32%, #1BB17B 83.07%)",
-      "gradient-2": "linear-gradient(180deg, #43EDBD 0%, #1BB17B 100%)",
+      "gradient-1": "linear-gradient(293.54deg, #C957B6 13.32%, #5938D9 83.07%)",
+      "gradient-2": "linear-gradient(180deg, #ECC66D 0%, #D39349 100%)",
+      "gradient-3": "linear-gradient(293.54deg, #9D4BF4 13.32%, #ECC66D 83.07%)",
       "gradient-purple": "linear-gradient(180deg, #A93BFF 0%, #7B2ACC 100%)",
       "gradient-glass":
         "linear-gradient(141.24deg, rgba(146, 124, 255, 0.142) 1.69%, rgba(64, 201, 162, 0) 100%)",
