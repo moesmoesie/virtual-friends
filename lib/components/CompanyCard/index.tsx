@@ -21,7 +21,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
                   <span className="body-2 font-bold">KVK: </span>
                   <span>86165321</span> <br />
                   <span className="body-2 font-bold">BTW: </span>
-                  <span>NL291929092B02</span> <br />
+                  <span>NL004201207B04</span> <br />
                 </p>
               </div>
               <div className="flex justify-between">
@@ -107,7 +107,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
                     <span className="body-2 font-bold">KVK: </span>
                     <span>86165321</span> <br />
                     <span className="body-2 font-bold">BTW: </span>
-                    <span>NL291929092B02</span> <br />
+                    <span>NL004201207B04</span> <br />
                   </p>
                 </div>
               </div>
