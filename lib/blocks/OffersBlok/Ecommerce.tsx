@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Product, Button, Receipt, IconButton } from "../../components";
+import {
+  Product,
+  Button,
+  Receipt,
+  IconButton,
+  GradientText,
+} from "../../components";
 import FloatingContainer from "../../components/FloatingContainer";
 const products = [
   {
@@ -49,7 +55,7 @@ const Ecommerce: React.FC = () => {
               icon={
                 <div className="relative">
                   <svg
-                    className="text-teal-500 w-7 h-7"
+                    className="text-voilet-400 w-7 h-7"
                     viewBox="0 0 21 19"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
@@ -65,9 +71,7 @@ const Ecommerce: React.FC = () => {
           </FloatingContainer>
         </div>
         <FloatingContainer className="relative">
-          <div className="shadow-2xl">
-            <Receipt products={products.slice(0, 3)} />
-          </div>
+          <Receipt products={products.slice(0, 3)} />
         </FloatingContainer>
       </div>
     </div>
@@ -77,25 +81,11 @@ const Ecommerce: React.FC = () => {
 const ProductCard: React.FC = () => {
   const [currentId, setId] = useState("1");
   return (
-    <div className="shadow-2xl">
-      <Product
-        products={products}
-        currentProductId={currentId}
-        setCurrentProductId={(value) => setId(value)}
-        favoriteButton={<div />}
-        addButton={
-          <Button type="accent">
-            <span className="body-1 whitespace-nowrap flex items-center gap-2  px-6 py-2 font-bold">
-              {/* <FontAwesomeIcon
-                className="text-[20px] text-teal-500"
-                icon="plus"
-              /> */}
-              Add to Chart
-            </span>
-          </Button>
-        }
-      />
-    </div>
+    <Product
+      products={products}
+      currentProductId={currentId}
+      setCurrentProductId={(value) => setId(value)}
+    />
   );
 };
 

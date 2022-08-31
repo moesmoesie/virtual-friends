@@ -9,6 +9,4 @@ export interface ProductPorps {
   }[];
   currentProductId: string;
   setCurrentProductId: (value: string) => void;
-  favoriteButton?: JSX.Element;
-  addButton: JSX.Element;
 }
