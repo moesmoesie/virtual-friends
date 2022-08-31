@@ -90,4 +90,17 @@
   .display-4 {
     @apply font-display text-[23px] font-bold leading-[1.4] medium:text-[35px];
   }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+}
+
+

@@ -53,7 +53,7 @@ const Form: React.FC = () => {
         status={form.getStatus("catagory")}
         placeholder="Catagory"
         errorMessage={form.getFirstErrorMessage("catagory")}
-        options={["Need a website", "E-Commerce", "Other"]}
+        options={["Need a website", "E-Commerce"]}
         name="catagory"
       />
 
