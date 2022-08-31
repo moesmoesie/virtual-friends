@@ -67,7 +67,7 @@ export const SelectInput: React.FC<InputSelectProps> = (props) => {
                 event.preventDefault();
                 setCurrent(option);
               }}
-              className={`rounded-lg text-black/30 body-1 h-8 bg-dark-purple-300 ${
+              className={`rounded-lg border border-grey-200 body-1 h-8 ${
                 option === current ? "!bg-gradient-purple !text-white" : ""
               }  px-3 py-1`}
             >
