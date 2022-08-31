@@ -6,6 +6,7 @@ import {
   InfoCard,
   StoryblokImage,
   ScrollContainer,
+  FadeIn,
 } from "../../components";
 import { useScreen } from "../../hooks";
 import { storyblokEditable } from "@storyblok/react";
@@ -18,13 +19,17 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
     <div {...storyblokEditable(blok)}>
       <Container module={blok}>
         <div>
-          <h2 className="display-1 mb-6">
-            <GradientText>{blok?.title}</GradientText>
-          </h2>
+          <FadeIn>
+            <div>
+              <h2 className="display-1 mb-6">
+                <GradientText>{blok?.title}</GradientText>
+              </h2>
 
-          <p className="body-3 medium:display-4 mb-8 large:mb-12 max-w-3xl">
-            {blok?.body}
-          </p>
+              <p className="body-3 medium:display-4 mb-8 large:mb-12 max-w-3xl">
+                {blok?.body}
+              </p>
+            </div>
+          </FadeIn>
 
           {screen === "large" && (
             <div className="flex gap-5">
