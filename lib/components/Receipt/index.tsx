@@ -13,7 +13,7 @@ interface ReceiptProps {
 
 const Receipt: React.FC<ReceiptProps> = ({ products }) => {
   return (
-    <div className="w-[320px] rounded-lg bg-grey-p p-5">
+    <div className="w-[320px] shadow-card-m rounded-lg bg-grey-p p-5">
       <div className="border-b-[1px] border-grey-100 pb-5">
         <p className="body-3 font-bold">Your Order</p>
       </div>

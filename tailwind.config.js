@@ -83,6 +83,9 @@ module.exports = {
       "gradient-glass":
         "linear-gradient(141.24deg, rgba(146, 124, 255, 0.142) 1.69%, rgba(64, 201, 162, 0) 100%)",
     },
+    boxShadow: {
+      "card-m": "0px 9px 12px rgba(0, 0, 0, 0.1), 0px 14px 32px rgba(0, 0, 0, 0.05), 0px 32px 44px rgba(0, 0, 0, 0.1)"
+    }
   },
 
   plugins: [

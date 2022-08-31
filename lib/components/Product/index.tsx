@@ -12,7 +12,7 @@ const Product: React.FC<ProductPorps> = ({ products }) => {
   };
 
   return (
-    <div className="flex w-[241px] flex-col gap-4 rounded-lg bg-grey-p p-5">
+    <div className="flex w-[241px] shadow-card-m flex-col gap-4 rounded-lg bg-grey-p p-5">
       {/* HEADER */}
       <div className="flex items-center justify-between">
         <div className="inline-block rounded-md bg-white py-1 px-3">
