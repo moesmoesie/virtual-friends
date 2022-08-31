@@ -15,7 +15,7 @@ const AssetLineChartCard: React.FC = () => {
   ];
 
   return (
-    <div className="bg-dark-purple-600 rounded-lg pt-6 pb-4 shadow-2xl">
+    <div className="bg-grey-p rounded-lg pt-6 pb-4 shadow-card-m">
       <StoryblokImage
         alt="chart"
         filename={
