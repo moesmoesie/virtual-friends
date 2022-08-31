@@ -4,7 +4,9 @@ import { ContainerProps } from "./types";
 const Container: React.FC<ContainerProps> = (props) => {
   return (
     <div
+      id={props?.module?.id}
       style={{
+        scrollMargin: props.module?.scrollMargin,
         backgroundColor: props.module?.backgroundColor
           ? props.module.backgroundColor
           : "transparent",

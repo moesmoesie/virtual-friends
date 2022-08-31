@@ -4,6 +4,8 @@ export interface Module {
     paddingTop?: number
     paddingBottom?: number,
     backgroundColor?: string,
+    id?: string,
+    scrollMargin?: string,
     [propName: string]: any;
 }
 
