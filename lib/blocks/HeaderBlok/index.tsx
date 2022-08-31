@@ -15,9 +15,9 @@ const HeaderBlok: React.FC<{ blok: Blok }> = ({ blok }) => {
             <GradientText>Virtual Friends</GradientText>
           </a>
           <div className="hidden medium:flex gap-8 justify-end flex-1">
-            {blok?.links.map((link: any) => {
+            {blok?.links.map((link: any, index: number) => {
               return (
-                <a className="body-2 font-bold" href={link?.href}>
+                <a key={index} className="body-2 font-bold" href={link?.href}>
                   {link?.name}
                 </a>
               );
