@@ -11,16 +11,15 @@ import { Chip } from "../../components";
 import { ProductSectionProps } from "./types";
 import { animated, useChain, useSpring, useSpringRef } from "@react-spring/web";
 import { Waypoint } from "react-waypoint";
+import { useScreen } from "../../hooks";
 
 const OffersBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
   return (
     <section {...storyblokEditable(blok)} className="relative">
       <Container module={blok}>
-        <FadeIn>
-          <h2 className="display-1 mb-9 relative z-[10] large:mb-64">
-            <GradientText>{blok?.title}</GradientText>
-          </h2>
-        </FadeIn>
+        <h2 className="display-1 mb-9 relative z-[10] large:mb-64">
+          <GradientText>{blok?.title}</GradientText>
+        </h2>
 
         <div className="flex relative flex-col gap-14 medium:gap-20 large:gap-80">
           {blok?.products?.map((el: Blok, index: number) => {
@@ -54,6 +53,7 @@ const ProductComponent: React.FC<{ name: string }> = ({ name }) => {
 
 const ProductSection: React.FC<ProductSectionProps> = (props) => {
   const [show, setShow] = useState(false);
+  const screen = useScreen();
 
   const iconStylesRef = useSpringRef();
   const iconStyles = useSpring({
@@ -76,19 +76,21 @@ const ProductSection: React.FC<ProductSectionProps> = (props) => {
         props.reverse ? "large:flex-row-reverse" : "flex-row"
       }`}
     >
-      <div className="max-w-xl grid gap-4 medium:gap-6 w-full">
-        <h3 className="display-3">{props.title}</h3>
-        <p className="body-3">{props.body}</p>
-        <ul className="flex flex-wrap  gap-3">
-          {props.keywords.map((keyword: string, index: number) => {
-            return (
-              <li key={index}>
-                <Chip value={keyword} />
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      <FadeIn animate={screen !== "large"}>
+        <div className="max-w-xl grid gap-4 medium:gap-6 w-full">
+          <h3 className="display-3">{props.title}</h3>
+          <p className="body-3">{props.body}</p>
+          <ul className="flex flex-wrap  gap-3">
+            {props.keywords.map((keyword: string, index: number) => {
+              return (
+                <li key={index}>
+                  <Chip value={keyword} />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </FadeIn>
 
       <div
         className={`flex-1 relative hidden large:block ${

@@ -44,7 +44,7 @@ const Background: React.FC<{ images: any }> = (props) => {
                 style={{
                   ...p,
                 }}
-                className="absolute w-[200px] blur-xl  large:blur-0 medium:w-[300px]"
+                className="absolute w-[200px] opacity-40 large:opacity-100 blur-xl  large:blur-0 medium:w-[300px]"
                 {...image.Image}
               />
             </FloatingContainer>
