@@ -1,6 +1,6 @@
 const Picker: React.FC = () => {
   return (
-    <div className="bg-dark-purple-600 relative px-2 py-1 rounded-lg shadow-2xl">
+    <div className="bg-grey-p relative shadow-card-m px-2 py-2 rounded-lg shadow-2xl">
       <button className="py-2 w-full px-2 flex gap-5 items-center">
         <span className="body-1">Purple</span>
         <div className="w-3 h-3 ml-auto rounded-full bg-gradient-purple" />
