@@ -13,7 +13,11 @@ const HomeLandingBlok: React.FC<{ blok: Blok }> = ({ blok }) => {
             <h1 className="display-1 ">{blok?.title}</h1>
             <p className="body-3 medium:max-w-[80%]">{blok.body}</p>
             <div className="flex items-center">
-              <Button type="accent">{blok.callToAction}</Button>
+              <a href="#contact">
+                <div className="pointer-events-none">
+                  <Button>{blok.callToAction}</Button>
+                </div>
+              </a>
             </div>
           </div>
         </div>

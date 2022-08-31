@@ -99,7 +99,7 @@ const Product: React.FC<ProductPorps> = ({ products }) => {
         {/* END ColorPicker */}
       </div>
       <div className="flex justify-center">
-        <Button className="text-white" type="accent">
+        <Button className="text-white">
           <div className="flex items-center gap-2">
             <svg
               width="15"

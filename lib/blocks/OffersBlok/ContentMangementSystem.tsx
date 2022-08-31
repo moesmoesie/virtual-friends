@@ -15,7 +15,7 @@ const ContentMangementSystem: React.FC = () => {
 
       <FloatingContainer delay={0.4}>
         <div className="z-10 mt-24 translate-x-6">
-          <Button className="text-white" type="accent">
+          <Button className="text-white">
             <div className="flex whitespace-nowrap items-center gap-2">
               <svg
                 width="15"

@@ -83,7 +83,7 @@ const Form: React.FC = () => {
       </div>
 
       <div className="mt-4">
-        <Button onClick={form.submit} type="accent">
+        <Button onClick={form.submit}>
           <span className="body-2 whitespace-nowrap">
             {form.status === "error" && "Failed, Try Again!"}
             {form.status === "success" && "Completed!"}
