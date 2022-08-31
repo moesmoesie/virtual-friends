@@ -43,6 +43,7 @@ module.exports = {
       "grey-100": "#e6e6e6",
       "grey-050": "#f3f3f3",
       "grey-p": "#F5F6F9",
+      "yellow" : "#E7B24B",
       "mint-500": "#a3f7b5",
       "teal-500": "#40c9a2",
       "nyanza-500": "#e5f9e0",
