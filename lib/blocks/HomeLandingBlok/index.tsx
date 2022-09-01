@@ -1,5 +1,5 @@
 import { storyblokEditable } from "@storyblok/react";
-import { Button, Container, StoryblokImage } from "../../components";
+import { Button, Container, Richtext, StoryblokImage } from "../../components";
 import FloatingContainer from "../../components/FloatingContainer";
 import { Blok } from "../types";
 
@@ -10,7 +10,9 @@ const HomeLandingBlok: React.FC<{ blok: Blok }> = ({ blok }) => {
         <Background images={blok?.landingImages ?? []} />
         <div className="flex items-center relative justify-between">
           <div className="max-w-2xl flex flex-col gap-10">
-            <h1 className="display-1 ">{blok?.title}</h1>
+            <h1 className="display-1 ">
+              <Richtext content={blok?.title} />
+            </h1>
             <p className="body-3 medium:max-w-[80%]">{blok.body}</p>
             <div className="flex gap-10 items-center">
               <a href="#contact">
