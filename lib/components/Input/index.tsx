@@ -47,7 +47,7 @@ export const SelectInput: React.FC<InputSelectProps> = (props) => {
 
   useEffect(() => {
     if (current != undefined) props.onChange(props.name, current);
-  }, [current]);
+  }, [current, props]);
 
   return (
     <div
