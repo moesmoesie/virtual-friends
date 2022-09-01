@@ -28,7 +28,8 @@ const Receipt: React.FC<ReceiptProps> = ({ products }) => {
                     filename={el.image}
                     alt=""
                     is_external_url={false}
-                    size={300}
+                    width={300}
+                    height={300}
                     lazy={true}
                   />
                 </div>

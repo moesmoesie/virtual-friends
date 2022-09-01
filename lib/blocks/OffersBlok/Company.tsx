@@ -47,7 +47,7 @@ const Company: React.FC = () => {
               body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               company: "Caboosy inc",
               image:
-                "https://a.storyblok.com/f/170199/512x512/6b21f39954/woman.png",
+                "https://a.storyblok.com/f/170199/3276x4096/3ea0eb3a15/woman.jpg",
             }}
           />
         </FloatingContainer>

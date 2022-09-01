@@ -46,10 +46,11 @@ const Product: React.FC<ProductPorps> = ({ products }) => {
               <div className="relative grid h-44 w-full place-items-center rounded-lg bg-white">
                 <StoryblokImage
                   key={currentProductId}
-                  className="absolute h-[90%]"
+                  className="absolute h-[90%] object-contain"
                   filename={getProduct()?.image ?? ""}
                   is_external_url={false}
-                  size={300}
+                  width={300}
+                  height={300}
                   loading="lazy"
                 />
               </div>

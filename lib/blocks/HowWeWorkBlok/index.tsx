@@ -44,7 +44,8 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                       <div className="px-4 py-6 text-center gap-6 flex flex-col items-center">
                         <StoryblokImage
                           lazy={true}
-                          size={500}
+                          width={500}
+                          height={500}
                           className="w-24"
                           {...el?.icon}
                         />
@@ -72,7 +73,8 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                         <div className="px-4 py-6 text-center gap-6 flex flex-col items-center">
                           <StoryblokImage
                             lazy={true}
-                            size={500}
+                            width={500}
+                            height={500}
                             className="w-24"
                             {...el?.icon}
                           />
@@ -97,7 +99,8 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
                       body={el.body}
                       icon={
                         <StoryblokImage
-                          size={300}
+                          width={300}
+                          height={300}
                           className="w-12"
                           {...el?.icon}
                         />

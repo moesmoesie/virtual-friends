@@ -1,19 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  compiler: {
-    // ssr and displayName are configured by default
-    styledComponents: true,
+  images: {
+    domains: ['a.storyblok.com'],
   },
-
-  async redirects() {
-    return [
-      {
-        source: "/studio",
-        destination: "/studio/desk",
-        permanent: true,
-      },
-    ];
+  experimental: {
+    images: {
+      allowFutureImage: true,
+    },
   },
 };
 

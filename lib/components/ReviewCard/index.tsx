@@ -9,10 +9,11 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
       <div className="flex min-h-[200px] w-[300px] flex-col items-center p-5 text-center">
         <StoryblokImage
           filename={review.image}
-          size={500}
+          width={300}
+          height={300}
           is_external_url={false}
           alt={"Headshot of reviewer"}
-          className="mb-3 h-14 w-14 rounded-full"
+          className="mb-3 h-16 object-cover w-16 rounded-full"
         />
         <p className="body-2 mb-3">{review.body}</p>
         <p className="body-1">
