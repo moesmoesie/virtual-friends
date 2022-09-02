@@ -17,7 +17,7 @@ const OffersBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
   return (
     <section {...storyblokEditable(blok)} className="relative">
       <Container module={blok}>
-        <h2 className="display-1 mb-9 relative z-[10] large:mb-64">
+        <h2 className="display-2 mb-9 relative z-[10] large:mb-64">
           <GradientText>{blok?.title}</GradientText>
         </h2>
 

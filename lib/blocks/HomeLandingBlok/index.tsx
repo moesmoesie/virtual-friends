@@ -13,7 +13,7 @@ const HomeLandingBlok: React.FC<{ blok: Blok }> = ({ blok }) => {
             <h1 className="display-1 ">
               <Richtext content={blok?.title} />
             </h1>
-            <p className="body-3 medium:max-w-[80%]">{blok.body}</p>
+            <p className="body-3 medium:max-w-[90%]">{blok.body}</p>
             <div className="flex gap-10 items-center">
               <a href="#contact">
                 <div className="pointer-events-none">
@@ -107,7 +107,7 @@ const HomeLandingBlok: React.FC<{ blok: Blok }> = ({ blok }) => {
 const Background: React.FC<{ images: any }> = (props) => {
   return (
     <>
-      <div className="w-[500px]  h-[500px] -translate-y-12 right-0 absolute">
+      <div className="w-[500px]   h-[500px] -translate-y-12 right-0 absolute">
         {props.images.map((image: any, index: number) => {
           const p = Object.assign({}, image);
           Object.keys(p).forEach((key) => {
@@ -127,7 +127,7 @@ const Background: React.FC<{ images: any }> = (props) => {
                 style={{
                   ...p,
                 }}
-                className="absolute w-[200px] opacity-40 large:opacity-100 blur-xl  large:blur-0 medium:w-[300px]"
+                className="absolute w-[200px] opacity-20 large:opacity-100 blur-xl  large:blur-0 medium:w-[300px]"
                 {...image.Image}
               />
             </FloatingContainer>

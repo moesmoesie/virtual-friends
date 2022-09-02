@@ -9,7 +9,7 @@ const GeneralContactModule: React.FC<{ blok: Blok }> = ({ blok }) => {
   return (
     <section {...storyblokEditable(blok)}>
       <Container module={blok}>
-        <h2 className="display-1 mb-8">
+        <h2 className="display-2 mb-8">
           <GradientText>{blok?.title}</GradientText>
         </h2>
         <div className="flex gap-[60px] flex-col large:flex-row">

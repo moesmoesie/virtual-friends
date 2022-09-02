@@ -21,7 +21,7 @@ const HowWeWorkBlock: React.FC<{ blok: Blok }> = ({ blok }) => {
         <div>
           <FadeIn>
             <div>
-              <h2 className="display-1 mb-6">
+              <h2 className="display-2 mb-6">
                 <GradientText>{blok?.title}</GradientText>
               </h2>
 

@@ -76,15 +76,15 @@
   }
 
   .display-1 {
-    @apply font-display text-[60px] font-black tracking-tighter leading-[1] medium:text-[69px];
+    @apply font-display text-[48px] font-black tracking-tighter leading-[1] medium:text-[96px];
   }
 
   .display-2 {
-    @apply font-display text-[33px]  font-black leading-[1] tracking-tighter  medium:text-[55px];
+    @apply font-display text-[36px] font-black leading-[1] tracking-tighter  medium:text-[64px] large:text-[78px];
   }
 
   .display-3 {
-    @apply font-display text-[28px] font-bold leading-[1] tracking-tighter  medium:text-[44px];
+    @apply font-display text-[28px] font-bold leading-[1] tracking-tighter medium:text-[44px];
   }
 
   .display-4 {

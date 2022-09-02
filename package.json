@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "network-dev" : "yarn dev -p 3001 -H 192.168.178.24",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
