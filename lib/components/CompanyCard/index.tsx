@@ -56,7 +56,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
                       />
                     </svg>
                   </span>
-                  <span className="ml-1">mndarwesh@virtualfriends.dev</span>
+                  <span className="ml-1">mdarwesh@virtualfriends.dev</span>
                 </p>
               </div>
             </div>
@@ -100,7 +100,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
                       />
                     </svg>
 
-                    <span className="ml-1">mndarwesh@virtualfriends.dev</span>
+                    <span className="ml-1">mdarwesh@virtualfriends.dev</span>
                   </p>
 
                   <p className="body-2">
