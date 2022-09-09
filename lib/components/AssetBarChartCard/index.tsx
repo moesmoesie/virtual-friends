@@ -1,18 +1,22 @@
-type AssetBarChartCardType = {
+interface AssetBarChartCardType {
+  title: string;
+  currency: "euro" | "dollar";
   amount: number;
-  gainPercentage: number;
   values: number[];
-};
+}
 
 const AssetBarChartCard: React.FC<AssetBarChartCardType> = (props) => {
   return (
     <div className="bg-grey-p pr-7 inline-block rounded-lg p-6 shadow-card-m">
-      <p className="body-1 font-bold">Total Earning</p>
+      <p className="body-1 font-bold">{props.title}</p>
       <div className="flex gap-4 items-baseline">
-        <p className="body-1 -mt-1 text-[28px] font-bold">€{props.amount}</p>
-        <p className="body-1 text-voilet-400">+{props.gainPercentage}%</p>
+        <p className="body-1 -mt-1 text-[28px] font-bold">
+          {props.currency === "dollar" ? "$" : ""}
+          {props.currency === "euro" ? "€" : ""}
+          {props.amount}
+        </p>
       </div>
-      <div className="flex mt-2 gap-2 w-full justify-between">
+      <div className="flex mt-2 gap-3 w-full justify-start">
         {props.values.map((el, index) => {
           return (
             <div
