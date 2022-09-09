@@ -15,7 +15,11 @@ const ProgressiveWebApp: React.FC = () => {
       </FloatingContainer>
       <FloatingContainer delay={0.3}>
         <div className="translate-y-8">
-          <AssetBarChartCard />
+          <AssetBarChartCard
+            amount={30000}
+            gainPercentage={23}
+            values={[0.9, 0.87, 0.4, 0.9, 0.84, 1, 0.5, 0.4, 0.3]}
+          />
         </div>
       </FloatingContainer>
 
