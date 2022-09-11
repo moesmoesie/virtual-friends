@@ -26,6 +26,7 @@
     "react-dom": "18.2.0",
     "react-waypoint": "^10.3.0",
     "storyblok-rich-text-react-renderer": "^2.6.0",
+    "storybook-zeplin": "^1.7.2",
     "three": "^0.143.0"
   },
   "devDependencies": {

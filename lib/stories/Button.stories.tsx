@@ -38,4 +38,6 @@ Outlined.parameters = {
     type: "figma",
     url: "https://www.figma.com/file/jNHHDpJ0dyOuogzw7B4iqM/Virtual-Friends-Website-Light-mode?node-id=1496%3A818",
   },
+  zeplinLink:
+    "https://app.zeplin.io/project/631de5ac968559118b2e00fc/styleguide/components?coid=631de5b56d0b4711589f52bb",
 };
