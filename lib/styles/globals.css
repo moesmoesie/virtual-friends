@@ -91,6 +91,11 @@
     @apply font-display text-[23px] font-bold medium:text-[35px];
   }
 
+
+  .button-1 {
+    @apply font-display text-[14px] font-bold leading-[1.6] tracking-[1.25px]
+  }
+
   /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
