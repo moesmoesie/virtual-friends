@@ -6,6 +6,7 @@ export interface ImageType {
   lazy?: boolean;
   width: number;
   height?: number;
+  className?: string;
   [propName: string]: any;
 }
 

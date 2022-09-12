@@ -29,7 +29,9 @@
     "react-waypoint": "^10.3.0",
     "storyblok-rich-text-react-renderer": "^2.6.0",
     "storybook-zeplin": "^1.7.2",
-    "three": "^0.143.0"
+    "three": "^0.143.0",
+    "tsconfig-paths-webpack-plugin": "^4.0.0",
+    "vite-tsconfig-paths": "^3.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",
