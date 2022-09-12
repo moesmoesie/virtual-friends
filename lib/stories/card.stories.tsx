@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { StoryblokImage } from "../components";
 
-import { Card } from "../components/card";
+import { Card } from "components/card";
 
 export default {
   title: "Card",
