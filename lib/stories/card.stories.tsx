@@ -1,8 +1,9 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Card } from "../components/Card";
 import { StoryblokImage } from "../components";
+
+import { Card } from "../components/card";
 
 export default {
   title: "Card",
@@ -29,7 +30,8 @@ const Template: ComponentStory<typeof Card> = (args) => (
 export const Vertical = Template.bind({});
 Vertical.args = {
   title: "Card Title",
-  variant: "vertical",
+  mode: "vertical",
+  size: "normal",
   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.adipiscing",
 };
 
@@ -40,7 +42,8 @@ Vertical.parameters = {
 
 export const Horizontal = Template.bind({});
 Horizontal.args = {
-  variant: "horizontal",
+  mode: "horizontal",
+  size: "normal",
   title: "Card Title",
   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.adipiscing",
 };
@@ -50,14 +53,15 @@ Horizontal.parameters = {
     "https://app.zeplin.io/project/631de5ac968559118b2e00fc/styleguide/components?coid=631de5b5a15baa13e45bac0e",
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  variant: "large",
+export const VerticalLarge = Template.bind({});
+VerticalLarge.args = {
+  mode: "vertical",
+  size: "large",
   title: "Card Title",
   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.adipiscing",
 };
 
-Large.parameters = {
+VerticalLarge.parameters = {
   zeplinLink:
     "https://app.zeplin.io/project/631de5ac968559118b2e00fc/styleguide/components?coid=631de5b552eec6149bbb6e67",
 };

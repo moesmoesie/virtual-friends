@@ -1,7 +1,5 @@
-export { default as Button } from "./Button";
 export { default as WorkStep } from "./WorkStep";
 export { default as InfoCard } from "./InfoCard";
-export { default as Card } from "./Card";
 export { default as CompanyCard } from "./CompanyCard";
 export { default as Product } from "./Product";
 export { default as Receipt } from "./Receipt";

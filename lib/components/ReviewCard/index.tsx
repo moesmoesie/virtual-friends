@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "../Card";
 import StoryblokImage from "../StoryblokImage";
 import { ReviewCardProps } from "./types";
 
@@ -13,7 +12,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
           height={300}
           is_external_url={false}
           alt={"Headshot of reviewer"}
-          className="mb-3 h-16 object-cover w-16 rounded-full"
+          className="mb-3 h-16 w-16 rounded-full object-cover"
         />
         <p className="body-2 mb-3">{review.body}</p>
         <p className="body-1">

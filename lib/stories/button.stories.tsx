@@ -9,7 +9,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
-  <div className="w-full h-[300px]">
+  <div className="h-[300px] w-full">
     <Button {...args} />
   </div>
 );

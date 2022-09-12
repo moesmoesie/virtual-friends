@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "../Card";
 import { CompanyCardProps } from "./types";
 
 const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
@@ -28,7 +27,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
                 <p className="body-2 flex flex-1">
                   <span className="mr-2 text-voilet-400">
                     <svg
-                      className="w-5 h-5 translate-y-1 text-voilet-400"
+                      className="h-5 w-5 translate-y-1 text-voilet-400"
                       viewBox="0 0 59 59"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -42,10 +41,10 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
                   <span>+31612818127</span> <br />
                 </p>
 
-                <p className="body-2 flex items-center flex-1 ">
+                <p className="body-2 flex flex-1 items-center ">
                   <span className="mr-2 text-voilet-400">
                     <svg
-                      className="w-5 h-5 text-voilet-400"
+                      className="h-5 w-5 text-voilet-400"
                       viewBox="0 0 58 45"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -71,9 +70,9 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
                     The Netherlands
                   </p>
 
-                  <p className="body-2 items-center gap-2  flex whitespace-nowrap">
+                  <p className="body-2 flex items-center  gap-2 whitespace-nowrap">
                     <svg
-                      className="w-5 h-5 text-voilet-400"
+                      className="h-5 w-5 text-voilet-400"
                       viewBox="0 0 59 59"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -87,9 +86,9 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ type = "horizontal" }) => {
                     <span>+31612818127</span>
                   </p>
 
-                  <p className="flex gap-2 items-center mb-7 body-2">
+                  <p className="body-2 mb-7 flex items-center gap-2">
                     <svg
-                      className="w-5 h-5 text-voilet-400"
+                      className="h-5 w-5 text-voilet-400"
                       viewBox="0 0 58 45"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"

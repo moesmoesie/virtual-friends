@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "../Card";
 interface WorkStepProps {
   title: string;
   body: string;
