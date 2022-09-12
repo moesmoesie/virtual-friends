@@ -1,8 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { StoryblokImage } from "../components";
-
+import { Image } from "../components/image";
 import { Card } from "components/card";
 
 export default {
@@ -15,8 +14,7 @@ const Template: ComponentStory<typeof Card> = (args) => (
     <Card
       {...args}
       icon={
-        <StoryblokImage
-          is_external_url={false}
+        <Image
           fill={false}
           filename="https://a.storyblok.com/f/170199/2400x2400/c56fb8d398/euro-dynamic-gradient.png"
           width={200}
