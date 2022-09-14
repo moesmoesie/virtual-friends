@@ -20,6 +20,36 @@
     url("/fonts/inter-v11-latin/inter-v11-latin-regular.woff") format("woff");
 }
 
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* source-sans-pro-300 - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url('/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* source-sans-pro-700 - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 /* inter-700 - latin */
 @font-face {
   font-family: "Inter";
@@ -137,7 +167,7 @@
   }
   
   .subtitle-2 {
-    font-family: Roboto;
+    font-family: Source Sans Pro;
     font-size: 24px;
     font-weight: bold;
     font-stretch: normal;
@@ -147,7 +177,7 @@
   }
   
   .subtitle-3 {
-    font-family: Roboto;
+    font-family: Source Sans Pro;
     font-size: 20px;
     font-weight: bold;
     font-stretch: normal;
@@ -157,7 +187,7 @@
   }
   
   .body-1 {
-    font-family: Roboto;
+    font-family: Source Sans Pro;
     font-size: 18px;
     font-weight: bold;
     font-stretch: normal;
@@ -167,7 +197,7 @@
   }
   
   .body-1 {
-    font-family: Roboto;
+    font-family: Source Sans Pro;
     font-size: 18px;
     font-weight: normal;
     font-stretch: normal;
@@ -177,7 +207,7 @@
   }
   
   .body-2 {
-    font-family: Roboto;
+    font-family: Source Sans Pro;
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
@@ -187,7 +217,7 @@
   }
   
   .button-1 {
-    font-family: Roboto;
+    font-family: Source Sans Pro;
     font-size: 14px;
     font-weight: bold;
     font-stretch: normal;
@@ -211,5 +241,3 @@
   scrollbar-width: none;  /* Firefox */
 }
 }
-
-

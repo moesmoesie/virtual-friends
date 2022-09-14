@@ -9,7 +9,7 @@ export interface ItemType {
   discountPercentage?: number;
   image?: ImageType;
   title: string;
-  price: string;
+  price: number;
   color: string;
 }
 export interface ProductType {
