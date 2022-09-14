@@ -22,15 +22,17 @@ export const Product: React.FC<ProductType> = (props) => {
   return (
     <div className="flex max-w-[241px] flex-col gap-5 rounded-lg bg-neutral-400 p-5 shadow-m">
       {/* Header */}
-      <div className="flex items-center justify-between">
-        {product.discountPercentage ? (
+      <div
+        className={`flex items-center ${
+          product.discountPercentage ? "justify-between" : "justify-end"
+        }`}
+      >
+        {product.discountPercentage && (
           <div className="rounded-lg bg-white px-3 py-1">
             <p className="body-3 font-bold text-primary-400">
               {product.discountPercentage}%
             </p>
           </div>
-        ) : (
-          <div />
         )}
 
         <div className="text-primary-400">
