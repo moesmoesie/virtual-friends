@@ -17,8 +17,8 @@ const Template: ComponentStory<typeof Component> = (args) => {
 
 export const Review = Template.bind({});
 Review.args = {
-  company: "Caboosy inc",
-  name: "Jane Caboosy",
+  company: "Company",
+  name: "Firstname",
   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   image: {
     filename: "https://via.placeholder.com/200x200?text=placeholder",
