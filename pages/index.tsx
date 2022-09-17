@@ -1,7 +1,5 @@
 import { getStoryblokApi, useStoryblokState } from "@storyblok/react";
 import type { NextPage } from "next";
-import { PageBlock } from "../lib/blocks";
-import { StoryblokComponent } from "@storyblok/react";
 import { useScreen } from "../lib/hooks";
 
 const HomePage: NextPage<{ story: any; preview: any }> = ({
@@ -13,7 +11,7 @@ const HomePage: NextPage<{ story: any; preview: any }> = ({
 
   return (
     <div className="overflow-hidden">
-      <PageBlock
+      {/* <PageBlock
         title={story?.content?.title}
         description={story?.content?.description}
         header={<StoryblokComponent blok={story?.content?.header[0]} />}
@@ -27,7 +25,7 @@ const HomePage: NextPage<{ story: any; preview: any }> = ({
           }
           return <div key={nestedBlok._uid} />;
         })}
-      </PageBlock>
+      </PageBlock> */}
     </div>
   );
 };

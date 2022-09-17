@@ -57,6 +57,7 @@ export const Product: React.FC<ProductType> = (props) => {
             {props.products?.map((product, index) => {
               return (
                 <button
+                  key={index}
                   onClick={() => setProduct(props.products![index])}
                   style={{ background: product.color }}
                   className="h-3 w-3 rounded-full bg-white"

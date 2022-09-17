@@ -27,8 +27,8 @@ export const Receipt: React.FC<ReceiptType> = (props) => {
       <Header title={props.title} />
 
       <div className="h-[242px] overflow-auto">
-        {props.items.map((el) => {
-          return <ListItem {...el} />;
+        {props.items.map((el, index) => {
+          return <ListItem key={index} {...el} />;
         })}
       </div>
 
