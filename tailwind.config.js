@@ -6,6 +6,7 @@ module.exports = {
     "./lib/blocks/**/*.{html,js,ts,tsx}",
     "./lib/pages/**/*.{html,js,ts,tsx}",
     "./lib/components/**/*.{html,js,ts,tsx}",
+    "./lib/stories/**/*.{html,js,ts,tsx}",
     "./pages/**/*.{html,js,ts,tsx}",
   ],
   theme: {
@@ -35,6 +36,7 @@ module.exports = {
       "primary-400" : "#893AD8",
       "neutral-400" : "#f5f6f9",
       "neutral-500" : "#e6e6e6",
+      "neutral-600" : "#CCCCCC",
       transparent: "transparent",
       "grey-900": "#101010",
       "grey-800": "#2c2c2c",
