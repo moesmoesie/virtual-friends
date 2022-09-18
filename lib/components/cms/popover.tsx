@@ -12,11 +12,12 @@ export interface PopoverType {
 export const Popover: React.FC<PopoverType> = (props) => {
   return (
     <div className="inline-flex flex-col rounded-lg bg-neutral-400 py-3 shadow-m">
-      {props.options.map((el) => {
+      {props.options.map((el, index) => {
         const isActive =
           props.options[props.currentOptionIndex].value === el.value;
         return (
           <button
+            key={index}
             onClick={() => props.setOption(el.name)}
             className="body-3 flex items-center justify-between px-2 py-1.5"
           >
