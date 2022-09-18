@@ -33,6 +33,8 @@ module.exports = {
     colors: {
       white: "#ffffff",
       black: "#333333",
+      danger: "#ED0131",
+      success: "#0E6245",
       "primary-400" : "#893AD8",
       "neutral-400" : "#f5f6f9",
       "neutral-500" : "#e6e6e6",
