@@ -19,7 +19,7 @@ export const Picker: React.FC<PickerType> = (props) => {
       <div className="flex gap-2">
         {props.options.map((value, index) => {
           return (
-            <button onClick={() => props.onChange(index)}>
+            <button key={index} onClick={() => props.onChange(index)}>
               <Chip
                 variant={index === props.current ? "active" : "nonActive"}
                 text={value}
