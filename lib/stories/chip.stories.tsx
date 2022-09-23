@@ -1,7 +1,4 @@
-import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-
-import { Image } from "../components/image";
 import { Chip } from "components/chip";
 
 export default {
