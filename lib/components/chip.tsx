@@ -6,7 +6,7 @@ export interface ChipType {
 export const Chip: React.FC<ChipType> = (props) => {
   return (
     <div
-      className={`rounded-[4px] border border-transparent px-3 text-white
+      className={`inline-block rounded-[4px] border border-transparent px-3 text-white
         ${props.variant == "active" ? "bg-primary-400" : ""}
         ${
           props.variant == "nonActive"
