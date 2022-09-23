@@ -1,5 +1,6 @@
 import '../lib/styles/globals.css';
 import * as NextImage from 'next/image';
+import '@storybook/addon-console';
 
 const OriginalNextImage = NextImage.default;
 

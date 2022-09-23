@@ -8,16 +8,32 @@ var formatter = new Intl.NumberFormat("en-US", {
 
 export interface ReceiptType {
   title: string;
-  items: {
-    count: number;
-    item: ItemType;
-  }[];
+  items: ItemType[];
+}
+
+interface ReceiptItem {
+  count: number;
+  item: ItemType;
 }
 
 export const Receipt: React.FC<ReceiptType> = (props) => {
   let subtotal = 0;
   const delivery = 4.95;
+  const items: ReceiptItem[] = [];
+
   props.items.forEach((item) => {
+    const index = items.findIndex((pred) => pred.item.id === item.id);
+    if (index === -1) {
+      items.push({
+        item,
+        count: 1,
+      });
+    } else {
+      items[index].count += 1;
+    }
+  });
+
+  items.forEach((item) => {
     subtotal += item.count * item.item.price;
   });
   const total = subtotal + delivery;
@@ -27,7 +43,7 @@ export const Receipt: React.FC<ReceiptType> = (props) => {
       <Header title={props.title} />
 
       <div className="h-[242px] overflow-auto">
-        {props.items.map((el, index) => {
+        {items.map((el, index) => {
           return <ListItem key={index} {...el} />;
         })}
       </div>

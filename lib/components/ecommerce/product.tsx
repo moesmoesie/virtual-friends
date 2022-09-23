@@ -14,6 +14,7 @@ export interface ItemType {
 }
 export interface ProductType {
   products?: ItemType[];
+  onBuy: (item: ItemType) => void;
 }
 
 export const Product: React.FC<ProductType> = (props) => {
@@ -70,7 +71,11 @@ export const Product: React.FC<ProductType> = (props) => {
 
       {/* Call to action */}
       <div className="flex w-full justify-center">
-        <Button text="Add To Chart" type="default" />
+        <Button
+          onClick={() => props.onBuy(product)}
+          text="Add To Chart"
+          type="default"
+        />
       </div>
     </div>
   );

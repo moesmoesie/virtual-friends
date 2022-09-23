@@ -1,19 +1,26 @@
 export interface ButtonType {
   type: "default" | "outlined";
   text: string;
+  onClick?: () => void;
 }
 
 export const Button: React.FC<ButtonType> = (props) => {
   if (props.type === "default") {
     return (
-      <button className="button-1 rounded-lg px-5 uppercase bg-primary-400 text-white py-2">
+      <button
+        onClick={props.onClick}
+        className="button-1 rounded-lg bg-primary-400 px-5 py-2 uppercase text-white"
+      >
         {props.text}
       </button>
     );
   }
 
   return (
-    <button className="button-1 rounded-lg px-5 border uppercase border-primary-400 text-primary-400 py-2">
+    <button
+      onClick={props.onClick}
+      className="button-1 rounded-lg border border-primary-400 px-5 py-2 uppercase text-primary-400"
+    >
       {props.text}
     </button>
   );
