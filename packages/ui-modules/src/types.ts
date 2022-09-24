@@ -5,3 +5,5 @@ export interface ModuleType {
         scrollMargin?: number;
     }
 }
+
+export type RichTextType = string | JSX.Element

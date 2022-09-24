@@ -16,3 +16,4 @@ export * from "./components/input/text-field";
 export * from "./components/input/textarea";
 export * from "./components/input/picker";
 export * from "./components/container";
+export * from "./components/markdown";
