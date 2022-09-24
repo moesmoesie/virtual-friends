@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Chip } from "ui";
 
 export default {
-  title: "Chip",
+  title: "Components/Chip",
   component: Chip,
 } as ComponentMeta<typeof Chip>;
 

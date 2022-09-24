@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { ImagePicker as Component } from "ui";
 
 export default {
-  title: "CMS/Image Picker",
+  title: "Components/Image Picker",
   component: Component,
 } as ComponentMeta<typeof Component>;
 

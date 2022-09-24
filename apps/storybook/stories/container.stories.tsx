@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Container as Component } from "ui";
 
 export default {
-  title: "Container",
+  title: "Components/Container",
   component: Component,
 } as ComponentMeta<typeof Component>;
 

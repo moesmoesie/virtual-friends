@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Product as Component } from "ui";
 
 export default {
-  title: "Ecommerce/Product",
+  title: "Components/Product",
   component: Component,
 } as ComponentMeta<typeof Component>;
 

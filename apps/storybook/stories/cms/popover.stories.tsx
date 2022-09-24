@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Popover as Component, OptionType } from "ui";
 
 export default {
-  title: "CMS/Popover",
+  title: "Components/Popover",
   component: Component,
 } as ComponentMeta<typeof Component>;
 

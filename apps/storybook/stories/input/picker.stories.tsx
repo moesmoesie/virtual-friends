@@ -4,7 +4,7 @@ import { Picker as Component } from "ui";
 import { useState } from "react";
 
 export default {
-  title: "Input/Picker",
+  title: "Components/Input/Picker",
   component: Component,
 } as ComponentMeta<typeof Component>;
 

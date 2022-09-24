@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Employee as Component } from "ui";
 
 export default {
-  title: "Company/Employee",
+  title: "Components/Employee",
   component: Component,
 } as ComponentMeta<typeof Component>;
 

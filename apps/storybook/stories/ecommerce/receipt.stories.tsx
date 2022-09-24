@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Receipt as Component } from "ui";
 
 export default {
-  title: "Ecommerce/Receipt",
+  title: "Components/Receipt",
   component: Component,
 } as ComponentMeta<typeof Component>;
 

@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { EcommerceComponentCollection as Component } from "ui";
 
 export default {
-  title: "Ecommerce/Component Collection",
+  title: "Components/Ecommerce Component Collection",
   component: Component,
 } as ComponentMeta<typeof Component>;
 
@@ -14,8 +14,8 @@ const Template: ComponentStory<typeof Component> = (args) => {
   );
 };
 
-export const ComponentCollection = Template.bind({});
-ComponentCollection.args = {
+export const EcommerceComponentCollection = Template.bind({});
+EcommerceComponentCollection.args = {
   initialsItems: [
     {
       id: "1",

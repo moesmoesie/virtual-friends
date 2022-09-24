@@ -3,7 +3,7 @@ import { Checkbox as Component } from "ui";
 import { useState } from "react";
 
 export default {
-  title: "Input/Checkbox",
+  title: "Components/Input/Checkbox",
   component: Component,
 } as ComponentMeta<typeof Component>;
 
