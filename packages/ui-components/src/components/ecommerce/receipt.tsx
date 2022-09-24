@@ -1,4 +1,4 @@
-import { ItemType } from "../ecommerce/product";
+import { ItemType } from "./product";
 import { Image } from "../image";
 var formatter = new Intl.NumberFormat("en-US", {
   style: "currency",

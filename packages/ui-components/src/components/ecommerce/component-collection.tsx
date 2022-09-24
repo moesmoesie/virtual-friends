@@ -1,5 +1,5 @@
-import { Receipt } from "../ecommerce/receipt";
-import { Product, ItemType } from "../ecommerce/product";
+import { Receipt } from "./receipt";
+import { Product, ItemType } from "./product";
 import { useState } from "react";
 
 export interface EcommerceComponentCollectionType {

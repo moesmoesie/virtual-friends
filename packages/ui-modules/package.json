@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "ui-modules",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -21,7 +21,8 @@
     "tailwindcss": "^3.1.8",
     "tsconfig": "*",
     "tsup": "^6.2.3",
-    "typescript": "^4.5.2"
+    "typescript": "^4.5.2",
+    "ui-components" : "*"
   },
   "dependencies": {
     "concurrently": "^7.4.0"

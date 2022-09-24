@@ -1,8 +1,8 @@
 export interface ContainerType {
   scrollMargin?: number;
   backgroundColor?: string;
-  padding: string;
-  children: React.ReactNode;
+  padding?: string;
+  children?: React.ReactNode;
 }
 
 export const Container: React.FC<ContainerType> = (props) => {
