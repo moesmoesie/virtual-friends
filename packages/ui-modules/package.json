@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "concurrently": "^7.4.0",
-    "markdown-to-jsx": "^7.1.7"
+    "markdown-to-jsx": "^7.1.7",
+    "react-spring": "^9.5.4"
   }
 }
