@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Textarea as Component } from "ui";
+import { Textarea as Component } from "ui-components";
 
 export default {
   title: "Components/Input/Textarea",

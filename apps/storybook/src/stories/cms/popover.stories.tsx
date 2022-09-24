@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Popover as Component, OptionType } from "ui";
+import { Popover as Component } from "ui-components";
 
 export default {
   title: "Components/Popover",

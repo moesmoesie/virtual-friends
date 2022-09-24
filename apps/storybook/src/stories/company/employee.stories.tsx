@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Employee as Component } from "ui";
+import { Employee as Component } from "ui-components";
 
 export default {
   title: "Components/Employee",

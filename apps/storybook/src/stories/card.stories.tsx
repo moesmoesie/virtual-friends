@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Image, Card } from "ui";
+import { Image, Card } from "ui-components";
 
 export default {
   title: "Components/Card",

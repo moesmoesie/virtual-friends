@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { EcommerceComponentCollection as Component } from "ui";
+import { EcommerceComponentCollection as Component } from "ui-components";
 
 export default {
   title: "Components/Ecommerce Component Collection",

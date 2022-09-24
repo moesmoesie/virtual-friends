@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { BuisnessCard as Component } from "ui";
+import { BuisnessCard as Component } from "ui-components";
 
 export default {
   title: "Components/Buisness Card",

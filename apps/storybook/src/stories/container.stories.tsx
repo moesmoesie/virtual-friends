@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Container as Component } from "ui";
+import { Container as Component } from "ui-components";
 
 export default {
   title: "Components/Container",

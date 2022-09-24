@@ -1,5 +1,5 @@
 import '../src/fonts.css'
-import 'ui/dist/style.css'
+import 'ui-components/dist/style.css'
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
