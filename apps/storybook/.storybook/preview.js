@@ -1,6 +1,4 @@
-import '../src/fonts.css'
-import 'ui-components/dist/style.css'
-import 'ui-modules/dist/style.css'
+import "../src/styles/globals.css";
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -9,4 +7,4 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};

@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { EcommerceComponentCollection as Component } from "ui-components";
+import { EcommerceComponentCollection as Component } from "ui/components/ecommerce";
 
 export default {
   title: "Components/Ecommerce Component Collection",
@@ -14,8 +14,8 @@ const Template: ComponentStory<typeof Component> = (args) => {
   );
 };
 
-export const EcommerceComponentCollection = Template.bind({});
-EcommerceComponentCollection.args = {
+export const Default = Template.bind({});
+Default.args = {
   initialsItems: [
     {
       id: "1",

@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Container as Component } from "ui-components";
+import { Container as Component } from "ui/components";
 
 export default {
   title: "Components/Container",
@@ -10,8 +10,8 @@ const Template: ComponentStory<typeof Component> = (args) => (
   <Component {...args} />
 );
 
-export const Container = Template.bind({});
-Container.args = {
+export const Default = Template.bind({});
+Default.args = {
   backgroundColor: "black",
   padding: "100px 100px",
 };

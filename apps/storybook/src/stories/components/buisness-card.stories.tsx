@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { BuisnessCard as Component } from "ui-components";
+import { BuisnessCard as Component } from "ui/components";
 
 export default {
   title: "Components/Buisness Card",
@@ -12,8 +12,8 @@ const Template: ComponentStory<typeof Component> = (args) => (
   </div>
 );
 
-export const BuisnessCard = Template.bind({});
-BuisnessCard.args = {
+export const Default = Template.bind({});
+Default.args = {
   address: "Van Nelleweg 1",
   postalcode: "3044 BC Rotterdam",
   country: "The Netherlands",

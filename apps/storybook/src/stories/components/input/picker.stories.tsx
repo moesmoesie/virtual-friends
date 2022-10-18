@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Picker as Component } from "ui-components";
+import { Picker as Component } from "ui/components/input";
 import { useState } from "react";
 
 export default {

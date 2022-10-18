@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Product as Component } from "ui-components";
+import { Product as Component } from "ui/components/ecommerce";
 
 export default {
   title: "Components/Product",
@@ -15,8 +15,8 @@ const Template: ComponentStory<typeof Component> = (args) => {
   );
 };
 
-export const Product = Template.bind({});
-Product.args = {
+export const Default = Template.bind({});
+Default.args = {
   products: [
     {
       id: "1",
@@ -69,7 +69,7 @@ Product.args = {
   ],
 };
 
-Product.parameters = {
+Default.parameters = {
   zeplinLink:
     "https://app.zeplin.io/project/631de5ac968559118b2e00fc/styleguide/components?coid=631de5badc961513bd37910d",
 };

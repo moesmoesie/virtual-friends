@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Popover as Component } from "ui-components";
+import { Popover as Component } from "ui/components/cms";
 
 export default {
   title: "Components/Popover",
@@ -33,5 +33,5 @@ const Template: ComponentStory<typeof Component> = (args) => {
   );
 };
 
-export const Popover = Template.bind({});
-Popover.args = {};
+export const Default = Template.bind({});
+Default.args = {};

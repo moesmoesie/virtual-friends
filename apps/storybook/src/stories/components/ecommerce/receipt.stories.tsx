@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Receipt as Component } from "ui-components";
+import { Receipt as Component } from "ui/components/ecommerce";
 
 export default {
   title: "Components/Receipt",
@@ -15,8 +15,8 @@ const Template: ComponentStory<typeof Component> = (args) => {
   );
 };
 
-export const Receipt = Template.bind({});
-Receipt.args = {
+export const Default = Template.bind({});
+Default.args = {
   title: "Your order",
   items: [
     {
@@ -58,7 +58,7 @@ Receipt.args = {
   ],
 };
 
-Receipt.parameters = {
+Default.parameters = {
   zeplinLink:
     "https://app.zeplin.io/project/631de5ac968559118b2e00fc/styleguide/components?coid=631de5b6e15f86157ed4786b",
 };

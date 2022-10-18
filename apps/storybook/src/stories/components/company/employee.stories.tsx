@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Employee as Component } from "ui-components";
+import { Employee as Component } from "ui/components/company";
 
 export default {
   title: "Components/Employee",
@@ -14,8 +14,8 @@ const Template: ComponentStory<typeof Component> = (args) => {
   );
 };
 
-export const Employee = Template.bind({});
-Employee.args = {
+export const Default = Template.bind({});
+Default.args = {
   company: "Company",
   name: "Name",
   phone: "+31634XXX366",
@@ -29,7 +29,7 @@ Employee.args = {
   },
 };
 
-Employee.parameters = {
+Default.parameters = {
   zeplinLink:
     "https://app.zeplin.io/project/631de5ac968559118b2e00fc/styleguide/components?coid=631de5bbbf3b5c13a9021e57",
 };

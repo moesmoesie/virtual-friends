@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { ImagePicker as Component } from "ui-components";
+import { ImagePicker as Component } from "ui/components/cms";
 
 export default {
   title: "Components/Image Picker",
@@ -14,5 +14,5 @@ const Template: ComponentStory<typeof Component> = (args) => (
   </div>
 );
 
-export const ImagePicker = Template.bind({});
-ImagePicker.args = {};
+export const Default = Template.bind({});
+Default.args = {};
