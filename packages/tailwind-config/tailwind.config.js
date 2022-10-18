@@ -3,17 +3,18 @@ const plugin = require("tailwindcss/plugin");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "../../packages/ui/**/*.{html,js,ts,tsx}",
     "./src/**/*.{html,js,ts,tsx}",
   ],
   theme: {
     keyframes: {
       floating: {
-        '0%,100%': { transform: 'translateY(0px)' },
-        '50%': { transform: 'translateY(15px)' },
-      }
+        "0%,100%": { transform: "translateY(0px)" },
+        "50%": { transform: "translateY(15px)" },
+      },
     },
     animation: {
-      floating: 'floating 4s ease-in-out infinite',
+      floating: "floating 4s ease-in-out infinite",
     },
     fontFamily: {
       headline: ["Inter"],
@@ -31,10 +32,10 @@ module.exports = {
       black: "#333333",
       danger: "#ED0131",
       success: "#0E6245",
-      "primary-400" : "#893AD8",
-      "neutral-400" : "#f5f6f9",
-      "neutral-500" : "#e6e6e6",
-      "neutral-600" : "#CCCCCC",
+      "primary-400": "#893AD8",
+      "neutral-400": "#f5f6f9",
+      "neutral-500": "#e6e6e6",
+      "neutral-600": "#CCCCCC",
       transparent: "transparent",
       "grey-900": "#101010",
       "grey-800": "#2c2c2c",
@@ -47,7 +48,7 @@ module.exports = {
       "grey-100": "#e6e6e6",
       "grey-050": "#f3f3f3",
       "grey-p": "#F5F6F9",
-      "yellow" : "#E7B24B",
+      yellow: "#E7B24B",
       "mint-500": "#a3f7b5",
       "teal-500": "#40c9a2",
       "nyanza-500": "#e5f9e0",
@@ -81,17 +82,20 @@ module.exports = {
       "dark-purple-100": "#564f71",
     },
     backgroundImage: {
-      "gradient-1": "linear-gradient(293.54deg, #C957B6 13.32%, #5938D9 83.07%)",
+      "gradient-1":
+        "linear-gradient(293.54deg, #C957B6 13.32%, #5938D9 83.07%)",
       "gradient-2": "linear-gradient(180deg, #ECC66D 0%, #D39349 100%)",
-      "gradient-3": "linear-gradient(293.54deg, #9D4BF4 13.32%, #ECC66D 83.07%)",
+      "gradient-3":
+        "linear-gradient(293.54deg, #9D4BF4 13.32%, #ECC66D 83.07%)",
       "gradient-purple": "linear-gradient(180deg, #A93BFF 0%, #7B2ACC 100%)",
       "gradient-glass":
         "linear-gradient(141.24deg, rgba(146, 124, 255, 0.142) 1.69%, rgba(64, 201, 162, 0) 100%)",
     },
     boxShadow: {
-      "m": "0px 9px 12px rgba(0, 0, 0, 0.1), 0px 14px 32px rgba(0, 0, 0, 0.05), 0px 32px 44px rgba(0, 0, 0, 0.1)",
-      "card-m": "0px 9px 12px rgba(0, 0, 0, 0.1), 0px 14px 32px rgba(0, 0, 0, 0.05), 0px 32px 44px rgba(0, 0, 0, 0.1)"
-    }
+      m: "0px 9px 12px rgba(0, 0, 0, 0.1), 0px 14px 32px rgba(0, 0, 0, 0.05), 0px 32px 44px rgba(0, 0, 0, 0.1)",
+      "card-m":
+        "0px 9px 12px rgba(0, 0, 0, 0.1), 0px 14px 32px rgba(0, 0, 0, 0.05), 0px 32px 44px rgba(0, 0, 0, 0.1)",
+    },
   },
 
   plugins: [
