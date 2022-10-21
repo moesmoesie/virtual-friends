@@ -8,6 +8,7 @@ import {
   Image,
   Button,
   BuisnessCard,
+  RichText,
 } from "../../components";
 import React from "react";
 
@@ -36,7 +37,9 @@ export const Contact: React.FC<ContactType> = (props) => {
               </h2>
             </div>
 
-            <p className="body-1 max-w-2xl mb-7">{props.body}</p>
+            <p className="body-1 max-w-2xl mb-7">
+              <RichText value={props.body} />
+            </p>
             <div className="flex gap-3 medium:flex-row flex-col">
               <div>
                 <Button text={props.primaryCallToAction} type="default" />

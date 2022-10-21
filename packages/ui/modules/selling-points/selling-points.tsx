@@ -7,7 +7,7 @@ import {
 import React from "react";
 
 export interface SellingPointsType extends ModuleContainerType {
-  cards: {
+  sellingPoints: {
     title: string;
     body: string;
     icon: JSX.Element;
@@ -19,7 +19,7 @@ export const SellingPoints: React.FC<SellingPointsType> = (props) => {
     <ModuleContainer module={props?.module}>
       <Container>
         <div className="grid gap-3 medium:grid-cols-2 large:grid-cols-3">
-          {props?.cards.map((card) => {
+          {props?.sellingPoints?.map((card) => {
             return (
               <div>
                 <div className="hidden large:block">

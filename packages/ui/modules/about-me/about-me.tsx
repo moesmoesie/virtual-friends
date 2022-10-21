@@ -3,6 +3,7 @@ import {
   ModuleContainerType,
   ModuleContainer,
   GradientText,
+  RichText,
 } from "../../components";
 import React from "react";
 
@@ -19,7 +20,7 @@ export const AboutMe: React.FC<AboutMeType> = (props) => {
           <GradientText>{props.title}</GradientText>
         </h2>
         <p className="font-body body-1 max-w-md  medium:max-w-3xl !medium:text-[32px] !text-[28px]">
-          {props.body}
+          <RichText value={props?.body} />
         </p>
       </Container>
     </ModuleContainer>
