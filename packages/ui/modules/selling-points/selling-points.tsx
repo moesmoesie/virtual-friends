@@ -19,9 +19,9 @@ export const SellingPoints: React.FC<SellingPointsType> = (props) => {
     <ModuleContainer module={props?.module}>
       <Container>
         <div className="grid gap-3 medium:grid-cols-2 large:grid-cols-3">
-          {props?.sellingPoints?.map((card) => {
+          {props?.sellingPoints?.map((card, index) => {
             return (
-              <div>
+              <div key={index}>
                 <div className="hidden large:block">
                   <Card mode="vertical" size="large" {...card} />
                 </div>
