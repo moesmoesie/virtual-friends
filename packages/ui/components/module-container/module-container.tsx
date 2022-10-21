@@ -1,0 +1,43 @@
+import React from "react";
+
+export interface ModuleContainerType {
+  module?: {
+    scrollMargin?: number;
+    backgroundColor?: string;
+    paddingTop?: string;
+    paddingBottom?: string;
+    hide?: {
+      small?: boolean;
+      medium?: boolean;
+      large?: boolean;
+    };
+  };
+  children?: React.ReactNode;
+}
+
+export const ModuleContainer: React.FC<ModuleContainerType> = ({
+  module,
+  children,
+}) => {
+  return (
+    <div
+      style={{
+        scrollMargin: module?.scrollMargin,
+        backgroundColor: module?.backgroundColor
+          ? module?.backgroundColor
+          : "transparent",
+        paddingTop: module?.paddingTop ? module.paddingTop : "0px",
+        paddingBottom: module?.paddingBottom ? module.paddingBottom : "0px",
+      }}
+      className={`
+        ${module?.hide?.small ? "hidden" : "block"}
+        ${module?.hide?.medium ? "medium:hidden" : "medium:block"}
+        ${module?.hide?.large ? "large:hidden" : "large:block"}
+      `}
+    >
+      {children}
+    </div>
+  );
+};
+
+export default ModuleContainer;

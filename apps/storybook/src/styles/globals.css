@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .headline-1 {
+    font-family: Inter;
+    font-size: 95.4px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -4.77px;
+  }
+
+  .headline-2 {
+    font-family: Inter;
+    font-size: 76.3px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: -3.82px;
+  }
+
+  .headline-3 {
+    font-family: Inter;
+    font-size: 61px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: normal;
+  }
+
+  .headline-4 {
+    font-family: Inter;
+    font-size: 48.8px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: -2.44px;
+  }
+
+  .headline-5 {
+    font-family: Inter;
+    font-size: 44px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: -2.2px;
+  }
+
+  .subtitle-1 {
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: -1.2px;
+  }
+
+  .headline-6 {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: -1.6px;
+  }
+
+  .subtitle-2 {
+    font-family: Source Sans Pro;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 0.15px;
+  }
+
+  .subtitle-3 {
+    font-family: Source Sans Pro;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 0.15px;
+  }
+
+  .body-large {
+    font-family: Source Sans Pro;
+    font-size: 24px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+  }
+
+  .body-1 {
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+  }
+
+  .body-2 {
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+  }
+
+  .button-1 {
+    font-family: Source Sans Pro;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: 1.25px;
+  }
+
+  .body-3 {
+    @apply font-body leading-[1.6] text-[14px];
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .special-border {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='3' ry='3' stroke='rgb(204, 204, 204)' stroke-width='3' stroke-dasharray='12%2c 8' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+    border-radius: 3px;
+  }
+}
+
+/* inter-regular - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("/fonts/inter-v11-latin/inter-v11-latin-regular.woff2") format("woff2"),
+    url("/fonts/inter-v11-latin/inter-v11-latin-regular.woff") format("woff");
+}
+
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-regular.woff2")
+      format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-regular.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* source-sans-pro-300 - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""),
+    url("/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-300.woff2")
+      format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-300.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* source-sans-pro-700 - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-700.woff2")
+      format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-700.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-700 - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("/fonts/inter-v11-latin/inter-v11-latin-700.woff2") format("woff2"),
+    url("/fonts/inter-v11-latin/inter-v11-latin-700.woff") format("woff");
+}
+
+/* inter-900 - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: local(""),
+    url("/fonts/inter-v11-latin/inter-v12-latin-900.woff2") format("woff2"),
+    url("/fonts/inter-v11-latin/inter-v12-latin-900.woff") format("woff");
+}
+
+/* roboto-regular - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("/fonts/roboto-v30-latin/roboto-v30-latin-regular.woff2")
+      format("woff2"),
+    url("/fonts/roboto-v30-latin/roboto-v30-latin-regular.woff") format("woff");
+}
+
+/* roboto-700 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("/fonts/roboto-v30-latin/roboto-v30-latin-700.woff2") format("woff2"),
+    url("/fonts/roboto-v30-latin/roboto-v30-latin-700.woff") format("woff");
+}
