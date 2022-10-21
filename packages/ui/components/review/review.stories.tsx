@@ -21,8 +21,7 @@ Default.args = {
   name: "Firstname",
   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   image: {
-    filename: "https://via.placeholder.com/200x200?text=placeholder",
-    type: "normal",
+    src: "https://via.placeholder.com/200x200?text=placeholder",
     width: 80,
   },
 };

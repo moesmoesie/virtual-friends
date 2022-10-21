@@ -24,8 +24,7 @@ Default.args = {
   linkedin: "https://www.linkedin.com/in/mustafadarwesh/",
   mail: "mdarwesh@virtualfriends.dev",
   image: {
-    filename: "https://via.placeholder.com/200x200?text=placeholder",
-    type: "normal",
+    src: "https://via.placeholder.com/200x200?text=placeholder",
     width: 80,
   },
 };

@@ -26,8 +26,7 @@ Default.args = {
       price: 99.95,
       title: "Title",
       image: {
-        filename: "https://via.placeholder.com/80x120",
-        type: "normal",
+        src: "https://via.placeholder.com/80x120",
         width: 80,
       },
     },
@@ -38,8 +37,7 @@ Default.args = {
       price: 99.95,
       title: "Title",
       image: {
-        filename: "https://via.placeholder.com/80x120",
-        type: "normal",
+        src: "https://via.placeholder.com/80x120",
         width: 80,
       },
     },
@@ -50,15 +48,9 @@ Default.args = {
       price: 99.95,
       title: "Title",
       image: {
-        filename: "https://via.placeholder.com/80x120",
-        type: "normal",
+        src: "https://via.placeholder.com/80x120",
         width: 80,
       },
     },
   ],
-};
-
-Default.parameters = {
-  zeplinLink:
-    "https://app.zeplin.io/project/631de5ac968559118b2e00fc/styleguide/components?coid=631de5b6e15f86157ed4786b",
 };
