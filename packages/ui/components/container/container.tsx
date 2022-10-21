@@ -3,27 +3,33 @@ import React from "react";
 export interface ContainerType {
   scrollMargin?: number;
   backgroundColor?: string;
-  padding?: string;
+  paddingTop?: string;
+  paddingBottom?: string;
   children?: React.ReactNode;
 }
 
-export const Container: React.FC<ContainerType> = (props) => {
+export const Container: React.FC<ContainerType> = ({
+  scrollMargin = "0px",
+  paddingTop = "0px",
+  paddingBottom = "0px",
+  backgroundColor = "transparent",
+  children,
+}) => {
   return (
     <div
       style={{
-        scrollMargin: props?.scrollMargin,
-        backgroundColor: props?.backgroundColor
-          ? props?.backgroundColor
-          : "transparent",
+        scrollMargin,
+        backgroundColor,
       }}
     >
       <div
         style={{
-          padding: props.padding ? props.padding : "0px",
+          paddingTop,
+          paddingBottom,
         }}
         className={`md:px-16 mx-auto small:max-w-lg medium:max-w-5xl relative large:max-w-7xl px-4 medium:px-10`}
       >
-        {props.children}
+        {children}
       </div>
     </div>
   );

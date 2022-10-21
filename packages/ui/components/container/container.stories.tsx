@@ -14,5 +14,6 @@ const Template: ComponentStory<typeof Component> = (args) => (
 export const Default = Template.bind({});
 Default.args = {
   backgroundColor: "black",
-  padding: "100px 100px",
+  paddingBottom: "100px",
+  paddingTop: "100px",
 };
