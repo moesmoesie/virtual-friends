@@ -1,3 +1,9 @@
+import React from "react";
+
+const gradientRender = (props) => (
+  <span style={{ color: "#893AD8" }}>{props.children}</span>
+);
+
 export default {
   name: "richText",
   title: "RichText",
@@ -11,6 +17,14 @@ export default {
         decorators: [
           { title: "Strong", value: "strong" },
           { title: "Emphasis", value: "em" },
+          {
+            title: "Gradient",
+            value: "gradient",
+            blockEditor: {
+              icon: () => "G",
+              render: gradientRender,
+            },
+          },
         ],
         annotations: [],
       },

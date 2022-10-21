@@ -27,6 +27,7 @@ module.exports = {
       medium: "768px",
       large: "1280px",
     },
+
     colors: {
       white: "#ffffff",
       black: "#333333",
@@ -84,7 +85,8 @@ module.exports = {
     backgroundImage: {
       "gradient-1":
         "linear-gradient(293.54deg, #C957B6 13.32%, #5938D9 83.07%)",
-      "gradient-2": "linear-gradient(180deg, #ECC66D 0%, #D39349 100%)",
+      "gradient-2":
+        "linear-gradient(180deg, #F5F6F9 0%, rgba(245, 246, 249, 0) 100%)",
       "gradient-3":
         "linear-gradient(293.54deg, #9D4BF4 13.32%, #ECC66D 83.07%)",
       "gradient-purple": "linear-gradient(180deg, #A93BFF 0%, #7B2ACC 100%)",

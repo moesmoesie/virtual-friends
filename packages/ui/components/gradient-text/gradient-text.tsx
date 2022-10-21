@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface GradientTextType {
-  children: JSX.Element | string;
+  children: React.ReactNode | string;
 }
 
 export const GradientText: React.FC<GradientTextType> = (props) => {
