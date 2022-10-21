@@ -1,10 +1,9 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { AboutMe as Component } from "..";
 import React from "react";
-import { GradientText } from "../../components";
 
 export default {
-  title: "Modules/Amout Me",
+  title: "Modules/About Me",
   component: Component,
 } as ComponentMeta<typeof Component>;
 
