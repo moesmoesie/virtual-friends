@@ -16,3 +16,5 @@ export * from "./review/review";
 export * from "./text-field/text-field";
 export * from "./textarea/textarea";
 export * from "./container/container";
+export * from "./module-container/module-container";
+export * from "./gradient-text/gradient-text";
