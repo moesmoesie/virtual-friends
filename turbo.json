@@ -2,7 +2,15 @@
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build",
+        "$NEXT_PUBLIC_POSTHOG",
+        "$SANITY_PREVIEW_SECRET",
+        "$SECRET_REVALIDATION_TOKEN",
+        "$NEXT_PUBLIC_SANITY_PROJECT_ID",
+        "$SANITY_API_TOKEN",
+        "$NEXT_PUBLIC_SANITY_DATASET"
+      ],
       "outputs": ["dist/**", ".next/**"]
     },
     "lint": {
