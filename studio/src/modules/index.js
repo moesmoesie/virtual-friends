@@ -5,6 +5,7 @@ import solutions from "./solutions";
 import sellingPoints from "./selling-points";
 import aboutMe from "./about-me";
 import header from "./header";
+import footer from "./footer";
 
 export const modules = [
   landingHome,
@@ -14,4 +15,5 @@ export const modules = [
   sellingPoints,
   aboutMe,
   header,
+  footer,
 ];

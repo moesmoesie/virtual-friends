@@ -1,6 +1,7 @@
 import {
   AboutMe,
   Contact,
+  Footer,
   Header,
   LandingHome,
   SellingPoints,
@@ -38,6 +39,8 @@ const Module: React.FC<{ data: any }> = (data: any) => {
       return <Solutions {...data} />;
     case "spacer":
       return <Spacer {...data} />;
+    case "footer":
+      return <Footer {...data} />;
     default:
       break;
   }
