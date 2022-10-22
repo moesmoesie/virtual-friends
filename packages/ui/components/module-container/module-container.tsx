@@ -3,7 +3,7 @@ import React from "react";
 export interface ModuleContainerType {
   module?: {
     scrollMargin?: number;
-    backgroundColor?: string;
+    background?: string;
     paddingTop?: string;
     paddingBottom?: string;
     hide?: {
@@ -23,9 +23,7 @@ export const ModuleContainer: React.FC<ModuleContainerType> = ({
     <div
       style={{
         scrollMargin: module?.scrollMargin,
-        backgroundColor: module?.backgroundColor
-          ? module?.backgroundColor
-          : "transparent",
+        background: module?.background ? module?.background : "transparent",
         paddingTop: module?.paddingTop ? module.paddingTop : "0px",
         paddingBottom: module?.paddingBottom ? module.paddingBottom : "0px",
       }}

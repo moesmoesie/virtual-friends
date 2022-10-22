@@ -18,9 +18,9 @@ const createModule = ({ name, title, icon = CgComponents, fields }) => {
             title: "Scroll Margin",
           },
           {
-            name: "backgroundColor",
+            name: "background",
             type: "string",
-            title: "Background Color",
+            title: "Background",
           },
           {
             name: "paddingTop",
