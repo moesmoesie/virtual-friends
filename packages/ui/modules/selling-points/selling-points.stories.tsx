@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof Component> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  cards: [
+  sellingPoints: [
     {
       body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in morbi ultrices aliquam du.adipiscing",
       icon: <div className=" w-full h-full bg-danger" />,
