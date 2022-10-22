@@ -3,7 +3,7 @@ import {
   filterDataToSingleItem,
   formatSlugData,
 } from "./sanity/sanity";
-
+import { groq } from "next-sanity";
 import Module from "./module";
 import { getClient } from "./sanity/sanity.server";
 
@@ -52,15 +52,9 @@ export async function defaultGetStaticProps({
   type,
   prefixSlug,
 }) {
-  let query = `*[_type == $type && slug.current == $slug]`;
-
-  if (type === "home") {
-    query = `*[_type == $type && slug.current == $slug && slug.current != "/"]`;
-  }
-
   const slug = `${prefixSlug}/${params?.slug}`;
-  const queryParams = { slug, type };
-  const data = await getClient(preview).fetch(query, queryParams);
+  const queryParams = { slug, page: type };
+  const data = await getClient(preview).fetch(PageQuery, queryParams);
 
   if (!data) return { notFound: true };
 
@@ -71,9 +65,29 @@ export async function defaultGetStaticProps({
       preview,
       data: {
         page,
-        query: preview ? query : null,
+        query: preview ? PageQuery : null,
         queryParams: preview ? queryParams : null,
       },
     },
   };
 }
+
+const PageQuery = groq`
+    *[_type == $page && slug.current == $slug]{
+        _id,
+        modules[]{
+            _type,
+            ...select(
+                _type == "landing-home" => {
+                    ...,
+                    "image" : image.asset->
+                },
+                _type == "contact" => {
+                    ...,
+                    "image" : image.asset->
+                },
+                {...}
+            ) 
+        }
+    }
+`;

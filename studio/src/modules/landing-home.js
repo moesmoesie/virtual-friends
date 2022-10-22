@@ -5,6 +5,11 @@ export default createModule({
   title: "Landing Home",
   fields: [
     {
+      name: "image",
+      type: "image",
+      title: "Image",
+    },
+    {
       name: "title",
       type: "richText",
       title: "Title",

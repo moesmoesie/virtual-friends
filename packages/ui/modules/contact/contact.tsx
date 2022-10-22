@@ -31,12 +31,12 @@ export const Contact: React.FC<ContactType> = (props) => {
               <Image
                 className="w-[130px] h-[130px] rounded-full object-cover"
                 {...props.image}
+                width="400"
               />
               <h2 className="headline-3">
                 <GradientText>{props.title}</GradientText>
               </h2>
             </div>
-
             <p className="body-1 max-w-2xl mb-7">
               <RichText value={props.body} />
             </p>
@@ -49,7 +49,6 @@ export const Contact: React.FC<ContactType> = (props) => {
               </div>
             </div>
           </div>
-
           <div>
             <BuisnessCard {...props.buisnessCard} />
           </div>

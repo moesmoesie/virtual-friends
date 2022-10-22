@@ -5,6 +5,11 @@ export default createModule({
   title: "Contact",
   fields: [
     {
+      name: "image",
+      type: "image",
+      title: "Image",
+    },
+    {
       name: "title",
       type: "string",
       title: "Title",

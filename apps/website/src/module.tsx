@@ -15,9 +15,6 @@ const Module: React.FC<{ data: any }> = (data: any) => {
       return (
         <Contact
           {...data}
-          image={{
-            src: "/images/headshot.jpg",
-          }}
           buisnessCard={{
             address: "Van Nelleweg 1",
             postalcode: "3044 BC Rotterdam",
@@ -31,14 +28,7 @@ const Module: React.FC<{ data: any }> = (data: any) => {
         />
       );
     case "landing-home":
-      return (
-        <LandingHome
-          {...data}
-          image={{
-            src: "/images/headshot.jpg",
-          }}
-        />
-      );
+      return <LandingHome {...data} />;
     case "sellingPoints":
       return <SellingPoints {...data} />;
     case "solutions":

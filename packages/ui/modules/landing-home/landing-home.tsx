@@ -25,6 +25,7 @@ export const LandingHome: React.FC<LandingHomeType> = (props) => {
           <Image
             className="rounded-full medium:w-[250px] medium:h-[250px] large:w-[320px] large:h-[320px] object-cover w-[200px] h-[200px]"
             {...props?.image}
+            width="600"
           />
 
           <div className="flex flex-col max-w-md medium:max-w-2xl gap-8 items-center large:items-start justify-center">
