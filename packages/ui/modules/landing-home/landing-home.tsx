@@ -21,7 +21,7 @@ export const LandingHome: React.FC<LandingHomeType> = (props) => {
   return (
     <ModuleContainer module={props?.module}>
       <Container>
-        <div className="text-center large:text-left flex flex-col items-center justify-center gap-12 large:flex-row">
+        <div className="text-center min-h-[80vh] large:text-left flex flex-col items-center justify-center gap-12 large:flex-row">
           <Image
             className="rounded-full medium:w-[250px] medium:h-[250px] large:w-[320px] large:h-[320px] object-cover w-[200px] h-[200px]"
             {...props?.image}

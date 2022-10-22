@@ -10,12 +10,7 @@ import {
 const Module: React.FC<{ data: any }> = (data: any) => {
   switch (data?._type) {
     case "about-me":
-      return (
-        <div className="relative">
-          <div className="w-full absolute top-0 h-[300px] bg-gradient-2" />
-          <AboutMe {...data} />;
-        </div>
-      );
+      return <AboutMe {...data} />;
     case "contact":
       return (
         <Contact
