@@ -3,6 +3,7 @@ import {
   ModuleContainerType,
   ModuleContainer,
   Card,
+  Image,
 } from "../../components";
 import React from "react";
 
@@ -23,11 +24,21 @@ export const SellingPoints: React.FC<SellingPointsType> = (props) => {
             return (
               <div key={index}>
                 <div className="hidden large:block">
-                  <Card mode="vertical" size="large" {...card} />
+                  <Card
+                    mode="vertical"
+                    size="large"
+                    {...card}
+                    icon={<Image {...card?.icon} width="200" />}
+                  />
                 </div>
 
                 <div className="large:hidden">
-                  <Card mode="horizontal" size="normal" {...card} />
+                  <Card
+                    mode="horizontal"
+                    size="normal"
+                    {...card}
+                    icon={<Image {...card?.icon} width="200" />}
+                  />
                 </div>
               </div>
             );

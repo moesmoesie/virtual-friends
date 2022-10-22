@@ -40,7 +40,7 @@ export const Card: React.FC<CardType> = (props) => {
   return (
     <div className="relative flex flex-col gap-1.5 overflow-hidden rounded-2xl bg-white p-6 shadow-m">
       <div className="flex items-center gap-1.5">
-        <div className="h-8 w-8 shrink-0">{props.icon}</div>
+        <div className="h-12 w-12 shrink-0">{props.icon}</div>
         <p className="subtitle-3 max-w-full flex-1 text-black">{props.title}</p>
       </div>
       <p className="body-3 text-black">{props.body}</p>

@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface ImageType {
-  src: string;
+  src?: string;
   lazy?: boolean;
   width: string;
   height?: string;

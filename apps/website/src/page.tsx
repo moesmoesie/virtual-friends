@@ -86,6 +86,13 @@ const PageQuery = groq`
                     ...,
                     "image" : image.asset->
                 },
+                _type == "sellingPoints" => {
+                    ...,
+                    sellingPoints[]{
+                      ...,
+                      "icon": icon.asset->
+                    }
+                },
                 {...}
             ) 
         }
