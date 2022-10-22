@@ -3,7 +3,6 @@ export * from "./button/button";
 export * from "./card/card";
 export * from "./checkbox/checkbox";
 export * from "./chip/chip";
-export * from "./eccomerce/eccomerce";
 export * from "./container/container";
 export * from "./employee/employee";
 export * from "./image/image";
