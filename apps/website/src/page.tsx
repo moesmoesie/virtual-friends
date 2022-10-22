@@ -92,7 +92,11 @@ const PageQuery = groq`
                       ...,
                       "icon": icon.asset->
                     }
-                },
+                  },
+                  _type == "header" => {
+                      ...,
+                      "logo": logo.asset->
+                  },
                 {...}
             ) 
         }

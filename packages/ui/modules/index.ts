@@ -4,3 +4,4 @@ export * from "./selling-points/selling-points";
 export * from "./contact/contact";
 export * from "./solutions/solutions";
 export * from "./spacer/spacer";
+export * from "./header/header";

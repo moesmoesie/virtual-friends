@@ -1,6 +1,7 @@
 import {
   AboutMe,
   Contact,
+  Header,
   LandingHome,
   SellingPoints,
   Solutions,
@@ -29,6 +30,8 @@ const Module: React.FC<{ data: any }> = (data: any) => {
       );
     case "landing-home":
       return <LandingHome {...data} />;
+    case "header":
+      return <Header {...data} />;
     case "sellingPoints":
       return <SellingPoints {...data} />;
     case "solutions":
