@@ -6,7 +6,7 @@ export interface ImageType {
   width: string;
   height?: string;
   className?: string;
-  _type: string;
+  _type?: string;
   [propName: string]: any;
 }
 

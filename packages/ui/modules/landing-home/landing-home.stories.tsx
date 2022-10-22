@@ -16,7 +16,7 @@ export const Default = Template.bind({});
 Default.args = {
   image: {
     src: "/images/headshot.jpg",
-    width: 100,
+    width: "100",
   },
   subtitle:
     "We are a software development agency that can bring your web ideas into production",

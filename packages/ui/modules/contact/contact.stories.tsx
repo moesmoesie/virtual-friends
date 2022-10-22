@@ -16,7 +16,7 @@ Default.args = {
   title: "Let's Talk",
   image: {
     src: "/images/headshot.jpg",
-    width: 100,
+    width: "100",
   },
   body: "Wil je met mij sparren over jouw designvraagstuk? Dat kan! Neem contact met me op via hi@daanpothoven.nl, LinkedIn of 0638296775. Ik hoor graag wie je bent en wat ik als UX/UI designer voor je kan betekenen. Ik ben bereikbaar van ma t/m do.",
   primaryCallToAction: "Send a Mail",
