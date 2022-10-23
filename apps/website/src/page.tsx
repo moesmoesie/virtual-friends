@@ -97,6 +97,13 @@ const PageQuery = groq`
                       ...,
                       "logo": logo.asset->
                   },
+                  _type == "solutions" => {
+                      ...,
+                      solutions[]{
+                        ...,
+                        "icon": icon.asset->
+                      }
+                  },
                 {...}
             ) 
         }

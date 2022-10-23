@@ -18,6 +18,11 @@ export default createModule({
           type: "object",
           fields: [
             {
+              title: "Icon",
+              name: "icon",
+              type: "image",
+            },
+            {
               title: "Title",
               name: "title",
               type: "string",
