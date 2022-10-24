@@ -15,6 +15,9 @@ import {
   ImagePicker,
   Popover,
   Editor,
+  AssetCard,
+  AssetBarChart,
+  AssetLineChartCard,
 } from "../../components";
 import React from "react";
 import { Waypoint } from "react-waypoint";
@@ -40,6 +43,9 @@ export const Solutions: React.FC<SolutionsType> = (props) => {
 
             if (solution.solutionType === "cms")
               return <Cms isReversed={isReversed} content={solution} />;
+
+            if (solution.solutionType === "saas")
+              return <Saas isReversed={isReversed} content={solution} />;
 
             return <Ecommerce isReversed={isReversed} content={solution} />;
           })}
@@ -74,6 +80,45 @@ const Ecommerce: React.FC<SolutionType> = ({ content, isReversed = false }) => {
           onBuy={(product) => setBasket((prev) => [...prev, product])}
         />
         <Receipt items={basket} title="Bonnetje" />
+      </div>
+    </Solution>
+  );
+};
+
+const Saas: React.FC<SolutionType> = ({ content, isReversed = false }) => {
+  const [show, setShow] = React.useState(false);
+
+  return (
+    <Solution
+      content={content}
+      isReversed={isReversed}
+      setShow={() => setShow(true)}
+      show={show}
+    >
+      <div className="flex pt-6   flex-col">
+        <div className="flex h-full justify-center  items-center gap-3 ">
+          <div className="">
+            <div className="translate-y-14">
+              <AssetCard />
+            </div>
+          </div>
+          <div className="translate-y-5">
+            <AssetBarChart
+              title="This weeks earnings"
+              amount={300000}
+              currency="euro"
+              values={[0.9, 0.87, 0.4, 0.9, 0.84, 1, 0.5, 0.4, 0.3]}
+            />
+          </div>
+          <div className="-translate-y-2">
+            <AssetCard />
+          </div>
+        </div>
+        <div className="flex w-full justify-center">
+          <div className="w-[90%]">
+            <AssetLineChartCard />
+          </div>
+        </div>
       </div>
     </Solution>
   );

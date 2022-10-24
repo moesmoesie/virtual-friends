@@ -19,3 +19,6 @@ export * from "./module-container/module-container";
 export * from "./gradient-text/gradient-text";
 export * from "./rich-text/rich-text";
 export * from "./editor/editor";
+export * from "./asset-bar-chart/asset-bar-chart";
+export * from "./asset/asset";
+export * from "./asset-line-chart/asset-line-chart";
