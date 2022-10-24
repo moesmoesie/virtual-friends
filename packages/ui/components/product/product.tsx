@@ -20,7 +20,7 @@ export const Product: React.FC<ProductType> = (props) => {
   const [product, setProduct] = useState<ItemType>(props.products![0]);
 
   return (
-    <div className="flex max-w-[241px] flex-col gap-5 rounded-lg bg-neutral-400 p-5 shadow-m">
+    <div className="flex min-w-[241px] flex-col gap-5 rounded-lg bg-neutral-400 p-5 shadow-m">
       {/* Header */}
       <div
         className={`flex items-center ${

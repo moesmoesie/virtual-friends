@@ -69,7 +69,7 @@ const Total: React.FC<{ total: number }> = (props) => {
 const ListItem: React.FC<{ item: ItemType; count: number }> = (props) => {
   const { item, count } = props;
   return (
-    <div className="border-b-[1px] border-neutral-500 py-5 last:border-0 last:border-b-0 ">
+    <div className="border-b-[1px] min-w-[280px] border-neutral-500 py-5 last:border-0 last:border-b-0 ">
       <div className="flex gap-5">
         <div className="h-[80px] w-[60px] rounded-lg bg-white">
           {props.item.image && (
