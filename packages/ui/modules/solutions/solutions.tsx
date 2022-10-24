@@ -56,7 +56,10 @@ interface SolutionType {
 
 const Ecommerce: React.FC<SolutionType> = ({ content, isReversed = false }) => {
   const [show, setShow] = React.useState(false);
-  const [basket, setBasket] = React.useState<ItemType[]>([products[0]]);
+  const [basket, setBasket] = React.useState<ItemType[]>([
+    products[0],
+    products[1],
+  ]);
 
   return (
     <Solution
