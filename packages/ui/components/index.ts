@@ -18,3 +18,4 @@ export * from "./container/container";
 export * from "./module-container/module-container";
 export * from "./gradient-text/gradient-text";
 export * from "./rich-text/rich-text";
+export * from "./editor/editor";

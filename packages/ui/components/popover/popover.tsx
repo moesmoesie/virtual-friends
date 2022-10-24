@@ -19,7 +19,7 @@ export const Popover: React.FC<PopoverType> = (props) => {
         return (
           <button
             key={index}
-            onClick={() => props.setOption(el.name)}
+            onClick={() => props.setOption(el.value)}
             className="body-3 flex items-center justify-between px-2 py-1.5"
           >
             <span className="pr-6 text-black">{el.name}</span>

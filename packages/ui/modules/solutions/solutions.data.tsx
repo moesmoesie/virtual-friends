@@ -1,4 +1,9 @@
-import { ItemType, EmployeeType, ReviewType } from "../../components";
+import {
+  ItemType,
+  EmployeeType,
+  ReviewType,
+  OptionType,
+} from "../../components";
 
 export const products: ItemType[] = [
   {
@@ -83,3 +88,9 @@ export const review: ReviewType = {
     width: "100",
   },
 };
+
+export const colorOptions: OptionType[] = [
+  { name: "Small", value: "small" },
+  { name: "Medium", value: "medium" },
+  { name: "Large", value: "large" },
+];

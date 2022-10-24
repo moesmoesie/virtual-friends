@@ -12,10 +12,13 @@ import {
   ItemType,
   Employee,
   Review,
+  ImagePicker,
+  Popover,
+  Editor,
 } from "../../components";
 import React from "react";
 import { Waypoint } from "react-waypoint";
-import { employees, products, review } from "./solutions.data";
+import { colorOptions, employees, products, review } from "./solutions.data";
 
 export interface SolutionsType extends ModuleContainerType {
   title: string;
@@ -35,6 +38,9 @@ export const Solutions: React.FC<SolutionsType> = (props) => {
             if (solution.solutionType === "website")
               return <Website isReversed={isReversed} content={solution} />;
 
+            if (solution.solutionType === "cms")
+              return <Cms isReversed={isReversed} content={solution} />;
+
             return <Ecommerce isReversed={isReversed} content={solution} />;
           })}
         </div>
@@ -43,15 +49,12 @@ export const Solutions: React.FC<SolutionsType> = (props) => {
   );
 };
 
-interface EcommerceType {
+interface SolutionType {
   content: ContentType;
   isReversed: Boolean;
 }
 
-const Ecommerce: React.FC<EcommerceType> = ({
-  content,
-  isReversed = false,
-}) => {
+const Ecommerce: React.FC<SolutionType> = ({ content, isReversed = false }) => {
   const [show, setShow] = React.useState(false);
   const [basket, setBasket] = React.useState<ItemType[]>([products[0]]);
 
@@ -73,7 +76,7 @@ const Ecommerce: React.FC<EcommerceType> = ({
   );
 };
 
-const Website: React.FC<EcommerceType> = ({ content, isReversed = false }) => {
+const Website: React.FC<SolutionType> = ({ content, isReversed = false }) => {
   const [show, setShow] = React.useState(false);
 
   return (
@@ -92,6 +95,42 @@ const Website: React.FC<EcommerceType> = ({ content, isReversed = false }) => {
         </div>
         <div className="-translate-y-6">
           <Review {...review} />
+        </div>
+      </div>
+    </Solution>
+  );
+};
+
+const Cms: React.FC<SolutionType> = ({ content, isReversed = false }) => {
+  const [show, setShow] = React.useState(false);
+  const [color, setColor] = React.useState("small");
+
+  return (
+    <Solution
+      content={content}
+      isReversed={isReversed}
+      setShow={() => setShow(true)}
+      show={show}
+    >
+      <div className=" items-center flex  flex-col pt-24">
+        <Editor
+          initialValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam."
+        />
+        <div className="flex">
+          <div className=" -translate-y-10">
+            <ImagePicker />
+          </div>
+
+          <div className="translate-x-10 -translate-y-16">
+            <Popover
+              setOption={(name) => setColor(name)}
+              currentOptionIndex={colorOptions.findIndex(
+                (el) => el.value === color
+              )}
+              options={colorOptions}
+            />
+          </div>
         </div>
       </div>
     </Solution>
