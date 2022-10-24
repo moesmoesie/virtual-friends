@@ -23,7 +23,6 @@ export interface SolutionsType extends ModuleContainerType {
 }
 
 export const Solutions: React.FC<SolutionsType> = (props) => {
-  console.log(props);
   return (
     <ModuleContainer module={props?.module}>
       <Container>

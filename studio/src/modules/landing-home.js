@@ -10,6 +10,14 @@ export default createModule({
       title: "Image",
     },
     {
+      name: "imageBackground",
+      type: "image",
+      title: "Image Background",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: "title",
       type: "richText",
       title: "Title",

@@ -15,6 +15,7 @@ export interface LandingHomeType extends ModuleContainerType {
   primaryCallToAction: string;
   secondaryCallToAction: string;
   image: ImageType;
+  imageBackground: ImageType;
 }
 
 export const LandingHome: React.FC<LandingHomeType> = (props) => {
@@ -22,11 +23,23 @@ export const LandingHome: React.FC<LandingHomeType> = (props) => {
     <ModuleContainer module={props?.module}>
       <Container>
         <div className="text-center min-h-[80vh] large:text-left flex flex-col items-center justify-center gap-12 large:flex-row">
-          <Image
-            className="rounded-full medium:w-[250px] medium:h-[250px] large:w-[320px] large:h-[320px] object-cover w-[200px] h-[200px]"
-            {...props?.image}
-            width="600"
-          />
+          <div className="rounded-full relative overflow-hidden medium:w-[250px] medium:h-[250px] large:w-[320px] large:h-[320px] object-cover w-[200px] h-[200px]">
+            <div className="absolute left-0 top-0 h-full w-full">
+              <div className="w-full h-full">
+                <Image
+                  className="w-full h-full scale-150"
+                  {...props?.imageBackground}
+                  width="600"
+                />
+              </div>
+            </div>
+
+            <Image
+              className="absolute left-0 scale-95 origin-bottom top-0 w-full h-full object-cover"
+              {...props?.image}
+              width="600"
+            />
+          </div>
 
           <div className="flex flex-col max-w-md medium:max-w-2xl gap-8 items-center large:items-start justify-center">
             <h1 className="headline-4 medium:headline-2 large:headline-1">

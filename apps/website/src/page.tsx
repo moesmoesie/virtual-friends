@@ -80,7 +80,8 @@ const PageQuery = groq`
             ...select(
                 _type == "landing-home" => {
                     ...,
-                    "image" : image.asset->
+                    "image" : image.asset->,
+                    "imageBackground": imageBackground.asset->
                 },
                 _type == "contact" => {
                     ...,

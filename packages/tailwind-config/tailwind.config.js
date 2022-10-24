@@ -8,13 +8,17 @@ module.exports = {
   ],
   theme: {
     keyframes: {
-      floating: {
-        "0%,100%": { transform: "translateY(0px)" },
-        "50%": { transform: "translateY(15px)" },
+      extends: {
+        floating: {
+          "0%,100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(15px)" },
+        },
       },
     },
     animation: {
-      floating: "floating 4s ease-in-out infinite",
+      extends: {
+        floating: "floating 4s ease-in-out infinite",
+      },
     },
     fontFamily: {
       headline: ["Inter"],
