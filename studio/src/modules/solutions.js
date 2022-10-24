@@ -38,6 +38,19 @@ export default createModule({
               type: "array",
               of: [{ type: "string" }],
             },
+            {
+              title: "Solution Type",
+              name: "solutionType",
+              type: "string",
+              options: {
+                list: [
+                  { title: "Ecommerce", value: "eccomerce" },
+                  { title: "CMS", value: "cms" },
+                  { title: "Website", value: "website" },
+                  { title: "SAAS", value: "saas" },
+                ],
+              },
+            },
           ],
         },
       ],

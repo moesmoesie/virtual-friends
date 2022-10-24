@@ -10,10 +10,12 @@ import {
   Product,
   Receipt,
   ItemType,
+  Employee,
+  Review,
 } from "../../components";
 import React from "react";
 import { Waypoint } from "react-waypoint";
-import { products } from "./solutions.data";
+import { employees, products, review } from "./solutions.data";
 
 export interface SolutionsType extends ModuleContainerType {
   title: string;
@@ -21,6 +23,7 @@ export interface SolutionsType extends ModuleContainerType {
 }
 
 export const Solutions: React.FC<SolutionsType> = (props) => {
+  console.log(props);
   return (
     <ModuleContainer module={props?.module}>
       <Container>
@@ -29,7 +32,11 @@ export const Solutions: React.FC<SolutionsType> = (props) => {
         </h2>
         <div className="flex flex-col gap-16">
           {props.solutions.map((solution, index) => {
-            return <Ecommerce isReversed={index % 2 == 1} content={solution} />;
+            const isReversed = index % 2 == 1;
+            if (solution.solutionType === "website")
+              return <Website isReversed={isReversed} content={solution} />;
+
+            return <Ecommerce isReversed={isReversed} content={solution} />;
           })}
         </div>
       </Container>
@@ -62,6 +69,31 @@ const Ecommerce: React.FC<EcommerceType> = ({
           onBuy={(product) => setBasket((prev) => [...prev, product])}
         />
         <Receipt items={basket} title="Bonnetje" />
+      </div>
+    </Solution>
+  );
+};
+
+const Website: React.FC<EcommerceType> = ({ content, isReversed = false }) => {
+  const [show, setShow] = React.useState(false);
+
+  return (
+    <Solution
+      content={content}
+      isReversed={isReversed}
+      setShow={() => setShow(true)}
+      show={show}
+    >
+      <div className="flex flex-col items-center">
+        <div className="flex justify-center gap-5">
+          <Employee {...employees[0]} />
+          <div className="translate-y-5 flex-1">
+            <Employee {...employees[1]} />
+          </div>
+        </div>
+        <div className="-translate-y-6">
+          <Review {...review} />
+        </div>
       </div>
     </Solution>
   );
@@ -135,6 +167,7 @@ interface ContentType {
   body: string | JSX.Element;
   keywords: string[];
   icon?: ImageType;
+  solutionType: string;
 }
 
 const Content: React.FC<ContentType> = (props) => {

@@ -25,11 +25,6 @@ Default.args = {
   mail: "mdarwesh@virtualfriends.dev",
   image: {
     src: "https://via.placeholder.com/200x200?text=placeholder",
-    width: 80,
+    width: "80",
   },
-};
-
-Default.parameters = {
-  zeplinLink:
-    "https://app.zeplin.io/project/631de5ac968559118b2e00fc/styleguide/components?coid=631de5bbbf3b5c13a9021e57",
 };

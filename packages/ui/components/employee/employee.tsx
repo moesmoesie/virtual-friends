@@ -15,7 +15,7 @@ export interface EmployeeType {
 export const Employee: React.FC<EmployeeType> = (props) => {
   return (
     <div
-      className={`${props.className} relative flex h-[283px] w-full max-w-[221px] overflow-hidden rounded-lg shadow-card-m `}
+      className={`${props.className} relative flex h-[283px] w-full min-w-[221px] overflow-hidden rounded-lg shadow-card-m `}
     >
       <div className="z-10 mt-auto flex w-full items-end justify-between px-4 py-3 text-white">
         <div>
@@ -37,7 +37,7 @@ export const Employee: React.FC<EmployeeType> = (props) => {
           )}
 
           {props?.mail && (
-            <a href={props?.mail}>
+            <a href={`mailto:${props?.mail}`}>
               <MailIcon />
             </a>
           )}

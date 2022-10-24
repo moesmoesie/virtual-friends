@@ -1,4 +1,4 @@
-import { ItemType } from "../../components";
+import { ItemType, EmployeeType, ReviewType } from "../../components";
 
 export const products: ItemType[] = [
   {
@@ -46,3 +46,40 @@ export const products: ItemType[] = [
     },
   },
 ];
+
+export const employees: EmployeeType[] = [
+  {
+    company: "Company",
+    name: "Name",
+    phone: "+31634XXX366",
+    github: "https://github.com/moesmoesie",
+    linkedin: "https://www.linkedin.com/in/mustafadarwesh/",
+    mail: "mdarwesh@virtualfriends.dev",
+    image: {
+      src: "/images/employee1.png",
+      width: "80",
+    },
+  },
+  {
+    company: "Company",
+    name: "Name",
+    phone: "+31634XXX366",
+    github: "https://github.com/moesmoesie",
+    linkedin: "https://www.linkedin.com/in/mustafadarwesh/",
+    mail: "mdarwesh@virtualfriends.dev",
+    image: {
+      src: "/images/employee2.png",
+      width: "80",
+    },
+  },
+];
+
+export const review: ReviewType = {
+  company: "Caboosy Inc",
+  name: "Jane Caboosy",
+  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  image: {
+    src: "/images/reviewer.jpg",
+    width: "100",
+  },
+};

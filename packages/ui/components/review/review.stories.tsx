@@ -22,6 +22,6 @@ Default.args = {
   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   image: {
     src: "https://via.placeholder.com/200x200?text=placeholder",
-    width: 80,
+    width: "80",
   },
 };
