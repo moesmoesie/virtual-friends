@@ -20,7 +20,7 @@ export const Header: React.FC<HeaderType> = (props) => {
           <Container>
             <div className="flex justify-between items-center">
               <a href="#">
-                <Image className="w-[192px]" {...props.logo} width="1000" />
+                <Image className="w-[100px]" {...props.logo} width="1000" />
               </a>
               <div className="hidden medium:flex gap-8 items-center">
                 {props?.links?.map((el) => {

@@ -12,6 +12,15 @@ module.exports = {
       display: ["Inter"],
       body: ["Source Sans Pro"],
     },
+    keyframes: {
+      floating: {
+        "0%,100%": { transform: "translateY(0px)" },
+        "50%": { transform: "translateY(15px)" },
+      },
+    },
+    animation: {
+      floating: "floating 4s ease-in-out infinite",
+    },
     screens: {
       touch: { raw: "(hover:none)" },
       small: "450px",
