@@ -19,9 +19,9 @@ export const Footer: React.FC<FooterType> = (props) => {
             <span className="ml-2">© 2022</span>
           </p>
           <div className="flex gap-8 items-center">
-            {props?.links?.map((el) => {
+            {props?.links?.map((el, index) => {
               return (
-                <a href="#" className="body-2">
+                <a key={index} href="#" className="body-2">
                   {el}
                 </a>
               );

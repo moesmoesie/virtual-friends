@@ -23,9 +23,9 @@ export const Header: React.FC<HeaderType> = (props) => {
                 <Image className="w-[100px]" {...props.logo} width="1000" />
               </a>
               <div className="hidden medium:flex gap-8 items-center">
-                {props?.links?.map((el) => {
+                {props?.links?.map((el, index) => {
                   return (
-                    <a href="#" className="body-3 font-bold">
+                    <a key={index} href="#" className="body-3 font-bold">
                       {el}
                     </a>
                   );

@@ -40,15 +40,31 @@ export const Solutions: React.FC<SolutionsType> = (props) => {
           {props.solutions.map((solution, index) => {
             const isReversed = index % 2 == 1;
             if (solution.solutionType === "website")
-              return <Website isReversed={isReversed} content={solution} />;
+              return (
+                <Website
+                  key={index}
+                  isReversed={isReversed}
+                  content={solution}
+                />
+              );
 
             if (solution.solutionType === "cms")
-              return <Cms isReversed={isReversed} content={solution} />;
+              return (
+                <Cms key={index} isReversed={isReversed} content={solution} />
+              );
 
             if (solution.solutionType === "saas")
-              return <Saas isReversed={isReversed} content={solution} />;
+              return (
+                <Saas key={index} isReversed={isReversed} content={solution} />
+              );
 
-            return <Ecommerce isReversed={isReversed} content={solution} />;
+            return (
+              <Ecommerce
+                key={index}
+                isReversed={isReversed}
+                content={solution}
+              />
+            );
           })}
         </div>
       </Container>

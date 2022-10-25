@@ -18,8 +18,8 @@ export default function Page({ data, preview }) {
 
   return (
     <div>
-      {page?.modules?.map((module) => {
-        return <Module key={module?._key} {...module} />;
+      {page?.modules?.map((module, index) => {
+        return <Module key={index} {...module} />;
       })}
     </div>
   );
