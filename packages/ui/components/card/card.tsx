@@ -22,7 +22,7 @@ export const Card: React.FC<CardType> = (props) => {
   if (props.mode === "vertical" && props.size === "large")
     return (
       <div className="relative flex flex-col items-center gap-3 overflow-hidden rounded-2xl bg-white px-7 py-5 text-center shadow-m">
-        <div className="h-[100px] w-[100px]">{props.icon}</div>
+        <div className="h-[80px] w-[80px]">{props.icon}</div>
         <p className="subtitle-2 text-black">{props.title}</p>
         <p className="body-1 text-black">{props.body}</p>
       </div>
