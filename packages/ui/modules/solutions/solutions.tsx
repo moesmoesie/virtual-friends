@@ -288,7 +288,7 @@ const Content: React.FC<ContentType> = (props) => {
   return (
     <div className="flex max-w-lg flex-col gap-3">
       <h3 className="headline-6 medium:headline-5">{props.title}</h3>
-      <p className="body-2">
+      <p className="body-1">
         <RichText value={props.body} />
       </p>
       <div className="flex flex-wrap gap-2">
