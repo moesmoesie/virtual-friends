@@ -7,19 +7,6 @@ module.exports = {
     "./src/**/*.{html,js,ts,tsx}",
   ],
   theme: {
-    keyframes: {
-      extends: {
-        floating: {
-          "0%,100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(15px)" },
-        },
-      },
-    },
-    animation: {
-      extends: {
-        floating: "floating 4s ease-in-out infinite",
-      },
-    },
     fontFamily: {
       headline: ["Inter"],
       display: ["Inter"],
