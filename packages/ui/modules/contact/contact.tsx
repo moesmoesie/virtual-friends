@@ -14,7 +14,7 @@ import {
 import React from "react";
 
 export interface ContactType extends ModuleContainerType {
-  title: string;
+  title: any;
   body: string | JSX.Element;
   primaryCallToAction: ButtonType;
   secondaryCallToAction: ButtonType;
@@ -29,13 +29,8 @@ export const Contact: React.FC<ContactType> = (props) => {
         <div className="flex flex-col large:flex-row gap-16 medium:gap-18 large:gap-28">
           <div>
             <div className="mb-6 flex gap-4 medium:gap-10 flex-col medium:flex-row items-center">
-              <Image
-                className="w-[130px] h-[130px] rounded-full object-cover"
-                {...props.image}
-                width="400"
-              />
               <h2 className="headline-3">
-                <GradientText>{props.title}</GradientText>
+                <RichText value={props.title} />
               </h2>
             </div>
             <p className="body-1 max-w-2xl mb-7">

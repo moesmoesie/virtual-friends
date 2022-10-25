@@ -25,7 +25,7 @@ import { Waypoint } from "react-waypoint";
 import { colorOptions, employees, products, review } from "./solutions.data";
 
 export interface SolutionsType extends ModuleContainerType {
-  title: string;
+  title: any;
   solutions: ContentType[];
 }
 
@@ -34,7 +34,7 @@ export const Solutions: React.FC<SolutionsType> = (props) => {
     <ModuleContainer module={props?.module}>
       <Container>
         <h2 className="headline-4 mb-10 medium:headline-3">
-          <GradientText>{props.title}</GradientText>
+          <RichText value={props.title} />
         </h2>
         <div className="flex flex-col gap-16">
           {props.solutions.map((solution, index) => {

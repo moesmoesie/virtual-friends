@@ -6,7 +6,7 @@ export default createModule({
   fields: [
     {
       name: "title",
-      type: "string",
+      type: "richText",
       title: "Title",
     },
     {
