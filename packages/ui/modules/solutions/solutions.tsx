@@ -18,6 +18,7 @@ import {
   AssetCard,
   AssetBarChart,
   AssetLineChartCard,
+  Floating,
 } from "../../components";
 import React from "react";
 import { Waypoint } from "react-waypoint";
@@ -75,11 +76,15 @@ const Ecommerce: React.FC<SolutionType> = ({ content, isReversed = false }) => {
       show={show}
     >
       <div className="relative flex items-center  justify-center gap-6 ">
-        <Product
-          products={products}
-          onBuy={(product) => setBasket((prev) => [...prev, product])}
-        />
-        <Receipt items={basket} title="Bonnetje" />
+        <Floating>
+          <Product
+            products={products}
+            onBuy={(product) => setBasket((prev) => [...prev, product])}
+          />
+        </Floating>
+        <Floating delay={0.7}>
+          <Receipt items={basket} title="Bonnetje" />
+        </Floating>
       </div>
     </Solution>
   );
@@ -98,25 +103,36 @@ const Saas: React.FC<SolutionType> = ({ content, isReversed = false }) => {
       <div className="flex pt-6   flex-col">
         <div className="flex h-full justify-center  items-center gap-3 ">
           <div className="">
-            <div className="translate-y-14">
-              <AssetCard />
-            </div>
+            <Floating delay={1}>
+              <div className="translate-y-14">
+                <AssetCard />
+              </div>
+            </Floating>
           </div>
           <div className="translate-y-5">
-            <AssetBarChart
-              title="This weeks earnings"
-              amount={300000}
-              currency="euro"
-              values={[0.9, 0.87, 0.4, 0.9, 0.84, 1, 0.5, 0.4, 0.3]}
-            />
+            <Floating>
+              <AssetBarChart
+                title="This weeks earnings"
+                amount={300000}
+                currency="euro"
+                values={[0.9, 0.87, 0.4, 0.9, 0.84, 1, 0.5, 0.4, 0.3]}
+              />
+            </Floating>
           </div>
-          <div className="-translate-y-2">
-            <AssetCard />
-          </div>
+
+          <Floating>
+            <div className="-translate-y-2">
+              <AssetCard />
+            </div>
+          </Floating>
         </div>
         <div className="flex w-full justify-center">
-          <div className="w-[90%]">
-            <AssetLineChartCard />
+          <div className="-z-10">
+            <Floating>
+              <div className="w-[90%]">
+                <AssetLineChartCard />
+              </div>
+            </Floating>
           </div>
         </div>
       </div>
@@ -136,14 +152,20 @@ const Website: React.FC<SolutionType> = ({ content, isReversed = false }) => {
     >
       <div className="flex flex-col items-center">
         <div className="flex justify-center gap-5">
-          <Employee {...employees[0]} />
-          <div className="translate-y-5 flex-1">
-            <Employee {...employees[1]} />
+          <Floating>
+            <Employee {...employees[0]} />
+          </Floating>
+          <Floating delay={1}>
+            <div className="translate-y-5 flex-1">
+              <Employee {...employees[1]} />
+            </div>
+          </Floating>
+        </div>
+        <Floating>
+          <div className="-translate-y-6">
+            <Review {...review} />
           </div>
-        </div>
-        <div className="-translate-y-6">
-          <Review {...review} />
-        </div>
+        </Floating>
       </div>
     </Solution>
   );
@@ -161,24 +183,30 @@ const Cms: React.FC<SolutionType> = ({ content, isReversed = false }) => {
       show={show}
     >
       <div className=" items-center flex  flex-col pt-24">
-        <Editor
-          initialValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam.
+        <Floating delay={0.5}>
+          <Editor
+            initialValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam."
-        />
+          />
+        </Floating>
         <div className="flex">
-          <div className=" -translate-y-10">
-            <ImagePicker />
-          </div>
+          <Floating>
+            <div className=" -translate-y-10">
+              <ImagePicker />
+            </div>
+          </Floating>
 
-          <div className="translate-x-10 -translate-y-16">
-            <Popover
-              setOption={(name) => setColor(name)}
-              currentOptionIndex={colorOptions.findIndex(
-                (el) => el.value === color
-              )}
-              options={colorOptions}
-            />
-          </div>
+          <Floating delay={0.8}>
+            <div className="translate-x-10 -translate-y-16">
+              <Popover
+                setOption={(name) => setColor(name)}
+                currentOptionIndex={colorOptions.findIndex(
+                  (el) => el.value === color
+                )}
+                options={colorOptions}
+              />
+            </div>
+          </Floating>
         </div>
       </div>
     </Solution>

@@ -22,3 +22,4 @@ export * from "./editor/editor";
 export * from "./asset-bar-chart/asset-bar-chart";
 export * from "./asset/asset";
 export * from "./asset-line-chart/asset-line-chart";
+export * from "./floating/floating";
