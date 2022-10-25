@@ -9,14 +9,15 @@ import {
   Button,
   BuisnessCard,
   RichText,
+  ButtonType,
 } from "../../components";
 import React from "react";
 
 export interface ContactType extends ModuleContainerType {
   title: string;
   body: string | JSX.Element;
-  primaryCallToAction: string;
-  secondaryCallToAction: string;
+  primaryCallToAction: ButtonType;
+  secondaryCallToAction: ButtonType;
   image: ImageType;
   buisnessCard: BuisnessCardType;
 }
@@ -42,10 +43,10 @@ export const Contact: React.FC<ContactType> = (props) => {
             </p>
             <div className="flex gap-3 medium:flex-row flex-col">
               <div>
-                <Button text={props.primaryCallToAction} type="default" />
+                <Button {...props.primaryCallToAction} type="default" />
               </div>
               <div>
-                <Button text={props.secondaryCallToAction} type="outlined" />
+                <Button {...props.secondaryCallToAction} type="outlined" />
               </div>
             </div>
           </div>

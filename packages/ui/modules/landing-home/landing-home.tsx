@@ -6,14 +6,15 @@ import {
   ModuleContainerType,
   ModuleContainer,
   RichText,
+  ButtonType,
 } from "../../components";
 import React from "react";
 
 export interface LandingHomeType extends ModuleContainerType {
   title: string | JSX.Element;
   subtitle: string | JSX.Element;
-  primaryCallToAction: string;
-  secondaryCallToAction: string;
+  primaryCallToAction: ButtonType;
+  secondaryCallToAction: ButtonType;
   image: ImageType;
   imageBackground: ImageType;
 }
@@ -50,8 +51,8 @@ export const LandingHome: React.FC<LandingHomeType> = (props) => {
             </p>
 
             <div className="flex gap-3">
-              <Button text={props?.primaryCallToAction} type="default" />
-              <Button text={props?.secondaryCallToAction} type="outlined" />
+              <Button {...props.primaryCallToAction} type="default" />
+              <Button {...props.secondaryCallToAction} type="outlined" />
             </div>
           </div>
         </div>

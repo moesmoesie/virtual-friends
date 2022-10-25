@@ -13,6 +13,11 @@ const createModule = ({ name, title, icon = CgComponents, fields }) => {
         name: "module",
         fields: [
           {
+            name: "id",
+            type: "string",
+            title: "ID",
+          },
+          {
             name: "scrollMargin",
             type: "string",
             title: "Scroll Margin",

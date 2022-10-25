@@ -29,12 +29,12 @@ export default createModule({
     },
     {
       name: "primaryCallToAction",
-      type: "string",
+      type: "link",
       title: "Primary Call to action",
     },
     {
       name: "secondaryCallToAction",
-      type: "string",
+      type: "link",
       title: "Secondary Call to action",
     },
   ],

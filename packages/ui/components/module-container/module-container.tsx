@@ -2,6 +2,7 @@ import React from "react";
 
 export interface ModuleContainerType {
   module?: {
+    id?: string;
     scrollMargin?: number;
     background?: string;
     paddingTop?: string;
@@ -21,6 +22,7 @@ export const ModuleContainer: React.FC<ModuleContainerType> = ({
 }) => {
   return (
     <div
+      id={module?.id ? module.id : ""}
       style={{
         scrollMargin: module?.scrollMargin,
         background: module?.background ? module?.background : "transparent",
