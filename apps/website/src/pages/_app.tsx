@@ -3,7 +3,7 @@ import { usePostHog } from "next-use-posthog";
 
 function MyApp({ Component, pageProps }) {
   usePostHog(process.env.NEXT_PUBLIC_POSTHOG, {
-    api_host: "https://app.posthog.com",
+    api_host: "https://eu.posthog.com",
   });
 
   return <Component {...pageProps} />;
