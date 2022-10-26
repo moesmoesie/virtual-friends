@@ -8,6 +8,7 @@ class Document extends NextDocument<Props> {
     return (
       <Html>
         <Head>
+          <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
           <link
             rel="preload"
             href="/fonts/inter-v11-latin/inter-v11-latin-700.woff2"

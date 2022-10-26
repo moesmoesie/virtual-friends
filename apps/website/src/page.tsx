@@ -6,6 +6,7 @@ import {
 import { groq } from "next-sanity";
 import Module from "./module";
 import { getClient } from "./sanity/sanity.server";
+import Head from "next/head";
 
 export default function Page({ data, preview }) {
   const { data: previewData } = usePreviewSubscription(data?.query, {
@@ -17,11 +18,16 @@ export default function Page({ data, preview }) {
   const page = filterDataToSingleItem(previewData, preview);
 
   return (
-    <div>
-      {page?.modules?.map((module, index) => {
-        return <Module key={index} {...module} />;
-      })}
-    </div>
+    <>
+      <Head>
+        <title>Mustafa</title>
+      </Head>
+      <div>
+        {page?.modules?.map((module, index) => {
+          return <Module key={index} {...module} />;
+        })}
+      </div>
+    </>
   );
 }
 
