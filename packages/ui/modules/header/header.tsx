@@ -16,11 +16,15 @@ export const Header: React.FC<HeaderType> = (props) => {
   return (
     <div className="fixed top-0 w-full z-[999]">
       <ModuleContainer module={props?.module}>
-        <div className="border-b py-5 border-grey-200">
+        <div className="border-b py-3 medium:py-5 border-grey-200">
           <Container>
             <div className="flex justify-between items-center">
               <a href="#">
-                <Image className="w-[100px]" {...props.logo} width="1000" />
+                <Image
+                  className="w-[75px] medium:w-[100px]"
+                  {...props.logo}
+                  width="1000"
+                />
               </a>
               <div className="hidden medium:flex gap-8 items-center">
                 {props?.links?.map((el, index) => {
