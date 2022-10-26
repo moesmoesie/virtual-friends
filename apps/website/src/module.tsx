@@ -19,12 +19,12 @@ const Module: React.FC<{ data: any }> = (data: any) => {
           {...data}
           buisnessCard={{
             address: "Van Nelleweg 1",
-            postalcode: "3044 BC Rotterdam",
+            postalcode: "3044 BC",
             country: "The Netherlands",
-            telephone: "+3123456789",
-            email: "name@example.dev",
-            kvk: "0123456789",
-            btw: "0123456789",
+            telephone: "+31683600774",
+            email: "mdarwesh@virtualfriends.dev",
+            kvk: "86165321",
+            btw: "NL291929092BO2",
             city: "Rotterdam",
           }}
         />
