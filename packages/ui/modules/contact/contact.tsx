@@ -28,7 +28,7 @@ export const Contact: React.FC<ContactType> = (props) => {
       <Container>
         <div className="flex flex-col large:flex-row gap-16 medium:gap-18 large:gap-28">
           <div>
-            <div className="mb-6 flex gap-4 medium:gap-10 flex-col medium:flex-row items-center">
+            <div className="mb-6 flex gap-4 medium:gap-10 flex-col medium:flex-row">
               <h2 className="headline-3">
                 <RichText value={props.title} />
               </h2>
@@ -36,7 +36,7 @@ export const Contact: React.FC<ContactType> = (props) => {
             <p className="body-1 max-w-2xl mb-7">
               <RichText value={props.body} />
             </p>
-            <div className="flex gap-3 medium:flex-row flex-col">
+            <div className="flex gap-3 medium:flex-row items-start flex-col">
               <div>
                 <Button {...props.primaryCallToAction} type="default" />
               </div>
