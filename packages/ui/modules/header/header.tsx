@@ -9,7 +9,7 @@ import React from "react";
 
 export interface HeaderType extends ModuleContainerType {
   logo: ImageType;
-  links: string[];
+  links: { href: string; text: string }[];
 }
 
 export const Header: React.FC<HeaderType> = (props) => {
@@ -29,8 +29,8 @@ export const Header: React.FC<HeaderType> = (props) => {
               <div className="hidden medium:flex gap-8 items-center">
                 {props?.links?.map((el, index) => {
                   return (
-                    <a key={index} href="#" className="body-3 font-bold">
-                      {el}
+                    <a key={index} href={el.href} className="body-3 font-bold">
+                      {el.text}
                     </a>
                   );
                 })}
