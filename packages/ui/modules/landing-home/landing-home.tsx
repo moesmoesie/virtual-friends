@@ -28,7 +28,7 @@ export const LandingHome: React.FC<LandingHomeType> = (props) => {
             <div className="absolute left-0 top-0 h-full w-full">
               <div className="w-full h-full">
                 <Image
-                  className="w-full h-full scale-150"
+                  className="w-full h-full object-cover pointer-events-none"
                   {...props?.imageBackground}
                   width="600"
                 />
@@ -39,6 +39,7 @@ export const LandingHome: React.FC<LandingHomeType> = (props) => {
               className="absolute left-0 scale-95 origin-bottom top-0 w-full h-full object-cover"
               {...props?.image}
               width="600"
+              alt="Headshot of Mustafa"
             />
           </div>
 

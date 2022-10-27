@@ -24,6 +24,7 @@ export const Header: React.FC<HeaderType> = (props) => {
                   className="w-[75px] medium:w-[100px]"
                   {...props.logo}
                   width="1000"
+                  alt="Logo"
                 />
               </a>
               <div className="hidden medium:flex gap-8 items-center">

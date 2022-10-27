@@ -6,11 +6,16 @@ export interface ImageType {
   width: string;
   height?: string;
   className?: string;
+  alt?: string;
   _type?: string;
   [propName: string]: any;
 }
 
-export const Image: React.FC<ImageType> = ({ lazy = true, ...props }) => {
+export const Image: React.FC<ImageType> = ({
+  lazy = true,
+  alt = "",
+  ...props
+}) => {
   let src = props?.src;
 
   if (props._type === "sanity.imageAsset") {
@@ -27,6 +32,7 @@ export const Image: React.FC<ImageType> = ({ lazy = true, ...props }) => {
       height={props?.height}
       className={props?.className}
       src={src}
+      alt={alt}
     />
   );
 };
