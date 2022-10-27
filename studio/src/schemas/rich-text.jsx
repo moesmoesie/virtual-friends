@@ -26,7 +26,19 @@ export default {
             },
           },
         ],
-        annotations: [],
+        annotations: [
+          {
+            name: "link",
+            type: "object",
+            title: "link",
+            fields: [
+              {
+                name: "link",
+                type: "link",
+              },
+            ],
+          },
+        ],
       },
     },
   ],

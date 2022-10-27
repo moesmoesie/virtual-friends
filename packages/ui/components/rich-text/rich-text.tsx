@@ -10,6 +10,13 @@ const myPortableTextComponents: PortableTextComponents = {
     em: ({ children }) => <em className="italic">{children}</em>,
     strong: ({ children }) => <strong className="font-bold">{children}</strong>,
     gradient: ({ children }) => <GradientText>{children}</GradientText>,
+    link: ({ children, value }) => {
+      return (
+        <a href={value?.link?.href} className="underline">
+          {children}
+        </a>
+      );
+    },
   },
   unknownMark: ({ children }) => <span>{children}</span>,
 };
