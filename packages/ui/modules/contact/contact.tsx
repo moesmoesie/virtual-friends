@@ -29,7 +29,7 @@ export const Contact: React.FC<ContactType> = (props) => {
         <div className="flex flex-col large:flex-row gap-16 medium:gap-18 large:gap-28">
           <div>
             <div className="mb-6 flex gap-4 medium:gap-10 flex-col medium:flex-row">
-              <h2 className="headline-3">
+              <h2 className="headline-4 medium:headline-3">
                 <RichText value={props.title} />
               </h2>
             </div>

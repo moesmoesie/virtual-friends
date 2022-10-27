@@ -15,7 +15,7 @@ export const AboutMe: React.FC<AboutMeType> = (props) => {
   return (
     <ModuleContainer module={props?.module}>
       <Container>
-        <h2 className="headline-3 mb-8">
+        <h2 className="headline-4 medium:headline-3 mb-8">
           <RichText value={props?.title} />
         </h2>
         <p className="font-body body-1 max-w-md  medium:max-w-3xl !medium:text-[32px] !text-[28px]">
