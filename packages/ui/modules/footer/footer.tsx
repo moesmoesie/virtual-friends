@@ -6,7 +6,7 @@ import {
 import React from "react";
 
 export interface FooterType extends ModuleContainerType {
-  links: string[];
+  links: { href: string; text: string }[];
 }
 
 export const Footer: React.FC<FooterType> = (props) => {
@@ -21,8 +21,8 @@ export const Footer: React.FC<FooterType> = (props) => {
           <div className="flex gap-8 items-center">
             {props?.links?.map((el, index) => {
               return (
-                <a key={index} href="#" className="body-2">
-                  {el}
+                <a key={index} href={el.href} className="body-2">
+                  {el.text}
                 </a>
               );
             })}

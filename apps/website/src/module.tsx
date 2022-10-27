@@ -7,6 +7,7 @@ import {
   SellingPoints,
   Solutions,
   Spacer,
+  Article,
 } from "ui/modules";
 
 const Module: React.FC<{ data: any }> = (data: any) => {
@@ -41,6 +42,8 @@ const Module: React.FC<{ data: any }> = (data: any) => {
       return <Spacer {...data} />;
     case "footer":
       return <Footer {...data} />;
+    case "article":
+      return <Article {...data} />;
     default:
       break;
   }

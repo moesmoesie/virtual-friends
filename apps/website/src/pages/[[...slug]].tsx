@@ -1,12 +1,10 @@
-import {
-  usePreviewSubscription,
-  filterDataToSingleItem,
-  formatSlugData,
-} from "./sanity/sanity";
 import { groq } from "next-sanity";
-import Module from "./module";
-import { getClient } from "./sanity/sanity.server";
 import Head from "next/head";
+import Module from "../module";
+import { filterDataToSingleItem } from "../sanity/sanity";
+import { formatSlugData } from "../sanity/sanity";
+import { usePreviewSubscription } from "../sanity/sanity";
+import { getClient } from "../sanity/sanity.server";
 
 export default function Page({ data, preview }) {
   const { data: previewData } = usePreviewSubscription(data?.query, {
@@ -31,35 +29,25 @@ export default function Page({ data, preview }) {
   );
 }
 
-export async function defaultGetStaticPaths(type: string, slugPrefix: string) {
-  const params = {
-    type,
-    slugPrefix,
-  };
+export async function getStaticPaths() {
+  const query = `*[defined(slug.current)]{
+    'params': {
+      'slug': slug.current
+    }
+  }`;
 
-  const query = `*[_type == $type && string::startsWith(slug.current, $slugPrefix)]{
-      'params': {
-        'slug': slug.current
-      }
-    }`;
-
-  let data = await getClient(false).fetch(query, params);
-  data = formatSlugData(data, slugPrefix + "/");
+  let data = await getClient(false).fetch(query);
+  data = formatSlugData(data);
 
   return {
     paths: data,
-    fallback: true,
+    fallback: false,
   };
 }
 
-export async function defaultGetStaticProps({
-  params,
-  preview = false,
-  type,
-  prefixSlug,
-}) {
-  const slug = `${prefixSlug}/${params?.slug}`;
-  const queryParams = { slug, page: type };
+export async function getStaticProps({ params, preview = false }) {
+  const slug = `/${params?.slug?.join("/") ?? ""}`;
+  const queryParams = { slug };
   const data = await getClient(preview).fetch(PageQuery, queryParams);
 
   if (!data) return { notFound: true };
@@ -79,7 +67,7 @@ export async function defaultGetStaticProps({
 }
 
 const PageQuery = groq`
-    *[_type == $page && slug.current == $slug]{
+    *[slug.current == $slug]{
         _id,
         modules[]{
             _type,

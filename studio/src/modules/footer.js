@@ -9,7 +9,7 @@ export default createModule({
       name: "links",
       type: "array",
       title: "Links",
-      of: [{ type: "string" }],
+      of: [{ type: "link" }],
     },
   ],
 });

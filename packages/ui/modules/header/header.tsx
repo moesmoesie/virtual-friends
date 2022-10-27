@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderType> = (props) => {
         <div className="border-b py-3 medium:py-5 border-grey-200">
           <Container>
             <div className="flex justify-between items-center">
-              <a href="#">
+              <a href="/">
                 <Image
                   className="w-[75px] medium:w-[100px]"
                   {...props.logo}
