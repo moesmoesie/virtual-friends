@@ -18,7 +18,8 @@ export default function Page({ data, preview }) {
   return (
     <>
       <Head>
-        <title>Mustafa</title>
+        <title>Mustafa Darwesh</title>
+        <meta name="description" content="Freelance Web Developer" />
       </Head>
       <div>
         {page?.modules?.map((module, index) => {

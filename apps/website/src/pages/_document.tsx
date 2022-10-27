@@ -6,7 +6,7 @@ type Props = {};
 class Document extends NextDocument<Props> {
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
           <link
