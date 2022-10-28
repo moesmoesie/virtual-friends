@@ -48,7 +48,7 @@ const Outlined: React.FC<{ children: JSX.Element | string }> = (props) => {
 
 const Default: React.FC<{ children: JSX.Element | string }> = (props) => {
   return (
-    <div className="font-bold font-body rounded-lg bg-primary-400 px-5 py-2 uppercase text-white focus:-translate-y-1 hover:-translate-y-1 transition-transform">
+    <div className="font-bold font-body rounded-lg border border-primary-400 bg-primary-400 px-5 py-2 uppercase text-white focus:-translate-y-1 hover:-translate-y-1 transition-transform">
       {props.children}
     </div>
   );
