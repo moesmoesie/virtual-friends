@@ -26,10 +26,11 @@ export const LandingHome: React.FC<LandingHomeType> = (props) => {
         <div className="text-center min-h-[80vh] large:text-left flex flex-col items-center justify-center gap-12 large:flex-row">
           <div className="rounded-full relative overflow-hidden medium:w-[250px] medium:h-[250px] large:w-[320px] large:h-[320px] object-cover w-[200px] h-[200px]">
             <div className="absolute left-0 top-0 h-full w-full">
-              <div className="w-full h-full">
+              <div className="w-full relative h-full">
                 <Image
+                  withPlaceholder={true}
                   lazy={false}
-                  className="w-full h-full object-cover pointer-events-none"
+                  className="w-full h-full absolute top-0 left-0 object-cover pointer-events-none"
                   {...props?.imageBackground}
                   width="600"
                 />

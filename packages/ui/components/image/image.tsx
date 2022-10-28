@@ -8,6 +8,10 @@ export interface ImageType {
   className?: string;
   alt?: string;
   _type?: string;
+  withPlaceholder?: boolean;
+  metadata?: {
+    lqip?: string;
+  };
   [propName: string]: any;
 }
 
@@ -18,6 +22,8 @@ export const Image: React.FC<ImageType> = ({
 }) => {
   let src = props?.src;
 
+  const lqip = props?.metadata?.lqip;
+
   if (props._type === "sanity.imageAsset") {
     const url = new URL(props?.url);
     url.searchParams.append("auto", "format");
@@ -27,12 +33,24 @@ export const Image: React.FC<ImageType> = ({
   }
 
   return (
-    <img
-      width={props.width}
-      height={props?.height}
-      className={props?.className}
-      src={src}
-      alt={alt}
-    />
+    <>
+      {lqip && props?.withPlaceholder && (
+        <img
+          width={props.width}
+          height={props?.height}
+          className={props?.className}
+          src={lqip}
+          alt={alt}
+        />
+      )}
+
+      <img
+        width={props.width}
+        height={props?.height}
+        className={props?.className}
+        src={src}
+        alt={alt}
+      />
+    </>
   );
 };
