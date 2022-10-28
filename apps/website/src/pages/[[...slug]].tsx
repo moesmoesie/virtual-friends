@@ -20,6 +20,19 @@ export default function Page({ data, preview }) {
       <Head>
         <title>Mustafa Darwesh</title>
         <meta name="description" content="Freelance Web Developer" />
+        <meta
+          property="og: title"
+          content="I'm a web developer, here to bring your pixel-perfect designs to life."
+        />
+
+        <meta property="og: image" content="/images/logo.png" />
+
+        <meta
+          property="og: image"
+          content="I'm a web developer, here to bring your pixel-perfect designs to life."
+        />
+
+        <meta property="og: type" content="website" />
       </Head>
       <div>
         {page?.modules?.map((module, index) => {
