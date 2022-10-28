@@ -302,7 +302,7 @@ interface ContentType {
 
 const Content: React.FC<ContentType> = (props) => {
   return (
-    <div className="flex max-w-lg flex-col gap-3">
+    <div className="flex max-w-lg flex-col gap-6">
       <h3 className="headline-6 medium:headline-5">{props.title}</h3>
       <p className="body-1">
         <RichText value={props.body} />
