@@ -24,7 +24,7 @@ export const products: ItemType[] = [
     title: "Virtual Boy X",
     discountPercentage: 10,
     image: {
-      src: "https://cdn.sanity.io/images/kby5cprw/production/def68604fa15d693b04c9deb52c14c947cc82c37-800x800.png",
+      src: "https://cdn.sanity.io/images/kby5cprw/production/def68604fa15d693b04c9deb52c14c947cc82c37-800x800.png?auto=format&w=500",
       width: "100",
     },
   },
