@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@portabletext/react": "^1.0.6",
+    "framer-motion": "^7.6.2",
     "markdown-to-jsx": "^7.1.7",
     "react-waypoint": "^10.3.0"
   }
