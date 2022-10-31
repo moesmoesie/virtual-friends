@@ -8,7 +8,7 @@ import {
   RichText,
   ButtonType,
 } from "../../components";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 export interface LandingHomeType extends ModuleContainerType {
