@@ -5,15 +5,9 @@ import { MdOutlineAttachMoney } from "react-icons/md";
 export default defineType({
   name: "sellingPoints",
   title: "Selling points",
-  type: "document",
+  type: "object",
   icon: MdOutlineAttachMoney,
   preview: createModulePreview("Selling Points", MdOutlineAttachMoney),
-  groups: [
-    {
-      name: "module",
-      title: "Module settings",
-    },
-  ],
   fields: [
     defineField({
       name: "sellingPoints",
@@ -45,7 +39,6 @@ export default defineType({
     }),
     defineField({
       name: "module",
-      group: "module",
       title: "Module Settings",
       type: "module",
     }),

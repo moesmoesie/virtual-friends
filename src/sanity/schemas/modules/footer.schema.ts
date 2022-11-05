@@ -5,15 +5,9 @@ import { CgToolbarBottom } from "react-icons/cg";
 export default defineType({
   name: "footer",
   title: "Footer",
-  type: "document",
+  type: "object",
   icon: CgToolbarBottom,
   preview: createModulePreview("Footer", CgToolbarBottom),
-  groups: [
-    {
-      name: "module",
-      title: "Module settings",
-    },
-  ],
   fields: [
     defineField({
       name: "links",
@@ -23,7 +17,6 @@ export default defineType({
     }),
     defineField({
       name: "module",
-      group: "module",
       title: "Module Settings",
       type: "module",
     }),

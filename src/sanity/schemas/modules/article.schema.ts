@@ -4,15 +4,9 @@ import { MdOutlineArticle } from "react-icons/md";
 export default defineType({
   name: "article",
   title: "Article",
-  type: "document",
+  type: "object",
   icon: MdOutlineArticle,
   preview: createModulePreview("Article", MdOutlineArticle),
-  groups: [
-    {
-      name: "module",
-      title: "Module settings",
-    },
-  ],
   fields: [
     defineField({
       name: "body",
@@ -21,7 +15,6 @@ export default defineType({
     }),
     defineField({
       name: "module",
-      group: "module",
       title: "Module Settings",
       type: "module",
     }),

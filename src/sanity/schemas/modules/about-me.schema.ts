@@ -5,7 +5,7 @@ import { createModulePreview } from "../../sanity.helpers";
 export default defineType({
   title: "About me",
   name: "about-me",
-  type: "document",
+  type: "object",
   icon: BsPerson,
   preview: createModulePreview("About me", BsPerson),
   groups: [
@@ -27,7 +27,6 @@ export default defineType({
     }),
     defineField({
       name: "module",
-      group: "module",
       title: "Module Settings",
       type: "module",
     }),

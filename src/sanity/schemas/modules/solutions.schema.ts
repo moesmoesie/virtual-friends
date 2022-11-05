@@ -5,7 +5,7 @@ import { createModulePreview } from "../../sanity.helpers";
 export default defineType({
   name: "solutions",
   title: "Solutions",
-  type: "document",
+  type: "object",
   icon: BiBulb,
   preview: createModulePreview("Solutions", BiBulb),
   fields: [
@@ -71,7 +71,7 @@ export default defineType({
     defineField({
       name: "module",
       type: "module",
-      title: "Module",
+      title: "Module Settings",
     }),
   ],
 });

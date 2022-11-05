@@ -4,16 +4,10 @@ import { AiOutlineHome } from "react-icons/ai";
 
 export default defineField({
   name: "landing-home",
-  type: "document",
+  type: "object",
   title: "Landing Home",
   icon: AiOutlineHome,
   preview: createModulePreview("Landing Home", AiOutlineHome),
-  groups: [
-    {
-      name: "module",
-      title: "Module settings",
-    },
-  ],
   fields: [
     defineField({
       name: "title",
@@ -47,7 +41,6 @@ export default defineField({
     }),
     defineField({
       name: "module",
-      group: "module",
       title: "Module Settings",
       type: "module",
     }),

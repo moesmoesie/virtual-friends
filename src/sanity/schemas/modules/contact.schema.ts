@@ -5,15 +5,9 @@ import { AiOutlinePhone } from "react-icons/ai";
 export default defineType({
   name: "contact",
   title: "Contact",
-  type: "document",
+  type: "object",
   icon: AiOutlinePhone,
   preview: createModulePreview("Contact", AiOutlinePhone),
-  groups: [
-    {
-      name: "module",
-      title: "Module settings",
-    },
-  ],
   fields: [
     defineField({
       name: "title",
@@ -42,7 +36,6 @@ export default defineType({
     }),
     defineField({
       name: "module",
-      group: "module",
       title: "Module Settings",
       type: "module",
     }),

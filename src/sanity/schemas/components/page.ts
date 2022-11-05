@@ -45,12 +45,7 @@ export default defineType({
       name: "modules",
       title: "Modules",
       type: "array",
-      of: [
-        {
-          type: "reference",
-          to: AllModuleTypes.map((schema) => ({ type: schema })),
-        },
-      ],
+      of: AllModuleTypes.map((schema) => ({ type: schema })),
     }),
   ],
 });

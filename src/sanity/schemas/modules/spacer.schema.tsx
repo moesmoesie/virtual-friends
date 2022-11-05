@@ -9,7 +9,7 @@ const SpacerIcon: React.FC = () => {
 export default defineType({
   title: "Spacer",
   name: "spacer",
-  type: "document",
+  type: "object",
   icon: SpacerIcon,
   preview: createModulePreview("Spacer", SpacerIcon),
   fields: [

@@ -16,7 +16,7 @@ export const PageQuery = groq`
           "description" : coalesce(description, "Description"),
           "keywords" : coalesce(keywords, [])
         },
-        modules[]-> {
+        modules[]{
           _type,
           _id,
           module,

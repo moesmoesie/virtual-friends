@@ -5,15 +5,9 @@ import { CgToolbarTop } from "react-icons/cg";
 export default defineType({
   name: "header",
   title: "Header",
-  type: "document",
+  type: "object",
   icon: CgToolbarTop,
   preview: createModulePreview("Header", CgToolbarTop),
-  groups: [
-    {
-      name: "module",
-      title: "Module settings",
-    },
-  ],
   fields: [
     defineField({
       name: "logo",
@@ -28,7 +22,6 @@ export default defineType({
     }),
     defineField({
       name: "module",
-      group: "module",
       title: "Module Settings",
       type: "module",
     }),
