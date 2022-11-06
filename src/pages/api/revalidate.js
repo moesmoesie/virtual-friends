@@ -12,13 +12,12 @@ export default async function handler(req, res) {
   console.log(req.body?.slug);
 
   try {
-    // this should be the actual path not a rewritten path
-    // e.g. for "/blog/[slug]" this should be "/blog/post-1"
+    if (req.body?.beforeSlug) {
+      await res.revalidate(req.body.slug);
+    }
     await res.revalidate(req.body.slug);
-    return res.json({ revalidated: true, slug: req.body.slug });
+    return res.json({ revalidated: true, slug: req.body.slug, beforeSlug: req.body?.beforeSlug ?? "" });
   } catch (err) {
-    // If there was an error, Next.js will continue
-    // to show the last successfully generated page
     return res.status(500).send("Error revalidating");
   }
 }

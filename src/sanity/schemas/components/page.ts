@@ -7,6 +7,12 @@ export default defineType({
   type: "document",
   title: "Page",
   icon: CgWebsite,
+  preview: {
+    select: {
+      title: "slug.current",
+      subtitle: "title",
+    },
+  },
   groups: [
     {
       name: "seo",
