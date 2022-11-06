@@ -28,7 +28,7 @@ export const Contact: React.FC<ContactType> = (props) => {
             </div>
           </div>
           <div>
-            <BuisnessCard address="van Nelleweg 1" city="Rotterdam" country="Netherlands" email="mndarwesh@virtualfriends.dev" btw="NL001234567B01" kvk="12345678" postalcode="3044BC" telephone="+31683600774" />
+            <BuisnessCard address="van Nelleweg 1" city="Rotterdam" country="Netherlands" email="mndarwesh@virtualfriends.dev" btw="NL004201207B04" kvk="86165321" postalcode="3044BC" telephone="+31683600774" />
           </div>
         </div>
       </Container>
