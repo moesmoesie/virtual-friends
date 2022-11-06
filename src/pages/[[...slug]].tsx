@@ -73,7 +73,8 @@ export const getStaticProps: GetStaticProps = async ({ params, preview = false }
   const queryParams = { slug };
   const data = await getClient(preview).fetch(PageQuery, queryParams);
 
-  if (!data) return { notFound: true };
+  if (!data || (Array.isArray(data) && data.length === 0)) return { notFound: true };
+
   const page: Props = filterDataToSingleItem(data, preview);
   PageZod.parse(page);
 
