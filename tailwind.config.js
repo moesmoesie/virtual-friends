@@ -2,10 +2,7 @@ const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "../../packages/ui/**/*.{html,js,ts,tsx}",
-    "./src/**/*.{html,js,ts,tsx}",
-  ],
+  content: ["../../packages/ui/**/*.{html,js,ts,tsx}", "./src/**/*.{html,js,ts,tsx}"],
   theme: {
     fontFamily: {
       headline: ["Inter"],
@@ -27,7 +24,11 @@ module.exports = {
       medium: "768px",
       large: "1280px",
     },
-
+    scrollMargin: {
+      small: "var(--scroll-margin-small)",
+      medium: "var(--scroll-margin-medium)",
+      large: "var(--scroll-margin-large)",
+    },
     colors: {
       white: "#ffffff",
       black: "#333333",
@@ -83,30 +84,33 @@ module.exports = {
       "dark-purple-100": "#564f71",
     },
     backgroundImage: {
-      "gradient-1":
-        "linear-gradient(293.54deg, #C957B6 13.32%, #5938D9 83.07%)",
-      "gradient-2":
-        "linear-gradient(180deg, #F5F6F9 0%, rgba(245, 246, 249, 0) 100%)",
-      "gradient-3":
-        "linear-gradient(293.54deg, #9D4BF4 13.32%, #ECC66D 83.07%)",
+      "gradient-1": "linear-gradient(293.54deg, #C957B6 13.32%, #5938D9 83.07%)",
+      "gradient-2": "linear-gradient(180deg, #F5F6F9 0%, rgba(245, 246, 249, 0) 100%)",
+      "gradient-3": "linear-gradient(293.54deg, #9D4BF4 13.32%, #ECC66D 83.07%)",
       "gradient-purple": "linear-gradient(180deg, #A93BFF 0%, #7B2ACC 100%)",
-      "gradient-glass":
-        "linear-gradient(141.24deg, rgba(146, 124, 255, 0.142) 1.69%, rgba(64, 201, 162, 0) 100%)",
+      "gradient-glass": "linear-gradient(141.24deg, rgba(146, 124, 255, 0.142) 1.69%, rgba(64, 201, 162, 0) 100%)",
     },
     boxShadow: {
       m: "0px 9px 12px rgba(0, 0, 0, 0.1), 0px 14px 32px rgba(0, 0, 0, 0.05), 0px 32px 44px rgba(0, 0, 0, 0.1)",
-      "card-m":
-        "0px 9px 12px rgba(0, 0, 0, 0.1), 0px 14px 32px rgba(0, 0, 0, 0.05), 0px 32px 44px rgba(0, 0, 0, 0.1)",
+      "card-m": "0px 9px 12px rgba(0, 0, 0, 0.1), 0px 14px 32px rgba(0, 0, 0, 0.05), 0px 32px 44px rgba(0, 0, 0, 0.1)",
+    },
+
+    extend: {
+      padding: {
+        "small-top": "var(--padding-top-small)",
+        "medium-top": "var(--padding-top-medium)",
+        "large-top": "var(--padding-top-large)",
+        "small-bottom": "var(--padding-bottom-small)",
+        "medium-bottom": "var(--padding-bottom-medium)",
+        "large-bottom": "var(--padding-bottom-large)",
+      },
     },
   },
 
   plugins: [
     require("@tailwindcss/typography"),
     plugin(function ({ addVariant }) {
-      addVariant(
-        "supports-backdrop-filter",
-        "@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))"
-      );
+      addVariant("supports-backdrop-filter", "@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))");
     }),
   ],
 };
