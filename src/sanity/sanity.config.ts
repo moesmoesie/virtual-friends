@@ -28,7 +28,7 @@ const Config = defineConfig({
   ...BaseConfig,
   plugins: [deskTool()],
   basePath: "/studio",
-
+  title: "Studio",
   schema: {
     types: allSchemas,
   },

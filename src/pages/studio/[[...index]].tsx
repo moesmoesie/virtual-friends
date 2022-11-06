@@ -4,14 +4,11 @@ import Head from "next/head";
 import { defineConfig } from "sanity";
 import config from "../../sanity/sanity.config";
 
-const studioConfig = defineConfig(config as any);
+const studioConfig = defineConfig(config);
 
 const Studio: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Studio</title>
-      </Head>
       <NextStudio config={studioConfig} />
     </>
   );
