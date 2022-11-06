@@ -1,12 +1,20 @@
 import { NextPage } from "next";
 import { NextStudio } from "next-sanity/studio";
-import { createConfig } from "sanity";
+import Head from "next/head";
+import { defineConfig } from "sanity";
 import config from "../../sanity/sanity.config";
 
-const studioConfig = createConfig(config as any);
+const studioConfig = defineConfig(config as any);
 
 const Studio: NextPage = () => {
-  return <NextStudio config={studioConfig} />;
+  return (
+    <>
+      <Head>
+        <title>Studio</title>
+      </Head>
+      <NextStudio config={studioConfig} />
+    </>
+  );
 };
 
 export default Studio;
