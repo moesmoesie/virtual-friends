@@ -5,6 +5,7 @@ import { ModuleZod } from "../../types";
 import { SolutionCMS } from "./solutions.cms";
 import { ContentZod } from "./solutions.content";
 import { SolutionEcommerce } from "./solutions.eccomerce";
+import { SolutionJamstack } from "./solutions.jamstack";
 import { SolutionSaas } from "./solutions.saas";
 
 export const Solutions: React.FC<SolutionsType> = (props) => {
@@ -25,7 +26,7 @@ export const Solutions: React.FC<SolutionsType> = (props) => {
               case "saas":
                 return <SolutionSaas key={index} content={solution} isReversed={isReversed} />;
               case "jamstack":
-                return <SolutionEcommerce key={index} content={solution} isReversed={isReversed} />;
+                return <SolutionJamstack key={index} content={solution} isReversed={isReversed} />;
             }
           })}
         </div>

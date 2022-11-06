@@ -3,7 +3,7 @@ import { Employee, Floating, ItemType, Product, Receipt, Review } from "../../co
 import { Solution, SolutionType } from "./solutions.content";
 import { employees, products, review } from "./solutions.data";
 
-export const SolutionEcommerce: React.FC<SolutionType> = (props) => {
+export const SolutionJamstack: React.FC<SolutionType> = (props) => {
   return (
     <Solution content={props.content} isReversed={props.isReversed}>
       <div className="flex flex-col items-center">

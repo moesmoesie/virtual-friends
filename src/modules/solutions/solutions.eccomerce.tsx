@@ -12,7 +12,7 @@ export const SolutionEcommerce: React.FC<SolutionType> = (props) => {
           <Product products={products} onBuy={(product) => setBasket((prev) => [...prev, product])} />
         </Floating>
         <Floating delay={0.7}>
-          <Receipt items={basket} title="Bonnetje" />
+          <Receipt items={basket} title="Receipt" />
         </Floating>
       </div>
     </Solution>
