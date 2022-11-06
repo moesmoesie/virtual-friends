@@ -7,6 +7,7 @@ import { SellingPoints, SellingPointsZod } from "./selling-points/selling-points
 import { Spacer, SpacerZod } from "./spacer/spacer";
 import { z } from "zod";
 import { Solutions, SolutionsZod } from "./solutions/solutions";
+import { Article, ArticleZod } from "./article/article";
 
 const Module: React.FC<ModuleType> = (props) => {
   switch (props?._type) {
@@ -26,6 +27,8 @@ const Module: React.FC<ModuleType> = (props) => {
       return <Contact {...props} />;
     case "solutions":
       return <Solutions {...props} />;
+    case "article":
+      return <Article {...props} />;
     default:
       return <div />;
   }
@@ -33,6 +36,6 @@ const Module: React.FC<ModuleType> = (props) => {
 
 export default Module;
 
-export const ModuleZod = z.discriminatedUnion("_type", [AboutMeZod, HeaderZod, FooterZod, SellingPointsZod, LandingHomeZod, SpacerZod, ContactZod, SolutionsZod]);
+export const ModuleZod = z.discriminatedUnion("_type", [AboutMeZod, ArticleZod, HeaderZod, FooterZod, SellingPointsZod, LandingHomeZod, SpacerZod, ContactZod, SolutionsZod]);
 
 export type ModuleType = z.infer<typeof ModuleZod>;

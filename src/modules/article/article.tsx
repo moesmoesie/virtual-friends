@@ -9,7 +9,7 @@ export const Article: React.FC<ArticleType> = (props) => {
   return (
     <ModuleContainer module={props?.module}>
       <Container>
-        <Markdown>{props.article}</Markdown>
+        <Markdown>{props.body}</Markdown>
       </Container>
     </ModuleContainer>
   );
@@ -17,7 +17,7 @@ export const Article: React.FC<ArticleType> = (props) => {
 
 export const ArticleZod = ModuleZod.extend({
   _type: z.literal("article"),
-  article: z.string(),
+  body: z.string(),
 });
 
 export type ArticleType = z.infer<typeof ArticleZod>;

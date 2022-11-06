@@ -10,7 +10,7 @@ export default defineType({
   fields: [
     defineField({
       name: "body",
-      type: "rich-text",
+      type: "text",
       title: "Body",
     }),
     defineField({

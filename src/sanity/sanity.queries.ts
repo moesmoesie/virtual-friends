@@ -67,6 +67,9 @@ export const PageQuery = groq`
               body,
               keywords
             }
+          },
+          _type == "article" => {
+            body
           }
         }
     }
