@@ -17,18 +17,16 @@ import ModuleSchema from "./schemas/components/module";
 
 // END SCHEMA IMPORTS
 import { deskTool } from "sanity/desk";
-import { Config, isDev } from "sanity";
-import { visionTool } from "@sanity/vision";
+import { defineConfig } from "sanity";
 
 const allSchemas = [SolutionsSchema, AboutMeSchema, ArticleSchema, ContactSchema, FooterSchema, HeaderSchema, LandingHomeSchema, SellingPointsSchema, SpacerSchema, PageSchema, RichTextSchema, LinkSchema, ModuleSchema];
-const devOnlyPlugins = [visionTool()];
 
 import BaseConfig from "./sanity.base-config";
 import productionUrl from "./structure/production-url";
 
-const Config: Config = {
+const Config = defineConfig({
   ...BaseConfig,
-  plugins: [deskTool(), ...(isDev ? devOnlyPlugins : [])],
+  plugins: [deskTool()],
   basePath: "/studio",
 
   schema: {
@@ -38,6 +36,6 @@ const Config: Config = {
   document: {
     productionUrl,
   },
-};
+});
 
 export default Config;
