@@ -1,7 +1,7 @@
 import React from "react";
-import { defineField } from "sanity";
+import { GradientText } from "../../../components";
 
-export default defineField({
+export default {
   name: "rich-text",
   title: "Rich Text",
   type: "array",
@@ -17,6 +17,10 @@ export default defineField({
           {
             title: "Gradient",
             value: "gradient",
+            blockEditor: {
+              icon: () => <div className="w-4 h-4 bg-primary-400 rounded-full translate-y-[2px]" />,
+              render: (props: any) => <GradientText>{props.children}</GradientText>,
+            },
           },
         ],
         annotations: [
@@ -35,4 +39,4 @@ export default defineField({
       },
     },
   ],
-});
+};
