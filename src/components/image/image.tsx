@@ -18,7 +18,7 @@ export const Image: React.FC<ImageType> = ({ lazy = true, alt = "", ...props }) 
     <>
       {lqip && props?.withPlaceholder && <img width={props.width} height={props?.height} className={props?.className} src={lqip} alt={alt} />}
 
-      <img width={props.width} height={props?.height} className={props?.className} src={src} alt={alt} />
+      <img loading={lazy ? "lazy" : "eager"} width={props.width} height={props?.height} className={props?.className} src={src} alt={alt} />
     </>
   );
 };

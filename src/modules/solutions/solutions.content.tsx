@@ -45,7 +45,7 @@ export const Solution: React.FC<SolutionType> = (props) => {
           <Waypoint onEnter={() => setShow(true)}></Waypoint>
         </div>
         <div className={`w-[600px] hidden large:block h-[600px]  relative translate-y-16 `}>
-          <Image {...props.content.image} className={`absolute w-full transition-all object-contain duration-700 h-full ${show ? "blur-3xl opacity-75 scale-105" : ""}`} />
+          <Image {...props.content.image} width="500" className={`absolute w-full transition-all object-contain duration-700 h-full ${show ? "blur-3xl opacity-75 scale-105" : ""}`} />
 
           <SlideInContainer show={show} direction={"bottom"}>
             {props.children}
