@@ -32,17 +32,15 @@ const Page: React.FC<Props> = (props) => {
   const page: PageType = filterDataToSingleItem(previewData, props.preview);
 
   return (
-    <div>
-      <Head>
-        <Seo {...page.seo} />
-      </Head>
+    <>
+      <Seo {...page.seo} />
       <div>
         {page.modules &&
           page.modules.map((module, index) => {
             return <Module key={index} {...module} />;
           })}
       </div>
-    </div>
+    </>
   );
 };
 
