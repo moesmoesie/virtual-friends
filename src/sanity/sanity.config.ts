@@ -14,12 +14,13 @@ import PageSchema from "./schemas/components/page";
 import RichTextSchema from "./schemas/components/rich-text";
 import LinkSchema from "./schemas/components/link";
 import ModuleSchema from "./schemas/components/module";
+import SeoSchema from "./schemas/components/seo";
 
 // END SCHEMA IMPORTS
 import { deskTool } from "sanity/desk";
 import { defineConfig } from "sanity";
 
-const allSchemas = [SolutionsSchema, AboutMeSchema, ArticleSchema, ContactSchema, FooterSchema, HeaderSchema, LandingHomeSchema, SellingPointsSchema, SpacerSchema, PageSchema, RichTextSchema, LinkSchema, ModuleSchema];
+const allSchemas = [SolutionsSchema, SeoSchema, AboutMeSchema, ArticleSchema, ContactSchema, FooterSchema, HeaderSchema, LandingHomeSchema, SellingPointsSchema, SpacerSchema, PageSchema, RichTextSchema, LinkSchema, ModuleSchema];
 
 import BaseConfig from "./sanity.base-config";
 import productionUrl from "./structure/production-url";

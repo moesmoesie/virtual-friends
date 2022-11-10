@@ -11,11 +11,7 @@ export const SlugQuery = groq`
 export const PageQuery = groq`
     *[slug.current == $slug]{
         _id,
-        "seo" : {
-          "title" : coalesce(title, "Title"),
-          "description" : coalesce(description, "Description"),
-          "keywords" : coalesce(keywords, [])
-        },
+        seo,
         modules[]{
           _type,
           _id,

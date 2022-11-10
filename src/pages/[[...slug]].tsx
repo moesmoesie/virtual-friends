@@ -6,13 +6,10 @@ import { filterDataToSingleItem } from "../sanity/sanity.helpers";
 import Module, { ModuleZod } from "../modules";
 import { z } from "zod";
 import { PageQuery, SlugQuery } from "../sanity/sanity.queries";
+import { Seo, SeoZod } from "../components/seo/seo";
 
 const PageZod = z.object({
-  seo: z.object({
-    title: z.string().nullable(),
-    description: z.string().nullable(),
-    keywords: z.array(z.string()).nullable(),
-  }),
+  seo: SeoZod.nullable().optional(),
   modules: z.array(ModuleZod),
 });
 
@@ -37,10 +34,7 @@ const Page: React.FC<Props> = (props) => {
   return (
     <div>
       <Head>
-        <title>{page.seo.title ?? ""}</title>
-        <meta name="description" content={page.seo.description ?? ""} />
-        <meta name="keywords" content={page.seo?.keywords ? "" : ""} />
-        <link rel="icon" href="/favicon.ico" />
+        <Seo {...page.seo} />
       </Head>
       <div>
         {page.modules &&
