@@ -1,12 +1,12 @@
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { getClient } from "../sanity/sanity.server";
-import { usePreviewSubscription } from "../sanity/sanity.helpers";
-import { filterDataToSingleItem } from "../sanity/sanity.helpers";
 import Module, { ModuleZod } from "../modules";
 import { z } from "zod";
 import { PageQuery, SlugQuery } from "../sanity/sanity.queries";
 import { Seo, SeoZod } from "../components/seo/seo";
+import usePreviewSubscription from "../sanity/helpers/usePreviewSubscription";
+import filterDataToSingleItem from "../sanity/helpers/filterDataToSingleItem";
 
 const PageZod = z.object({
   seo: SeoZod.nullable().optional(),

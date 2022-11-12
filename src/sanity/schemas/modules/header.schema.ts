@@ -1,5 +1,5 @@
 import { defineField, defineType } from "sanity";
-import { createModulePreview } from "../../sanity.helpers";
+import createModulePreview from "../../helpers/createModulePreview";
 import { CgToolbarTop } from "react-icons/cg";
 
 export default defineType({

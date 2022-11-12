@@ -1,6 +1,6 @@
 import { defineField, defineType } from "sanity";
 import { BsPerson } from "react-icons/bs";
-import { createModulePreview } from "../../sanity.helpers";
+import createModulePreview from "../../helpers/createModulePreview";
 
 export default defineType({
   title: "About me",

@@ -1,5 +1,5 @@
 import { defineType, defineField } from "sanity";
-import { createModulePreview } from "../../sanity.helpers";
+import createModulePreview from "../../helpers/createModulePreview";
 import { MdOutlineAttachMoney } from "react-icons/md";
 
 export default defineType({

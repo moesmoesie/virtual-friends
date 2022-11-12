@@ -1,5 +1,5 @@
 import { defineField } from "sanity";
-import { createModulePreview } from "../../sanity.helpers";
+import createModulePreview from "../../helpers/createModulePreview";
 import { AiOutlineHome } from "react-icons/ai";
 
 export default defineField({
