@@ -1,7 +1,6 @@
-import { useState } from "react";
-import { Employee, Floating, ItemType, Product, Receipt, Review } from "../../components";
+import { Employee, Floating, Review } from "../../components";
 import { Solution, SolutionType } from "./solutions.content";
-import { employees, products, review } from "./solutions.data";
+import { employees, review } from "./solutions.data";
 
 export const SolutionJamstack: React.FC<SolutionType> = (props) => {
   return (

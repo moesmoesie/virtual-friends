@@ -1,7 +1,11 @@
-import { Container, ModuleContainer, Image, ImageZod } from "../../components";
+import { Container, ModuleContainer } from "../../components";
 import React from "react";
 import { z } from "zod";
 import { LinkZod, ModuleZod } from "../../types";
+import { ImageZod } from "../../types";
+
+import Image from "next/image";
+import getCustomImageLoader from "../../sanity/helpers/getCustomImageLoader";
 
 export const Header: React.FC<HeaderType> = (props) => {
   return (
@@ -11,8 +15,9 @@ export const Header: React.FC<HeaderType> = (props) => {
           <Container>
             <div className="flex justify-between items-center">
               <a href="/">
-                <Image className="w-[75px] medium:w-[100px]" {...props.logo} width="1000" alt="Logo" />
+                <Image loader={getCustomImageLoader} {...props.logo} width={100} priority />
               </a>
+
               {props.links && (
                 <div className="hidden medium:flex gap-8 items-center">
                   {props.links.map((el, index) => {

@@ -45,4 +45,15 @@ export const LinkZod = z.object({
   href: z.string().default("#"),
 });
 
+export const ImageZod = z.object({
+  src: z.string().default(""),
+  alt: z.string().default(""),
+  width: z.number().default(1),
+  height: z.number().default(1),
+  blurDataURL: z.string().optional(),
+  aspectRatio: z.number().optional(),
+});
+
+export type ImageType = z.infer<typeof ImageZod>;
+
 export type ModuleType = z.infer<typeof ModuleZod>;

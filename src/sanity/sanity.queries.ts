@@ -17,7 +17,12 @@ export const PageQuery = groq`
           _id,
           module,
           _type == "header" => {
-            "logo": logo.asset->,
+            "logo": logo.asset->{
+              'src': url,
+              'blurDataURL': metadata.blurHash,
+              'width': metadata.dimensions.width,
+              'height': metadata.dimensions.height,
+            },
             links[]{
               text,
               href
@@ -32,8 +37,18 @@ export const PageQuery = groq`
           _type == "landing-home" => {
             title,
             subtitle,
-            "image": image.asset->,
-            "imageBackground": imageBackground.asset->,
+            "image": image.asset->{
+              'src': url,
+              'blurDataURL': metadata.blurHash,
+              'width': metadata.dimensions.width,
+              'height': metadata.dimensions.height,
+            },
+            "imageBackground": imageBackground.asset->{
+              'src': url,
+              'blurDataURL': metadata.blurHash,
+              'width': metadata.dimensions.width,
+              'height': metadata.dimensions.height,
+            },
             primaryCallToAction,
             secondaryCallToAction
           },
@@ -43,7 +58,12 @@ export const PageQuery = groq`
           },
           _type == "sellingPoints" => {
             sellingPoints[]{
-              "icon" : icon.asset->,
+              "icon" : icon.asset->{
+                'src': url,
+                'blurDataURL': metadata.blurHash,
+                'width': metadata.dimensions.width,
+                'height': metadata.dimensions.height,
+              },
               title,
               body
             }
@@ -59,7 +79,12 @@ export const PageQuery = groq`
             "content" : content[]{
               title,
               variant,
-              "image": image.asset->,
+              "image": image.asset-> {
+                'src': url,
+                'blurDataURL': metadata.blurHash,
+                'width': metadata.dimensions.width,
+                'height': metadata.dimensions.height,
+              },
               body,
               keywords
             }

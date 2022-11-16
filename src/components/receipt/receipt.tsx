@@ -1,6 +1,6 @@
 import React from "react";
 import { ItemType } from "../product/product";
-import { Image } from "../image/image";
+import Image from "next/image";
 var formatter = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "EUR",
@@ -59,9 +59,7 @@ const Total: React.FC<{ total: number }> = (props) => {
   return (
     <div className="flex items-baseline justify-between pt-5">
       <p className="body-3">Total</p>
-      <p className="body-2 spacing font-bold ">
-        {formatter.format(props.total)}
-      </p>
+      <p className="body-2 spacing font-bold ">{formatter.format(props.total)}</p>
     </div>
   );
 };
@@ -71,14 +69,7 @@ const ListItem: React.FC<{ item: ItemType; count: number }> = (props) => {
   return (
     <div className="border-b-[1px] min-w-[280px] border-neutral-500 py-5 last:border-0 last:border-b-0 ">
       <div className="flex gap-5">
-        <div className="h-[80px] w-[60px] rounded-lg bg-white">
-          {props.item.image && (
-            <Image
-              className="h-full w-full object-contain px-1 py-3"
-              {...props.item.image}
-            />
-          )}
-        </div>
+        <div className="h-[80px] w-[60px] rounded-lg bg-white">{props.item.image && <Image className="h-full w-full object-contain px-1 py-3" {...props.item.image} />}</div>
         <div className="mt-[5.5px] flex flex-col">
           <p className="body-2 font-bold">{item.title}</p>
           <div className="flex items-center gap-[7px]">

@@ -1,23 +1,24 @@
-import { Container, ModuleContainer, Card, Image } from "../../components";
+import { Container, ModuleContainer, Card } from "../../components";
 import React from "react";
 import { ModuleZod } from "../../types";
-import { ImageZod } from "../../components";
+import { ImageZod } from "../../types";
 import { z } from "zod";
+import Image from "next/image";
 
 export const SellingPoints: React.FC<SellingPointsType> = (props) => {
   return (
     <ModuleContainer module={props?.module}>
       <Container>
         <div className="grid gap-3 medium:grid-cols-2 large:grid-cols-3">
-          {props?.sellingPoints?.map((card, index) => {
+          {props.sellingPoints.map((card, index) => {
             return (
               <div key={index}>
                 <div className="hidden large:block">
-                  <Card mode="vertical" size="large" {...card} icon={<Image {...card?.icon} width="200" />} />
+                  <Card mode="vertical" size="large" {...card} icon={<Image {...card.icon} width="200" />} />
                 </div>
 
                 <div className="large:hidden">
-                  <Card mode="horizontal" size="normal" {...card} icon={<Image {...card?.icon} width="200" />} />
+                  <Card mode="horizontal" size="normal" {...card} icon={<Image {...card.icon} width="200" />} />
                 </div>
               </div>
             );
@@ -30,13 +31,15 @@ export const SellingPoints: React.FC<SellingPointsType> = (props) => {
 
 export const SellingPointsZod = ModuleZod.extend({
   _type: z.literal("sellingPoints"),
-  sellingPoints: z.array(
-    z.object({
-      title: z.string().default("Title"),
-      body: z.string().default("Body"),
-      icon: ImageZod,
-    })
-  ),
+  sellingPoints: z
+    .array(
+      z.object({
+        title: z.string().default("Title"),
+        body: z.string().default("Body"),
+        icon: ImageZod.default({}),
+      })
+    )
+    .default([]),
 });
 
 export type SellingPointsType = z.infer<typeof SellingPointsZod>;

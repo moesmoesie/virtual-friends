@@ -5,7 +5,6 @@ export * from "./checkbox/checkbox";
 export * from "./chip/chip";
 export * from "./container/container";
 export * from "./employee/employee";
-export * from "./image/image";
 export * from "./image-picker/image-picker";
 export * from "./picker/picker";
 export * from "./popover/popover";

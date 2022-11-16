@@ -67,8 +67,9 @@ export const getStaticProps: GetStaticProps = async ({ params, preview = false }
   if (!data || (Array.isArray(data) && data.length === 0)) return { notFound: true };
 
   let page: PageType = filterDataToSingleItem(data, preview);
-  page = PageZod.parse(page);
+  console.log(page.modules[1]);
 
+  page = PageZod.parse(page);
   return {
     props: {
       page: page,

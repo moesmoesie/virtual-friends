@@ -1,5 +1,6 @@
 import React from "react";
-import { ImageType, Image } from "../image/image";
+import Image from "next/image";
+import { ImageType } from "../../types";
 
 export interface ReviewType {
   image: ImageType;
@@ -11,10 +12,7 @@ export interface ReviewType {
 export const Review: React.FC<ReviewType> = (props) => {
   return (
     <div className="flex min-h-[200px] w-[300px] flex-col items-center rounded-lg bg-white p-5 text-center shadow-m">
-      <Image
-        {...props.image}
-        className="mb-3 h-16 w-16 rounded-full object-cover"
-      />
+      <Image {...props.image} className="mb-3 h-16 w-16 rounded-full object-cover" />
       <p className="body-1 mb-3">{props.body}</p>
       <p className="body-3">
         <span className="font-bold">{props.name}</span>
