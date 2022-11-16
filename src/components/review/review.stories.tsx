@@ -21,7 +21,9 @@ Default.args = {
   name: "Firstname",
   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   image: {
-    src: "https://via.placeholder.com/200x200?text=placeholder",
-    width: "80",
+    src: "https://cdn.sanity.io/images/kby5cprw/production/00719dd13aa9d16f6e716dac3d7e6a26dc4ddab6-3276x4096.jpg",
+    width: 100,
+    height: 100,
+    alt: "Jane Caboosy",
   },
 };

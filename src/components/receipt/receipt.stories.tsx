@@ -26,8 +26,10 @@ Default.args = {
       price: 99.95,
       title: "Title",
       image: {
-        src: "https://via.placeholder.com/80x120",
-        width: "80",
+        src: "https://cdn.sanity.io/images/kby5cprw/production/def68604fa15d693b04c9deb52c14c947cc82c37-800x800.png",
+        width: 500,
+        height: 0,
+        alt: "Virtual Box X",
       },
     },
     {
@@ -37,19 +39,10 @@ Default.args = {
       price: 99.95,
       title: "Title",
       image: {
-        src: "https://via.placeholder.com/80x120",
-        width: "80",
-      },
-    },
-    {
-      id: "2",
-      color: "#893AD8",
-      discountPercentage: 30,
-      price: 99.95,
-      title: "Title",
-      image: {
-        src: "https://via.placeholder.com/80x120",
-        width: "80",
+        src: "https://cdn.sanity.io/images/kby5cprw/production/def68604fa15d693b04c9deb52c14c947cc82c37-800x800.png",
+        width: 500,
+        height: 0,
+        alt: "Virtual Box X",
       },
     },
   ],

@@ -24,7 +24,9 @@ Default.args = {
   linkedin: "https://www.linkedin.com/in/mustafadarwesh/",
   mail: "mdarwesh@virtualfriends.dev",
   image: {
-    src: "https://via.placeholder.com/200x200?text=placeholder",
-    width: "80",
+    src: "https://cdn.sanity.io/images/kby5cprw/production/4395f182fa04851c14d7c54612ff4c5e15f28b80-663x849.png",
+    width: 500,
+    height: 0,
+    alt: "John Doe",
   },
 };
