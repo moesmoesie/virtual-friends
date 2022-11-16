@@ -50,6 +50,7 @@ export const ImageZod = z.object({
   alt: z.string().default(""),
   width: z.number().default(1),
   height: z.number().default(1),
+  title: z.string().optional(),
   blurDataURL: z.string().optional(),
   aspectRatio: z.number().optional(),
 });

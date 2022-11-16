@@ -13,6 +13,18 @@ export default defineType({
       name: "logo",
       type: "image",
       title: "Logo",
+      fields: [
+        {
+          name: "title",
+          type: "string",
+          title: "Caption",
+        },
+        {
+          name: "alt",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     }),
     defineField({
       name: "links",

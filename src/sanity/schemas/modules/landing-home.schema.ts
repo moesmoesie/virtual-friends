@@ -23,6 +23,18 @@ export default defineField({
       name: "image",
       type: "image",
       title: "Image",
+      fields: [
+        {
+          name: "title",
+          type: "string",
+          title: "Caption",
+        },
+        {
+          name: "alt",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     }),
     defineField({
       name: "imageBackground",
