@@ -1,7 +1,7 @@
 import { Container, ModuleContainer, Image, ImageZod } from "../../components";
 import React from "react";
 import { z } from "zod";
-import { ModuleZod } from "../../types";
+import { LinkZod, ModuleZod } from "../../types";
 
 export const Header: React.FC<HeaderType> = (props) => {
   return (
@@ -13,15 +13,17 @@ export const Header: React.FC<HeaderType> = (props) => {
               <a href="/">
                 <Image className="w-[75px] medium:w-[100px]" {...props.logo} width="1000" alt="Logo" />
               </a>
-              <div className="hidden medium:flex gap-8 items-center">
-                {props?.links?.map((el, index) => {
-                  return (
-                    <a key={index} href={el.href} className="body-3 font-bold">
-                      {el.text}
-                    </a>
-                  );
-                })}
-              </div>
+              {props.links && (
+                <div className="hidden medium:flex gap-8 items-center">
+                  {props.links.map((el, index) => {
+                    return (
+                      <a key={index} href={el.href} className="body-3 font-bold">
+                        {el.text}
+                      </a>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           </Container>
         </div>
@@ -33,14 +35,7 @@ export const Header: React.FC<HeaderType> = (props) => {
 export const HeaderZod = ModuleZod.extend({
   _type: z.literal("header"),
   logo: ImageZod,
-  links: z
-    .array(
-      z.object({
-        href: z.string(),
-        text: z.string(),
-      })
-    )
-    .optional(),
+  links: z.array(LinkZod).optional(),
 });
 
 export type HeaderType = z.infer<typeof HeaderZod>;

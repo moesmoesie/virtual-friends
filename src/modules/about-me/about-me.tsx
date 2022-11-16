@@ -20,7 +20,7 @@ export const AboutMe: React.FC<AboutMeType> = (props) => {
 
 export const AboutMeZod = ModuleZod.extend({
   _type: z.literal("about-me"),
-  title: z.string().optional(),
+  title: z.string().default("About me"),
   body: z.any(),
 });
 

@@ -40,4 +40,9 @@ export const ModuleZod = z.object({
 
 export const RichTextZod = z.union([z.array(z.any()), z.string()]);
 
+export const LinkZod = z.object({
+  text: z.string().default("Link"),
+  href: z.string().default("#"),
+});
+
 export type ModuleType = z.infer<typeof ModuleZod>;

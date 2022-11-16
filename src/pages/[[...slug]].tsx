@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { GetStaticProps } from "next";
 import { getClient } from "../sanity/sanity.server";
 import Module, { ModuleZod } from "../modules";
@@ -67,8 +66,8 @@ export const getStaticProps: GetStaticProps = async ({ params, preview = false }
 
   if (!data || (Array.isArray(data) && data.length === 0)) return { notFound: true };
 
-  const page: Props = filterDataToSingleItem(data, preview);
-  PageZod.parse(page);
+  let page: PageType = filterDataToSingleItem(data, preview);
+  page = PageZod.parse(page);
 
   return {
     props: {

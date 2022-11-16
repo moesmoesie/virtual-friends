@@ -19,12 +19,16 @@ export const Contact: React.FC<ContactType> = (props) => {
               <RichText value={props.body} />
             </p>
             <div className="flex gap-3 medium:flex-row items-start flex-col">
-              <div>
-                <Button {...props.primaryCallToAction} type="default" />
-              </div>
-              <div>
-                <Button {...props.secondaryCallToAction} type="outlined" />
-              </div>
+              {props.primaryCallToAction && (
+                <div>
+                  <Button {...props.primaryCallToAction} type="default" />
+                </div>
+              )}
+              {props.secondaryCallToAction && (
+                <div>
+                  <Button {...props.secondaryCallToAction} type="outlined" />
+                </div>
+              )}
             </div>
           </div>
           <div>
@@ -38,10 +42,10 @@ export const Contact: React.FC<ContactType> = (props) => {
 
 export const ContactZod = ModuleZod.extend({
   _type: z.literal("contact"),
-  title: z.string(),
-  body: RichTextZod,
-  primaryCallToAction: ButtonZod,
-  secondaryCallToAction: ButtonZod,
+  title: z.string().default("Contact"),
+  body: RichTextZod.default("Contact Body"),
+  primaryCallToAction: ButtonZod.optional(),
+  secondaryCallToAction: ButtonZod.optional(),
 });
 
 export type ContactType = z.infer<typeof ContactZod>;

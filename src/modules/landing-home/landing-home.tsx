@@ -17,7 +17,7 @@ export const LandingHome: React.FC<LandingHomeType> = (props) => {
             className="rounded-full relative overflow-hidden medium:w-[250px] medium:h-[250px] large:w-[320px] large:h-[320px] object-cover w-[200px] h-[200px]"
           >
             <motion.div className="w-full rounded-full overflow-hiddens relative h-full">
-              <Image withPlaceholder={true} lazy={false} className="w-full h-full absolute top-0 left-0 object-cover pointer-events-none" {...props?.imageBackground} width="400" />
+              {props.imageBackground && <Image withPlaceholder={true} lazy={false} className="w-full h-full absolute top-0 left-0 object-cover pointer-events-none" {...props?.imageBackground} width="400" />}
 
               <Image lazy={false} className={`scale-95 origin-bottom w-full h-full z-50 object-cover transition-transform`} {...props?.image} width="400" alt="Headshot of Mustafa" />
             </motion.div>
@@ -32,8 +32,8 @@ export const LandingHome: React.FC<LandingHomeType> = (props) => {
             </p>
 
             <div className="flex gap-3">
-              <Button {...props.primaryCallToAction} type="default" />
-              <Button {...props.secondaryCallToAction} type="outlined" />
+              {props.primaryCallToAction && <Button {...props.primaryCallToAction} type="default" />}
+              {props.secondaryCallToAction && <Button {...props.secondaryCallToAction} type="outlined" />}
             </div>
           </div>
         </div>
@@ -44,12 +44,12 @@ export const LandingHome: React.FC<LandingHomeType> = (props) => {
 
 export const LandingHomeZod = ModuleZod.extend({
   _type: z.literal("landing-home"),
-  title: RichTextZod,
-  subtitle: RichTextZod,
-  primaryCallToAction: ButtonZod,
-  secondaryCallToAction: ButtonZod,
+  title: RichTextZod.default("Mustafa Darwesh"),
+  subtitle: RichTextZod.default("Full Stack Developer"),
+  primaryCallToAction: ButtonZod.optional(),
+  secondaryCallToAction: ButtonZod.optional(),
   image: ImageZod,
-  imageBackground: ImageZod,
+  imageBackground: ImageZod.optional(),
 });
 
 export type LandingHomeType = z.infer<typeof LandingHomeZod>;

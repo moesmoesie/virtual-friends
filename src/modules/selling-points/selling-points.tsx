@@ -32,8 +32,8 @@ export const SellingPointsZod = ModuleZod.extend({
   _type: z.literal("sellingPoints"),
   sellingPoints: z.array(
     z.object({
-      title: z.string(),
-      body: z.string(),
+      title: z.string().default("Title"),
+      body: z.string().default("Body"),
       icon: ImageZod,
     })
   ),

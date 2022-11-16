@@ -17,7 +17,7 @@ export const Article: React.FC<ArticleType> = (props) => {
 
 export const ArticleZod = ModuleZod.extend({
   _type: z.literal("article"),
-  body: z.string(),
+  body: z.string().default("Article Content"),
 });
 
 export type ArticleType = z.infer<typeof ArticleZod>;
