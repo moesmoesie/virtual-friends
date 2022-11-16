@@ -19,11 +19,10 @@ export const PageQuery = groq`
           _type == "header" => {
             "logo": logo.asset->{
               'src': url,
-              'title' : ^.logo.title,
-              'alt' : ^.logo.alt,
               'blurDataURL': metadata.blurHash,
               'width': metadata.dimensions.width,
               'height': metadata.dimensions.height,
+              ...^.logo
             },
             links[]{
               text,
@@ -42,10 +41,9 @@ export const PageQuery = groq`
             "image": image.asset->{
               'src': url,
               'blurDataURL': metadata.blurHash,
-              'title' : ^.image.title,
-              'alt' : ^.image.alt,
               'width': metadata.dimensions.width,
               'height': metadata.dimensions.height,
+              ...^.image
             },
             "imageBackground": imageBackground.asset->{
               'src': url,
