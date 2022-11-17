@@ -17,12 +17,15 @@ export const PageQuery = groq`
           _id,
           module,
           _type == "header" => {
-            "logo": logo.asset->{
-              'src': url,
-              'blurDataURL': metadata.blurHash,
-              'width': metadata.dimensions.width,
-              'height': metadata.dimensions.height,
-              ...^.logo
+            logo{
+              defined(alt) => alt,
+              defined(title) => title,
+              ...asset->{
+                'src': url,
+                'blurDataURL': metadata.blurHash,
+                'width': metadata.dimensions.width,
+                'height': metadata.dimensions.height,
+              },
             },
             links[]{
               text,
@@ -38,18 +41,25 @@ export const PageQuery = groq`
           _type == "landing-home" => {
             title,
             subtitle,
-            "image": image.asset->{
-              'src': url,
-              'blurDataURL': metadata.blurHash,
-              'width': metadata.dimensions.width,
-              'height': metadata.dimensions.height,
-              ...^.image
+            image{
+              defined(alt) => alt,
+              defined(title) => title,
+              ...asset->{
+                'src': url,
+                'blurDataURL': metadata.blurHash,
+                'width': metadata.dimensions.width,
+                'height': metadata.dimensions.height,
+              }
             },
-            "imageBackground": imageBackground.asset->{
-              'src': url,
-              'blurDataURL': metadata.blurHash,
-              'width': metadata.dimensions.width,
-              'height': metadata.dimensions.height,
+            imageBackground{
+              defined(alt) => alt,
+              defined(title) => title,
+              ...asset->{
+                'src': url,
+                'blurDataURL': metadata.blurHash,
+                'width': metadata.dimensions.width,
+                'height': metadata.dimensions.height,
+              },
             },
             primaryCallToAction,
             secondaryCallToAction
@@ -60,11 +70,15 @@ export const PageQuery = groq`
           },
           _type == "sellingPoints" => {
             sellingPoints[]{
-              "icon" : icon.asset->{
+              icon{
+                defined(alt) => alt,
+                defined(title) => title,
+                ...asset->{
                 'src': url,
                 'blurDataURL': metadata.blurHash,
                 'width': metadata.dimensions.width,
                 'height': metadata.dimensions.height,
+               },
               },
               title,
               body
@@ -81,11 +95,15 @@ export const PageQuery = groq`
             "content" : content[]{
               title,
               variant,
-              "image": image.asset-> {
-                'src': url,
-                'blurDataURL': metadata.blurHash,
-                'width': metadata.dimensions.width,
-                'height': metadata.dimensions.height,
+              image{
+                defined(alt) => alt,
+                defined(title) => title,
+                ...asset-> {
+                  'src': url,
+                  'blurDataURL': metadata.blurHash,
+                  'width': metadata.dimensions.width,
+                  'height': metadata.dimensions.height,
+                },
               },
               body,
               keywords
