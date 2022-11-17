@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Popover as Component } from "..";
+import { Popover as Component } from "./popover";
 
 export default {
   title: "Components/Popover",
@@ -23,12 +23,7 @@ const Template: ComponentStory<typeof Component> = (args) => {
 
   return (
     <div className="h-[600px]">
-      <Component
-        {...args}
-        options={options}
-        setOption={setOption}
-        currentOptionIndex={currentOptionIndex}
-      />
+      <Component {...args} options={options} setOption={setOption} currentOptionIndex={currentOptionIndex} />
     </div>
   );
 };

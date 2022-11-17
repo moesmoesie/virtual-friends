@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { AssetBarChart as Component } from "../../components";
+import { AssetBarChart as Component } from "./asset-bar-chart";
 
 export default {
   title: "Components/Bar Chart Card",

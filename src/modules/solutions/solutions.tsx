@@ -1,6 +1,8 @@
 import React from "react";
 import { z } from "zod";
-import { Container, GradientText, ModuleContainer } from "../../components";
+import Container from "../../components/container/container";
+import { GradientText } from "../../components/gradient-text/gradient-text";
+import ModuleContainer from "../../components/module-container/module-container";
 import { ModuleZod } from "../../types";
 import { SolutionCMS } from "./solutions.cms";
 import { ContentZod } from "./solutions.content";

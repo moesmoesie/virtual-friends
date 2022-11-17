@@ -1,4 +1,7 @@
-import { ItemType, EmployeeType, ReviewType, OptionType } from "../../components";
+import { EmployeeType } from "../../components/employee/employee";
+import { OptionType } from "../../components/popover/popover";
+import { ItemType } from "../../components/product/product";
+import { ReviewType } from "../../components/review/review";
 
 export const products: ItemType[] = [
   {

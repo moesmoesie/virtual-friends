@@ -1,6 +1,9 @@
-import { Container, GradientText, ModuleContainer, RichText } from "../../components";
 import React from "react";
 import { z } from "zod";
+import Container from "../../components/container/container";
+import { GradientText } from "../../components/gradient-text/gradient-text";
+import ModuleContainer from "../../components/module-container/module-container";
+import { RichText } from "../../components/rich-text/rich-text";
 import { ModuleZod } from "../../types";
 
 export const AboutMe: React.FC<AboutMeType> = (props) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { z } from "zod";
-import { ModuleContainer } from "../../components";
+import ModuleContainer from "../../components/module-container/module-container";
 import { ModuleZod } from "../../types";
 
 export const Spacer: React.FC<SpacerType> = (props) => {

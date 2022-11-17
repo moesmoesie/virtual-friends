@@ -1,4 +1,6 @@
-import { Employee, Floating, Review } from "../../components";
+import Employee from "../../components/employee/employee";
+import { Floating } from "../../components/floating/floating";
+import { Review } from "../../components/review/review";
 import { Solution, SolutionType } from "./solutions.content";
 import { employees, review } from "./solutions.data";
 

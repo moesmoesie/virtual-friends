@@ -1,4 +1,3 @@
-import { Button, Container, ModuleContainer, RichText, ButtonZod } from "../../components";
 import React from "react";
 import { motion } from "framer-motion";
 import { ModuleZod } from "../../types";
@@ -7,6 +6,10 @@ import { RichTextZod } from "../../types";
 import { ImageZod } from "../../types";
 import getCustomImageLoader from "../../sanity/helpers/getCustomImageLoader";
 import Image from "next/image";
+import { Button, ButtonZod } from "../../components/button/button";
+import Container from "../../components/container/container";
+import ModuleContainer from "../../components/module-container/module-container";
+import { RichText } from "../../components/rich-text/rich-text";
 
 export const LandingHome: React.FC<LandingHomeType> = (props) => {
   return (

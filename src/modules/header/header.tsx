@@ -1,4 +1,3 @@
-import { Container, ModuleContainer } from "../../components";
 import React from "react";
 import { z } from "zod";
 import { LinkZod, ModuleZod } from "../../types";
@@ -6,6 +5,8 @@ import { ImageZod } from "../../types";
 
 import Image from "next/image";
 import getCustomImageLoader from "../../sanity/helpers/getCustomImageLoader";
+import Container from "../../components/container/container";
+import ModuleContainer from "../../components/module-container/module-container";
 
 export const Header: React.FC<HeaderType> = (props) => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Review as Component } from "..";
+import { Review as Component } from "./review";
 
 export default {
   title: "Components/Review",

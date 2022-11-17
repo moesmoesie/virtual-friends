@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Receipt as Component } from "..";
+import { Receipt as Component } from "./receipt";
 
 export default {
   title: "Components/Receipt",

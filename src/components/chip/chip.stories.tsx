@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Chip } from "..";
+import { Chip } from "./chip";
 
 export default {
   title: "Components/Chip",

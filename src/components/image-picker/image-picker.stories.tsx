@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { ImagePicker as Component } from "..";
+import { ImagePicker as Component } from "./image-picker";
 
 export default {
   title: "Components/Image Picker",

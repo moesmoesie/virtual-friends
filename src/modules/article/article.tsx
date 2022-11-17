@@ -1,8 +1,8 @@
-import { Container } from "../../components";
-import { ModuleContainer } from "../../components";
-import { Markdown } from "../../components";
+import Markdown from "markdown-to-jsx";
 import React from "react";
 import { z } from "zod";
+import Container from "../../components/container/container";
+import ModuleContainer from "../../components/module-container/module-container";
 import { ModuleZod } from "../../types";
 
 export const Article: React.FC<ArticleType> = (props) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Floating as Component } from "..";
+import { Floating as Component } from "./floating";
 
 export default {
   title: "Components/Floating",

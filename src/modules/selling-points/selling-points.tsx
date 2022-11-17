@@ -1,9 +1,11 @@
-import { Container, ModuleContainer, Card } from "../../components";
 import React from "react";
 import { ModuleZod } from "../../types";
 import { ImageZod } from "../../types";
 import { z } from "zod";
 import Image from "next/image";
+import { Card } from "../../components/card/card";
+import Container from "../../components/container/container";
+import ModuleContainer from "../../components/module-container/module-container";
 
 export const SellingPoints: React.FC<SellingPointsType> = (props) => {
   return (

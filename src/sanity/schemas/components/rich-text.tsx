@@ -1,5 +1,5 @@
 import React from "react";
-import { GradientText } from "../../../components";
+import { GradientText } from "../../../components/gradient-text/gradient-text";
 
 export default {
   name: "rich-text",

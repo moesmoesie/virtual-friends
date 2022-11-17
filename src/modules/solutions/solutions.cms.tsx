@@ -1,5 +1,8 @@
 import { useState } from "react";
-import { Floating, Editor, ImagePicker, Popover } from "../../components";
+import { Editor } from "../../components/editor/editor";
+import { Floating } from "../../components/floating/floating";
+import { ImagePicker } from "../../components/image-picker/image-picker";
+import { Popover } from "../../components/popover/popover";
 import { Solution, SolutionType } from "./solutions.content";
 import { colorOptions } from "./solutions.data";
 

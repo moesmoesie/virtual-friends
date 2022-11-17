@@ -1,10 +1,11 @@
 import { z } from "zod";
-import { Chip, RichText } from "../../components";
 import { RichTextZod } from "../../types";
 import react, { useState } from "react";
 import { Waypoint } from "react-waypoint";
 import { ImageZod } from "../../types";
 import Image from "next/image";
+import { Chip } from "../../components/chip/chip";
+import { RichText } from "../../components/rich-text/rich-text";
 export interface SolutionType {
   isReversed: boolean;
   content: ContentType;

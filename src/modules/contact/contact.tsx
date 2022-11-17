@@ -1,8 +1,12 @@
 import React from "react";
-import { Container, ModuleContainer, Button, RichText, GradientText, BuisnessCard } from "../../components";
-import { ButtonZod } from "../../components/button/button";
 import { ModuleZod, RichTextZod } from "../../types";
 import { z } from "zod";
+import { BuisnessCard } from "../../components/buisness-card/buisness-card";
+import { Button, ButtonZod } from "../../components/button/button";
+import Container from "../../components/container/container";
+import { GradientText } from "../../components/gradient-text/gradient-text";
+import ModuleContainer from "../../components/module-container/module-container";
+import { RichText } from "../../components/rich-text/rich-text";
 
 export const Contact: React.FC<ContactType> = (props) => {
   return (

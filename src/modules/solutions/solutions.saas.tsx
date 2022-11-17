@@ -1,4 +1,7 @@
-import { AssetBarChart, AssetCard, AssetLineChartCard, Floating } from "../../components";
+import { AssetBarChart } from "../../components/asset-bar-chart/asset-bar-chart";
+import { AssetLineChartCard } from "../../components/asset-line-chart/asset-line-chart";
+import { AssetCard } from "../../components/asset/asset";
+import { Floating } from "../../components/floating/floating";
 import { Solution, SolutionType } from "./solutions.content";
 
 export const SolutionSaas: React.FC<SolutionType> = (props) => {

@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Floating, ItemType, Product, Receipt } from "../../components";
+import { Floating } from "../../components/floating/floating";
+import Product, { ItemType } from "../../components/product/product";
+import { Receipt } from "../../components/receipt/receipt";
 import { Solution, SolutionType } from "./solutions.content";
 import { products } from "./solutions.data";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Picker as Component } from "..";
+import { Picker as Component } from "./picker";
 import { useState } from "react";
 
 export default {
@@ -12,11 +12,7 @@ const Template: ComponentStory<typeof Component> = (args) => {
   const [current, setCurrent] = useState(0);
   return (
     <div className="h-[600px]">
-      <Component
-        {...args}
-        onChange={(index) => setCurrent(index)}
-        current={current}
-      />
+      <Component {...args} onChange={(index) => setCurrent(index)} current={current} />
     </div>
   );
 };

@@ -1,6 +1,7 @@
-import { Container, ModuleContainer } from "../../components";
 import React from "react";
 import { z } from "zod";
+import Container from "../../components/container/container";
+import ModuleContainer from "../../components/module-container/module-container";
 import { LinkZod, ModuleZod } from "../../types";
 
 export const Footer: React.FC<FooterType> = (props) => {
