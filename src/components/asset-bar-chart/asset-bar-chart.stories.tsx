@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { AssetBarChart as Component } from "../../components";
 
 export default {
-  title: "Ecommerce/BarChartCard",
+  title: "Components/Bar Chart Card",
   component: Component,
 } as ComponentMeta<typeof Component>;
 
