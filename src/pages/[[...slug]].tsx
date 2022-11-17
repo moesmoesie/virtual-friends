@@ -8,7 +8,7 @@ import usePreviewSubscription from "../sanity/helpers/usePreviewSubscription";
 import filterDataToSingleItem from "../sanity/helpers/filterDataToSingleItem";
 
 const PageZod = z.object({
-  seo: SeoZod.nullable().optional(),
+  seo: SeoZod.optional(),
   modules: z.array(ModuleZod),
 });
 
@@ -44,6 +44,8 @@ const Page: React.FC<Props> = (props) => {
 };
 
 export default Page;
+
+// DATA FETCHING
 
 export async function getStaticPaths() {
   const data = await getClient(false).fetch(SlugQuery);

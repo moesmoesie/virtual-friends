@@ -11,7 +11,7 @@ export const SlugQuery = groq`
 export const PageQuery = groq`
     *[slug.current == $slug]{
         _id,
-        seo,
+        defined(seo) => seo,
         modules[]{
           _type,
           _id,
