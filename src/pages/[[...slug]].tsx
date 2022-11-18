@@ -1,18 +1,13 @@
 import { GetStaticProps } from "next";
 import { getClient } from "../sanity/sanity.server";
-import Module, { ModuleZod } from "../modules";
-import { z } from "zod";
 import { PageQuery, SlugQuery } from "../sanity/sanity.queries";
-import { Seo, SeoZod } from "../components/seo/seo";
-import usePreviewSubscription from "../sanity/helpers/usePreviewSubscription";
 import filterDataToSingleItem from "../sanity/helpers/filterDataToSingleItem";
+import { PageZod, PageType } from "../screens/page/page";
+import { PreviewSuspense } from "next-sanity/preview";
+import { Page } from "../screens/page/page";
+import { lazy } from "react";
 
-const PageZod = z.object({
-  seo: SeoZod.optional(),
-  modules: z.array(ModuleZod),
-});
-
-type PageType = z.infer<typeof PageZod>;
+const PreviewPage = lazy(() => import("../screens/page/page.preview"));
 
 interface Props {
   page: PageType;
@@ -21,31 +16,19 @@ interface Props {
   queryParams: any;
 }
 
-const Page: React.FC<Props> = (props) => {
-  const { data: previewData } = usePreviewSubscription(props.query, {
-    params: props.queryParams ?? {},
-    initialData: props.page,
-    enabled: props.preview,
-  });
+const Dynamic: React.FC<Props> = (props) => {
+  if (props.preview) {
+    return (
+      <PreviewSuspense fallback={<Page {...props.page} />}>
+        <PreviewPage query={props.query} params={props.queryParams} />
+      </PreviewSuspense>
+    );
+  }
 
-  const page: PageType = filterDataToSingleItem(previewData, props.preview);
-
-  return (
-    <>
-      <Seo {...page.seo} />
-      <div>
-        {page.modules &&
-          page.modules.map((module, index) => {
-            return <Module key={index} {...module} />;
-          })}
-      </div>
-    </>
-  );
+  return <Page {...props.page} />;
 };
 
-export default Page;
-
-// DATA FETCHING
+export default Dynamic;
 
 export async function getStaticPaths() {
   const data = await getClient(false).fetch(SlugQuery);
