@@ -14,7 +14,7 @@ export const SellingPoints: React.FC<SellingPointsType> = (props) => {
             props.sellingPoints.map((card, index) => {
               return (
                 <div key={index}>
-                  <div className="hidden large:block">
+                  <div className="hidden h-full large:block">
                     <Card mode="vertical" size="large" {...card} icon={card.icon ? <Image {...card.icon} width="200" /> : <div />} />
                   </div>
 
