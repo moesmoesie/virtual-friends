@@ -1,6 +1,5 @@
 import React from "react";
-import { z } from "zod";
-import { ModuleZod } from "../../types";
+import { ModuleContainerType } from "./type";
 
 export const ModuleContainer: React.FC<ModuleContainerType> = ({ module, children }) => {
   return (
@@ -31,14 +30,9 @@ export const ModuleContainer: React.FC<ModuleContainerType> = ({ module, childre
       `}
     >
       {children}
-
       <div />
     </div>
   );
 };
 
 export default ModuleContainer;
-
-export interface ModuleContainerType extends z.infer<typeof ModuleZod> {
-  children: React.ReactNode;
-}

@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Editor } from "../../components/editor/editor";
-import { Floating } from "../../components/floating/floating";
-import { ImagePicker } from "../../components/image-picker/image-picker";
-import { Popover } from "../../components/popover/popover";
-import { Solution, SolutionType } from "./solutions.content";
-import { colorOptions } from "./solutions.data";
+import { Editor } from "../../../../components/editor/editor";
+import { Floating } from "../../../../components/floating/floating";
+import { ImagePicker } from "../../../../components/image-picker/image-picker";
+import { Popover } from "../../../../components/popover/popover";
+import { Solution } from "../content/content";
+import { colorOptions } from "../../data";
+import { SolutionType } from "../../type";
 
 export const SolutionCMS: React.FC<SolutionType> = (props) => {
   const [color, setColor] = useState("small");

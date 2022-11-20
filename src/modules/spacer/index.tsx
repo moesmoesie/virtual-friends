@@ -1,7 +1,6 @@
 import React from "react";
-import { z } from "zod";
 import ModuleContainer from "../../components/module-container/module-container";
-import { ModuleZod } from "../../types";
+import { SpacerType } from "./type";
 
 export const Spacer: React.FC<SpacerType> = (props) => {
   return (
@@ -10,9 +9,3 @@ export const Spacer: React.FC<SpacerType> = (props) => {
     </ModuleContainer>
   );
 };
-
-export const SpacerZod = ModuleZod.extend({
-  _type: z.literal("spacer"),
-});
-
-export type SpacerType = z.infer<typeof SpacerZod>;

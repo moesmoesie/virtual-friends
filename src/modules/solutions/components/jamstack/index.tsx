@@ -1,8 +1,9 @@
-import Employee from "../../components/employee/employee";
-import { Floating } from "../../components/floating/floating";
-import { Review } from "../../components/review/review";
-import { Solution, SolutionType } from "./solutions.content";
-import { employees, review } from "./solutions.data";
+import Employee from "../../../../components/employee/employee";
+import { Floating } from "../../../../components/floating/floating";
+import { Review } from "../../../../components/review/review";
+import { Solution } from "../content/content";
+import { employees, review } from "../../data";
+import { SolutionType } from "../../type";
 
 export const SolutionJamstack: React.FC<SolutionType> = (props) => {
   return (

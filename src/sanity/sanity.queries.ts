@@ -8,25 +8,26 @@ export const SlugQuery = groq`
   }
 `;
 
-export const PageQuery = groq`
+const image = `{
+  defined(alt) => alt,
+  defined(title) => title,
+  ...asset->{
+    'src': url,
+    'blurDataURL': metadata.blurHash,
+    'width': metadata.dimensions.width,
+    'height': metadata.dimensions.height
+  }
+}`;
+
+export const PageQuery = `
     *[slug.current == $slug]{
         _id,
         defined(seo) => seo,
         modules[]{
           _type,
-          _id,
           module,
           _type == "header" => {
-            logo{
-              defined(alt) => alt,
-              defined(title) => title,
-              ...asset->{
-                'src': url,
-                'blurDataURL': metadata.blurHash,
-                'width': metadata.dimensions.width,
-                'height': metadata.dimensions.height,
-              },
-            },
+            logo${image},
             links[]{
               text,
               href
@@ -41,26 +42,8 @@ export const PageQuery = groq`
           _type == "landing-home" => {
             title,
             subtitle,
-            image{
-              defined(alt) => alt,
-              defined(title) => title,
-              ...asset->{
-                'src': url,
-                'blurDataURL': metadata.blurHash,
-                'width': metadata.dimensions.width,
-                'height': metadata.dimensions.height,
-              }
-            },
-            imageBackground{
-              defined(alt) => alt,
-              defined(title) => title,
-              ...asset->{
-                'src': url,
-                'blurDataURL': metadata.blurHash,
-                'width': metadata.dimensions.width,
-                'height': metadata.dimensions.height,
-              },
-            },
+            image${image},
+            imageBackground${image},
             primaryCallToAction,
             secondaryCallToAction
           },
@@ -70,16 +53,7 @@ export const PageQuery = groq`
           },
           _type == "sellingPoints" => {
             sellingPoints[]{
-              icon{
-                defined(alt) => alt,
-                defined(title) => title,
-                ...asset->{
-                'src': url,
-                'blurDataURL': metadata.blurHash,
-                'width': metadata.dimensions.width,
-                'height': metadata.dimensions.height,
-               },
-              },
+              icon${image},
               title,
               body
             }
@@ -95,16 +69,7 @@ export const PageQuery = groq`
             "content" : content[]{
               title,
               variant,
-              image{
-                defined(alt) => alt,
-                defined(title) => title,
-                ...asset-> {
-                  'src': url,
-                  'blurDataURL': metadata.blurHash,
-                  'width': metadata.dimensions.width,
-                  'height': metadata.dimensions.height,
-                },
-              },
+              image${image},
               body,
               keywords
             }

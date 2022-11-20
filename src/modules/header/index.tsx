@@ -1,12 +1,9 @@
 import React from "react";
-import { z } from "zod";
-import { LinkZod, ModuleZod } from "../../types";
-import { ImageZod } from "../../types";
-
 import Image from "next/image";
 import getCustomImageLoader from "../../sanity/helpers/getCustomImageLoader";
 import Container from "../../components/container/container";
 import ModuleContainer from "../../components/module-container/module-container";
+import { HeaderType } from "./type";
 
 export const Header: React.FC<HeaderType> = (props) => {
   return (
@@ -37,11 +34,3 @@ export const Header: React.FC<HeaderType> = (props) => {
     </div>
   );
 };
-
-export const HeaderZod = ModuleZod.extend({
-  _type: z.literal("header"),
-  logo: ImageZod,
-  links: z.array(LinkZod).optional(),
-});
-
-export type HeaderType = z.infer<typeof HeaderZod>;

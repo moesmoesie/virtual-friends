@@ -2,24 +2,16 @@ import { z } from "zod";
 import { SeoZod, Seo } from "../../components/seo/seo";
 
 // Import modules
-import { AboutMe, AboutMeZod } from "../../modules/about-me/about-me";
-import { Article, ArticleZod } from "../../modules/article/article";
-import { Contact, ContactZod } from "../../modules/contact/contact";
-import { Footer, FooterZod } from "../../modules/footer/footer";
-import { Header, HeaderZod } from "../../modules/header/header";
-import { LandingHome, LandingHomeZod } from "../../modules/landing-home/landing-home";
-import { SellingPoints, SellingPointsZod } from "../../modules/selling-points/selling-points";
-import { Solutions, SolutionsZod } from "../../modules/solutions/solutions";
-import { Spacer, SpacerZod } from "../../modules/spacer/spacer";
-
-export const ModuleZod = z.union([AboutMeZod, SolutionsZod, LandingHomeZod, HeaderZod, ContactZod, FooterZod, SellingPointsZod, SpacerZod, ArticleZod]);
-
-export const PageZod = z.object({
-  seo: SeoZod.optional(),
-  modules: z.array(ModuleZod),
-});
-
-export type PageType = z.infer<typeof PageZod>;
+import AboutMe from "../../modules/about-me";
+import { Article } from "../../modules/article";
+import { Contact } from "../../modules/contact";
+import { Footer } from "../../modules/footer";
+import { Header } from "../../modules/header";
+import { LandingHome } from "../../modules/landing-home";
+import { SellingPoints } from "../../modules/selling-points";
+import { Solutions } from "../../modules/solutions";
+import { Spacer } from "../../modules/spacer";
+import { PageType } from "./type";
 
 export const Page: React.FC<PageType> = (props) => {
   return (

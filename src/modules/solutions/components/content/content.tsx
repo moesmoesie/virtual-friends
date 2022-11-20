@@ -1,16 +1,9 @@
-import { z } from "zod";
-import { RichTextZod } from "../../types";
-import react, { useState } from "react";
+import { useState } from "react";
 import { Waypoint } from "react-waypoint";
-import { ImageZod } from "../../types";
 import Image from "next/image";
-import { Chip } from "../../components/chip/chip";
-import { RichText } from "../../components/rich-text/rich-text";
-export interface SolutionType {
-  isReversed: boolean;
-  content: ContentType;
-  children?: JSX.Element;
-}
+import { Chip } from "../../../../components/chip/chip";
+import { RichText } from "../../../../components/rich-text/rich-text";
+import { ContentType, SolutionType } from "../../type";
 
 export const Content: React.FC<ContentType> = (props) => {
   return (
@@ -28,16 +21,6 @@ export const Content: React.FC<ContentType> = (props) => {
   );
 };
 
-export const ContentZod = z.object({
-  title: z.string(),
-  body: RichTextZod,
-  keywords: z.array(z.string()),
-  image: ImageZod,
-  variant: z.union([z.literal("cms"), z.literal("ecommerce"), z.literal("saas"), z.literal("jamstack")]),
-});
-
-export type ContentType = z.infer<typeof ContentZod>;
-
 export const Solution: React.FC<SolutionType> = (props) => {
   const [show, setShow] = useState(false);
   return (
@@ -47,8 +30,7 @@ export const Solution: React.FC<SolutionType> = (props) => {
           <Waypoint onEnter={() => setShow(true)}></Waypoint>
         </div>
         <div className={`w-[600px] hidden large:block h-[600px]  relative translate-y-16 `}>
-          <Image {...props.content.image} width="500" className={`absolute w-full transition-all object-contain duration-700 h-full ${show ? "blur-3xl opacity-75 scale-105" : ""}`} />
-
+          {props.content.image && <Image {...props.content.image} width="500" className={`absolute w-full transition-all object-contain duration-700 h-full ${show ? "blur-3xl opacity-75 scale-105" : ""}`} />}
           <SlideInContainer show={show} direction={"bottom"}>
             {props.children}
           </SlideInContainer>

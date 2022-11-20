@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Floating } from "../../components/floating/floating";
-import Product, { ItemType } from "../../components/product/product";
-import { Receipt } from "../../components/receipt/receipt";
-import { Solution, SolutionType } from "./solutions.content";
-import { products } from "./solutions.data";
+import { Floating } from "../../../../components/floating/floating";
+import Product, { ItemType } from "../../../../components/product/product";
+import { Receipt } from "../../../../components/receipt/receipt";
+import { Solution } from "../content/content";
+import { products } from "../../data";
+import { SolutionType } from "../../type";
 
 export const SolutionEcommerce: React.FC<SolutionType> = (props) => {
   const [basket, setBasket] = useState<ItemType[]>([products[0], products[1]]);

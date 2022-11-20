@@ -1,12 +1,11 @@
 import React from "react";
-import { ModuleZod, RichTextZod } from "../../types";
-import { z } from "zod";
 import { BuisnessCard } from "../../components/buisness-card/buisness-card";
-import { Button, ButtonZod } from "../../components/button/button";
+import { Button } from "../../components/button/button";
 import Container from "../../components/container/container";
 import { GradientText } from "../../components/gradient-text/gradient-text";
 import ModuleContainer from "../../components/module-container/module-container";
 import { RichText } from "../../components/rich-text/rich-text";
+import { ContactType } from "./type";
 
 export const Contact: React.FC<ContactType> = (props) => {
   return (
@@ -16,7 +15,7 @@ export const Contact: React.FC<ContactType> = (props) => {
           <div>
             <div className="mb-6 flex gap-4 medium:gap-10 flex-col medium:flex-row">
               <h2 className="headline-4 medium:headline-3">
-                <GradientText>{props?.title}</GradientText>
+                <GradientText>{props.title}</GradientText>
               </h2>
             </div>
             <p className="body-1 max-w-2xl mb-7">
@@ -43,13 +42,3 @@ export const Contact: React.FC<ContactType> = (props) => {
     </ModuleContainer>
   );
 };
-
-export const ContactZod = ModuleZod.extend({
-  _type: z.literal("contact"),
-  title: z.string().default("Contact"),
-  body: RichTextZod.default("Contact Body"),
-  primaryCallToAction: ButtonZod.optional(),
-  secondaryCallToAction: ButtonZod.optional(),
-});
-
-export type ContactType = z.infer<typeof ContactZod>;

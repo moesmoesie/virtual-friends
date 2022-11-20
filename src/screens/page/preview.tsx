@@ -1,4 +1,4 @@
-import { Page } from "./page";
+import { Page } from ".";
 import { usePreview } from "../../sanity/sanity.preview";
 import filterDataToSingleItem from "../../sanity/helpers/filterDataToSingleItem";
 

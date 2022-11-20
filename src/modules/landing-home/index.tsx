@@ -1,15 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ModuleZod } from "../../types";
-import { z } from "zod";
-import { RichTextZod } from "../../types";
-import { ImageZod } from "../../types";
 import getCustomImageLoader from "../../sanity/helpers/getCustomImageLoader";
 import Image from "next/image";
-import { Button, ButtonZod } from "../../components/button/button";
+import { Button } from "../../components/button/button";
 import Container from "../../components/container/container";
 import ModuleContainer from "../../components/module-container/module-container";
 import { RichText } from "../../components/rich-text/rich-text";
+import { LandingHomeType } from "./type";
 
 export const LandingHome: React.FC<LandingHomeType> = (props) => {
   return (
@@ -24,7 +21,7 @@ export const LandingHome: React.FC<LandingHomeType> = (props) => {
           >
             <motion.div className="w-full rounded-full overflow-hiddens relative h-full">
               {props.imageBackground && <Image {...props?.imageBackground} width={400} priority className="w-full h-full absolute top-0 left-0 object-cover pointer-events-none" />}
-              <Image loader={getCustomImageLoader} {...props.image} width={200} priority className="w-full absolute bottom-0" />
+              {props.image && <Image loader={getCustomImageLoader} {...props.image} width={200} priority className="w-full absolute bottom-0" />}
             </motion.div>
           </motion.div>
 
@@ -46,15 +43,3 @@ export const LandingHome: React.FC<LandingHomeType> = (props) => {
     </ModuleContainer>
   );
 };
-
-export const LandingHomeZod = ModuleZod.extend({
-  _type: z.literal("landing-home"),
-  title: RichTextZod.default("Mustafa Darwesh"),
-  subtitle: RichTextZod.default("Full Stack Developer"),
-  primaryCallToAction: ButtonZod.optional(),
-  secondaryCallToAction: ButtonZod.optional(),
-  image: ImageZod,
-  imageBackground: ImageZod.optional(),
-});
-
-export type LandingHomeType = z.infer<typeof LandingHomeZod>;

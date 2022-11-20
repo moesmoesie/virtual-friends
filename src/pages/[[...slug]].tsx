@@ -2,12 +2,12 @@ import { GetStaticProps } from "next";
 import { getClient } from "../sanity/sanity.server";
 import { PageQuery, SlugQuery } from "../sanity/sanity.queries";
 import filterDataToSingleItem from "../sanity/helpers/filterDataToSingleItem";
-import { PageZod, PageType } from "../screens/page/page";
 import { PreviewSuspense } from "next-sanity/preview";
-import { Page } from "../screens/page/page";
+import { Page } from "../screens/page";
+import { PageType } from "../screens/page/type";
 import { lazy } from "react";
 
-const PreviewPage = lazy(() => import("../screens/page/page.preview"));
+const PreviewPage = lazy(() => import("../screens/page/preview"));
 
 interface Props {
   page: PageType;
@@ -46,12 +46,15 @@ export const getStaticProps: GetStaticProps = async ({ params, preview = false }
     slug += params.slug.join("/");
   }
 
+  const PageZod = (await import("../screens/page/type")).PageZod;
+
   const queryParams = { slug };
   const data = await getClient(preview).fetch(PageQuery, queryParams);
 
   if (!data || (Array.isArray(data) && data.length === 0)) return { notFound: true };
 
-  let page: PageType = filterDataToSingleItem(data, preview);
+  let page = filterDataToSingleItem(data, preview);
+
   page = PageZod.parse(page);
 
   return {

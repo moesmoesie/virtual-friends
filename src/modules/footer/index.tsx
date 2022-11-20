@@ -1,8 +1,7 @@
 import React from "react";
-import { z } from "zod";
 import Container from "../../components/container/container";
 import ModuleContainer from "../../components/module-container/module-container";
-import { LinkZod, ModuleZod } from "../../types";
+import { FooterType } from "./type";
 
 export const Footer: React.FC<FooterType> = (props) => {
   return (
@@ -30,10 +29,3 @@ export const Footer: React.FC<FooterType> = (props) => {
     </ModuleContainer>
   );
 };
-
-export const FooterZod = ModuleZod.extend({
-  _type: z.literal("footer"),
-  links: z.array(LinkZod).optional(),
-});
-
-export type FooterType = z.infer<typeof FooterZod>;
