@@ -22,7 +22,7 @@ const image = `{
 export const PageQuery = `
     *[slug.current == $slug]{
         _id,
-        defined(seo) => seo,
+        seo,
         modules[]{
           _type,
           module,
