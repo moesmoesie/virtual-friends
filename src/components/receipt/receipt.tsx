@@ -42,7 +42,7 @@ export const Receipt: React.FC<ReceiptType> = (props) => {
     <div className="w-[280px] rounded-lg bg-grey-p p-5 text-black shadow-card-m">
       <Header title={props.title} />
 
-      <div className="h-[242px] overflow-auto">
+      <div className="h-[242px] w-full overflow-y-auto overflow-x-hidden">
         {items.map((el, index) => {
           return <ListItem key={index} {...el} />;
         })}
@@ -67,7 +67,7 @@ const Total: React.FC<{ total: number }> = (props) => {
 const ListItem: React.FC<{ item: ItemType; count: number }> = (props) => {
   const { item, count } = props;
   return (
-    <div className="border-b-[1px] min-w-[280px] border-neutral-500 py-5 last:border-0 last:border-b-0 ">
+    <div className="border-b-[1px]  min-w-[280px] border-neutral-500 py-5 last:border-0 last:border-b-0 ">
       <div className="flex gap-5">
         <div className="h-[80px] w-[60px] rounded-lg bg-white">{props.item.image && <Image className="h-full w-full object-contain px-1 py-3" {...props.item.image} />}</div>
         <div className="mt-[5.5px] flex flex-col">
