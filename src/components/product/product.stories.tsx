@@ -1,4 +1,3 @@
-import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Product as Component } from "./product";
 
@@ -9,7 +8,7 @@ export default {
 
 const Template: ComponentStory<typeof Component> = (args) => {
   return (
-    <div className="h-[600px]">
+    <div className="h-[600px] w-[250px]">
       <Component {...args} />
     </div>
   );
@@ -35,7 +34,7 @@ Default.args = {
       color: "#7F95E3",
       id: "2",
       price: 124.95,
-      title: "Virtual Boy X",
+      title: "Virtual Boy P",
       discountPercentage: 10,
       image: {
         src: "https://cdn.sanity.io/images/kby5cprw/production/def68604fa15d693b04c9deb52c14c947cc82c37-800x800.png",

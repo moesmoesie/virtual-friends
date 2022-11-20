@@ -9,7 +9,7 @@ export default {
 
 const Template: ComponentStory<typeof Component> = (args) => {
   return (
-    <div className="h-[600px]">
+    <div className="h-[600px] w-[250px]">
       <Component {...args} />
     </div>
   );
