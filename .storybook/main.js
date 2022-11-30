@@ -5,6 +5,12 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     {
+      name: "storybook-addon-next",
+      options: {
+        nextConfigPath: path.resolve(__dirname, "../next.config.js"),
+      },
+    },
+    {
       name: "@storybook/addon-postcss",
       options: {
         postcssLoaderOptions: {
