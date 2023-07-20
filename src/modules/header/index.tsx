@@ -13,7 +13,7 @@ export const Header: React.FC<HeaderType> = (props) => {
           <Container>
             <div className="flex justify-between items-center">
               <a href="/">
-                <Image loader={getCustomImageLoader} {...props.logo} width={100} priority />
+                <Image loader={getCustomImageLoader} {...props.logo} width={150} priority />
               </a>
 
               {props.links && (
