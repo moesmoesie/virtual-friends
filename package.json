@@ -6,37 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.14",
-    "@storybook/addon-a11y": "^7.0.12",
-    "@types/node": "20.1.5",
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.2.4",
+    "@types/node": "20.4.8",
+    "@types/react": "18.2.18",
+    "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
-    "eslint": "8.40.0",
-    "eslint-config-next": "^13.4.4",
-    "next": "^13.4.4",
-    "postcss": "8.4.23",
+    "eslint": "8.46.0",
+    "eslint-config-next": "^13.4.12",
+    "next": "^13.4.12",
+    "postcss": "8.4.27",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-wrap-balancer": "^0.5.0",
-    "storybook-addon-pseudo-states": "^2.0.1",
-    "tailwindcss": "3.3.2",
-    "typescript": "5.0.4"
-  },
-  "devDependencies": {
-    "@storybook/addon-essentials": "^7.0.12",
-    "@storybook/addon-interactions": "^7.0.12",
-    "@storybook/addon-links": "^7.0.12",
-    "@storybook/blocks": "^7.0.12",
-    "@storybook/nextjs": "^7.0.12",
-    "@storybook/react": "^7.0.12",
-    "@storybook/testing-library": "^0.0.14-next.2",
-    "eslint-plugin-storybook": "^0.6.12",
-    "storybook": "^7.0.12"
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6"
   }
 }
