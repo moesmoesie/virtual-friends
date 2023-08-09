@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import "./globals.css";
+import Footer from "@/components/footer";
 
 export const metadata = {
   title: "Virtual Friends",
@@ -21,7 +22,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="w-2.5 h-full bg-purple-600 absolute top-0" />
         </div>
 
-        <footer className="container">Footer</footer>
+        <footer className="container">
+          <Footer />
+        </footer>
       </body>
     </html>
   );
