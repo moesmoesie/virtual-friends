@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </header>
 
           <main className="container">{children}</main>
-          <div className="w-2.5 h-full bg-purple-600 absolute top-0" />
+          <div className="w-2.5 h-full bg-gradient-to-b from-violet-800 via-purple-600 to-zinc-300 absolute top-0" />
         </div>
 
         <footer className="container">
