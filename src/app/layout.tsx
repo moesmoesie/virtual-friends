@@ -25,8 +25,8 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className={`${dm_mono.variable} ${dm_sans.variable}`} lang="en">
-      <body className="relative">
-        <div className="relative">
+      <body className="relative flex flex-col min-h-screen">
+        <div className="relative flex flex-1">
           <header className="fixed z-10 bg-white w-full top-0">
             <div className="container">
               <Header />
