@@ -1,7 +1,7 @@
 const Header: React.FC = () => {
   return (
     <div className="flex bg-white ">
-      <div className="border-b w-full pt-12 flex justify-between items-center pb-20">
+      <div className="border-b w-full pt-12 flex justify-between items-center pb-10">
         <Logo />
         <HamburgerButton />
       </div>
