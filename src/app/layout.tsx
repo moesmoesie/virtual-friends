@@ -1,6 +1,21 @@
 import Header from "@/components/header";
 import "./globals.css";
 import Footer from "@/components/footer";
+import { DM_Mono, DM_Sans } from "next/font/google";
+
+const dm_mono = DM_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500"],
+  variable: "--font-dm-mono",
+});
+
+const dm_sans = DM_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-dm-sans",
+  weight: ["400", "500", "700"],
+});
 
 export const metadata = {
   title: "Virtual Friends",
@@ -9,7 +24,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html className={`${dm_mono.variable} ${dm_sans.variable}`} lang="en">
       <body className="relative">
         <div className="relative">
           <header className="fixed bg-white w-full top-0">

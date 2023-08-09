@@ -12,6 +12,11 @@ module.exports = {
       width: {
         sidebar: "10px",
       },
+
+      fontFamily: {
+        sans: ["var(--font-dm-sans)"],
+        mono: ["var(--font-dm-mono)"],
+      },
     },
 
     container: {
