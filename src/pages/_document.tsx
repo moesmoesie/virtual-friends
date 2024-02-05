@@ -7,8 +7,6 @@ class Document extends NextDocument<Props> {
   render() {
     return (
       <Html lang="en">
-        <script defer data-domain="mustafadarwesh.dev" src="https://plausible.io/js/script.js"></script>
-
         <Head>
           <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
           <link rel="preload" href="/fonts/inter-v11-latin/inter-v11-latin-700.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
