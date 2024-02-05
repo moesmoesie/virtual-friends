@@ -13,7 +13,7 @@ export const Content: React.FC<ContentType> = (props) => {
         <RichText value={props.body} />
       </p>
       <div className="flex flex-wrap gap-2">
-        {props.keywords.map((keyword, index) => {
+        {props?.keywords?.map((keyword, index) => {
           return <Chip key={index} text={keyword} variant="active" />;
         })}
       </div>

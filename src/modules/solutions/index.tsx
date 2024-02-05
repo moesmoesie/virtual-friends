@@ -18,7 +18,7 @@ export const Solutions: React.FC<SolutionsType> = (props) => {
           </h2>
         )}
         <div className="flex flex-col gap-16">
-          {props.content.map((solution, index) => {
+          {props?.content?.map((solution, index) => {
             const isReversed = index % 2 == 1;
             switch (solution.variant) {
               case "cms":

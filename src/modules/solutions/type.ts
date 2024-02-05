@@ -5,7 +5,7 @@ import { ModuleZod, RichTextZod, ImageZod } from "../../types";
 export const ContentZod = z.object({
   title: z.string().or(fallback("Title")),
   body: RichTextZod.or(fallback("Body")),
-  keywords: z.array(z.string()).or(fallback([] as const)),
+  keywords: z.array(z.string()).or(fallback(undefined)),
   image: ImageZod.or(fallback(undefined)),
   variant: z.union([z.literal("cms"), z.literal("ecommerce"), z.literal("saas"), z.literal("jamstack")]).or(fallback("cms")),
 });
@@ -13,7 +13,7 @@ export const ContentZod = z.object({
 export const SolutionsZod = ModuleZod.extend({
   _type: z.literal("solutions"),
   title: z.string().or(fallback("Title")),
-  content: z.array(ContentZod).or(fallback([] as const)),
+  content: z.array(ContentZod).or(fallback(undefined)),
 });
 
 export interface SolutionType {
