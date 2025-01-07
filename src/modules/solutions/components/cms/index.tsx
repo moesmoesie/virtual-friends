@@ -13,10 +13,7 @@ export const SolutionCMS: React.FC<SolutionType> = (props) => {
     <Solution content={props.content} isReversed={props.isReversed}>
       <div className=" items-center flex  flex-col pt-24">
         <Floating delay={0.5}>
-          <Editor
-            initialValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor blandit diam."
-          />
+          <Editor initialValue="Working with Virtual Friends is like teaming up with the superheroes of the digital world. Imagine a crew of tech-savvy wizards, armed with creativity and determination, ready to transform your wildest ideas into stunning realities. Need a sleek, high-performing website? They've got you covered." />
         </Floating>
         <div className="flex">
           <Floating>
@@ -27,7 +24,13 @@ export const SolutionCMS: React.FC<SolutionType> = (props) => {
 
           <Floating delay={0.8}>
             <div className="translate-x-10 -translate-y-16">
-              <Popover setOption={(name) => setColor(name)} currentOptionIndex={colorOptions.findIndex((el) => el.value === color)} options={colorOptions} />
+              <Popover
+                setOption={(name) => setColor(name)}
+                currentOptionIndex={colorOptions.findIndex(
+                  (el) => el.value === color
+                )}
+                options={colorOptions}
+              />
             </div>
           </Floating>
         </div>

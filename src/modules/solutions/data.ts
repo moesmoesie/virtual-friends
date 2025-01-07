@@ -39,7 +39,7 @@ export const employees: EmployeeType[] = [
     phone: "+31634XXX366",
     github: "https://github.com/moesmoesie",
     linkedin: "https://www.linkedin.com/in/mustafadarwesh/",
-    mail: "mdarwesh@virtualfriends.dev",
+    mail: "mustafa@virtualfriends.dev",
     image: {
       src: "https://cdn.sanity.io/images/kby5cprw/production/4395f182fa04851c14d7c54612ff4c5e15f28b80-663x849.png",
       width: 500,
@@ -53,7 +53,7 @@ export const employees: EmployeeType[] = [
     phone: "+31634XXX366",
     github: "https://github.com/moesmoesie",
     linkedin: "https://www.linkedin.com/in/mustafadarwesh/",
-    mail: "mdarwesh@virtualfriends.dev",
+    mail: "mustafa@virtualfriends.dev",
     image: {
       src: "https://cdn.sanity.io/images/kby5cprw/production/10d2b9dec0aecef37669282c4dbef19f6d11e71c-663x849.png?auto=format&w=500",
       width: 500,
@@ -66,7 +66,7 @@ export const employees: EmployeeType[] = [
 export const review: ReviewType = {
   company: "Caboosy Inc",
   name: "Jane Caboosy",
-  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  body: "The website impressed with its performance, responsiveness, and intuitive design.",
   image: {
     src: "https://cdn.sanity.io/images/kby5cprw/production/00719dd13aa9d16f6e716dac3d7e6a26dc4ddab6-3276x4096.jpg",
     width: 100,

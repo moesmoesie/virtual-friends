@@ -10,7 +10,7 @@ export const Footer: React.FC<FooterType> = (props) => {
         <div className="flex medium:items-center gap-[10px] flex-col text-white py-5 medium:flex-row justify-between">
           <p className="body-2">
             <span className="font-bold">Virtual Friends</span>
-            <span className="ml-2">© 2024</span>
+            <span className="ml-2">© 2025</span>
           </p>
 
           {props.links && (
